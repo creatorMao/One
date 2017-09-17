@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>D:\study\uwpProjects\One\One\Assets\logo.png</Source>
+    <SmallTileSource>D:\study\uwpProjects\One\One\Assets\logo.png</SmallTileSource>
+    <MediumTileSource>D:\study\uwpProjects\One\One\Assets\logo.png</MediumTileSource>
+    <WideTileSource>D:\study\uwpProjects\One\One\Assets\logo.png</WideTileSource>
+    <LargeTileSource>D:\study\uwpProjects\One\One\Assets\logo.png</LargeTileSource>
+    <AppIconSource>D:\study\uwpProjects\One\One\Assets\logo.png</AppIconSource>
+    <SplashScreenSource>D:\study\uwpProjects\One\One\Assets\logo.png</SplashScreenSource>
+    <BadgeLogoSource>D:\study\uwpProjects\One\One\Assets\logo.png</BadgeLogoSource>
+    <PackageLogoSource>D:\study\uwpProjects\One\One\Assets\logo.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>
