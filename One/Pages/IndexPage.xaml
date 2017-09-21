@@ -5,8 +5,112 @@
     xmlns:local="using:One.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:One.Model"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <Style x:Key="MenuItemContainer" TargetType="ListViewItem">
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+    </Page.Resources>
+
     <Grid>
+        <ListView ItemsSource="{x:Bind receiveData}"
+                  ItemContainerStyle="{StaticResource MenuItemContainer}"
+                  HorizontalAlignment="Center"
+                  Name="ItemListview"
+                  Visibility="Visible"
+                  IsItemClickEnabled="True"
+                  ItemClick="ItemListview_ItemClick">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="data:RootObject">
+                    <Grid Height="250"
+                          MinWidth="400">
+                        <Image Source="{x:Bind data.content_list[0].img_url}"
+                               Stretch="UniformToFill"/>
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{x:Bind data.content_list[0].volume}"
+                                       Foreground="White"
+                                       FontSize="26"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Name="ItemDetailsPannel"
+              Visibility="Collapsed">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Image Name="DetailsImage"
+                       Stretch="UniformToFill">
+                </Image>
+
+            </Grid>
+
+
+            <Grid Grid.Row="1"
+                  Background="#52938B"
+                  Padding="20">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Name="VolumeText"
+                               Grid.Column="0"
+                               FontSize="20"
+                               Foreground="#264440"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                Grid.Column="1"
+                                HorizontalAlignment="Right">
+                        <Button Background="Transparent">
+                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                                      Glyph="&#xE1FD;"
+                                      Foreground="#264440"
+                                      FontSize="30"/>
+                        </Button>
+                        <Button Background="Transparent">
+                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                                      Glyph="&#xE72D;"
+                                      Foreground="#264440"
+                                      FontSize="30"/>
+                        </Button>
+                        <Button Background="Transparent"
+                                Click="Button_Click">
+                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                                      Glyph="&#xE72B;"
+                                      Foreground="#264440"
+                                      FontSize="30"/>
+                        </Button>
+                    </StackPanel>
+                    
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBlock Name="WordsText"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               TextWrapping="WrapWholeWords"
+                               />
+                </Grid>
+                
+            </Grid>
+            
+        </Grid>
     </Grid>
 </Page>

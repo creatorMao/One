@@ -55,15 +55,7 @@
               Grid.ColumnSpan="2">
         </Grid>
 
-        <Button x:ConnectionId='2' Name="HamburgerButton"
-                                             
-                Background="Transparent"
-                Style="{StaticResource HanmburgerStyle}"
-                Grid.Row="1">
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Foreground="Black"/>
-        </Button>
-
-        <SplitView x:ConnectionId='3' Name="RootSplitView"
+        <SplitView x:ConnectionId='2' Name="RootSplitView"
                    DisplayMode="CompactOverlay"
                    CompactPaneLength="0"
                    OpenPaneLength="300"
@@ -79,6 +71,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="200"/>
                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
 
                     <!--侧边栏顶部-->
@@ -89,8 +82,32 @@
                         </Image>
                     </Grid>
 
-                    <!--侧边栏选择项-->
+                    <!--侧边栏中间部分显示时间-->
                     <Grid Grid.Row="1">
+                        <StackPanel Margin="25,0,0,5">
+                            <TextBlock x:ConnectionId='9' Name="TodayDate"
+                                       Margin="0,5,0,5"
+                                       Foreground="#757575"
+                                       FontSize="17"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:ConnectionId='10' Name="PlaceName"
+                                           Margin="0,0,15,0"
+                                           Foreground="#757575"
+                                           FontSize="14"/>
+                                <TextBlock x:ConnectionId='11' Name="AirName"
+                                           Margin="0,0,15,0"
+                                           Foreground="#757575"
+                                           FontSize="14"/>
+                                <TextBlock x:ConnectionId='12' Name="TempName"
+                                           Margin="0,0,15,0"
+                                           Foreground="#757575"
+                                           FontSize="14"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+
+                    <!--侧边栏选择项-->
+                    <Grid Grid.Row="2">
                         <ListView x:ConnectionId='5' ItemContainerStyle="{StaticResource MenuItemContainer}"
                                                                     
                                                                 
@@ -106,7 +123,7 @@
                                                Height="20"
                                                />
                                         <TextBlock x:ConnectionId='8'                      
-                                                   Margin="20,-2,0,0"
+                                                   Margin="27,-2,0,0"
                                                                                                     
                                                    VerticalAlignment="Center"
                                                    />
@@ -119,14 +136,22 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid x:ConnectionId='9' Name="RootGrid">
-                    <Frame x:ConnectionId='10' Name="RootFrame"></Frame>
+                <Grid x:ConnectionId='13' Name="RootGrid">
+                    <Frame x:ConnectionId='14' Name="RootFrame"></Frame>
                 </Grid>
             </SplitView.Content>
         </SplitView>
 
-        
-        
+        <Button x:ConnectionId='3' Name="HamburgerButton"
+                                             
+                Background="Transparent"
+                Style="{StaticResource HanmburgerStyle}"
+                Grid.Row="1">
+            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Foreground="Black"/>
+        </Button>
+
+
+
         <Grid x:ConnectionId='4' Grid.Column="1"
               Grid.Row="0"
               Grid.RowSpan="3"

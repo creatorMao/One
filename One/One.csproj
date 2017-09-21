@@ -98,7 +98,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\IdlistManager.cs" />
     <Compile Include="Model\NavMenuManager.cs" />
+    <Compile Include="Model\OnelistManager.cs" />
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>

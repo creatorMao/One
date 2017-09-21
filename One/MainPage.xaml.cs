@@ -1,6 +1,8 @@
 ﻿using One.Model;
+using One.Pages;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -8,6 +10,7 @@ using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,14 +28,23 @@ namespace One
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public List<RootObject> onelistResultList = null;
+
         private List<NavMenuItem> navMenuList = null;
+
 
         public MainPage()
         {
             this.InitializeComponent();
             CustomTitileBar();
 
+            SetTitleBar();
+
             navMenuList = NavMenuManager.CreateNavMenuList();
+
+            PrepareData();
+
+            
 
         }
 
@@ -45,6 +57,40 @@ namespace One
             var titleBar = CoreApplication.GetCurrentView().TitleBar;
             titleBar.ExtendViewIntoTitleBar = true;
             
+        }
+
+        //三个按键样式设置
+        public void SetTitleBar()
+        {
+            //获得当前视图
+            var view = ApplicationView.GetForCurrentView();
+
+            //active 当前窗口
+            view.TitleBar.BackgroundColor = Colors.Transparent;
+            view.TitleBar.ForegroundColor = Colors.Black;
+
+            //inactive 不是当前窗口，我觉得不常用
+            view.TitleBar.InactiveBackgroundColor = Colors.Transparent;
+            view.TitleBar.InactiveForegroundColor = Colors.Black;
+
+            //button
+
+            //初始
+            view.TitleBar.ButtonBackgroundColor = Colors.Transparent;
+            view.TitleBar.ButtonForegroundColor = Colors.White;
+
+            //悬浮
+            view.TitleBar.ButtonHoverBackgroundColor = Colors.DarkGray;
+            view.TitleBar.ButtonHoverForegroundColor = Colors.White;
+
+            //按下
+            view.TitleBar.ButtonPressedBackgroundColor = Colors.DarkGray;
+            view.TitleBar.ButtonPressedForegroundColor = Colors.White;
+
+            //inactive 不是当前窗口，我觉得不常用
+            view.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+            view.TitleBar.ButtonInactiveForegroundColor = Colors.White;
+
         }
 
 
@@ -68,19 +114,32 @@ namespace One
 
             RootSplitView.IsPaneOpen = false;
             Mask.Visibility = Visibility.Collapsed;
-
+            HamburgerButton.Visibility = Visibility.Visible;
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             RootSplitView.IsPaneOpen = !RootSplitView.IsPaneOpen;
             Mask.Visibility = Visibility.Visible;
+            HamburgerButton.Visibility = Visibility.Collapsed;
         }
 
         private void Mask_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Mask.Visibility = Visibility.Collapsed;
+            HamburgerButton.Visibility = Visibility.Visible;
             RootSplitView.IsPaneOpen = false;
+        }
+
+        public async void PrepareData()
+        {
+            onelistResultList = await OnelistManager.GetLatelyOnelist();
+            TodayDate.Text = onelistResultList[0].data.weather.date.Replace("-","/"); ;
+            PlaceName.Text = onelistResultList[0].data.weather.city_name;
+            AirName.Text = onelistResultList[0].data.weather.climate;
+            TempName.Text = onelistResultList[0].data.weather.temperature+ "℃";
+
+            RootFrame.Navigate(typeof(IndexPage), onelistResultList);
         }
     }
 }
