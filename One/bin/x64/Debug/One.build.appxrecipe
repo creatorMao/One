@@ -405,6 +405,9 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\article-selected.png">
       <PackagePath>Assets\icon\article-selected.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\like.png">
+      <PackagePath>Assets\icon\like.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\movie-selected.png">
       <PackagePath>Assets\icon\movie-selected.png</PackagePath>
     </AppxPackagedFile>

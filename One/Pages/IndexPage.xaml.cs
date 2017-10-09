@@ -1,19 +1,14 @@
-﻿using One.Model;
+﻿using One.Converter;
+using One.Model;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -54,6 +49,11 @@ namespace One.Pages
             DetailsImage.Source = new BitmapImage(new Uri(rootObject.data.content_list[0].img_url));
             VolumeText.Text = rootObject.data.content_list[0].volume.ToString();
             WordsText.Text = rootObject.data.content_list[0].forward + " by " + rootObject.data.content_list[0].words_info;
+            LikesCountTextBlock.Text = rootObject.data.content_list[0].like_count.ToString();
+
+            ColorConverter colorConverter = new ColorConverter();
+            Color color = colorConverter.StringToColor("#ffffffff");
+            ContentContainer.Background = new SolidColorBrush(color);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

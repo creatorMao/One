@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
@@ -109,7 +110,7 @@ namespace One
 
             if (currentNavMenuItem.NavigatePage != null)
             {
-                RootFrame.Navigate(currentNavMenuItem.NavigatePage);
+                RootFrame.Navigate(currentNavMenuItem.NavigatePage,onelistResultList);
 ;            }
 
             RootSplitView.IsPaneOpen = false;
@@ -121,6 +122,26 @@ namespace One
         {
             RootSplitView.IsPaneOpen = !RootSplitView.IsPaneOpen;
             Mask.Visibility = Visibility.Visible;
+            Storyboard storyboard = new Storyboard();
+            DoubleAnimation animation = new DoubleAnimation
+            {
+                From = 0,
+                To = 0.4,
+                Duration = new Duration(TimeSpan.FromSeconds(0.3)),
+            };
+
+            Storyboard.SetTarget(animation,Mask);
+            Storyboard.SetTargetName(animation,"Mask");
+            Storyboard.SetTargetProperty(animation, "Opacity");
+
+            
+
+            storyboard.Children.Add(animation);
+            storyboard.Begin();
+
+            //遮罩
+            //Mask.Visibility = Visibility.Visible;
+            
             HamburgerButton.Visibility = Visibility.Collapsed;
         }
 
@@ -141,5 +162,7 @@ namespace One
 
             RootFrame.Navigate(typeof(IndexPage), onelistResultList);
         }
+
+       
     }
 }

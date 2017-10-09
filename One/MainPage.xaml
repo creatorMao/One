@@ -29,10 +29,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="HanmburgerStyle" TargetType="Button">
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Background" Value="Transparent"/>
-        </Style>
     </Page.Resources>
 
     
@@ -145,7 +141,7 @@
         <Button Name="HamburgerButton"
                 Click="HamburgerButton_Click"
                 Background="Transparent"
-                Style="{StaticResource HanmburgerStyle}"
+                Style="{StaticResource ButtonCommonStyle}"
                 Grid.Row="1">
             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Foreground="Black"/>
         </Button>
@@ -157,11 +153,14 @@
               Grid.RowSpan="3"
               Name="Mask"
               Background="Black"
-              Opacity="0.4"
+              Opacity="0"
               Visibility="Collapsed"
-              PointerPressed="Mask_PointerPressed">
+              PointerPressed="Mask_PointerPressed"
+              >
         </Grid>
         
         
     </Grid>
+
+   
 </Page>

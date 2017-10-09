@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\study\uwpProjects\One\One\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>39E2C90FF2D6B90BAB03B8C3B46BE8C33A3B4E71BD0A886062085F00F01D3533</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>EA0BF9A28CB9DF5240A1578B254876A2BD15E8D3BFE6B763964B213BA0762B7B</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>3f5aab68-ec02-41e5-85a4-1552b69e929a_1.0.0.0_x64__8zpsystjr6qct</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>3f5aab68-ec02-41e5-85a4-1552b69e929a_8zpsystjr6qct!App</RegisteredUserModeAppID>
     <RegisteredPackageID>3f5aab68-ec02-41e5-85a4-1552b69e929a</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\study\uwpProjects\One\One\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-21T14:06:39.732</Modified>
+      <Modified>2017-10-08T14:28:03.124</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\One.exe">
       <PackagePath>entrypoint\One.exe</PackagePath>
-      <Modified>2017-09-21T14:06:38.933</Modified>
+      <Modified>2017-10-08T14:28:02.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\Handy.DotNETCore-Compatibility.ColorTranslations\0.2.1\lib\netstandard1.4\ColorTranslations.dll">
       <PackagePath>ColorTranslations.dll</PackagePath>
@@ -540,6 +540,10 @@
       <PackagePath>Assets\icon\article-selected.png</PackagePath>
       <Modified>2017-09-06T06:08:01.427</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\like.png">
+      <PackagePath>Assets\icon\like.png</PackagePath>
+      <Modified>2017-09-23T11:54:39.967</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\movie-selected.png">
       <PackagePath>Assets\icon\movie-selected.png</PackagePath>
       <Modified>2017-09-05T16:29:35.425</Modified>
@@ -799,7 +803,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\One.xr.xml">
       <PackagePath>One.xr.xml</PackagePath>
-      <Modified>2017-09-21T14:06:38.723</Modified>
+      <Modified>2017-10-08T13:47:08.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -808,11 +812,11 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-21T14:06:39.484</Modified>
+      <Modified>2017-10-08T14:28:02.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\Core\One.exe">
       <PackagePath>One.exe</PackagePath>
-      <Modified>2017-09-21T14:06:39.728</Modified>
+      <Modified>2017-10-08T14:28:03.117</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
