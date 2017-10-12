@@ -41,7 +41,7 @@ namespace One.Pages
         private void ItemListview_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-            ItemListview.Visibility = Visibility.Collapsed;
+            //ItemListview.Visibility = Visibility.Collapsed;
             ItemDetailsPannel.Visibility = Visibility.Visible;
 
             RootObject rootObject = (RootObject)e.ClickedItem;
@@ -58,7 +58,7 @@ namespace One.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ItemListview.Visibility = Visibility.Visible;
+            //ItemListview.Visibility = Visibility.Visible;
             ItemDetailsPannel.Visibility = Visibility.Collapsed;
         }
 

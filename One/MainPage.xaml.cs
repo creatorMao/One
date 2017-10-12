@@ -31,6 +31,8 @@ namespace One
     {
         public List<RootObject> onelistResultList = null;
 
+        private ObservableCollection<Datum> movieListData = null;
+
         private List<NavMenuItem> navMenuList = null;
 
 
@@ -110,8 +112,24 @@ namespace One
 
             if (currentNavMenuItem.NavigatePage != null)
             {
-                RootFrame.Navigate(currentNavMenuItem.NavigatePage,onelistResultList);
-;            }
+                switch (currentNavMenuItem.Title)
+                {
+                    case "一个":
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
+                        break;
+                    case "文章":
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
+                        break;
+                    case "电影":
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage, movieListData);
+                        break;
+                    case "关于":
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage);
+                        break;
+
+                }
+                
+;           }
 
             RootSplitView.IsPaneOpen = false;
             Mask.Visibility = Visibility.Collapsed;
@@ -160,7 +178,14 @@ namespace One
             AirName.Text = onelistResultList[0].data.weather.climate;
             TempName.Text = onelistResultList[0].data.weather.temperature+ "℃";
 
-            RootFrame.Navigate(typeof(IndexPage), onelistResultList);
+
+            Movie_RootObject rootObject = new Movie_RootObject();
+            rootObject = await MovieListManager.GetRecentMovielist();
+            movieListData = new ObservableCollection<Datum>();
+            (rootObject.data).ForEach(p => movieListData.Add(p));
+
+            RootFrame.Navigate(typeof(IndexPage),onelistResultList);
+
         }
 
        

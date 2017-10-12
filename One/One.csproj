@@ -99,20 +99,22 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\ExtracteDataManager.cs" />
     <Compile Include="Model\IdlistManager.cs" />
+    <Compile Include="Model\MovieListManager.cs" />
     <Compile Include="Model\NavMenuManager.cs" />
     <Compile Include="Model\OnelistManager.cs" />
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ArticlePage.xaml.cs">
-      <DependentUpon>ArticlePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\IndexPage.xaml.cs">
       <DependentUpon>IndexPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MoviePage.xaml.cs">
       <DependentUpon>MoviePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ArticlePage.xaml.cs">
+      <DependentUpon>ArticlePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -200,15 +202,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ArticlePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\IndexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MoviePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ArticlePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

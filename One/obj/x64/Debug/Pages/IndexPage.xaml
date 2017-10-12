@@ -8,145 +8,93 @@
     xmlns:data="using:One.Model"
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <Style x:Key="IndexContainer" TargetType="ListViewItem">
-            <Setter Property="Padding" Value="0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Grid>
 
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup>
-                                    <VisualState x:Name="Normal">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0:0:0.4" From="1" To="0.7" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="contentPhoto" ></DoubleAnimation>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="PointerOver">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0:0:0.4" From="0.7" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="contentPhoto" ></DoubleAnimation>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-
-
-
-
-                            <Grid Name="Mask" 
-                                      Background="Black">
-
-                                <ContentPresenter x:Name="contentPhoto"
-                                              Opacity="0.5">
-                                    <ContentPresenter.RenderTransform>
-                                        <ScaleTransform x:Name="scaleGrid"
-                                                        ScaleX="1.0" 
-                                                        ScaleY="1.0" 
-                                                        CenterX="200"
-                                                        CenterY="200">
-                                        </ScaleTransform>
-                                    </ContentPresenter.RenderTransform>
-                                </ContentPresenter>
-                            </Grid>
-
-
-
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="ListViewStyle1" TargetType="ListView">
-            <Setter Property="IsTabStop" Value="False"/>
-            <Setter Property="TabNavigation" Value="Once"/>
-            <Setter Property="IsSwipeEnabled" Value="True"/>
-            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
-            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
-            <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Disabled"/>
-            <Setter Property="ScrollViewer.IsHorizontalRailEnabled" Value="False"/>
-            <Setter Property="ScrollViewer.VerticalScrollMode" Value="Enabled"/>
-            <Setter Property="ScrollViewer.IsVerticalRailEnabled" Value="True"/>
-            <Setter Property="ScrollViewer.ZoomMode" Value="Disabled"/>
-            <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="False"/>
-            <Setter Property="ScrollViewer.BringIntoViewOnFocusChange" Value="True"/>
-            <Setter Property="UseSystemFocusVisuals" Value="True"/>
-            <Setter Property="ItemContainerTransitions">
-                <Setter.Value>
-                    <TransitionCollection>
-                        <AddDeleteThemeTransition/>
-                        <ContentThemeTransition/>
-                        <ReorderThemeTransition/>
-                        <EntranceThemeTransition IsStaggeringEnabled="False"/>
-                    </TransitionCollection>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="ItemsPanel">
-                <Setter.Value>
-                    <ItemsPanelTemplate>
-                        <ItemsStackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ListView">
-                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
-                            <ScrollViewer x:Name="ScrollViewer" 
-                                          AutomationProperties.AccessibilityView="Raw" 
-                                          BringIntoViewOnFocusChange="{TemplateBinding ScrollViewer.BringIntoViewOnFocusChange}" 
-                                          HorizontalScrollMode="{TemplateBinding ScrollViewer.HorizontalScrollMode}" 
-                                          HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" 
-                                          IsHorizontalRailEnabled="{TemplateBinding ScrollViewer.IsHorizontalRailEnabled}"
-                                          IsHorizontalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsHorizontalScrollChainingEnabled}" 
-                                          IsVerticalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsVerticalScrollChainingEnabled}"
-                                          IsVerticalRailEnabled="{TemplateBinding ScrollViewer.IsVerticalRailEnabled}" 
-                                          IsDeferredScrollingEnabled="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}" 
-                                          TabNavigation="{TemplateBinding TabNavigation}" 
-                                          VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" 
-                                          VerticalScrollMode="{TemplateBinding ScrollViewer.VerticalScrollMode}"
-                                          ZoomMode="{TemplateBinding ScrollViewer.ZoomMode}">
-                                <ItemsPresenter FooterTransitions="{TemplateBinding FooterTransitions}" FooterTemplate="{TemplateBinding FooterTemplate}" Footer="{TemplateBinding Footer}" HeaderTemplate="{TemplateBinding HeaderTemplate}" Header="{TemplateBinding Header}" HeaderTransitions="{TemplateBinding HeaderTransitions}" Padding="{TemplateBinding Padding}"/>
-                            </ScrollViewer>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Page.Resources>
+    
+    
 
     <Grid>
-        <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
-            <ListView x:ConnectionId='9'                                   
-                  ItemContainerStyle="{StaticResource IndexContainer}"
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:ConnectionId='2' x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="ItemDetailsPannel.Grid.Column" Value="0"/>
+                        <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="2"/>
+
+
+                        <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
+                        <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="2"/>
+
+                       
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='3' x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="950"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
+                        <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="1"/>
+
+                        <Setter Target="ItemDetailsPannel.Grid.Column" Value="1"/>
+                        <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        
+
+        <Grid x:ConnectionId='4'  Name="ItemListContainer"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               >
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
+                           >
+                <ListView x:ConnectionId='12'                                   
+                  ItemContainerStyle="{StaticResource ListViewItemContainerCommonStyle}"
                   HorizontalAlignment="Center"
                   Name="ItemListview"
                   Visibility="Visible"
                   IsItemClickEnabled="True"
                                                     
-                  Style="{StaticResource ListViewStyle1}"
                   ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                  
                   >
-            <ListView.ItemTemplate>
-                <DataTemplate                             >
-                    <Grid x:ConnectionId='10' Height="250"
+                    <ListView.ItemTemplate>
+                        <DataTemplate                             >
+                            <Grid x:ConnectionId='13' Height="250"
                           MinWidth="400">
-                        <Image x:ConnectionId='11'                                               
+                                <Image x:ConnectionId='14'                                               
                                Stretch="UniformToFill"
                                Name="IndexImage"/>
-                        <StackPanel HorizontalAlignment="Center"
+                                <StackPanel HorizontalAlignment="Center"
                                     VerticalAlignment="Center">
-                            <TextBlock x:ConnectionId='12'                                            
+                                    <TextBlock x:ConnectionId='15'                                            
                                        Foreground="White"
                                        FontSize="26"/>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        </ScrollViewer>
-        <Grid x:ConnectionId='2' Name="ItemDetailsPannel"
-              Visibility="Collapsed">
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid x:ConnectionId='5' Name="ItemDetailsPannel"
+              Visibility="Collapsed"
+              Background="White"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="3*"></RowDefinition>
@@ -155,7 +103,7 @@
 
 
             <Grid Grid.Row="0">
-                <Image x:ConnectionId='7' Name="DetailsImage"
+                <Image x:ConnectionId='10' Name="DetailsImage"
                        Stretch="UniformToFill">
                 </Image>
                 <StackPanel Orientation="Horizontal"
@@ -171,7 +119,7 @@
                                Foreground="White"
                                FontSize="16"
                                FontWeight="Bold"/>
-                    <TextBlock x:ConnectionId='8' Name="LikesCountTextBlock"
+                    <TextBlock x:ConnectionId='11' Name="LikesCountTextBlock"
                                VerticalAlignment="Center"
                                Margin="8,0,0,0"
                                Foreground="White"
@@ -181,7 +129,7 @@
             </Grid>
 
 
-            <Grid x:ConnectionId='3' Grid.Row="1"
+            <Grid x:ConnectionId='6' Grid.Row="1"
                   Name="ContentContainer"
                   Background="#52938B"
                   Padding="20">
@@ -198,7 +146,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock x:ConnectionId='5' Name="VolumeText"
+                    <TextBlock x:ConnectionId='8' Name="VolumeText"
                                Grid.Column="0"
                                FontSize="20"
                                Foreground="#264440"/>
@@ -218,7 +166,7 @@
                                       Foreground="#264440"
                                       FontSize="30"/>
                         </Button>
-                        <Button x:ConnectionId='6' Background="Transparent"
+                        <Button x:ConnectionId='9' Background="Transparent"
                                                     >
                             <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE72B;"
@@ -230,7 +178,7 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <TextBlock x:ConnectionId='4' Name="WordsText"
+                    <TextBlock x:ConnectionId='7' Name="WordsText"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
                                TextWrapping="WrapWholeWords"
@@ -240,7 +188,9 @@
             </Grid>
 
         </Grid>
-        
+
+
+
     </Grid>
 </Page>
 

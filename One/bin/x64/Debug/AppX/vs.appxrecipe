@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\study\uwpProjects\One\One\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-08T14:28:03.124</Modified>
+      <Modified>2017-10-12T14:08:15.958</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\One.exe">
       <PackagePath>entrypoint\One.exe</PackagePath>
-      <Modified>2017-10-08T14:28:02.205</Modified>
+      <Modified>2017-10-12T14:08:14.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\Handy.DotNETCore-Compatibility.ColorTranslations\0.2.1\lib\netstandard1.4\ColorTranslations.dll">
       <PackagePath>ColorTranslations.dll</PackagePath>
@@ -803,7 +803,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\One.xr.xml">
       <PackagePath>One.xr.xml</PackagePath>
-      <Modified>2017-10-08T13:47:08.625</Modified>
+      <Modified>2017-10-12T14:08:14.024</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -812,11 +812,11 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-08T14:28:02.815</Modified>
+      <Modified>2017-10-12T14:08:15.005</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\Core\One.exe">
       <PackagePath>One.exe</PackagePath>
-      <Modified>2017-10-08T14:28:03.117</Modified>
+      <Modified>2017-10-12T14:08:15.953</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

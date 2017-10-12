@@ -5,8 +5,49 @@
     xmlns:local="using:One.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:One.Model"
     mc:Ignorable="d">
 
     <Grid>
+        <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+            <ListView Name="StoryListView"
+                        ItemsSource="{x:Bind contentList}"
+                        ItemContainerStyle="{StaticResource ListViewItemContainerDefaultStyle}"
+                        Visibility="Visible"
+                        ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                        >
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:ContentList">
+                        <Grid 
+                              Height="180"
+                              Padding="30,20,30,20">
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <Ellipse Width="60"
+                                            Height="60">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{x:Bind author.web_url}"></ImageBrush>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical"
+                                            Margin="15,0,0,0">
+                                    <TextBlock Text="{x:Bind title}"
+                                               FontWeight="Bold"></TextBlock>
+                                    <TextBlock Text="{x:Bind author.user_name}"
+                                               FontSize="14"
+                                               Margin="0,5,0,0"></TextBlock>
+                                    <TextBlock Text="{x:Bind forward}"
+                                               Margin="0,5,0,0"
+                                               TextWrapping="Wrap"
+                                               ></TextBlock>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
     </Grid>
 </Page>

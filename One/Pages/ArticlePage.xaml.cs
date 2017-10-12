@@ -1,4 +1,5 @@
-﻿using System;
+﻿using One.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,23 @@ namespace One.Pages
     /// </summary>
     public sealed partial class ArticlePage : Page
     {
+        List<RootObject> receiveData = null;
+
+        List<ContentList> contentList = null;
+
         public ArticlePage()
         {
             this.InitializeComponent();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            receiveData = (List<RootObject>)e.Parameter;
+
+            contentList = ExtracteDataManager.ExtracteDataByShareUrl(receiveData, "article");
+        }
+
+
     }
 }

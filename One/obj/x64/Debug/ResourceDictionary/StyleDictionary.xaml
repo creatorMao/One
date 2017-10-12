@@ -770,5 +770,91 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <!--ListViewItem的模板 这个模板鼠标移上去有变化-->
+    <Style x:Key="ListViewItemContainerCommonStyle" TargetType="ListViewItem">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup>
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.4" From="1" To="0.7" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="contentPhoto" ></DoubleAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.4" From="0.7" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="contentPhoto" ></DoubleAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+
+
+
+                        <Grid Name="Mask" 
+                                      Background="Black">
+
+                            <ContentPresenter x:Name="contentPhoto"
+                                              Opacity="0.5">
+                                <ContentPresenter.RenderTransform>
+                                    <ScaleTransform x:Name="scaleGrid"
+                                                        ScaleX="1.0" 
+                                                        ScaleY="1.0" 
+                                                        CenterX="200"
+                                                        CenterY="200">
+                                    </ScaleTransform>
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
+                        </Grid>
+
+
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--除了改了一点padding  几乎没改-->
+    <Style x:Key="ListViewItemContainerDefaultStyle" TargetType="ListViewItem">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid Name="RootContainer">
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup>
+                                <VisualState x:Name="Normal">
+                                </VisualState>
+                                <VisualState x:Name="PointerOver">
+                                    <!--<Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.4" From="0.7" To="1" Storyboard.TargetProperty="" Storyboard.TargetName="RootContainer" ></DoubleAnimation>
+                                    </Storyboard>-->
+                                    <VisualState.Setters>
+                                        <Setter Target="RootContainer.Background" Value="#e8e8e8"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+
+                        <ContentPresenter>
+                               
+                            </ContentPresenter>
+                        
+
+
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
 

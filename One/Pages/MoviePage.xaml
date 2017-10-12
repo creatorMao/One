@@ -5,8 +5,84 @@
     xmlns:local="using:One.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:One.Model"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Name="MoviePageRootGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="MovieDetail.Grid.Column" Value="0"/>
+                        <Setter Target="MovieDetail.Grid.ColumnSpan" Value="2"/>
+
+
+                        <Setter Target="MovieListViewContainer.Grid.Column" Value="0"/>
+                        <Setter Target="MovieListViewContainer.Grid.ColumnSpan" Value="2"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="950"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MovieListViewContainer.Grid.Column" Value="0"/>
+                        <Setter Target="MovieListViewContainer.Grid.ColumnSpan" Value="1"/>
+
+                        <Setter Target="MovieDetail.Grid.Column" Value="1"/>
+                        <Setter Target="MovieDetail.Grid.ColumnSpan" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <Grid Name="MovieListViewContainer">
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                <ListView Name="MovieListView"
+                          ItemsSource="{x:Bind receiveData}"
+                          ItemContainerStyle="{StaticResource ListViewItemContainerCommonStyle}"
+                          Visibility="Visible"
+                          IsItemClickEnabled="True"
+                          ItemClick="MovieListView_ItemClick"
+                          >
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Datum">
+                            <Grid MinWidth="400"
+                                  Height="300">
+                                <Image Source="{x:Bind img_url}"
+                                       Stretch="UniformToFill"></Image>
+                                <TextBlock Text="{x:Bind subtitle}"
+                                           HorizontalAlignment="Left"
+                                           VerticalAlignment="Bottom"
+                                           Margin="30"
+                                           Foreground="White"
+                                           FontSize="20"></TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid Name="MovieDetail"
+              Background="White"
+              Visibility="Collapsed">
+            
+        </Grid>
+        
     </Grid>
+    
 </Page>

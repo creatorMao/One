@@ -1,5 +1,7 @@
-﻿using System;
+﻿using One.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +24,28 @@ namespace One.Pages
     /// </summary>
     public sealed partial class MoviePage : Page
     {
+        private ObservableCollection<Datum> receiveData = null;
+
         public MoviePage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            receiveData = (ObservableCollection<Datum>)e.Parameter;
+        }
+
+
+        /// <summary>
+        ///  MovieItem点击
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MovieListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            MovieDetail.Visibility = Visibility.Visible;
         }
     }
 }
