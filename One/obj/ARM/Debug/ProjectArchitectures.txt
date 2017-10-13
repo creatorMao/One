@@ -1,0 +1,1 @@
+D:\study\uwpProjects\One\One\One.csproj;arm

@@ -52,14 +52,14 @@
         <Grid Name="MovieListViewContainer">
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
                 <ListView Name="MovieListView"
-                          ItemsSource="{x:Bind receiveData}"
+                          ItemsSource="{x:Bind contentList}"
                           ItemContainerStyle="{StaticResource ListViewItemContainerCommonStyle}"
                           Visibility="Visible"
                           IsItemClickEnabled="True"
                           ItemClick="MovieListView_ItemClick"
                           >
                     <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="model:Datum">
+                        <DataTemplate x:DataType="model:ContentList">
                             <Grid MinWidth="400"
                                   Height="300">
                                 <Image Source="{x:Bind img_url}"

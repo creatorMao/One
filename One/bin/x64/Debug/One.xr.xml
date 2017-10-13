@@ -100,10 +100,12 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Style" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
+      <RootProperty Name="Name" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Glyph" />
       <RootProperty Name="Foreground" />
@@ -138,8 +140,9 @@
       <RootProperty Name="Source" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Name" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Stretch" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -148,14 +151,27 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Name" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
-      <RootProperty Name="FontWeight" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="One.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Style" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalScrollMode" />
+      <RootProperty Name="VerticalScrollMode" />
+      <RootProperty Name="IsHorizontalRailEnabled" />
+      <RootProperty Name="IsVerticalRailEnabled" />
+      <RootProperty Name="ZoomMode" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
+    </RootType>
     <RootType FullName="One.Pages.AboutPage" />
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
@@ -171,18 +187,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.AdaptiveTrigger">
       <RootProperty Name="MinWindowWidth" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="Style" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalScrollMode" />
-      <RootProperty Name="VerticalScrollMode" />
-      <RootProperty Name="IsHorizontalRailEnabled" />
-      <RootProperty Name="IsVerticalRailEnabled" />
-      <RootProperty Name="ZoomMode" />
-      <RootProperty Name="VerticalScrollBarVisibility" />
-      <RootMethod Name="GetVerticalScrollBarVisibility" />
-      <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="One.Pages.IndexPage" />
     <RootType FullName="One.Pages.MoviePage" />

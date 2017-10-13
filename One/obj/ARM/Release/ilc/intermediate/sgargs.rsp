@@ -1,0 +1,12 @@
+/out:"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\SgGenerated\\"
+/int:"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\\"
+/ref:"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\TransformedSRWR"
+/ref:"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\in"
+/ref:"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\in\\"
+/ref:"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\in\\"
+/ref:"C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\tools\ARM\ilc\lib\Private\\"
+/ref:"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\in\WinMetadata"
+/ca:System.Private.CoreLib
+/cscpath:"C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\tools\ARM\ilc\csc"
+"@D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\PreMergeILTransformed\ComputedSerializationInput.txt"

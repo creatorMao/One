@@ -1,0 +1,16 @@
+/osver:6.2
+/appcontainer
+/runtime:mrt100_app
+/eh:clr
+/pdb
+"/nativeLink:C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\tools\ARM\ilc\lib\Native\vmath.lib"
+/customImports
+/methodBodyFolding
+"D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\MDIL\One.mdilexe"
+"/i:D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\MDIL"
+"/out:D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\Native\One.exe"
+"/pdbAltPath:D:\study\uwpProjects\One\One\bin\ARM\Release\ilc"
+"/res:D:\study\uwpProjects\One\One\obj\ARM\Release\ilc\intermediate\Native.res"
+"/i:C:\Users\maozw\.nuget\packages\microsoft.net.native.sharedlibrary-arm\1.7.0\tools\SharedLibrary\ret\MDIL"
+/shimexe
+"/classlib:SharedLibrary"

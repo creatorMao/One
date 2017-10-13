@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="3f5aab68-ec02-41e5-85a4-1552b69e929a" Publisher="CN=maozw" Version="1.0.0.0" ProcessorArchitecture="x64" />
+  <Identity Name="3f5aab68-ec02-41e5-85a4-1552b69e929a" Publisher="CN=maozw" Version="1.0.1.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="3f5aab68-ec02-41e5-85a4-1552b69e929a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>One</DisplayName>

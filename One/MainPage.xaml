@@ -143,7 +143,10 @@
                 Background="Transparent"
                 Style="{StaticResource ButtonCommonStyle}"
                 Grid.Row="1">
-            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Foreground="Black"/>
+            <FontIcon FontFamily="Segoe MDL2 Assets"
+                      Glyph="&#xE700;"
+                      Foreground="Black"
+                      Name="HamburgerButtonFontIcon"/>
         </Button>
 
 

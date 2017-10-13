@@ -116,15 +116,19 @@ namespace One
                 {
                     case "一个":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
+                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "文章":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
+                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "电影":
-                        RootFrame.Navigate(currentNavMenuItem.NavigatePage, movieListData);
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
+                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "关于":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage);
+                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
                         break;
 
                 }
@@ -185,6 +189,8 @@ namespace One
             (rootObject.data).ForEach(p => movieListData.Add(p));
 
             RootFrame.Navigate(typeof(IndexPage),onelistResultList);
+
+            //RootFrame.Navigate(typeof(AboutPage));
 
         }
 

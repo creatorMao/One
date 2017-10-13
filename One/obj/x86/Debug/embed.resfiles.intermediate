@@ -1,2 +1,8 @@
 App.xbf
 MainPage.xbf
+Pages\AboutPage.xbf
+Pages\ArticlePage.xbf
+Pages\IndexPage.xbf
+Pages\MoviePage.xbf
+ResourceDictionary\Dictionary.xbf
+ResourceDictionary\StyleDictionary.xbf

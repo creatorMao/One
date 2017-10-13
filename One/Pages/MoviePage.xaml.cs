@@ -24,7 +24,9 @@ namespace One.Pages
     /// </summary>
     public sealed partial class MoviePage : Page
     {
-        private ObservableCollection<Datum> receiveData = null;
+        List<RootObject> receiveData = null;
+
+        List<ContentList> contentList = null;
 
         public MoviePage()
         {
@@ -34,9 +36,10 @@ namespace One.Pages
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            receiveData = (ObservableCollection<Datum>)e.Parameter;
-        }
+            receiveData = (List<RootObject>)e.Parameter;
 
+            contentList = ExtracteDataManager.ExtracteDataByShareUrl(receiveData,"movie");
+        }
 
         /// <summary>
         ///  MovieItem点击

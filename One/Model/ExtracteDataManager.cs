@@ -25,7 +25,7 @@ namespace One.Model
             {
                 foreach (var i in item.data.content_list)
                 {
-                    if (i.share_url.Substring(0,30)=="http://m.wufazhuce.com/"+category)
+                    if (i.share_url.Substring(0,23+category.Length)=="http://m.wufazhuce.com/"+category)
                     {
                         contentList.Add(i);
                     }

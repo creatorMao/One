@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MZW</Machine>
+    <WindowsUser>maozw</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Release|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>3f5aab68-ec02-41e5-85a4-1552b69e929a</PackageIdentityName>
+    <PackageIdentityPublisher>CN=maozw</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\study\uwpProjects\One\One\obj\x64\Release\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>D:\study\uwpProjects\One\One\bin\x64\Release\AppX</LayoutDir>
+    <RegisteredManifestChecksum>DD42AF51B348E9D59C28F2773A0863FDF006687A71DD6906E9E6EC4F4C06F0A4</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>3f5aab68-ec02-41e5-85a4-1552b69e929a_1.0.1.0_x64__8zpsystjr6qct</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>3f5aab68-ec02-41e5-85a4-1552b69e929a_8zpsystjr6qct!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>3f5aab68-ec02-41e5-85a4-1552b69e929a</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=maozw</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.1.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-10-13T12:36:58.794</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.608</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.626</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.644</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.663</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.686</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\about-selected.png">
+      <PackagePath>Assets\icon\about-selected.png</PackagePath>
+      <Modified>2017-09-05T16:29:35.403</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\about.png">
+      <PackagePath>Assets\icon\about.png</PackagePath>
+      <Modified>2017-09-05T16:29:35.444</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\article-selected.png">
+      <PackagePath>Assets\icon\article-selected.png</PackagePath>
+      <Modified>2017-09-06T06:08:01.427</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\article.png">
+      <PackagePath>Assets\icon\article.png</PackagePath>
+      <Modified>2017-09-06T04:52:18.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\like.png">
+      <PackagePath>Assets\icon\like.png</PackagePath>
+      <Modified>2017-09-23T11:54:39.967</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\movie-selected.png">
+      <PackagePath>Assets\icon\movie-selected.png</PackagePath>
+      <Modified>2017-09-05T16:29:35.425</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\movie.png">
+      <PackagePath>Assets\icon\movie.png</PackagePath>
+      <Modified>2017-09-05T16:29:35.428</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\one-selected.png">
+      <PackagePath>Assets\icon\one-selected.png</PackagePath>
+      <Modified>2017-09-06T06:07:48.580</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\one.png">
+      <PackagePath>Assets\icon\one.png</PackagePath>
+      <Modified>2017-09-06T04:48:55.269</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\header.jpg">
+      <PackagePath>Assets\images\header.jpg</PackagePath>
+      <Modified>2017-09-05T15:47:19.058</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.066</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.084</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.111</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.136</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.180</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2017-08-15T10:31:39.289</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\logo.png">
+      <PackagePath>Assets\logo.png</PackagePath>
+      <Modified>2017-09-06T10:29:02.716</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.783</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.799</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.816</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.837</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.855</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.473</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.495</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.516</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.542</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.591</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.871</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.889</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.907</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.924</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.381</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.453</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.413</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.430</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.200</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.242</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.257</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.275</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.292</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.308</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.396</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.364</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.325</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.344</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.702</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.734</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.752</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.773</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.965</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:08.983</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.020</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-06T10:33:09.044</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\clrcompression.dll">
+      <PackagePath>clrcompression.dll</PackagePath>
+      <Modified>2016-06-13T13:46:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\One.dll">
+      <PackagePath>One.dll</PackagePath>
+      <Modified>2017-10-13T12:36:58.431</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\One.exe">
+      <PackagePath>One.exe</PackagePath>
+      <Modified>2017-10-13T12:36:58.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\One.pdb">
+      <PackagePath>One.pdb</PackagePath>
+      <Modified>2017-10-13T12:36:58.777</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-10-13T12:35:58.872</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\maozw\.nuget\packages\microsoft.net.native.sharedlibrary-x86\1.7.0\build\..\tools\SharedLibrary\ret\Native\Microsoft.NET.Native.Framework.1.7.appx">
+      <Name>Microsoft.NET.Native.Framework.1.7</Name>
+      <Version>1.7.25531.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.Native.Framework.1.7, MinVersion = 1.7.25531.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\maozw\.nuget\packages\microsoft.net.native.sharedlibrary-x86\1.7.0\build\..\tools\SharedLibrary\ret\Native\Microsoft.NET.Native.Framework.1.7.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\maozw\.nuget\packages\microsoft.net.native.sharedlibrary-x64\1.7.0\build\..\tools\SharedLibrary\ret\Native\Microsoft.NET.Native.Framework.1.7.appx">
+      <Name>Microsoft.NET.Native.Framework.1.7</Name>
+      <Version>1.7.25531.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.Native.Framework.1.7, MinVersion = 1.7.25531.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\maozw\.nuget\packages\microsoft.net.native.sharedlibrary-x64\1.7.0\build\..\tools\SharedLibrary\ret\Native\Microsoft.NET.Native.Framework.1.7.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\maozw\.nuget\packages\microsoft.net.native.sharedlibrary-arm\1.7.0\build\..\tools\SharedLibrary\ret\Native\Microsoft.NET.Native.Framework.1.7.appx">
+      <Name>Microsoft.NET.Native.Framework.1.7</Name>
+      <Version>1.7.25531.0</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.Native.Framework.1.7, MinVersion = 1.7.25531.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\maozw\.nuget\packages\microsoft.net.native.sharedlibrary-arm\1.7.0\build\..\tools\SharedLibrary\ret\Native\Microsoft.NET.Native.Framework.1.7.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\build\..\tools\Runtime\x86\Microsoft.NET.Native.Runtime.1.7.appx">
+      <Name>Microsoft.NET.Native.Runtime.1.7</Name>
+      <Version>1.7.25531.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.Native.Runtime.1.7, MinVersion = 1.7.25531.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\build\..\tools\Runtime\x86\Microsoft.NET.Native.Runtime.1.7.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\build\..\tools\Runtime\x64\Microsoft.NET.Native.Runtime.1.7.appx">
+      <Name>Microsoft.NET.Native.Runtime.1.7</Name>
+      <Version>1.7.25531.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.Native.Runtime.1.7, MinVersion = 1.7.25531.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\build\..\tools\Runtime\x64\Microsoft.NET.Native.Runtime.1.7.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\build\..\tools\Runtime\arm\Microsoft.NET.Native.Runtime.1.7.appx">
+      <Name>Microsoft.NET.Native.Runtime.1.7</Name>
+      <Version>1.7.25531.0</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.Native.Runtime.1.7, MinVersion = 1.7.25531.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\maozw\.nuget\packages\microsoft.net.native.compiler\1.7.0\build\..\tools\Runtime\arm\Microsoft.NET.Native.Runtime.1.7.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.24123.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.24123.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\ARM\Microsoft.VCLibs.ARM.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.24123.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.24123.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\x64\Microsoft.VCLibs.x64.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00</Name>
+      <Version>14.0.24123.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00, MinVersion = 14.0.24123.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Retail\x86\Microsoft.VCLibs.x86.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

@@ -18,6 +18,9 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <PackageCertificateKeyFile>One_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -134,12 +137,21 @@
     <Content Include="Assets\icon\about.png" />
     <Content Include="Assets\icon\article.png" />
     <Content Include="Assets\icon\article-selected.png" />
+    <Content Include="Assets\icon\doge.png" />
+    <Content Include="Assets\icon\github.png" />
     <Content Include="Assets\icon\like.png" />
+    <Content Include="Assets\icon\microsoft-shop.png" />
     <Content Include="Assets\icon\movie-selected.png" />
     <Content Include="Assets\icon\movie.png" />
     <Content Include="Assets\icon\one-selected.png" />
     <Content Include="Assets\icon\one.png" />
+    <Content Include="Assets\icon\qq.png" />
+    <Content Include="Assets\icon\weibo.png" />
+    <Content Include="Assets\icon\email.png" />
     <Content Include="Assets\images\header.jpg" />
+    <Content Include="Assets\images\about-page-bg.png" />
+    <Content Include="Assets\images\about-page-bg1.png" />
+    <Content Include="Assets\images\about-page-bg2.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
