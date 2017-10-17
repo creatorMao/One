@@ -81,20 +81,20 @@
                     <!--侧边栏中间部分显示时间-->
                     <Grid Grid.Row="1">
                         <StackPanel Margin="25,0,0,5">
-                            <TextBlock x:ConnectionId='9' Name="TodayDate"
+                            <TextBlock x:ConnectionId='10' Name="TodayDate"
                                        Margin="0,5,0,5"
                                        Foreground="#757575"
                                        FontSize="17"/>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='10' Name="PlaceName"
+                                <TextBlock x:ConnectionId='11' Name="PlaceName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
-                                <TextBlock x:ConnectionId='11' Name="AirName"
+                                <TextBlock x:ConnectionId='12' Name="AirName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
-                                <TextBlock x:ConnectionId='12' Name="TempName"
+                                <TextBlock x:ConnectionId='13' Name="TempName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
@@ -104,21 +104,21 @@
 
                     <!--侧边栏选择项-->
                     <Grid Grid.Row="2">
-                        <ListView x:ConnectionId='5' ItemContainerStyle="{StaticResource MenuItemContainer}"
+                        <ListView x:ConnectionId='6' ItemContainerStyle="{StaticResource MenuItemContainer}"
                                                                     
                                                                 
                                   IsItemClickEnabled="True"
                                   Name="NavListview">
                             <ListView.ItemTemplate>
                                 <DataTemplate                               >
-                                    <StackPanel x:ConnectionId='6' Orientation="Horizontal"
+                                    <StackPanel x:ConnectionId='7' Orientation="Horizontal"
                                                 Padding="20,0,0,0"
                                                 >
-                                        <Image x:ConnectionId='7'                                          
+                                        <Image x:ConnectionId='8'                                          
                                                Width="20"
                                                Height="20"
                                                />
-                                        <TextBlock x:ConnectionId='8'                      
+                                        <TextBlock x:ConnectionId='9'                      
                                                    Margin="27,-2,0,0"
                                                                                                     
                                                    VerticalAlignment="Center"
@@ -132,8 +132,8 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid x:ConnectionId='13' Name="RootGrid">
-                    <Frame x:ConnectionId='14' Name="RootFrame"></Frame>
+                <Grid x:ConnectionId='14' Name="RootGrid">
+                    <Frame x:ConnectionId='15' Name="RootFrame"></Frame>
                 </Grid>
             </SplitView.Content>
         </SplitView>
@@ -143,7 +143,10 @@
                 Background="Transparent"
                 Style="{StaticResource ButtonCommonStyle}"
                 Grid.Row="1">
-            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Foreground="Black"/>
+            <FontIcon x:ConnectionId='5' FontFamily="Segoe MDL2 Assets"
+                      Glyph="&#xE700;"
+                      Foreground="Black"
+                      Name="HamburgerButtonFontIcon"/>
         </Button>
 
 

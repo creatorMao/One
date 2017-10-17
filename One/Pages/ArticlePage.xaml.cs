@@ -27,6 +27,8 @@ namespace One.Pages
 
         List<ContentList> contentList = null;
 
+        List<Article_RootObject> articleList = null;
+
         public ArticlePage()
         {
             this.InitializeComponent();
@@ -40,6 +42,26 @@ namespace One.Pages
             contentList = ExtracteDataManager.ExtracteDataByShareUrl(receiveData, "article");
         }
 
+        private void StoryListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Article_Detail.Visibility = Visibility.Visible;
 
+            var clickedItem = e.ClickedItem as ContentList;
+
+            string item_id = clickedItem.item_id;
+
+            PrePare(item_id);
+        }
+
+
+        private async void PrePare(string item_id)
+        {
+            articleList = await ArticalInfoManager.GetArticleInfoByItemId(item_id);
+
+
+            Article_Title.Text = articleList[0].data.hp_title;
+            Article_Author.Text = "文/"+articleList[0].data.author[0].user_name;
+            Article_Content.Text = articleList[0].data.hp_content.Replace("<p>","").Replace("</p>",""); ;
+        }
     }
 }

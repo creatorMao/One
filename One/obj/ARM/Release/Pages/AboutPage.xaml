@@ -6,14 +6,156 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-  
 
-    <Grid>
-        <Button Style="{StaticResource ButtonCommonStyle}">
-            <FontIcon FontFamily="Segoe MDL2 Assets"
-                      Glyph="&#xE700;" 
-                      Foreground="Black"/>
-        </Button>
+
+    <Grid Background="Black">
+        <Grid Opacity="0.5"
+              >
+            <Image Source="../Assets/images/about-page-bg2.png"
+                   Stretch="UniformToFill"/>
+        </Grid>
+        <Grid>
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            >
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <Image Source="../Assets/logo.png"
+                               Width="50"
+                               Height="50"/>
+                        <TextBlock Text="「ONE · 一个」"
+                               VerticalAlignment="Center"
+                               Foreground="White"
+                               FontSize="16"
+                               Margin="10,0,0,0"
+                               />
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Foreground="White">
+                            Version:1.0.0
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center"
+                            Margin="0,15,0,0">
+                        <TextBlock Foreground="White">复杂世界里, 一个就够了. One is all.</TextBlock>
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Foreground="White"
+                               FontWeight="Bold"
+                               FontSize="18"
+                               Margin="0,30,0,0">Like</TextBlock>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <Button x:ConnectionId='3' Foreground="White"
+                                Margin="0,10,0,0" 
+                                Style="{StaticResource ButtonAboutPageStyle}"
+                                               >
+                            给我点个赞.
+                        </Button>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Foreground="White"
+                               FontWeight="Bold"
+                               FontSize="18"
+                               Margin="0,30,0,0">Other Apps</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0,10,0,0">
+                        <Button Style="{StaticResource ButtonCommonStyle}">
+                            <Image Source="../Assets/icon/doge.png"
+                               Width="30"
+                               Height="30"/>
+                        </Button>
+                        <Button x:ConnectionId='2' Foreground="White"
+                                VerticalAlignment="Center"
+                                Style="{StaticResource ButtonAboutPageStyle}"
+                                               >
+                            围脖控
+                        </Button>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Foreground="White"
+                               FontWeight="Bold"
+                               FontSize="18"
+                               Margin="0,30,0,0">Contact Me</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0,10,0,0">
+                        <HyperlinkButton Margin="5,0,5,0"
+                                         NavigateUri="http://www.creatordream.cn/"
+                                         Width="50"
+                                         Height="50"
+                                         Style="{StaticResource HyperlinkButtonStyle1}">
+                            <Image Width="30"
+                                   Height="30"
+                                   Source="../Assets/icon/cat.png">
+                            </Image>
+                        </HyperlinkButton>
+                        <HyperlinkButton Margin="5,0,5,0"
+                                         Width="50"
+                                         Height="50"
+                                         NavigateUri="https://github.com/creatorMao/One"
+                                         Style="{StaticResource HyperlinkButtonStyle1}">
+                            <Image Width="35"
+                                   Height="35"
+                                   Source="../Assets/icon/github.png">
+                            </Image>
+                        </HyperlinkButton>
+                        <HyperlinkButton Margin="5,0,5,0"
+                                         Width="50"
+                                         Height="50"
+                                         NavigateUri="http://weibo.com/liushu845447380"
+                                         Style="{StaticResource HyperlinkButtonStyle1}"
+                                         >
+                            <Image Width="40"
+                               Height="40"
+                               Source="../Assets/icon/weibo.png">
+
+                            </Image>
+                        </HyperlinkButton>
+                        <HyperlinkButton Margin="5,0,5,0"
+                                         Width="50"
+                                         Height="50"
+                                         Style="{StaticResource HyperlinkButtonStyle1}">
+                            <Image Width="30"
+                               Height="30"
+                               Source="../Assets/icon/microsoft-shop.png">
+
+                            </Image>
+                        </HyperlinkButton>
+                        <HyperlinkButton x:ConnectionId='1' Margin="5,0,5,0"
+                                         Width="50"
+                                         Height="50"
+                                         Style="{StaticResource HyperlinkButtonStyle1}"
+                                                          >
+                            <Image Width="40"
+                               Height="40"
+                               Source="../Assets/icon/email.png"
+                                    Margin="0,-2,0,0"
+                                   >
+
+                            </Image>
+                        </HyperlinkButton>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Foreground="White"
+                               FontWeight="Bold"
+                               FontSize="18"
+                               Margin="0,30,0,0">Thanks</TextBlock>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <HyperlinkButton Foreground="White"
+                                         Content="JuniperPhoton"
+                                         NavigateUri="http://weibo.com/photon" 
+                                         Style="{StaticResource HyperlinkButtonCommonStyle}"/>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>
 

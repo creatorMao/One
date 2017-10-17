@@ -9,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
@@ -31,7 +32,6 @@ namespace One
     {
         public List<RootObject> onelistResultList = null;
 
-        private ObservableCollection<Datum> movieListData = null;
 
         private List<NavMenuItem> navMenuList = null;
 
@@ -183,14 +183,17 @@ namespace One
             TempName.Text = onelistResultList[0].data.weather.temperature+ "℃";
 
 
-            Movie_RootObject rootObject = new Movie_RootObject();
-            rootObject = await MovieListManager.GetRecentMovielist();
-            movieListData = new ObservableCollection<Datum>();
-            (rootObject.data).ForEach(p => movieListData.Add(p));
+           
 
             RootFrame.Navigate(typeof(IndexPage),onelistResultList);
 
             //RootFrame.Navigate(typeof(AboutPage));
+
+            //RootFrame.Navigate(typeof(IndexPage));
+
+
+            //RootFrame.Navigate(typeof(MoviePage), onelistResultList);
+
 
         }
 

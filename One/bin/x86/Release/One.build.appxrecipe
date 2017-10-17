@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Release|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>3f5aab68-ec02-41e5-85a4-1552b69e929a</PackageIdentityName>
-    <PackageIdentityPublisher>CN=maozw</PackageIdentityPublisher>
+    <PackageIdentityName>2c5bb877-dcde-4dd9-8219-b8632335d869</PackageIdentityName>
+    <PackageIdentityPublisher>CN=7AB80963-39C0-4325-A468-DC0AA0B127A8</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\study\uwpProjects\One\One\obj\x86\Release\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
@@ -57,8 +57,23 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\article.png">
       <PackagePath>Assets\icon\article.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\cat.png">
+      <PackagePath>Assets\icon\cat.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\doge.png">
+      <PackagePath>Assets\icon\doge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\email.png">
+      <PackagePath>Assets\icon\email.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\github.png">
+      <PackagePath>Assets\icon\github.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\like.png">
       <PackagePath>Assets\icon\like.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\microsoft-shop.png">
+      <PackagePath>Assets\icon\microsoft-shop.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\movie-selected.png">
       <PackagePath>Assets\icon\movie-selected.png</PackagePath>
@@ -71,6 +86,21 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\one.png">
       <PackagePath>Assets\icon\one.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\qq.png">
+      <PackagePath>Assets\icon\qq.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\weibo.png">
+      <PackagePath>Assets\icon\weibo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\images\about-page-bg.png">
+      <PackagePath>Assets\images\about-page-bg.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\images\about-page-bg1.png">
+      <PackagePath>Assets\images\about-page-bg1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\images\about-page-bg2.png">
+      <PackagePath>Assets\images\about-page-bg2.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\images\header.jpg">
       <PackagePath>Assets\images\header.jpg</PackagePath>

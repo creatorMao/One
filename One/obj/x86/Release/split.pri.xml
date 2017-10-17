@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PriInfo>
-	<ResourceMap name="3f5aab68-ec02-41e5-85a4-1552b69e929a" version="1.0" primary="true">
+	<ResourceMap name="32688UWP.UWP" version="1.0" primary="true">
 		<Qualifiers>
 			<AlternateForm>UNPLATED</AlternateForm>
 			<Scale>200</Scale>
 			<TargetSize>256,16,24,32,48</TargetSize>
 		</Qualifiers>
 		<ResourceMapSubtree name="Files">
-			<NamedResource name="App.xbf" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/App.xbf">
+			<NamedResource name="App.xbf" uri="ms-resource://32688UWP.UWP/Files/App.xbf">
 				<Candidate type="EmbeddedData">
 					<Base64Value>[Embedded Binary Data]</Base64Value>
 				</Candidate>
 			</NamedResource>
-			<NamedResource name="MainPage.xbf" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/MainPage.xbf">
+			<NamedResource name="MainPage.xbf" uri="ms-resource://32688UWP.UWP/Files/MainPage.xbf">
 				<Candidate type="EmbeddedData">
 					<Base64Value>[Embedded Binary Data]</Base64Value>
 				</Candidate>
 			</NamedResource>
-			<NamedResource name="One.xr.xml" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/One.xr.xml">
+			<NamedResource name="One.xr.xml" uri="ms-resource://32688UWP.UWP/Files/One.xr.xml">
 				<Candidate type="Path">
 					<Value>One.xr.xml</Value>
 				</Candidate>
 			</NamedResource>
 			<ResourceMapSubtree name="Assets">
-				<NamedResource name="BadgeLogo.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/BadgeLogo.png">
+				<NamedResource name="BadgeLogo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/BadgeLogo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\BadgeLogo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="LargeTile.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/LargeTile.png">
+				<NamedResource name="LargeTile.png" uri="ms-resource://32688UWP.UWP/Files/Assets/LargeTile.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\LargeTile.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="LockScreenLogo.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/LockScreenLogo.png">
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/LockScreenLogo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\LockScreenLogo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="logo.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/logo.png">
+				<NamedResource name="logo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/logo.png">
 					<Candidate type="Path">
 						<Value>Assets\logo.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="SmallTile.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/SmallTile.png">
+				<NamedResource name="SmallTile.png" uri="ms-resource://32688UWP.UWP/Files/Assets/SmallTile.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\SmallTile.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="SplashScreen.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/SplashScreen.png">
+				<NamedResource name="SplashScreen.png" uri="ms-resource://32688UWP.UWP/Files/Assets/SplashScreen.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\SplashScreen.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="Square150x150Logo.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/Square150x150Logo.png">
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/Square150x150Logo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\Square150x150Logo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="Square44x44Logo.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/Square44x44Logo.png">
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/Square44x44Logo.png">
 					<Candidate qualifiers="TargetSize-48, AlternateForm-UNPLATED" type="Path">
 						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</Value>
 					</Candidate>
@@ -93,65 +93,115 @@
 						<Value>Assets\Square44x44Logo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="StoreLogo.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/StoreLogo.png">
+				<NamedResource name="StoreLogo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/StoreLogo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\StoreLogo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/Wide310x150Logo.png">
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/Wide310x150Logo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
 				<ResourceMapSubtree name="icon">
-					<NamedResource name="about-selected.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/about-selected.png">
+					<NamedResource name="about-selected.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/about-selected.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\about-selected.png</Value>
 						</Candidate>
 					</NamedResource>
-					<NamedResource name="about.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/about.png">
+					<NamedResource name="about.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/about.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\about.png</Value>
 						</Candidate>
 					</NamedResource>
-					<NamedResource name="article-selected.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/article-selected.png">
+					<NamedResource name="article-selected.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/article-selected.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\article-selected.png</Value>
 						</Candidate>
 					</NamedResource>
-					<NamedResource name="article.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/article.png">
+					<NamedResource name="article.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/article.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\article.png</Value>
 						</Candidate>
 					</NamedResource>
-					<NamedResource name="like.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/like.png">
+					<NamedResource name="cat.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/cat.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\cat.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="doge.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/doge.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\doge.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="email.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/email.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\email.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="github.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/github.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\github.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="like.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/like.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\like.png</Value>
 						</Candidate>
 					</NamedResource>
-					<NamedResource name="movie-selected.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/movie-selected.png">
+					<NamedResource name="microsoft-shop.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/microsoft-shop.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\microsoft-shop.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="movie-selected.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/movie-selected.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\movie-selected.png</Value>
 						</Candidate>
 					</NamedResource>
-					<NamedResource name="movie.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/movie.png">
+					<NamedResource name="movie.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/movie.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\movie.png</Value>
 						</Candidate>
 					</NamedResource>
-					<NamedResource name="one-selected.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/one-selected.png">
+					<NamedResource name="one-selected.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/one-selected.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\one-selected.png</Value>
 						</Candidate>
 					</NamedResource>
-					<NamedResource name="one.png" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/icon/one.png">
+					<NamedResource name="one.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/one.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\one.png</Value>
 						</Candidate>
 					</NamedResource>
+					<NamedResource name="qq.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/qq.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\qq.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="weibo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/weibo.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\weibo.png</Value>
+						</Candidate>
+					</NamedResource>
 				</ResourceMapSubtree>
 				<ResourceMapSubtree name="images">
-					<NamedResource name="header.jpg" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Assets/images/header.jpg">
+					<NamedResource name="about-page-bg.png" uri="ms-resource://32688UWP.UWP/Files/Assets/images/about-page-bg.png">
+						<Candidate type="Path">
+							<Value>Assets\images\about-page-bg.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="about-page-bg1.png" uri="ms-resource://32688UWP.UWP/Files/Assets/images/about-page-bg1.png">
+						<Candidate type="Path">
+							<Value>Assets\images\about-page-bg1.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="about-page-bg2.png" uri="ms-resource://32688UWP.UWP/Files/Assets/images/about-page-bg2.png">
+						<Candidate type="Path">
+							<Value>Assets\images\about-page-bg2.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="header.jpg" uri="ms-resource://32688UWP.UWP/Files/Assets/images/header.jpg">
 						<Candidate type="Path">
 							<Value>Assets\images\header.jpg</Value>
 						</Candidate>
@@ -159,48 +209,48 @@
 				</ResourceMapSubtree>
 			</ResourceMapSubtree>
 			<ResourceMapSubtree name="Pages">
-				<NamedResource name="AboutPage.xbf" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Pages/AboutPage.xbf">
+				<NamedResource name="AboutPage.xbf" uri="ms-resource://32688UWP.UWP/Files/Pages/AboutPage.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="ArticlePage.xbf" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Pages/ArticlePage.xbf">
+				<NamedResource name="ArticlePage.xbf" uri="ms-resource://32688UWP.UWP/Files/Pages/ArticlePage.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="IndexPage.xbf" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Pages/IndexPage.xbf">
+				<NamedResource name="IndexPage.xbf" uri="ms-resource://32688UWP.UWP/Files/Pages/IndexPage.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="MoviePage.xbf" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Pages/MoviePage.xbf">
+				<NamedResource name="MoviePage.xbf" uri="ms-resource://32688UWP.UWP/Files/Pages/MoviePage.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
 			<ResourceMapSubtree name="Properties">
-				<NamedResource name="Default.rd.xml" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/Properties/Default.rd.xml">
+				<NamedResource name="Default.rd.xml" uri="ms-resource://32688UWP.UWP/Files/Properties/Default.rd.xml">
 					<Candidate type="Path">
 						<Value>Properties\Default.rd.xml</Value>
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
 			<ResourceMapSubtree name="ResourceDictionary">
-				<NamedResource name="Dictionary.xbf" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/ResourceDictionary/Dictionary.xbf">
+				<NamedResource name="Dictionary.xbf" uri="ms-resource://32688UWP.UWP/Files/ResourceDictionary/Dictionary.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="StyleDictionary.xbf" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/ResourceDictionary/StyleDictionary.xbf">
+				<NamedResource name="StyleDictionary.xbf" uri="ms-resource://32688UWP.UWP/Files/ResourceDictionary/StyleDictionary.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
 			<ResourceMapSubtree name="WinMetadata">
-				<NamedResource name="Windows.winmd" uri="ms-resource://3f5aab68-ec02-41e5-85a4-1552b69e929a/Files/WinMetadata/Windows.winmd">
+				<NamedResource name="Windows.winmd" uri="ms-resource://32688UWP.UWP/Files/WinMetadata/Windows.winmd">
 					<Candidate type="Path">
 						<Value>WinMetadata\Windows.winmd</Value>
 					</Candidate>

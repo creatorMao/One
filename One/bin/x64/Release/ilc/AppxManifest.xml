@@ -7,11 +7,11 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="3f5aab68-ec02-41e5-85a4-1552b69e929a" Publisher="CN=maozw" Version="1.0.1.0" ProcessorArchitecture="x64" />
-  <mp:PhoneIdentity PhoneProductId="3f5aab68-ec02-41e5-85a4-1552b69e929a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="32688UWP.UWP" Publisher="CN=7AB80963-39C0-4325-A468-DC0AA0B127A8" Version="1.1.12.0" ProcessorArchitecture="x64" />
+  <mp:PhoneIdentity PhoneProductId="2c5bb877-dcde-4dd9-8219-b8632335d869" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>One</DisplayName>
-    <PublisherDisplayName>maozw</PublisherDisplayName>
+    <DisplayName>一个UWP</DisplayName>
+    <PublisherDisplayName>UWP研究中心</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -35,11 +35,18 @@
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#0177d7" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="portraitFlipped" />
+          <uap:Rotation Preference="landscapeFlipped" />
+        </uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <uap:Capability Name="picturesLibrary" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />

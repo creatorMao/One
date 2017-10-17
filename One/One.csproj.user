@@ -10,9 +10,9 @@
     <SplashScreenSource>D:\study\uwpProjects\One\One\Assets\logo.png</SplashScreenSource>
     <BadgeLogoSource>D:\study\uwpProjects\One\One\Assets\logo.png</BadgeLogoSource>
     <PackageLogoSource>D:\study\uwpProjects\One\One\Assets\logo.png</PackageLogoSource>
-    <AppxPackageIsForStore>False</AppxPackageIsForStore>
+    <AppxPackageIsForStore>True</AppxPackageIsForStore>
     <AppxShowAllApps>False</AppxShowAllApps>
-    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <AppxBuildConfigurationSelection>x86|x64</AppxBuildConfigurationSelection>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">

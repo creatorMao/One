@@ -59,7 +59,7 @@
                                                              
                           >
                     <ListView.ItemTemplate>
-                        <DataTemplate                         >
+                        <DataTemplate                               >
                             <Grid x:ConnectionId='8' MinWidth="400"
                                   Height="300">
                                 <Image x:ConnectionId='9'                          

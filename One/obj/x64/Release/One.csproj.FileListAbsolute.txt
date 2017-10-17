@@ -1,3 +1,4 @@
+D:\study\uwpProjects\One\One\bin\x64\Release\System.Private.ServiceModel.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\App.xbf
 D:\study\uwpProjects\One\One\bin\x64\Release\MainPage.xbf
 D:\study\uwpProjects\One\One\bin\x64\Release\Pages\AboutPage.xbf
@@ -22,11 +23,21 @@ D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\about-selected.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\about.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\article-selected.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\article.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\cat.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\doge.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\email.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\github.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\like.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\microsoft-shop.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\movie-selected.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\movie.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\one-selected.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\one.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\qq.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\weibo.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\about-page-bg.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\about-page-bg1.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\about-page-bg2.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\header.jpg
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\LargeTile.scale-100.png
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\LargeTile.scale-125.png
@@ -90,6 +101,7 @@ D:\study\uwpProjects\One\One\bin\x64\Release\ilc\resources.pri
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\SafeTypes.g.cs
 D:\study\uwpProjects\One\One\bin\x64\Release\ilc\SharedStubs.g.cs
 D:\study\uwpProjects\One\One\bin\x64\Release\One.build.appxrecipe
+D:\study\uwpProjects\One\One\bin\x64\Release\Upload\One.build.appxrecipe
 D:\study\uwpProjects\One\One\bin\x64\Release\ColorTranslations.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\Microsoft.CSharp.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.ComponentModel.DataAnnotations.dll
@@ -167,7 +179,6 @@ D:\study\uwpProjects\One\One\bin\x64\Release\System.Numerics.Vectors.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.Numerics.Vectors.WindowsRuntime.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.ObjectModel.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.Private.DataContractSerialization.dll
-D:\study\uwpProjects\One\One\bin\x64\Release\System.Private.ServiceModel.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.Reflection.Context.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.Reflection.DispatchProxy.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.Reflection.Emit.dll
@@ -203,7 +214,6 @@ D:\study\uwpProjects\One\One\bin\x64\Release\System.Xml.ReaderWriter.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.Xml.XDocument.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.Xml.XmlDocument.dll
 D:\study\uwpProjects\One\One\bin\x64\Release\System.Xml.XmlSerializer.dll
-D:\study\uwpProjects\One\One\obj\x64\Release\One.csprojResolveAssemblyReference.cache
 D:\study\uwpProjects\One\One\obj\x64\Release\App.g.i.cs
 D:\study\uwpProjects\One\One\obj\x64\Release\App.g.cs
 D:\study\uwpProjects\One\One\obj\x64\Release\MainPage.g.i.cs
@@ -380,11 +390,21 @@ D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\about-selected.p
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\about.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\article.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\article-selected.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\cat.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\doge.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\github.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\like.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\microsoft-shop.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\movie-selected.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\movie.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\one-selected.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\one.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\qq.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\weibo.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\email.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\images\about-page-bg.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\images\about-page-bg1.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\images\about-page-bg2.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\LargeTile.scale-100.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\LargeTile.scale-125.png
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\LargeTile.scale-150.png
@@ -589,3 +609,4 @@ D:\study\uwpProjects\One\One\obj\x64\Release\ilc\intermediate\SgGenerated\System
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll.ILTransformTask.repro
 D:\study\uwpProjects\One\One\obj\x64\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.pdb
+D:\study\uwpProjects\One\One\obj\x64\Release\One.csprojResolveAssemblyReference.cache

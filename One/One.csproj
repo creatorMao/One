@@ -17,10 +17,11 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
-    <PackageCertificateKeyFile>One_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>One_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>2140C723FCBA86886D936331FDCDA579C579FF83</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -102,9 +103,13 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\AppSetting.cs" />
+    <Compile Include="Model\ArticalInfoManager.cs" />
+    <Compile Include="Model\DownloadImageManager.cs" />
     <Compile Include="Model\ExtracteDataManager.cs" />
     <Compile Include="Model\IdlistManager.cs" />
-    <Compile Include="Model\MovieListManager.cs" />
+    <Compile Include="Model\MovieInfoManager.cs" />
+    <Compile Include="Model\MovieStoryManager.cs" />
     <Compile Include="Model\NavMenuManager.cs" />
     <Compile Include="Model\OnelistManager.cs" />
     <Compile Include="Pages\AboutPage.xaml.cs">
@@ -125,6 +130,8 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="One_StoreKey.pfx" />
     <None Include="One_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -137,10 +144,12 @@
     <Content Include="Assets\icon\about.png" />
     <Content Include="Assets\icon\article.png" />
     <Content Include="Assets\icon\article-selected.png" />
+    <Content Include="Assets\icon\cat.png" />
     <Content Include="Assets\icon\doge.png" />
     <Content Include="Assets\icon\github.png" />
     <Content Include="Assets\icon\like.png" />
     <Content Include="Assets\icon\microsoft-shop.png" />
+    <Content Include="Assets\icon\MoviePage.png" />
     <Content Include="Assets\icon\movie-selected.png" />
     <Content Include="Assets\icon\movie.png" />
     <Content Include="Assets\icon\one-selected.png" />
@@ -193,6 +202,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\logo.png" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -225,11 +235,6 @@
     <Page Include="Pages\ArticlePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ResourceDictionary\Dictionary.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="ResourceDictionary\StyleDictionary.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Release|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
-    <PackageIdentityName>3f5aab68-ec02-41e5-85a4-1552b69e929a</PackageIdentityName>
-    <PackageIdentityPublisher>CN=maozw</PackageIdentityPublisher>
+    <PackageIdentityName>2c5bb877-dcde-4dd9-8219-b8632335d869</PackageIdentityName>
+    <PackageIdentityPublisher>CN=7AB80963-39C0-4325-A468-DC0AA0B127A8</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\study\uwpProjects\One\One\obj\x64\Release\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
@@ -19,19 +19,19 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\study\uwpProjects\One\One\bin\x64\Release\AppX</LayoutDir>
-    <RegisteredManifestChecksum>DD42AF51B348E9D59C28F2773A0863FDF006687A71DD6906E9E6EC4F4C06F0A4</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>3f5aab68-ec02-41e5-85a4-1552b69e929a_1.0.1.0_x64__8zpsystjr6qct</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>3f5aab68-ec02-41e5-85a4-1552b69e929a_8zpsystjr6qct!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>3f5aab68-ec02-41e5-85a4-1552b69e929a</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=maozw</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.1.0</RegisteredVersion>
+    <RegisteredManifestChecksum>E2F02096E4FDB31FA8F79B53A084F7E059F0A918609DB21A282FEE96D2512831</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>32688UWP.UWP_1.1.3.0_x64__9fwyyn341hema</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>32688UWP.UWP_9fwyyn341hema!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>32688UWP.UWP</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=7AB80963-39C0-4325-A468-DC0AA0B127A8</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.3.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-13T12:36:58.794</Modified>
+      <Modified>2017-10-16T11:09:03.765</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -76,9 +76,29 @@
       <PackagePath>Assets\icon\article.png</PackagePath>
       <Modified>2017-09-06T04:52:18.947</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\cat.png">
+      <PackagePath>Assets\icon\cat.png</PackagePath>
+      <Modified>2017-10-14T07:00:55.265</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\doge.png">
+      <PackagePath>Assets\icon\doge.png</PackagePath>
+      <Modified>2017-10-13T14:05:11.874</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\email.png">
+      <PackagePath>Assets\icon\email.png</PackagePath>
+      <Modified>2017-10-13T14:42:26.304</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\github.png">
+      <PackagePath>Assets\icon\github.png</PackagePath>
+      <Modified>2017-10-13T13:35:21.158</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\like.png">
       <PackagePath>Assets\icon\like.png</PackagePath>
       <Modified>2017-09-23T11:54:39.967</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\microsoft-shop.png">
+      <PackagePath>Assets\icon\microsoft-shop.png</PackagePath>
+      <Modified>2017-10-13T13:35:21.161</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\movie-selected.png">
       <PackagePath>Assets\icon\movie-selected.png</PackagePath>
@@ -95,6 +115,26 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\one.png">
       <PackagePath>Assets\icon\one.png</PackagePath>
       <Modified>2017-09-06T04:48:55.269</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\qq.png">
+      <PackagePath>Assets\icon\qq.png</PackagePath>
+      <Modified>2017-10-13T13:35:21.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\weibo.png">
+      <PackagePath>Assets\icon\weibo.png</PackagePath>
+      <Modified>2017-10-13T13:35:21.168</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\about-page-bg.png">
+      <PackagePath>Assets\images\about-page-bg.png</PackagePath>
+      <Modified>2017-10-13T12:48:07.803</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\about-page-bg1.png">
+      <PackagePath>Assets\images\about-page-bg1.png</PackagePath>
+      <Modified>2017-10-13T13:04:23.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\about-page-bg2.png">
+      <PackagePath>Assets\images\about-page-bg2.png</PackagePath>
+      <Modified>2017-10-13T14:14:49.915</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\header.jpg">
       <PackagePath>Assets\images\header.jpg</PackagePath>
@@ -339,20 +379,20 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\One.dll">
       <PackagePath>One.dll</PackagePath>
-      <Modified>2017-10-13T12:36:58.431</Modified>
+      <Modified>2017-10-16T11:09:03.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\One.exe">
       <PackagePath>One.exe</PackagePath>
-      <Modified>2017-10-13T12:36:58.778</Modified>
+      <Modified>2017-10-16T11:09:03.750</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\One.pdb">
       <PackagePath>One.pdb</PackagePath>
-      <Modified>2017-10-13T12:36:58.777</Modified>
+      <Modified>2017-10-16T11:09:03.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-13T12:35:58.872</Modified>
+      <Modified>2017-10-16T11:08:04.174</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

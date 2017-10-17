@@ -236,8 +236,4 @@ D:\study\uwpProjects\One\One\bin\x64\Debug\ColorTranslations.dll
 D:\study\uwpProjects\One\One\bin\x64\Debug\ResourceDictionary\StyleDictionary.xbf
 D:\study\uwpProjects\One\One\obj\x64\Debug\ResourceDictionary\StyleDictionary.xaml
 D:\study\uwpProjects\One\One\obj\x64\Debug\ResourceDictionary\StyleDictionary.xbf
-D:\study\uwpProjects\One\One\obj\x64\Debug\ResourceDictionary\Dictionary.xaml
-D:\study\uwpProjects\One\One\obj\x64\Debug\ResourceDictionary\Dictionary.xbf
-D:\study\uwpProjects\One\One\bin\x64\Debug\ResourceDictionary\Dictionary.xbf
-D:\study\uwpProjects\One\One\bin\x64\Debug\Core\ForBundle\AppxManifest.xml
 D:\study\uwpProjects\One\One\obj\x64\Debug\One.csprojResolveAssemblyReference.cache

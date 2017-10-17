@@ -9,18 +9,59 @@
     mc:Ignorable="d">
 
     <Grid>
-        <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="Article_Detail.Grid.Column" Value="0"/>
+                        <Setter Target="Article_Detail.Grid.ColumnSpan" Value="2"/>
+
+
+                        <Setter Target="ArtcleContainer.Grid.Column" Value="0"/>
+                        <Setter Target="ArtcleContainer.Grid.ColumnSpan" Value="2"/>
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1100"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ArtcleContainer.Grid.Column" Value="0"/>
+                        <Setter Target="ArtcleContainer.Grid.ColumnSpan" Value="1"/>
+
+                        <Setter Target="Article_Detail.Grid.Column" Value="1"/>
+                        <Setter Target="Article_Detail.Grid.ColumnSpan" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid Name="ArtcleContainer">
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
             <ListView Name="StoryListView"
                         ItemsSource="{x:Bind contentList}"
                         ItemContainerStyle="{StaticResource ListViewItemContainerDefaultStyle}"
+                        ItemClick="StoryListView_ItemClick"
+                        IsItemClickEnabled="True"
                         Visibility="Visible"
                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
                         >
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="model:ContentList">
-                        <Grid 
-                              Height="180"
-                              Padding="30,20,30,20">
+                        <Grid MinHeight="100"
+                              Padding="30,30,30,30">
                             <StackPanel Orientation="Horizontal">
                                 <StackPanel>
                                     <Ellipse Width="60"
@@ -49,5 +90,50 @@
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollViewer>
+        </Grid>
+
+        
+        <Grid Name="Article_Detail"
+              Background="#E8E8E8"
+              Visibility="Collapsed">
+
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                <Grid Padding="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <TextBlock Name="Article_Title"
+                               FontSize="30"
+                               Foreground="#333333">
+
+                    </TextBlock>
+                </Grid>
+
+                <Grid Grid.Row="1"
+                      Margin="0,20,0,20">
+                    <TextBlock Name="Article_Author"
+                               Foreground="#333333">
+
+                    </TextBlock>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <TextBlock Name="Article_Content"
+                               Foreground="#333333"
+                               LineHeight="40"
+                               TextWrapping="WrapWholeWords">
+
+                    </TextBlock>
+                </Grid>
+        </Grid>
+            </ScrollViewer>
+
+    </Grid>
+        
+        
     </Grid>
 </Page>

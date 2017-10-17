@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
-    <PackageIdentityName>3f5aab68-ec02-41e5-85a4-1552b69e929a</PackageIdentityName>
-    <PackageIdentityPublisher>CN=maozw</PackageIdentityPublisher>
+    <PackageIdentityName>2c5bb877-dcde-4dd9-8219-b8632335d869</PackageIdentityName>
+    <PackageIdentityPublisher>CN=7AB80963-39C0-4325-A468-DC0AA0B127A8</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\study\uwpProjects\One\One\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
@@ -405,6 +405,9 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\article-selected.png">
       <PackagePath>Assets\icon\article-selected.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\cat.png">
+      <PackagePath>Assets\icon\cat.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\doge.png">
       <PackagePath>Assets\icon\doge.png</PackagePath>
     </AppxPackagedFile>
@@ -416,6 +419,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\microsoft-shop.png">
       <PackagePath>Assets\icon\microsoft-shop.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\MoviePage.png">
+      <PackagePath>Assets\icon\MoviePage.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\movie-selected.png">
       <PackagePath>Assets\icon\movie-selected.png</PackagePath>

@@ -2,6 +2,7 @@
 using One.Model;
 using System;
 using System.Collections.Generic;
+using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -20,6 +21,8 @@ namespace One.Pages
     public sealed partial class IndexPage : Page
     {
         List<RootObject> receiveData= null;
+
+        RootObject rootObject = null;
 
         public IndexPage()
         {
@@ -44,7 +47,7 @@ namespace One.Pages
             //ItemListview.Visibility = Visibility.Collapsed;
             ItemDetailsPannel.Visibility = Visibility.Visible;
 
-            RootObject rootObject = (RootObject)e.ClickedItem;
+            rootObject = (RootObject)e.ClickedItem;
 
             DetailsImage.Source = new BitmapImage(new Uri(rootObject.data.content_list[0].img_url));
             VolumeText.Text = rootObject.data.content_list[0].volume.ToString();
@@ -52,7 +55,7 @@ namespace One.Pages
             LikesCountTextBlock.Text = rootObject.data.content_list[0].like_count.ToString();
 
             ColorConverter colorConverter = new ColorConverter();
-            Color color = colorConverter.StringToColor("#ffffffff");
+            Color color = colorConverter.StringToColor("#52948B");
             ContentContainer.Background = new SolidColorBrush(color);
         }
 
@@ -62,5 +65,30 @@ namespace One.Pages
             ItemDetailsPannel.Visibility = Visibility.Collapsed;
         }
 
+        /// <summary>
+        /// 点击保存图片
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ImageDownloadButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            X();
+
+
+        }
+
+        public async void X()
+        {
+            string imageName = rootObject.data.content_list[0].volume.ToString()+".jpg";
+            string imageUri = rootObject.data.content_list[0].img_url;
+            DownloadImageManager downloadImageManager = new DownloadImageManager();
+            await downloadImageManager.SaveImage(imageName, imageUri);
+
+            //ImageSource imageSource = 
+            //BitmapImage bitmapImage = new BitmapImage(new Uri());
+
+            //DetailsImage.Source = new BitmapImage(new Uri());
+        }
     }
 }
