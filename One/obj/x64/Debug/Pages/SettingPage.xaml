@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="One.Pages.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:One.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        
+        <Grid Opacity="0.5">
+            <Image Source="../Assets/images/about-page-bg2.png"
+                   Stretch="UniformToFill"></Image>
+        </Grid>
+
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+            
+            <StackPanel>
+                <TextBlock Foreground="White"
+                               FontWeight="Bold"
+                               FontSize="18"
+                               Margin="0,30,0,0">设置</TextBlock>
+                <StackPanel>
+                    <TextBlock>图片保存路径：</TextBlock>
+                    <Button>打开文件夹</Button>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+        
+    </Grid>
+    
+</Page>
+

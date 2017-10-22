@@ -23,7 +23,11 @@ namespace One.Model
           
             Uri uri = new Uri(imageUri);
 
+            backgroundDownload.SuccessToastNotification = ToastHelper.ShowAToast("保存成功", folder.Path, newFile.Path);
+
             DownloadOperation download= backgroundDownload.CreateDownload(uri, newFile);
+
+            
 
             await download.StartAsync();
 

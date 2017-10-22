@@ -1,2 +1,5 @@
+"/t:One.Model.Article_RootObject,One,json"
 "/t:One.Model.Idlist,One,json"
+"/t:One.Model.MovieInfo_RootObject,One,json"
+"/t:One.Model.MovieStory_RootObject,One,json"
 "/t:One.Model.RootObject,One,json"

@@ -36,6 +36,7 @@ namespace One
         private List<NavMenuItem> navMenuList = null;
 
 
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -67,6 +68,7 @@ namespace One
         {
             //获得当前视图
             var view = ApplicationView.GetForCurrentView();
+
 
             //active 当前窗口
             view.TitleBar.BackgroundColor = Colors.Transparent;
@@ -115,7 +117,7 @@ namespace One
                 switch (currentNavMenuItem.Title)
                 {
                     case "一个":
-                        RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "文章":
@@ -124,11 +126,14 @@ namespace One
                         break;
                     case "电影":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
-                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
+                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
                         break;
                     case "关于":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
+                        break;
+                    case "设置":
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage);
                         break;
 
                 }
@@ -176,7 +181,14 @@ namespace One
 
         public async void PrepareData()
         {
+            WaitPage.Visibility = Visibility.Visible;
+            MainPageProgressRing.IsActive = true;
+            //等待近10天数据
             onelistResultList = await OnelistManager.GetLatelyOnelist();
+
+            WaitPage.Visibility = Visibility.Collapsed;
+            MainPageProgressRing.IsActive = false;
+
             TodayDate.Text = onelistResultList[0].data.weather.date.Replace("-","/"); ;
             PlaceName.Text = onelistResultList[0].data.weather.city_name;
             AirName.Text = onelistResultList[0].data.weather.climate;
@@ -196,6 +208,19 @@ namespace One
 
 
         }
+
+
+        /// <summary>
+        /// 设置提示信息
+        /// </summary>
+        /// <param name="prompt"></param>
+        public void SetPrompt(string prompt)
+        {
+            Prompt.Text = prompt;
+        }
+
+
+
 
        
     }

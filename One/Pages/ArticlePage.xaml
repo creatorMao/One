@@ -30,6 +30,8 @@
                         <Setter Target="ArtcleContainer.Grid.Column" Value="0"/>
                         <Setter Target="ArtcleContainer.Grid.ColumnSpan" Value="2"/>
 
+                        <Setter Target="DetailPageBackground.Visibility" Value="Collapsed"/>
+
 
                     </VisualState.Setters>
                 </VisualState>
@@ -43,6 +45,10 @@
 
                         <Setter Target="Article_Detail.Grid.Column" Value="1"/>
                         <Setter Target="Article_Detail.Grid.ColumnSpan" Value="1"/>
+
+                        <Setter Target="DetailPageBackground.Grid.Column" Value="1"/>
+                        <Setter Target="DetailPageBackground.Grid.ColumnSpan" Value="1"/>
+                        
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -92,7 +98,16 @@
         </ScrollViewer>
         </Grid>
 
-        
+        <Grid Name="DetailPageBackground"
+              Background="White"
+              >
+            <Image Source="../Assets/images/oneisall.png"
+                    Width="250"
+                       Height="250"
+                       />
+        </Grid>
+
+
         <Grid Name="Article_Detail"
               Background="#E8E8E8"
               Visibility="Collapsed">

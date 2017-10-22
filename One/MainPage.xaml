@@ -149,6 +149,18 @@
                       Name="HamburgerButtonFontIcon"/>
         </Button>
 
+        <StackPanel Grid.Row="0"
+                    Grid.RowSpan="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,120"
+                    Padding="8"
+                    Background="DarkGray"
+                    Visibility="Collapsed">
+            <TextBlock Name="Prompt"></TextBlock>
+        </StackPanel>
 
 
         <Grid Grid.Column="1"
@@ -160,6 +172,26 @@
               Visibility="Collapsed"
               PointerPressed="Mask_PointerPressed"
               >
+        </Grid>
+
+        <Grid Grid.Row="0"
+              Grid.RowSpan="3"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"
+              Name="WaitPage"
+              Visibility="Collapsed">
+
+            <ProgressRing Name="MainPageProgressRing"
+                          Foreground="#333333">
+                
+            </ProgressRing>
+
+            <TextBlock VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0,50,0,0"
+                       Foreground="#333333">ONE IS MORE</TextBlock>
+            
+            
         </Grid>
         
         

@@ -82,7 +82,7 @@ namespace One.Pages
             MovieInfoImage.Source = new BitmapImage(new Uri(movieInfoList[0].data.detailcover));
             MovieStory_Title.Text = movieStoryList[0].data.data[0].title;
             MovieStory_Author.Text = "文/"+movieStoryList[0].data.data[0].author_list[0].user_name;
-            MovieStory_Content.Text = movieStoryList[0].data.data[0].content.Replace("<p>", "").Replace("</p>", "").Replace("<div class=\"one-img-container one-img-container-no-note\"></div>", ""); ; ;
+            MovieStory_Content.Text = RemoveHtmlManager.RemoveHtmlTag(movieStoryList[0].data.data[0].content);
         }
 
 

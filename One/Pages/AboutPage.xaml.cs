@@ -47,7 +47,7 @@ namespace One.Pages
         /// <param name="e"></param>
         private async void RateApp(object sender, RoutedEventArgs e)
         {
-            var a = await Launcher.LaunchUriAsync(new Uri("ms-windows-store://review/?productid=9n9s9lsrpc7q"));
+            var a = await Launcher.LaunchUriAsync(new Uri("ms-windows-store://review/?productid=9p1530zqcmp6"));
         }
 
 
@@ -69,6 +69,26 @@ namespace One.Pages
 
             //
             await EmailManager.ShowComposeNewEmailAsync(emailMessage);
+        }
+
+
+
+        /// <summary>
+        /// 捐助
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DonateMe(object sender, RoutedEventArgs e)
+        {
+            if (ZhifubaoAccount.Visibility == Visibility.Visible)
+            {
+                ZhifubaoAccount.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                ZhifubaoAccount.Visibility = Visibility.Visible;
+            }
+            
         }
     }
 }

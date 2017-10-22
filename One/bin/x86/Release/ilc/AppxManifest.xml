@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="32688UWP.UWP" Publisher="CN=7AB80963-39C0-4325-A468-DC0AA0B127A8" Version="1.1.12.0" ProcessorArchitecture="x86" />
+  <Identity Name="32688UWP.UWP" Publisher="CN=7AB80963-39C0-4325-A468-DC0AA0B127A8" Version="1.1.13.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="2c5bb877-dcde-4dd9-8219-b8632335d869" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>一个UWP</DisplayName>
@@ -53,14 +53,14 @@
     <build:Item Name="VisualStudio" Version="15.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2017" />
     <build:Item Name="OperatingSystem" Version="10.0.16299.15 (WinBuild.160101.0800)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.26720.2" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="15.0.26906.1" />
     <build:Item Name="ProjectGUID" Value="{DF119E1F-1D12-4B3A-BD98-2C39F0F95CF6}" />
     <build:Item Name="ilc.exe" Version="1.7.25531.01 built by: PROJECTNGDR2" />
     <build:Item Name="OptimizingToolset" Value="ilc.exe" />
     <build:Item Name="UseDotNetNativeSharedAssemblyFrameworkPackage" Value="True" />
     <build:Item Name="UniversalGenericsOptOut" Value="false" />
     <build:Item Name="ShortcutGenericAnalysis" Value="false" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.26720.2" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.26906.1" />
     <build:Item Name="MakePri.exe" Version="10.0.15063.468 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>

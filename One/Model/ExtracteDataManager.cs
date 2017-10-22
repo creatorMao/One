@@ -25,9 +25,13 @@ namespace One.Model
             {
                 foreach (var i in item.data.content_list)
                 {
-                    if (i.share_url.Substring(0,23+category.Length)=="http://m.wufazhuce.com/"+category)
+                    //排除当url为空的情况
+                    if (i.share_url!="")
                     {
-                        contentList.Add(i);
+                        if (i.share_url.Substring(0, 23 + category.Length) == "http://m.wufazhuce.com/" + category)
+                        {
+                            contentList.Add(i);
+                        }
                     }
                 }
             }

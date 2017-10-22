@@ -30,11 +30,18 @@
                         <Setter Target="ItemDetailsPannel.Grid.Column" Value="0"/>
                         <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="2"/>
 
+                        <Setter Target="SharePage.Grid.Column" Value="0"/>
+                        <Setter Target="SharePage.Grid.ColumnSpan" Value="2"/>
+
 
                         <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
                         <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="2"/>
 
-                       
+                        <Setter Target="DetailPageBackground.Visibility" Value="Collapsed"/>
+
+
+
+
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Desktop">
@@ -45,8 +52,19 @@
                         <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
                         <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="1"/>
 
+                        <Setter Target="SharePage.Grid.Column" Value="0"/>
+                        <Setter Target="SharePage.Grid.ColumnSpan" Value="2"/>
+
                         <Setter Target="ItemDetailsPannel.Grid.Column" Value="1"/>
                         <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="1"/>
+
+
+                        <Setter Target="DetailPageBackground.Grid.Column" Value="1"/>
+                        <Setter Target="DetailPageBackground.Grid.ColumnSpan" Value="1"/>
+
+
+
+
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -59,8 +77,10 @@
                Grid.ColumnSpan="2"
                >
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
+                          Name="ItemListContainerScrollViewer"
+                          ViewChanged="ItemListContainerScrollViewer_ViewChanged"
                            >
-                <ListView ItemsSource="{x:Bind receiveData}"
+                <ListView ItemsSource="{x:Bind _photoMonthList}"
                   ItemContainerStyle="{StaticResource ListViewItemContainerCommonStyle}"
                   HorizontalAlignment="Center"
                   Name="ItemListview"
@@ -71,14 +91,14 @@
                   
                   >
                     <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="data:RootObject">
+                        <DataTemplate x:DataType="data:PhotoAlbum_Datum">
                             <Grid Height="250">
-                                <Image Source="{x:Bind data.content_list[0].img_url}"
+                                <Image Source="{x:Bind HpImgUrl}"
                                Stretch="UniformToFill"
                                Name="IndexImage"/>
                                 <StackPanel HorizontalAlignment="Center"
                                     VerticalAlignment="Center">
-                                    <TextBlock Text="{x:Bind data.content_list[0].volume}"
+                                    <TextBlock Text="{x:Bind HpTitle}"
                                        Foreground="White"
                                        FontSize="26"/>
                                 </StackPanel>
@@ -88,114 +108,205 @@
                 </ListView>
             </ScrollViewer>
         </Grid>
+        
+
+        <Grid Name="DetailPageBackground"
+              Background="White"
+              >
+            <Image Source="../Assets/images/oneisall.png"
+                    Width="250"
+                       Height="250"
+                       />
+        </Grid>
+        
 
         <Grid Name="ItemDetailsPannel"
-              Visibility="Collapsed"
               Grid.Column="0"
-              Grid.ColumnSpan="2">
+              Grid.ColumnSpan="2"
+              Visibility="Collapsed"
+              >
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="3*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-            </Grid.RowDefinitions>
+            <Grid Name="DetailPageContent"
+                  >
 
-
-            <Grid Grid.Row="0">
-                <Image Name="DetailsImage"
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                
+                <Grid Grid.Row="0">
+                    <Image Name="DetailsImage"
                        Stretch="UniformToFill">
-                </Image>
-                <StackPanel Orientation="Horizontal"
+                    </Image>
+                    <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Bottom"
                             Margin="0,0,20,10">
-                    <Image Source="ms-appx:///Assets/icon/like.png"
+                        <Image Source="ms-appx:///Assets/icon/like.png"
                            Width="25"
                            Height="25"/>
-                    <TextBlock Text="Likes"
+                        <TextBlock Text="Likes"
                                VerticalAlignment="Center"
                                Margin="10,0,0,0"
                                Foreground="White"
                                FontSize="16"
                                FontWeight="Bold"/>
-                    <TextBlock Name="LikesCountTextBlock"
+                        <TextBlock Name="LikesCountTextBlock"
                                VerticalAlignment="Center"
                                Margin="8,0,0,0"
                                Foreground="White"
                                FontSize="16"
                                FontWeight="Bold"/>
-                </StackPanel>
-            </Grid>
+                    </StackPanel>
+                </Grid>
 
 
-            <Grid Grid.Row="1"
+                <Grid Grid.Row="1"
                   Name="ContentContainer"
                   Background="#52948B"
                   Padding="20">
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-                <Grid Grid.Row="0">
+                    <Grid Grid.Row="0">
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <TextBlock Name="VolumeText"
+                        <TextBlock Name="VolumeText"
                                Grid.Column="0"
                                FontSize="20"
                                Foreground="#264440"/>
 
-                    <StackPanel Orientation="Horizontal"
+                        <StackPanel Orientation="Horizontal"
                                 Grid.Column="1"
                                 HorizontalAlignment="Right">
-                        <Button Background="Transparent"
+                            <Button Background="Transparent"
                                 Style="{StaticResource ButtonCommonStyle}"
                                 Click="ImageDownloadButton_Click">
-                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                                <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE1FD;"
                                       Foreground="#264440"
                                       FontSize="26"/>
-                        </Button>
-                        <Button Background="Transparent"
-                                Style="{StaticResource ButtonCommonStyle}">
-                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                            </Button>
+                            <Button Background="Transparent"
+                                Style="{StaticResource ButtonCommonStyle}"
+                                Click="OpenSharePage">
+                                <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE72D;"
                                       Foreground="#264440"
                                       FontSize="26"/>
-                        </Button>
-                        <Button Background="Transparent"
+                            </Button>
+                            <Button Background="Transparent"
                                 Style="{StaticResource ButtonCommonStyle}"
                                 Click="Button_Click">
-                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                                <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE72B;"
                                       Foreground="#264440"
                                       FontSize="26"/>
-                        </Button>
-                    </StackPanel>
+                            </Button>
+                        </StackPanel>
 
-                </Grid>
+                    </Grid>
 
-                <Grid Grid.Row="1">
-                    <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
-                        <TextBlock Name="WordsText"
+                    <Grid Grid.Row="1">
+                        <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                            <TextBlock Name="WordsText"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
                                TextWrapping="WrapWholeWords"
                                LineHeight="25"
                                    FontWeight="Light"
                                />
-                    </ScrollViewer>
-                </Grid>
+                        </ScrollViewer>
+                    </Grid>
 
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+        
+
+
+
+        <Grid Name="SharePage"
+              Visibility="Collapsed"
+              >
+
+            <Grid Name="SharePageMask"
+                  Background="Black"
+                  Opacity="0.7"
+                  PointerPressed="CloseSharePage">
+            </Grid>
+
+
+            <Grid Width="370"
+                  Height="250"
+                  Background="White"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center">
+                <StackPanel  HorizontalAlignment="Center"
+                             VerticalAlignment="Center">
+                    <StackPanel Margin="0,0,0,15">
+                        <TextBlock HorizontalAlignment="Center"
+                                   FontSize="20">
+                            分享
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <StackPanel Margin="10,0,0,0">
+                            <Button Style="{StaticResource ButtonCommonStyle}"
+                                Width="65"
+                                Height="65"
+                                Name="CopyShare_linkButton"
+                                Click="CopyShare_link"
+                                >
+                                <Image Source="../Assets/icon/share_link.png"/>
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center">
+                            链接
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Margin="10,0,0,0">
+                            <Button Style="{StaticResource ButtonCommonStyle}"
+                                Width="65"
+                                Height="65"
+                                Click="ShareMore"
+                                >
+                                <Image Source="../Assets/icon/share_more.png"/>
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center">
+                            更多
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Margin="10,0,0,0">
+                            <Button Style="{StaticResource ButtonCommonStyle}"
+                                Width="70"
+                                Height="70"
+                                Margin="0,-3,0,0"
+                                Click="ShareToWeibo"
+                                >
+                                <Image Source="../Assets/icon/share_weibo.png"/>
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center">
+                            微博
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
             </Grid>
 
         </Grid>
 
 
-
+      
     </Grid>
 </Page>

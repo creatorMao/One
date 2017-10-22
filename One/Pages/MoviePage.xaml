@@ -30,6 +30,8 @@
                         <Setter Target="MovieListViewContainer.Grid.Column" Value="0"/>
                         <Setter Target="MovieListViewContainer.Grid.ColumnSpan" Value="2"/>
 
+                        <Setter Target="DetailPageBackground.Visibility" Value="Collapsed"/>
+
 
                     </VisualState.Setters>
                 </VisualState>
@@ -43,6 +45,10 @@
 
                         <Setter Target="MovieDetail.Grid.Column" Value="1"/>
                         <Setter Target="MovieDetail.Grid.ColumnSpan" Value="1"/>
+
+                        <Setter Target="DetailPageBackground.Grid.Column" Value="1"/>
+                        <Setter Target="DetailPageBackground.Grid.ColumnSpan" Value="1"/>
+
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -77,10 +83,19 @@
             </ScrollViewer>
         </Grid>
 
+        <Grid Name="DetailPageBackground"
+              Background="White"
+              >
+            <Image Source="../Assets/images/oneisall.png"
+                    Width="250"
+                       Height="250"
+                       />
+        </Grid>
+
         <Grid Name="MovieDetail"
               Background="White"
               Visibility="Collapsed">
-            
+
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
                 <Grid>
 
@@ -106,15 +121,16 @@
                         </Grid.RowDefinitions>
 
                         <Grid Grid.Row="0"
-                          Padding="30">
+                              Padding="30,30,30,15">
                             <TextBlock Name="MovieStory_Title"
                                        FontSize="28"
                                        Foreground="#333333"/>
                         </Grid>
 
                         <Grid Grid.Row="1"
-                              Padding="30">
+                              Padding="30,0,30,0">
                             <TextBlock Name="MovieStory_Author"
+                                       VerticalAlignment="Center"
                                        Foreground="#333333"></TextBlock>
                             <Button Style="{StaticResource ButtonCommonStyle}"
                                     HorizontalAlignment="Right"
@@ -127,12 +143,12 @@
                         </Grid>
 
                         <Grid Grid.Row="2"
-                          Padding="30">
+                              Padding="30,0,30,0">
                             <TextBlock Name="MovieStory_Content"
                                   TextWrapping="WrapWholeWords"
                                    LineHeight="50"
                                    FontSize="16"
-                                       Foreground="#333333"></TextBlock>
+                                   Foreground="#333333"></TextBlock>
                         </Grid>
 
                     </Grid>

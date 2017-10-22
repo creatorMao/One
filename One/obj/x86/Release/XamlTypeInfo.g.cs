@@ -132,7 +132,7 @@ namespace One.One_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[12];
             _typeNameTable[0] = "One.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -140,12 +140,13 @@ namespace One.One_XamlTypeInfo
             _typeNameTable[4] = "One.Pages.IndexPage";
             _typeNameTable[5] = "One.Pages.MoviePage";
             _typeNameTable[6] = "One.Pages.ArticlePage";
-            _typeNameTable[7] = "Windows.UI.Color";
-            _typeNameTable[8] = "System.ValueType";
-            _typeNameTable[9] = "Object";
-            _typeNameTable[10] = "Byte";
+            _typeNameTable[7] = "One.Pages.SettingPage";
+            _typeNameTable[8] = "Windows.UI.Color";
+            _typeNameTable[9] = "System.ValueType";
+            _typeNameTable[10] = "Object";
+            _typeNameTable[11] = "Byte";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[12];
             _typeTable[0] = typeof(global::One.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -153,10 +154,11 @@ namespace One.One_XamlTypeInfo
             _typeTable[4] = typeof(global::One.Pages.IndexPage);
             _typeTable[5] = typeof(global::One.Pages.MoviePage);
             _typeTable[6] = typeof(global::One.Pages.ArticlePage);
-            _typeTable[7] = typeof(global::Windows.UI.Color);
-            _typeTable[8] = typeof(global::System.ValueType);
-            _typeTable[9] = typeof(global::System.Object);
-            _typeTable[10] = typeof(global::System.Byte);
+            _typeTable[7] = typeof(global::One.Pages.SettingPage);
+            _typeTable[8] = typeof(global::Windows.UI.Color);
+            _typeTable[9] = typeof(global::System.ValueType);
+            _typeTable[10] = typeof(global::System.Object);
+            _typeTable[11] = typeof(global::System.Byte);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -196,6 +198,7 @@ namespace One.One_XamlTypeInfo
         private object Activate_4_IndexPage() { return new global::One.Pages.IndexPage(); }
         private object Activate_5_MoviePage() { return new global::One.Pages.MoviePage(); }
         private object Activate_6_ArticlePage() { return new global::One.Pages.ArticlePage(); }
+        private object Activate_7_SettingPage() { return new global::One.Pages.SettingPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -250,7 +253,14 @@ namespace One.One_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 7:   //  Windows.UI.Color
+            case 7:   //  One.Pages.SettingPage
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_SettingPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Windows.UI.Color
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.AddMemberName("A");
                 userType.AddMemberName("B");
@@ -259,16 +269,16 @@ namespace One.One_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  System.ValueType
+            case 9:   //  System.ValueType
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 9:   //  Object
+            case 10:   //  Object
                 xamlType = new global::One.One_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 10:   //  Byte
+            case 11:   //  Byte
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;

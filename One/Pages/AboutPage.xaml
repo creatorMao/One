@@ -47,13 +47,31 @@
                                FontSize="18"
                                Margin="0,30,0,0">Like</TextBlock>
                     </StackPanel>
-                    <StackPanel HorizontalAlignment="Center">
+                    <StackPanel HorizontalAlignment="Center"
+                                Orientation="Horizontal">
                         <Button Foreground="White"
                                 Margin="0,10,0,0" 
                                 Style="{StaticResource ButtonAboutPageStyle}"
                                 Click="RateApp">
                             给我点个赞.
                         </Button>
+                        <Button Foreground="White"
+                                VerticalAlignment="Center"
+                                Style="{StaticResource ButtonAboutPageStyle}"
+                                Click="DonateMe"
+                                Margin="0,10,0,0">
+                            捐助
+                        </Button>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center"
+                                Margin="0,10,0,0"
+                                Visibility="Collapsed"
+                                Name="ZhifubaoAccount">
+                        <TextBlock Foreground="White"
+                                   Margin="0,0,0,0"
+                                   VerticalAlignment="Center">
+                            支付宝：13588042344 毛
+                        </TextBlock>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center">
                         <TextBlock Foreground="White"
@@ -163,6 +181,9 @@
                                          NavigateUri="https://www.coolapk.com/apk/com.orekie.mone" 
                                          HorizontalAlignment="Center"
                                          Style="{StaticResource HyperlinkButtonCommonStyle}"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>

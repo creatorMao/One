@@ -30,23 +30,41 @@
                         <Setter Target="ItemDetailsPannel.Grid.Column" Value="0"/>
                         <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="2"/>
 
+                        <Setter Target="SharePage.Grid.Column" Value="0"/>
+                        <Setter Target="SharePage.Grid.ColumnSpan" Value="2"/>
+
 
                         <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
                         <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="2"/>
 
-                       
+                        <Setter Target="DetailPageBackground.Visibility" Value="Collapsed"/>
+
+
+
+
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:ConnectionId='3' x:Name="Desktop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="950"></AdaptiveTrigger>
+                        <AdaptiveTrigger MinWindowWidth="1100"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
                         <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="1"/>
 
+                        <Setter Target="SharePage.Grid.Column" Value="0"/>
+                        <Setter Target="SharePage.Grid.ColumnSpan" Value="2"/>
+
                         <Setter Target="ItemDetailsPannel.Grid.Column" Value="1"/>
                         <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="1"/>
+
+
+                        <Setter Target="DetailPageBackground.Grid.Column" Value="1"/>
+                        <Setter Target="DetailPageBackground.Grid.ColumnSpan" Value="1"/>
+
+
+
+
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -58,9 +76,11 @@
                Grid.Column="0"
                Grid.ColumnSpan="2"
                >
-            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
+            <ScrollViewer x:ConnectionId='21' Style="{StaticResource ScrollViewerCommonStyle}"
+                          Name="ItemListContainerScrollViewer"
+                                                                                 
                            >
-                <ListView x:ConnectionId='13'                                   
+                <ListView x:ConnectionId='22'                                       
                   ItemContainerStyle="{StaticResource ListViewItemContainerCommonStyle}"
                   HorizontalAlignment="Center"
                   Name="ItemListview"
@@ -71,15 +91,14 @@
                   
                   >
                     <ListView.ItemTemplate>
-                        <DataTemplate                             >
-                            <Grid x:ConnectionId='14' Height="250"
-                          MinWidth="400">
-                                <Image x:ConnectionId='15'                                               
+                        <DataTemplate                                   >
+                            <Grid x:ConnectionId='23' Height="250">
+                                <Image x:ConnectionId='24'                           
                                Stretch="UniformToFill"
                                Name="IndexImage"/>
                                 <StackPanel HorizontalAlignment="Center"
                                     VerticalAlignment="Center">
-                                    <TextBlock x:ConnectionId='16'                                            
+                                    <TextBlock x:ConnectionId='25'                        
                                        Foreground="White"
                                        FontSize="26"/>
                                 </StackPanel>
@@ -89,109 +108,206 @@
                 </ListView>
             </ScrollViewer>
         </Grid>
+        
 
-        <Grid x:ConnectionId='5' Name="ItemDetailsPannel"
-              Visibility="Collapsed"
+        <Grid x:ConnectionId='5' Name="DetailPageBackground"
               Background="White"
+              >
+            <Image Source="../Assets/images/oneisall.png"
+                    Width="250"
+                       Height="250"
+                       />
+        </Grid>
+        
+
+        <Grid x:ConnectionId='6' Name="ItemDetailsPannel"
               Grid.Column="0"
-              Grid.ColumnSpan="2">
+              Grid.ColumnSpan="2"
+              Visibility="Collapsed"
+              >
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="3*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-            </Grid.RowDefinitions>
+            <Grid x:ConnectionId='12' Name="DetailPageContent"
+                  >
 
-
-            <Grid Grid.Row="0">
-                <Image x:ConnectionId='11' Name="DetailsImage"
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                
+                <Grid Grid.Row="0">
+                    <Image x:ConnectionId='19' Name="DetailsImage"
                        Stretch="UniformToFill">
-                </Image>
-                <StackPanel Orientation="Horizontal"
+                    </Image>
+                    <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Bottom"
                             Margin="0,0,20,10">
-                    <Image Source="ms-appx:///Assets/icon/like.png"
+                        <Image Source="ms-appx:///Assets/icon/like.png"
                            Width="25"
                            Height="25"/>
-                    <TextBlock Text="Likes"
+                        <TextBlock Text="Likes"
                                VerticalAlignment="Center"
                                Margin="10,0,0,0"
                                Foreground="White"
                                FontSize="16"
                                FontWeight="Bold"/>
-                    <TextBlock x:ConnectionId='12' Name="LikesCountTextBlock"
+                        <TextBlock x:ConnectionId='20' Name="LikesCountTextBlock"
                                VerticalAlignment="Center"
                                Margin="8,0,0,0"
                                Foreground="White"
                                FontSize="16"
                                FontWeight="Bold"/>
-                </StackPanel>
-            </Grid>
+                    </StackPanel>
+                </Grid>
 
 
-            <Grid x:ConnectionId='6' Grid.Row="1"
+                <Grid x:ConnectionId='13' Grid.Row="1"
                   Name="ContentContainer"
-                  Background="#52938B"
+                  Background="#52948B"
                   Padding="20">
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-                <Grid Grid.Row="0">
+                    <Grid Grid.Row="0">
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <TextBlock x:ConnectionId='8' Name="VolumeText"
+                        <TextBlock x:ConnectionId='15' Name="VolumeText"
                                Grid.Column="0"
                                FontSize="20"
                                Foreground="#264440"/>
 
-                    <StackPanel Orientation="Horizontal"
+                        <StackPanel Orientation="Horizontal"
                                 Grid.Column="1"
                                 HorizontalAlignment="Right">
-                        <Button x:ConnectionId='9' Background="Transparent"
+                            <Button x:ConnectionId='16' Background="Transparent"
+                                Style="{StaticResource ButtonCommonStyle}"
                                                                  >
-                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                                <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE1FD;"
                                       Foreground="#264440"
-                                      FontSize="30"/>
-                        </Button>
-                        <Button Background="Transparent">
-                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                                      FontSize="26"/>
+                            </Button>
+                            <Button x:ConnectionId='17' Background="Transparent"
+                                Style="{StaticResource ButtonCommonStyle}"
+                                                     >
+                                <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE72D;"
                                       Foreground="#264440"
-                                      FontSize="30"/>
-                        </Button>
-                        <Button x:ConnectionId='10' Background="Transparent"
+                                      FontSize="26"/>
+                            </Button>
+                            <Button x:ConnectionId='18' Background="Transparent"
+                                Style="{StaticResource ButtonCommonStyle}"
                                                     >
-                            <FontIcon FontFamily="Segoe MDL2 Assets"
+                                <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE72B;"
                                       Foreground="#264440"
-                                      FontSize="30"/>
-                        </Button>
-                    </StackPanel>
+                                      FontSize="26"/>
+                            </Button>
+                        </StackPanel>
 
-                </Grid>
+                    </Grid>
 
-                <Grid Grid.Row="1">
-                    <TextBlock x:ConnectionId='7' Name="WordsText"
+                    <Grid Grid.Row="1">
+                        <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                            <TextBlock x:ConnectionId='14' Name="WordsText"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
                                TextWrapping="WrapWholeWords"
+                               LineHeight="25"
+                                   FontWeight="Light"
                                />
-                </Grid>
+                        </ScrollViewer>
+                    </Grid>
 
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+        
+
+
+
+        <Grid x:ConnectionId='7' Name="SharePage"
+              Visibility="Collapsed"
+              >
+
+            <Grid x:ConnectionId='8' Name="SharePageMask"
+                  Background="Black"
+                  Opacity="0.7"
+                                                 >
+            </Grid>
+
+
+            <Grid Width="370"
+                  Height="250"
+                  Background="White"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center">
+                <StackPanel  HorizontalAlignment="Center"
+                             VerticalAlignment="Center">
+                    <StackPanel Margin="0,0,0,15">
+                        <TextBlock HorizontalAlignment="Center"
+                                   FontSize="20">
+                            分享
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <StackPanel Margin="10,0,0,0">
+                            <Button x:ConnectionId='11' Style="{StaticResource ButtonCommonStyle}"
+                                Width="65"
+                                Height="65"
+                                Name="CopyShare_linkButton"
+                                                      
+                                >
+                                <Image Source="../Assets/icon/share_link.png"/>
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center">
+                            链接
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Margin="10,0,0,0">
+                            <Button x:ConnectionId='10' Style="{StaticResource ButtonCommonStyle}"
+                                Width="65"
+                                Height="65"
+                                                 
+                                >
+                                <Image Source="../Assets/icon/share_more.png"/>
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center">
+                            更多
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Margin="10,0,0,0">
+                            <Button x:ConnectionId='9' Style="{StaticResource ButtonCommonStyle}"
+                                Width="70"
+                                Height="70"
+                                Margin="0,-3,0,0"
+                                                    
+                                >
+                                <Image Source="../Assets/icon/share_weibo.png"/>
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center">
+                            微博
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
             </Grid>
 
         </Grid>
 
 
-
+      
     </Grid>
 </Page>
 

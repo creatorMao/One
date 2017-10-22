@@ -28,6 +28,7 @@ namespace One.Model
             list.Add(new NavMenuItem("文章", "0,117,117,17", "0,96,125,139", "Assets/icon/article.png", "Assets/icon/article-selected.png",typeof(ArticlePage),false,"#ffffff"));
             list.Add(new NavMenuItem("电影", "0,117,117,17", "0,96,125,139", "Assets/icon/movie.png", "Assets/icon/movie-selected.png",typeof(MoviePage),false,"#ffffff"));
             list.Add(new NavMenuItem("关于", "0,117,117,17", "0,96,125,139", "Assets/icon/about.png", "Assets/icon/about-selected.png",typeof(AboutPage),false, "#ffffff"));
+            list.Add(new NavMenuItem("设置", "0,117,117,17", "0,96,125,139", "Assets/icon/set.png", "Assets/icon/set-selected.png", typeof(SettingPage), false, "#ffffff"));
             return list;
         }
     }

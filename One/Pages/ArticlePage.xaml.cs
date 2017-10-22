@@ -61,7 +61,8 @@ namespace One.Pages
 
             Article_Title.Text = articleList[0].data.hp_title;
             Article_Author.Text = "文/"+articleList[0].data.author[0].user_name;
-            Article_Content.Text = articleList[0].data.hp_content.Replace("<p>","").Replace("</p>",""); ;
+            Article_Content.Text = RemoveHtmlManager.RemoveHtmlTag(articleList[0].data.hp_content);
+           
         }
     }
 }

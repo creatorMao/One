@@ -81,20 +81,20 @@
                     <!--侧边栏中间部分显示时间-->
                     <Grid Grid.Row="1">
                         <StackPanel Margin="25,0,0,5">
-                            <TextBlock x:ConnectionId='10' Name="TodayDate"
+                            <TextBlock x:ConnectionId='13' Name="TodayDate"
                                        Margin="0,5,0,5"
                                        Foreground="#757575"
                                        FontSize="17"/>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='11' Name="PlaceName"
+                                <TextBlock x:ConnectionId='14' Name="PlaceName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
-                                <TextBlock x:ConnectionId='12' Name="AirName"
+                                <TextBlock x:ConnectionId='15' Name="AirName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
-                                <TextBlock x:ConnectionId='13' Name="TempName"
+                                <TextBlock x:ConnectionId='16' Name="TempName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
@@ -104,21 +104,21 @@
 
                     <!--侧边栏选择项-->
                     <Grid Grid.Row="2">
-                        <ListView x:ConnectionId='6' ItemContainerStyle="{StaticResource MenuItemContainer}"
+                        <ListView x:ConnectionId='9' ItemContainerStyle="{StaticResource MenuItemContainer}"
                                                                     
                                                                 
                                   IsItemClickEnabled="True"
                                   Name="NavListview">
                             <ListView.ItemTemplate>
                                 <DataTemplate                               >
-                                    <StackPanel x:ConnectionId='7' Orientation="Horizontal"
+                                    <StackPanel x:ConnectionId='10' Orientation="Horizontal"
                                                 Padding="20,0,0,0"
                                                 >
-                                        <Image x:ConnectionId='8'                                          
+                                        <Image x:ConnectionId='11'                                          
                                                Width="20"
                                                Height="20"
                                                />
-                                        <TextBlock x:ConnectionId='9'                      
+                                        <TextBlock x:ConnectionId='12'                      
                                                    Margin="27,-2,0,0"
                                                                                                     
                                                    VerticalAlignment="Center"
@@ -132,8 +132,8 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid x:ConnectionId='14' Name="RootGrid">
-                    <Frame x:ConnectionId='15' Name="RootFrame"></Frame>
+                <Grid x:ConnectionId='17' Name="RootGrid">
+                    <Frame x:ConnectionId='18' Name="RootFrame"></Frame>
                 </Grid>
             </SplitView.Content>
         </SplitView>
@@ -143,12 +143,24 @@
                 Background="Transparent"
                 Style="{StaticResource ButtonCommonStyle}"
                 Grid.Row="1">
-            <FontIcon x:ConnectionId='5' FontFamily="Segoe MDL2 Assets"
+            <FontIcon x:ConnectionId='8' FontFamily="Segoe MDL2 Assets"
                       Glyph="&#xE700;"
                       Foreground="Black"
                       Name="HamburgerButtonFontIcon"/>
         </Button>
 
+        <StackPanel Grid.Row="0"
+                    Grid.RowSpan="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,120"
+                    Padding="8"
+                    Background="DarkGray"
+                    Visibility="Collapsed">
+            <TextBlock x:ConnectionId='7' Name="Prompt"></TextBlock>
+        </StackPanel>
 
 
         <Grid x:ConnectionId='4' Grid.Column="1"
@@ -160,6 +172,26 @@
               Visibility="Collapsed"
                                                   
               >
+        </Grid>
+
+        <Grid x:ConnectionId='5' Grid.Row="0"
+              Grid.RowSpan="3"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"
+              Name="WaitPage"
+              Visibility="Collapsed">
+
+            <ProgressRing x:ConnectionId='6' Name="MainPageProgressRing"
+                          Foreground="#333333">
+                
+            </ProgressRing>
+
+            <TextBlock VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0,50,0,0"
+                       Foreground="#333333">ONE IS MORE</TextBlock>
+            
+            
         </Grid>
         
         
