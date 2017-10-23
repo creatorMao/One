@@ -2244,63 +2244,63 @@ namespace __Interop
 
 		public delegate void AddrOfTarget131(
 					global::System.__ComObject a0, 
-					global::Windows.UI.Xaml.Documents.TextElement a1, 
-					global::Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs a2);
+					object a1, 
+					global::Windows.UI.Xaml.ExceptionRoutedEventArgs a2);
 
 		public delegate void AddrOfTarget132(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Documents.TextElement a1, 
-					global::Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs a2);
+					global::Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs a2);
 
 		public delegate void AddrOfTarget133(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Documents.TextElement a1, 
-					global::Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs a2);
+					global::Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs a2);
 
 		public delegate void AddrOfTarget134(
 					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.Controls.ContextMenuEventArgs a2);
+					global::Windows.UI.Xaml.Documents.TextElement a1, 
+					global::Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs a2);
 
 		public delegate void AddrOfTarget135(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.SelectionChangedEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ContextMenuEventArgs a2);
 
 		public delegate void AddrOfTarget136(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.ItemClickEventArgs a2);
+					global::Windows.UI.Xaml.Controls.SelectionChangedEventArgs a2);
 
 		public delegate void AddrOfTarget137(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.DragItemsStartingEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ItemClickEventArgs a2);
 
 		public delegate void AddrOfTarget138(
 					global::System.__ComObject a0, 
-					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
-					global::Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs a2);
+					object a1, 
+					global::Windows.UI.Xaml.Controls.DragItemsStartingEventArgs a2);
 
 		public delegate void AddrOfTarget139(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
-					global::Windows.UI.Xaml.Controls.DragItemsCompletedEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs a2);
 
 		public delegate void AddrOfTarget140(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
-					global::Windows.UI.Xaml.Controls.ChoosingItemContainerEventArgs a2);
+					global::Windows.UI.Xaml.Controls.DragItemsCompletedEventArgs a2);
 
 		public delegate void AddrOfTarget141(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
-					global::Windows.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ChoosingItemContainerEventArgs a2);
 
 		public delegate void AddrOfTarget142(
 					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.ExceptionRoutedEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
+					global::Windows.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs a2);
 
 		public delegate void AddrOfTarget143(
 					global::System.__ComObject a0, 

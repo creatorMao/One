@@ -36,6 +36,9 @@ namespace One
         private List<NavMenuItem> navMenuList = null;
 
 
+        private ObservableCollection<PhotoAlbum_Datum> _photoMonthList = null;
+
+
 
         public MainPage()
         {
@@ -117,7 +120,7 @@ namespace One
                 switch (currentNavMenuItem.Title)
                 {
                     case "一个":
-                        RootFrame.Navigate(currentNavMenuItem.NavigatePage);
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage,_photoMonthList);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "文章":
@@ -181,13 +184,22 @@ namespace One
 
         public async void PrepareData()
         {
+            //开启等待
             WaitPage.Visibility = Visibility.Visible;
             MainPageProgressRing.IsActive = true;
+            HamburgerButton.Visibility = Visibility.Collapsed;
             //等待近10天数据
             onelistResultList = await OnelistManager.GetLatelyOnelist();
 
+            PhotoAlbum_GettingStarted data = new PhotoAlbum_GettingStarted();
+             _photoMonthList = new ObservableCollection<PhotoAlbum_Datum>();
+            data = await PhotoAlbumManager.GetPhotolistByMonth();
+            data.Data.ForEach(p => _photoMonthList.Add(p));
+
+            //结束等待
             WaitPage.Visibility = Visibility.Collapsed;
             MainPageProgressRing.IsActive = false;
+            HamburgerButton.Visibility = Visibility.Visible;
 
             TodayDate.Text = onelistResultList[0].data.weather.date.Replace("-","/"); ;
             PlaceName.Text = onelistResultList[0].data.weather.city_name;
@@ -197,14 +209,7 @@ namespace One
 
            
 
-            RootFrame.Navigate(typeof(IndexPage),onelistResultList);
-
-            //RootFrame.Navigate(typeof(AboutPage));
-
-            //RootFrame.Navigate(typeof(IndexPage));
-
-
-            //RootFrame.Navigate(typeof(MoviePage), onelistResultList);
+            RootFrame.Navigate(typeof(IndexPage), _photoMonthList);
 
 
         }

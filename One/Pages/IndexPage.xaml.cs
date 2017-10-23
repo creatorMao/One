@@ -47,10 +47,6 @@ namespace One.Pages
 
             dateTime = DateTime.Now.AddMonths(-1);
 
-            PreParePhotoList();
-
-            
-
 
         }
 
@@ -58,19 +54,19 @@ namespace One.Pages
         {
             base.OnNavigatedTo(e);
 
-            
+            _photoMonthList =e.Parameter as ObservableCollection<PhotoAlbum_Datum>;
 
         }
 
       
-        private async void PreParePhotoList()
-        {
-            PhotoAlbum_GettingStarted data =new PhotoAlbum_GettingStarted();
-            _photoMonthList = new ObservableCollection<PhotoAlbum_Datum>();
+        //private async void PreParePhotoList()
+        //{
+        //    PhotoAlbum_GettingStarted data =new PhotoAlbum_GettingStarted();
+        //    _photoMonthList = new ObservableCollection<PhotoAlbum_Datum>();
 
-            data = await PhotoAlbumManager.GetPhotolistByMonth();
-            data.Data.ForEach(p => _photoMonthList.Add(p));
-        }
+        //    data = await PhotoAlbumManager.GetPhotolistByMonth();
+        //    data.Data.ForEach(p => _photoMonthList.Add(p));
+        //}
 
 
 
@@ -189,15 +185,13 @@ namespace One.Pages
         /// <param name="e"></param>
         private void ShareMore(object sender, RoutedEventArgs e)
         {
-            DataTransferManager.GetForCurrentView().DataRequested += IndexPage_DataRequested;
+            DataTransferManager dataTransferManager = DataTransferManager.GetForCurrentView();
+            dataTransferManager.DataRequested += IndexPage_DataRequested;
             DataTransferManager.ShowShareUI();
         }
 
         void IndexPage_DataRequested(DataTransferManager sender, DataRequestedEventArgs args)
         {
-            
-            var deferral = args.Request.GetDeferral();
-
 
             string shareLinkString = photoAlbum_Datum.ShareList.Weibo.link;
 
@@ -205,15 +199,13 @@ namespace One.Pages
             DataPackage dataPackage = new DataPackage();
             dataPackage.SetWebLink(new Uri(shareLinkString));
             dataPackage.SetBitmap(RandomAccessStreamReference.CreateFromUri((new Uri(photoAlbum_Datum.HpImgUrl))));
+            dataPackage.Properties.Title = photoAlbum_Datum.HpTitle;
+            dataPackage.Properties.Description = "ONE for Windows10";
 
+            DataRequest request = args.Request;
+            request.Data = dataPackage;
 
-
-            args.Request.Data = dataPackage;
-
-            args.Request.Data.Properties.Title = photoAlbum_Datum.HpTitle;
-            args.Request.Data.Properties.Description = "ONE for Windows10";
-
-            deferral.Complete();
+            
         }
 
 
@@ -246,8 +238,30 @@ namespace One.Pages
 
         }
 
-    
+        /// <summary>
+        /// 暂时每张照片的额info
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ShowImageInfo(object sender, RoutedEventArgs e)
+        {
 
-       
+            ImageInfoPageMask.Visibility = Visibility.Visible;
+            ImageInfoPage.Visibility = Visibility.Visible;
+
+
+            ImageIinfo_Image.Source = new BitmapImage(new Uri(photoAlbum_Datum.HpImgUrl));
+            ImageIinfo_Author.Text = photoAlbum_Datum.HpAuthor + "&" + photoAlbum_Datum.ImageAuthors + "作品";
+            ImageIinfo_Time.Text = photoAlbum_Datum.HpMakettime;
+            ImageIinfo_Uri.Text = photoAlbum_Datum.WebUrl;
+
+
+        }
+
+        private void ImageInfoPage_PointerPressed(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            ImageInfoPageMask.Visibility = Visibility.Collapsed;
+            ImageInfoPage.Visibility = Visibility.Collapsed;
+        }
     }
 }

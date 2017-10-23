@@ -15109,17 +15109,6 @@ namespace Windows.ApplicationModel.DataTransfer
 		public static partial class Stubs
 		{
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.ApplicationModel.DataTransfer.DataPackage get_Data(global::System.__ComObject __this)
-			{
-				global::Windows.ApplicationModel.DataTransfer.DataPackage __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.ApplicationModel.DataTransfer.IDataRequest, global::Windows.ApplicationModel.DataTransfer.DataPackage>(
-									__this, 
-									6
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static void put_Data(
 						global::System.__ComObject __this, 
 						global::Windows.ApplicationModel.DataTransfer.DataPackage value)
@@ -15130,17 +15119,6 @@ namespace Windows.ApplicationModel.DataTransfer
 									7
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.ApplicationModel.DataTransfer.DataRequestDeferral GetDeferral(global::System.__ComObject __this)
-			{
-				global::Windows.ApplicationModel.DataTransfer.DataRequestDeferral __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.ApplicationModel.DataTransfer.IDataRequest, global::Windows.ApplicationModel.DataTransfer.DataRequestDeferral>(
-									__this, 
-									10
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
 			}
 		}
 	}
@@ -15239,24 +15217,6 @@ namespace Windows.ApplicationModel.DataTransfer
 									__this, 
 									value, 
 									7
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-		}
-	}
-
-	// Windows.ApplicationModel.DataTransfer.IDataRequestDeferral
-	public unsafe static class IDataRequestDeferral__Impl
-	{
-		// StubClass for 'Windows.ApplicationModel.DataTransfer.IDataRequestDeferral'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void Complete(global::System.__ComObject __this)
-			{
-				global::__Interop.ForwardComStubs.Stub_16<global::Windows.ApplicationModel.DataTransfer.IDataRequestDeferral>(
-									__this, 
-									6
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
@@ -48892,6 +48852,146 @@ namespace Windows.UI.Xaml.Controls
 		}
 	}
 
+	// Windows.UI.Xaml.Controls.IImageStatics
+	public unsafe static class IImageStatics__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Controls.IImageStatics'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.DependencyProperty get_SourceProperty(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.DependencyProperty __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.UI.Xaml.Controls.IImageStatics, global::Windows.UI.Xaml.DependencyProperty>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
+
+	// Windows.UI.Xaml.Controls.IImage
+	public unsafe static class IImage__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Controls.IImage'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Media.ImageSource get_Source(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.Media.ImageSource __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.UI.Xaml.Controls.IImage, global::Windows.UI.Xaml.Media.ImageSource>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Source(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Media.ImageSource value)
+			{
+				global::__Interop.ForwardComStubs.Stub_5<global::Windows.UI.Xaml.Controls.IImage, global::Windows.UI.Xaml.Media.ImageSource>(
+									__this, 
+									value, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			// Signature, Windows.UI.Xaml.Controls.IImage.get_Stretch, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.EnumMarshaller] Windows_UI_Xaml_Media_Stretch__Windows_UI_Xaml_Media__Stretch, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Media.Stretch get_Stretch(global::System.__ComObject __this)
+			{
+				// Setup
+				global::Windows.UI.Xaml.Media.Stretch unsafe_value__retval;
+				global::Windows.UI.Xaml.Media.Stretch value__retval;
+				int unsafe___hr;
+				// Marshalling
+				// Call to native method
+				unsafe___hr = global::__Interop.ComCallHelpers.Call(
+									__this, 
+									typeof(global::Windows.UI.Xaml.Controls.IImage).TypeHandle, 
+									8, 
+									&(unsafe_value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				value__retval = unsafe_value__retval;
+				// Return
+				return value__retval;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Stretch(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Media.Stretch value)
+			{
+				global::__Interop.ForwardComStubs.Stub_7<global::Windows.UI.Xaml.Controls.IImage>(
+									__this, 
+									((int)value), 
+									9
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageFailed(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.ExceptionRoutedEventHandler value)
+			{
+				global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __ret = global::__Interop.ForwardComStubs.Stub_48<global::Windows.UI.Xaml.Controls.IImage>(
+									__this, 
+									value, 
+									13
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void remove_ImageFailed(
+						global::System.__ComObject __this, 
+						global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
+			{
+				global::__Interop.ForwardComStubs.Stub_8<global::Windows.UI.Xaml.Controls.IImage>(
+									__this, 
+									token, 
+									14
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageOpened(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.RoutedEventHandler value)
+			{
+				global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __ret = global::__Interop.ForwardComStubs.Stub_21<global::Windows.UI.Xaml.Controls.IImage>(
+									__this, 
+									value, 
+									15
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void remove_ImageOpened(
+						global::System.__ComObject __this, 
+						global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
+			{
+				global::__Interop.ForwardComStubs.Stub_8<global::Windows.UI.Xaml.Controls.IImage>(
+									__this, 
+									token, 
+									16
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+		}
+	}
+
 	// Windows.UI.Xaml.Controls.IProgressRing
 	public unsafe static class IProgressRing__Impl
 	{
@@ -50650,146 +50750,6 @@ namespace Windows.UI.Xaml.Controls
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 				return __ret;
-			}
-		}
-	}
-
-	// Windows.UI.Xaml.Controls.IImageStatics
-	public unsafe static class IImageStatics__Impl
-	{
-		// StubClass for 'Windows.UI.Xaml.Controls.IImageStatics'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.UI.Xaml.DependencyProperty get_SourceProperty(global::System.__ComObject __this)
-			{
-				global::Windows.UI.Xaml.DependencyProperty __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.UI.Xaml.Controls.IImageStatics, global::Windows.UI.Xaml.DependencyProperty>(
-									__this, 
-									6
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-		}
-	}
-
-	// Windows.UI.Xaml.Controls.IImage
-	public unsafe static class IImage__Impl
-	{
-		// StubClass for 'Windows.UI.Xaml.Controls.IImage'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.UI.Xaml.Media.ImageSource get_Source(global::System.__ComObject __this)
-			{
-				global::Windows.UI.Xaml.Media.ImageSource __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.UI.Xaml.Controls.IImage, global::Windows.UI.Xaml.Media.ImageSource>(
-									__this, 
-									6
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Source(
-						global::System.__ComObject __this, 
-						global::Windows.UI.Xaml.Media.ImageSource value)
-			{
-				global::__Interop.ForwardComStubs.Stub_5<global::Windows.UI.Xaml.Controls.IImage, global::Windows.UI.Xaml.Media.ImageSource>(
-									__this, 
-									value, 
-									7
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			// Signature, Windows.UI.Xaml.Controls.IImage.get_Stretch, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.EnumMarshaller] Windows_UI_Xaml_Media_Stretch__Windows_UI_Xaml_Media__Stretch, 
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.UI.Xaml.Media.Stretch get_Stretch(global::System.__ComObject __this)
-			{
-				// Setup
-				global::Windows.UI.Xaml.Media.Stretch unsafe_value__retval;
-				global::Windows.UI.Xaml.Media.Stretch value__retval;
-				int unsafe___hr;
-				// Marshalling
-				// Call to native method
-				unsafe___hr = global::__Interop.ComCallHelpers.Call(
-									__this, 
-									typeof(global::Windows.UI.Xaml.Controls.IImage).TypeHandle, 
-									8, 
-									&(unsafe_value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				value__retval = unsafe_value__retval;
-				// Return
-				return value__retval;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Stretch(
-						global::System.__ComObject __this, 
-						global::Windows.UI.Xaml.Media.Stretch value)
-			{
-				global::__Interop.ForwardComStubs.Stub_7<global::Windows.UI.Xaml.Controls.IImage>(
-									__this, 
-									((int)value), 
-									9
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageFailed(
-						global::System.__ComObject __this, 
-						global::Windows.UI.Xaml.ExceptionRoutedEventHandler value)
-			{
-				global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __ret = global::__Interop.ForwardComStubs.Stub_48<global::Windows.UI.Xaml.Controls.IImage>(
-									__this, 
-									value, 
-									13
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void remove_ImageFailed(
-						global::System.__ComObject __this, 
-						global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
-			{
-				global::__Interop.ForwardComStubs.Stub_8<global::Windows.UI.Xaml.Controls.IImage>(
-									__this, 
-									token, 
-									14
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageOpened(
-						global::System.__ComObject __this, 
-						global::Windows.UI.Xaml.RoutedEventHandler value)
-			{
-				global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __ret = global::__Interop.ForwardComStubs.Stub_21<global::Windows.UI.Xaml.Controls.IImage>(
-									__this, 
-									value, 
-									15
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void remove_ImageOpened(
-						global::System.__ComObject __this, 
-						global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
-			{
-				global::__Interop.ForwardComStubs.Stub_8<global::Windows.UI.Xaml.Controls.IImage>(
-									__this, 
-									token, 
-									16
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
 		}
 	}

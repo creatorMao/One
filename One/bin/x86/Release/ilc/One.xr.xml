@@ -63,12 +63,12 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="MinHeight" />
@@ -123,6 +123,15 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Name" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
       <RootProperty Name="Name" />
       <RootProperty Name="Foreground" />
@@ -167,15 +176,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Source" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="Name" />
-      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="Name" />

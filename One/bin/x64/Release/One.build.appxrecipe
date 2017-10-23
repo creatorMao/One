@@ -57,6 +57,12 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\article.png">
       <PackagePath>Assets\icon\article.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\boy.png">
+      <PackagePath>Assets\icon\boy.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\boy1.png">
+      <PackagePath>Assets\icon\boy1.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\cat.png">
       <PackagePath>Assets\icon\cat.png</PackagePath>
     </AppxPackagedFile>
@@ -108,8 +114,20 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\share_weibo.png">
       <PackagePath>Assets\icon\share_weibo.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\time.png">
+      <PackagePath>Assets\icon\time.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\time1.png">
+      <PackagePath>Assets\icon\time1.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\weibo.png">
       <PackagePath>Assets\icon\weibo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\world.png">
+      <PackagePath>Assets\icon\world.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\world1.png">
+      <PackagePath>Assets\icon\world1.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\about-page-bg.png">
       <PackagePath>Assets\images\about-page-bg.png</PackagePath>
@@ -122,9 +140,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\header.jpg">
       <PackagePath>Assets\images\header.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\oneisall.jpeg">
-      <PackagePath>Assets\images\oneisall.jpeg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\images\oneisall.png">
       <PackagePath>Assets\images\oneisall.png</PackagePath>

@@ -181,15 +181,25 @@
               Name="WaitPage"
               Visibility="Collapsed">
 
-            <ProgressRing Name="MainPageProgressRing"
-                          Foreground="#333333">
-                
-            </ProgressRing>
+            <Image Source="../Assets/images/oneisall.png"
+                   Width="250"
+                   Height="250"
+                   ></Image>
 
-            <TextBlock VerticalAlignment="Center"
+            <StackPanel VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,50">
+                <ProgressRing Name="MainPageProgressRing"
+                          Foreground="#333333">
+
+                </ProgressRing>
+
+                <TextBlock VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       Margin="0,50,0,0"
+                       Margin="0,10,0,0"
                        Foreground="#333333">ONE IS MORE</TextBlock>
+            </StackPanel>
+           
             
             
         </Grid>

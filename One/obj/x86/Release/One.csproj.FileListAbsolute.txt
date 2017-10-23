@@ -613,7 +613,6 @@ D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\set.png
 D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\share_link.png
 D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\share_more.png
 D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\share_weibo.png
-D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\images\oneisall.jpeg
 D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\images\oneisall.png
 D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\images\seting-page-bg.png
 D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\images\zhifubao.jpg
@@ -647,7 +646,6 @@ D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\icon\share_weibo.png
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\images\oneisall.png
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\images\seting-page-bg.png
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\images\zhifubao.jpg
-D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\images\oneisall.jpeg
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\intermediate\ILTransformed\Microsoft.CSharp.ildll
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\intermediate\ILTransformed\Microsoft.CSharp.ilpdb
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\intermediate\ILTransformed\Microsoft.Toolkit.Uwp.Notifications.ildll
@@ -670,3 +668,15 @@ D:\study\uwpProjects\One\One\obj\x86\Release\ilc\intermediate\PreMergeILTransfor
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\intermediate\PreMergeILTransformed\Microsoft.Toolkit.Uwp.Notifications.pdb
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\intermediate\PreMergeILTransformed\Newtonsoft.Json.dll
 D:\study\uwpProjects\One\One\obj\x86\Release\ilc\intermediate\PreMergeILTransformed\Newtonsoft.Json.pdb
+D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\boy.png
+D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\boy1.png
+D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\time.png
+D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\time1.png
+D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\world.png
+D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\world1.png
+D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\icon\boy1.png
+D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\icon\boy.png
+D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\icon\time1.png
+D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\icon\time.png
+D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\icon\world1.png
+D:\study\uwpProjects\One\One\obj\x86\Release\ilc\in\Assets\icon\world.png

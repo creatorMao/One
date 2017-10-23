@@ -1021,15 +1021,6 @@ namespace Windows.ApplicationModel.DataTransfer
 	public unsafe sealed class DataRequest : global::System.__ComObject, global::Windows.ApplicationModel.DataTransfer.IDataRequest
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Data")]
-		public global::Windows.ApplicationModel.DataTransfer.DataPackage get_Data()
-		{
-			global::Windows.ApplicationModel.DataTransfer.DataPackage __retVal = global::Windows.ApplicationModel.DataTransfer.IDataRequest__Impl.Stubs.get_Data(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Data")]
 		public void put_Data(global::Windows.ApplicationModel.DataTransfer.DataPackage value)
 		{
@@ -1038,14 +1029,6 @@ namespace Windows.ApplicationModel.DataTransfer
 								value
 							);
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public global::Windows.ApplicationModel.DataTransfer.DataRequestDeferral GetDeferral()
-		{
-			global::Windows.ApplicationModel.DataTransfer.DataRequestDeferral __retVal = global::Windows.ApplicationModel.DataTransfer.IDataRequest__Impl.Stubs.GetDeferral(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
 		}
 
 		public DataRequest(global::System.IntPtr dummy)
@@ -1295,24 +1278,6 @@ namespace Windows.ApplicationModel.DataTransfer
 		}
 	}
 
-	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.ApplicationModel.DataTransfer.IDataRequestDeferral))]
-	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe sealed class DataRequestDeferral : global::System.__ComObject, global::Windows.ApplicationModel.DataTransfer.IDataRequestDeferral
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public void Complete()
-		{
-			global::Windows.ApplicationModel.DataTransfer.IDataRequestDeferral__Impl.Stubs.Complete(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		public DataRequestDeferral(global::System.IntPtr dummy)
-		{
-		}
-	}
-
 	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
@@ -1386,15 +1351,8 @@ namespace Windows.ApplicationModel.DataTransfer
 	public unsafe interface IDataRequest
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Data")]
-		global::Windows.ApplicationModel.DataTransfer.DataPackage get_Data();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Data")]
 		void put_Data(global::Windows.ApplicationModel.DataTransfer.DataPackage value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		global::Windows.ApplicationModel.DataTransfer.DataRequestDeferral GetDeferral();
 	}
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -1431,14 +1389,6 @@ namespace Windows.ApplicationModel.DataTransfer
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		void SetWebLink(global::System.Uri value);
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IDataRequestDeferral
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		void Complete();
 	}
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -14442,6 +14392,137 @@ namespace Windows.UI.Xaml.Controls
 		}
 	}
 
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IImage))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class Image : global::Windows.UI.Xaml.FrameworkElement, global::Windows.UI.Xaml.Controls.IImage
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		public Image() : 
+				base(default(global::System.IntPtr))
+		{
+			global::System.IntPtr retval;
+			retval = global::System.Runtime.InteropServices.McgMarshal.ActivateInstance("Windows.UI.Xaml.Controls.Image");
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			this.__AttachAndRelease(retval);
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Source")]
+		public global::Windows.UI.Xaml.Media.ImageSource get_Source()
+		{
+			global::Windows.UI.Xaml.Media.ImageSource __retVal = global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.get_Source(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Source")]
+		public void put_Source(global::Windows.UI.Xaml.Media.ImageSource value)
+		{
+			global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.put_Source(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Stretch")]
+		public global::Windows.UI.Xaml.Media.Stretch get_Stretch()
+		{
+			global::Windows.UI.Xaml.Media.Stretch __retVal = global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.get_Stretch(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Stretch")]
+		public void put_Stretch(global::Windows.UI.Xaml.Media.Stretch value)
+		{
+			global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.put_Stretch(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ImageFailed")]
+		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageFailed(global::Windows.UI.Xaml.ExceptionRoutedEventHandler value)
+		{
+			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.add_ImageFailed(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ImageFailed")]
+		public void remove_ImageFailed(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
+		{
+			global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.remove_ImageFailed(
+								this, 
+								token
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ImageOpened")]
+		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageOpened(global::Windows.UI.Xaml.RoutedEventHandler value)
+		{
+			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.add_ImageOpened(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ImageOpened")]
+		public void remove_ImageOpened(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
+		{
+			global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.remove_ImageOpened(
+								this, 
+								token
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "SourceProperty")]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.UI.Xaml.DependencyProperty get_SourceProperty()
+		{
+			global::Windows.UI.Xaml.DependencyProperty retval;
+			retval = __Factory_Windows_UI_Xaml_Controls__IImageStatics_get_SourceProperty("Windows.UI.Xaml.Controls.Image");
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.UI.Xaml.DependencyProperty __Factory_Windows_UI_Xaml_Controls__IImageStatics_get_SourceProperty(string typeName)
+		{
+			global::Windows.UI.Xaml.DependencyProperty __pRetVal;
+			__pRetVal = global::Windows.UI.Xaml.Controls.IImageStatics__Impl.Stubs.get_SourceProperty(global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+									typeName, 
+									typeof(global::Windows.UI.Xaml.Controls.IImageStatics).TypeHandle
+								));
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		public Image(global::System.IntPtr dummy) : 
+				base(dummy)
+		{
+		}
+	}
+
 	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IProgressRing))]
 	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -15835,137 +15916,6 @@ namespace Windows.UI.Xaml.Controls
 		}
 
 		public ListView(global::System.IntPtr dummy) : 
-				base(dummy)
-		{
-		}
-	}
-
-	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IImage))]
-	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe sealed class Image : global::Windows.UI.Xaml.FrameworkElement, global::Windows.UI.Xaml.Controls.IImage
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		public Image() : 
-				base(default(global::System.IntPtr))
-		{
-			global::System.IntPtr retval;
-			retval = global::System.Runtime.InteropServices.McgMarshal.ActivateInstance("Windows.UI.Xaml.Controls.Image");
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			this.__AttachAndRelease(retval);
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Source")]
-		public global::Windows.UI.Xaml.Media.ImageSource get_Source()
-		{
-			global::Windows.UI.Xaml.Media.ImageSource __retVal = global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.get_Source(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Source")]
-		public void put_Source(global::Windows.UI.Xaml.Media.ImageSource value)
-		{
-			global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.put_Source(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Stretch")]
-		public global::Windows.UI.Xaml.Media.Stretch get_Stretch()
-		{
-			global::Windows.UI.Xaml.Media.Stretch __retVal = global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.get_Stretch(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Stretch")]
-		public void put_Stretch(global::Windows.UI.Xaml.Media.Stretch value)
-		{
-			global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.put_Stretch(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ImageFailed")]
-		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageFailed(global::Windows.UI.Xaml.ExceptionRoutedEventHandler value)
-		{
-			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.add_ImageFailed(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ImageFailed")]
-		public void remove_ImageFailed(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
-		{
-			global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.remove_ImageFailed(
-								this, 
-								token
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ImageOpened")]
-		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageOpened(global::Windows.UI.Xaml.RoutedEventHandler value)
-		{
-			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.add_ImageOpened(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ImageOpened")]
-		public void remove_ImageOpened(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
-		{
-			global::Windows.UI.Xaml.Controls.IImage__Impl.Stubs.remove_ImageOpened(
-								this, 
-								token
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "SourceProperty")]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static global::Windows.UI.Xaml.DependencyProperty get_SourceProperty()
-		{
-			global::Windows.UI.Xaml.DependencyProperty retval;
-			retval = __Factory_Windows_UI_Xaml_Controls__IImageStatics_get_SourceProperty("Windows.UI.Xaml.Controls.Image");
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return retval;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static global::Windows.UI.Xaml.DependencyProperty __Factory_Windows_UI_Xaml_Controls__IImageStatics_get_SourceProperty(string typeName)
-		{
-			global::Windows.UI.Xaml.DependencyProperty __pRetVal;
-			__pRetVal = global::Windows.UI.Xaml.Controls.IImageStatics__Impl.Stubs.get_SourceProperty(global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-									typeName, 
-									typeof(global::Windows.UI.Xaml.Controls.IImageStatics).TypeHandle
-								));
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __pRetVal;
-		}
-
-		public Image(global::System.IntPtr dummy) : 
 				base(dummy)
 		{
 		}
@@ -17506,6 +17456,52 @@ namespace Windows.UI.Xaml.Controls
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IImageStatics
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "SourceProperty")]
+		global::Windows.UI.Xaml.DependencyProperty get_SourceProperty();
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IImage
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Source")]
+		global::Windows.UI.Xaml.Media.ImageSource get_Source();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Source")]
+		void put_Source(global::Windows.UI.Xaml.Media.ImageSource value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Stretch")]
+		global::Windows.UI.Xaml.Media.Stretch get_Stretch();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Stretch")]
+		void put_Stretch(global::Windows.UI.Xaml.Media.Stretch value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ImageFailed")]
+		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageFailed(global::Windows.UI.Xaml.ExceptionRoutedEventHandler value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ImageFailed")]
+		void remove_ImageFailed(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ImageOpened")]
+		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageOpened(global::Windows.UI.Xaml.RoutedEventHandler value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ImageOpened")]
+		void remove_ImageOpened(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
 	public unsafe interface IProgressRing
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
@@ -18014,52 +18010,6 @@ namespace Windows.UI.Xaml.Controls
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
 	public unsafe interface IListView
 	{
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IImageStatics
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "SourceProperty")]
-		global::Windows.UI.Xaml.DependencyProperty get_SourceProperty();
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IImage
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Source")]
-		global::Windows.UI.Xaml.Media.ImageSource get_Source();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Source")]
-		void put_Source(global::Windows.UI.Xaml.Media.ImageSource value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Stretch")]
-		global::Windows.UI.Xaml.Media.Stretch get_Stretch();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Stretch")]
-		void put_Stretch(global::Windows.UI.Xaml.Media.Stretch value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ImageFailed")]
-		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageFailed(global::Windows.UI.Xaml.ExceptionRoutedEventHandler value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ImageFailed")]
-		void remove_ImageFailed(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ImageOpened")]
-		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ImageOpened(global::Windows.UI.Xaml.RoutedEventHandler value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ImageOpened")]
-		void remove_ImageOpened(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
 	}
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]

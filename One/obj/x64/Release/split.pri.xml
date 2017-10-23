@@ -124,6 +124,16 @@
 							<Value>Assets\icon\article.png</Value>
 						</Candidate>
 					</NamedResource>
+					<NamedResource name="boy.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/boy.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\boy.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="boy1.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/boy1.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\boy1.png</Value>
+						</Candidate>
+					</NamedResource>
 					<NamedResource name="cat.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/cat.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\cat.png</Value>
@@ -209,9 +219,29 @@
 							<Value>Assets\icon\share_weibo.png</Value>
 						</Candidate>
 					</NamedResource>
+					<NamedResource name="time.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/time.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\time.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="time1.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/time1.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\time1.png</Value>
+						</Candidate>
+					</NamedResource>
 					<NamedResource name="weibo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/weibo.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\weibo.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="world.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/world.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\world.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="world1.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/world1.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\world1.png</Value>
 						</Candidate>
 					</NamedResource>
 				</ResourceMapSubtree>
@@ -234,11 +264,6 @@
 					<NamedResource name="header.jpg" uri="ms-resource://32688UWP.UWP/Files/Assets/images/header.jpg">
 						<Candidate type="Path">
 							<Value>Assets\images\header.jpg</Value>
-						</Candidate>
-					</NamedResource>
-					<NamedResource name="oneisall.jpeg" uri="ms-resource://32688UWP.UWP/Files/Assets/images/oneisall.jpeg">
-						<Candidate type="Path">
-							<Value>Assets\images\oneisall.jpeg</Value>
 						</Candidate>
 					</NamedResource>
 					<NamedResource name="oneisall.png" uri="ms-resource://32688UWP.UWP/Files/Assets/images/oneisall.png">
