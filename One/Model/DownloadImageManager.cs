@@ -1,4 +1,5 @@
-﻿using System;
+﻿using One.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,8 @@ namespace One.Model
         {
             BackgroundDownloader backgroundDownload = new BackgroundDownloader();
 
-            AppSetting setting = new AppSetting();
-            StorageFolder folder = await setting.GetDownloadFolder();
 
+            StorageFolder folder = await StorageFolder.GetFolderFromPathAsync(AppSettings.GetSetting("DefaultDownloadPath").ToString());
 
             StorageFile newFile = await folder.CreateFileAsync(imageName, CreationCollisionOption.OpenIfExists);
 

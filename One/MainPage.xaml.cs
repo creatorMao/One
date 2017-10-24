@@ -1,4 +1,5 @@
-﻿using One.Model;
+﻿using One.Common;
+using One.Model;
 using One.Pages;
 using System;
 using System.Collections.Generic;
@@ -45,13 +46,14 @@ namespace One
             this.InitializeComponent();
             CustomTitileBar();
 
+
             SetTitleBar();
 
             navMenuList = NavMenuManager.CreateNavMenuList();
 
             PrepareData();
 
-            
+            Default();
 
         }
 
@@ -137,6 +139,7 @@ namespace One
                         break;
                     case "设置":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage);
+                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
                         break;
 
                 }
@@ -225,8 +228,19 @@ namespace One
         }
 
 
+        public async void Default()
+        {
+            if (AppSettings.localSettings.Values.ContainsKey("DefaultDownloadPath"))
+            {
+
+            }
+            else
+            {
+                StorageFolder delaultDownloadFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync("ONE", CreationCollisionOption.OpenIfExists);
+                AppSettings.SetSetting("DefaultDownloadPath", delaultDownloadFolder.Path);
+            }  
+        }
 
 
-       
     }
 }

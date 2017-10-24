@@ -99,11 +99,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\AppSettings.cs" />
     <Compile Include="Converter\ColorConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\AppSetting.cs" />
     <Compile Include="Model\ArticalInfoManager.cs" />
     <Compile Include="Model\DownloadImageManager.cs" />
     <Compile Include="Model\ExtracteDataManager.cs" />

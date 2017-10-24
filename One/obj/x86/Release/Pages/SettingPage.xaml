@@ -14,19 +14,193 @@
                    Stretch="UniformToFill"></Image>
         </Grid>
 
-        <Grid HorizontalAlignment="Center"
-              VerticalAlignment="Center">
+        <Grid MaxWidth="500"
+              VerticalAlignment="Center"
+              Padding="25"
+              >
             
-            <StackPanel>
-                <TextBlock Foreground="White"
-                               FontWeight="Bold"
-                               FontSize="18"
-                               Margin="0,30,0,0">设置</TextBlock>
-                <StackPanel>
-                    <TextBlock>图片保存路径：</TextBlock>
-                    <Button>打开文件夹</Button>
-                </StackPanel>
-            </StackPanel>
+            
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="0"
+                       Text="设置"
+                       Foreground="White"
+                       FontSize="25"
+                       />
+
+            <TextBlock Grid.Column="0"
+                       Grid.Row="1"
+                       Text="磁贴"
+                       Margin="0,25,0,0"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="Thin"/>
+            
+            <TextBlock Grid.Column="0"
+                       Grid.Row="2"
+                       Text="动态磁贴"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       FontSize="16"
+                       />
+
+            <ToggleSwitch x:ConnectionId='1' Grid.Column="1"
+                          Grid.Row="2"
+                          OffContent="关"
+                          OnContent="开"
+                          IsEnabled="True"
+                          Name="IsTileToggleSwitch"
+                          Foreground="White"
+                          Margin="28,0,0,0"
+                          VerticalAlignment="Center" 
+                          Style="{StaticResource ToggleSwitchCommonStyle}"
+                                                  
+                          >
+                
+            </ToggleSwitch>
+
+            <TextBlock Grid.Column="0"
+                       Grid.Row="3"
+                       Text="通知"
+                       Margin="0,20,0,0"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="Thin"/>
+
+            <TextBlock Grid.Column="0"
+                       Grid.Row="4"
+                       Text="复制/下载完成 提示"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       FontSize="16"
+                       />
+
+            <ToggleSwitch x:ConnectionId='2' Grid.Column="1"
+                          Grid.Row="4"
+                          OffContent="关"
+                          OnContent="开"
+                          Name="IsToastToggleSwitch"
+                          IsEnabled="True"
+                          Foreground="White"
+                          Margin="28,0,0,0"
+                          VerticalAlignment="Center"
+                          Style="{StaticResource ToggleSwitchCommonStyle}"
+                                                  
+                          >
+
+            </ToggleSwitch>
+
+            <TextBlock Grid.Column="0"
+                       Grid.Row="5"
+                       Text="主题"
+                       Margin="0,20,0,0"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="Thin"/>
+
+            <TextBlock Grid.Column="0"
+                       Grid.Row="6"
+                       Text="切换主题"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       FontSize="16"
+                       />
+
+            <ToggleSwitch x:ConnectionId='3' Grid.Column="1"
+                          Grid.Row="6"
+                          OffContent="白"
+                          OnContent="黑"
+                          Name="ThemeToggleSwitch"
+                          IsEnabled="True"
+                          Foreground="White"
+                          Margin="28,0,0,0"
+                          VerticalAlignment="Center"
+                          Style="{StaticResource ToggleSwitchCommonStyle}"
+                                                  
+                          >
+
+            </ToggleSwitch>
+
+
+
+
+
+            <TextBlock Grid.Column="0"
+                       Grid.Row="7"
+                       Text="语言"
+                       Foreground="White"
+                       Margin="0,20,0,0"
+                       FontSize="16"/>
+
+            <ComboBox x:ConnectionId='4' Grid.Column="0"
+                      Grid.ColumnSpan="2"
+                      Grid.Row="8"
+                      Margin="0,10,0,0"
+                      Name="LanguageSwitchComboBox"
+                      MinWidth="440" Style="{StaticResource ComboBoxComonStyle}"
+                                                                                
+                      >
+                
+            </ComboBox>
+
+
+            <TextBlock Grid.Column="0"
+                       Grid.Row="9"
+                       Text="保存路径"
+                       Foreground="White"
+                       Margin="0,20,0,0"/>
+
+
+            <TextBlock x:ConnectionId='5' Grid.Column="0"
+                       Grid.Row="10"
+                       Text="动态磁贴"
+                       Name="Folder"
+                                                  
+                       VerticalAlignment="Center"
+                       Foreground="White"/>
+
+            <Button x:ConnectionId='6' Grid.Column="1"
+                    Grid.Row="10"
+                    Content="修改保存路径"
+                                        
+                    Foreground="White"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource ButtonCommonStyle}">
+                
+            </Button>
+
+            <TextBlock Grid.Row="11"
+                       Foreground="White"
+                       Grid.Column="0"
+                       Opacity="0.8"
+                       FontSize="13"
+                       Margin="0,10,0,0"
+                       Grid.ColumnSpan="2">//设置界面很多功能还没有完成，边学边做</TextBlock>
+
+
+            
+
+
 
         </Grid>
         
