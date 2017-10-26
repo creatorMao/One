@@ -53,7 +53,7 @@ namespace One
 
             PrepareData();
 
-            Default();
+            JudgeIsAlreadySeted();
 
         }
 
@@ -218,27 +218,47 @@ namespace One
         }
 
 
-        /// <summary>
-        /// 设置提示信息
-        /// </summary>
-        /// <param name="prompt"></param>
-        public void SetPrompt(string prompt)
+
+        public async void JudgeIsAlreadySeted()
         {
-            Prompt.Text = prompt;
-        }
+            var localSettings = AppSettings.localSettings;
 
 
-        public async void Default()
-        {
-            if (AppSettings.localSettings.Values.ContainsKey("DefaultDownloadPath"))
-            {
-
-            }
-            else
+            //判断路径  不存在的时候进入
+            if (!localSettings.Values.ContainsKey("DefaultDownloadPath"))
             {
                 StorageFolder delaultDownloadFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync("ONE", CreationCollisionOption.OpenIfExists);
                 AppSettings.SetSetting("DefaultDownloadPath", delaultDownloadFolder.Path);
-            }  
+            }
+
+            //判断语言
+            if (!localSettings.Values.ContainsKey("Language"))
+            {
+                AppSettings.SetSetting("Language", 0);
+            }
+
+
+            //判断语言
+            if (!localSettings.Values.ContainsKey("Theme"))
+            {
+                AppSettings.SetSetting("Theme", false);
+            }
+
+            //判断通知
+            if (!localSettings.Values.ContainsKey("Toast"))
+            {
+                AppSettings.SetSetting("Toast", true);
+            }
+
+
+            //判断动态磁贴
+            if (!localSettings.Values.ContainsKey("Tile"))
+            {
+                AppSettings.SetSetting("Tile", true);
+            }
+
+
+
         }
 
 

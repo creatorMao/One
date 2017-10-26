@@ -1,4 +1,5 @@
 ﻿using One.Common;
+using One.UC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Networking.BackgroundTransfer;
 using Windows.Storage;
+using Windows.UI;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Media;
 
 namespace One.Model
 {
@@ -23,12 +28,25 @@ namespace One.Model
           
             Uri uri = new Uri(imageUri);
 
-            backgroundDownload.SuccessToastNotification = ToastHelper.ShowAToast("保存成功", folder.Path, newFile.Path);
+
+            //如果用户设置了没有提示的话 就不要这一步
+            if ((bool)AppSettings.GetSetting("Toast"))
+            {
+                backgroundDownload.SuccessToastNotification = ToastHelper.ShowAToast("保存成功", folder.Path, newFile.Path);
+            }
+
 
             DownloadOperation download= backgroundDownload.CreateDownload(uri, newFile);
 
-            
 
+
+
+
+
+            //NotifyPopup notifyPopup = new NotifyPopup("提示点东西吧!");
+            //notifyPopup.Show();
+            Prompt prompt = new Prompt();
+            prompt.Show("正在下载！");
             await download.StartAsync();
 
 

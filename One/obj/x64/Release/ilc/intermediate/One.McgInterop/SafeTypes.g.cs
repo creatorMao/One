@@ -4784,6 +4784,35 @@ namespace Windows.System
 	public unsafe sealed class Launcher : global::System.__ComObject
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.Foundation.IAsyncOperation<bool> LaunchFolderAsync(global::Windows.Storage.IStorageFolder folder)
+		{
+			global::Windows.Foundation.IAsyncOperation<bool> retval;
+			retval = __Factory_Windows_System__ILauncherStatics3_LaunchFolderAsync(
+								"Windows.System.Launcher", 
+								folder
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.Foundation.IAsyncOperation<bool> __Factory_Windows_System__ILauncherStatics3_LaunchFolderAsync(
+					string typeName, 
+					global::Windows.Storage.IStorageFolder folder)
+		{
+			global::Windows.Foundation.IAsyncOperation<bool> __pRetVal;
+			__pRetVal = global::Windows.System.ILauncherStatics3__Impl.Stubs.LaunchFolderAsync(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.System.ILauncherStatics3).TypeHandle
+												), 
+								folder
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		public static global::Windows.Foundation.IAsyncOperation<bool> LaunchUriAsync(global::System.Uri uri)
 		{
 			global::Windows.Foundation.IAsyncOperation<bool> retval;
@@ -4823,6 +4852,14 @@ namespace Windows.System
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		global::Windows.Foundation.IAsyncOperation<bool> LaunchUriAsync(global::System.Uri uri);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ILauncherStatics3
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.Foundation.IAsyncOperation<bool> LaunchFolderAsync(global::Windows.Storage.IStorageFolder folder);
 	}
 }
 

@@ -1,4 +1,5 @@
-﻿using One.Converter;
+﻿using One.Common;
+using One.Converter;
 using One.Model;
 using System;
 using System.Collections.Generic;
@@ -108,24 +109,16 @@ namespace One.Pages
 
             X();
 
-
         }
 
         public async void X()
         {
-            string imageName = photoAlbum_Datum.HpContent+".jpg";
+            string imageName = photoAlbum_Datum.HpcontentId+".jpg";
             string imageUri = photoAlbum_Datum.HpImgUrl;
             DownloadImageManager downloadImageManager = new DownloadImageManager();
-            //PromptManager promptManager = new PromptManager();
-            //promptManager.SetPrompt("开始下载");
-            await downloadImageManager.SaveImage(imageName, imageUri);
-            //promptManager.SetPrompt("下载成功");
             
-
-            //ImageSource imageSource = 
-            //BitmapImage bitmapImage = new BitmapImage(new Uri());
-
-            //DetailsImage.Source = new BitmapImage(new Uri());
+            await downloadImageManager.SaveImage(imageName, imageUri);
+            
         }
 
         private void OpenSharePage(object sender, RoutedEventArgs e)
@@ -160,9 +153,12 @@ namespace One.Pages
 
             Clipboard.SetContent(dataPackage);
 
-            ToastNotification toast=ToastHelper.ShowAToast("已经复制",shareLinkString);
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
-
+            //当用户设置为不提示的时候  就不提示233
+            if ((bool)AppSettings.GetSetting("Toast"))
+            {
+                ToastNotification toast = ToastHelper.ShowAToast("已经复制", shareLinkString);
+                ToastNotificationManager.CreateToastNotifier().Show(toast);
+            }
         }
 
 

@@ -40070,6 +40070,28 @@ namespace Windows.System
 			}
 		}
 	}
+
+	// Windows.System.ILauncherStatics3
+	public unsafe static class ILauncherStatics3__Impl
+	{
+		// StubClass for 'Windows.System.ILauncherStatics3'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Foundation.IAsyncOperation<bool> LaunchFolderAsync(
+						global::System.__ComObject __this, 
+						global::Windows.Storage.IStorageFolder folder)
+			{
+				global::Windows.Foundation.IAsyncOperation<bool> __ret = global::__Interop.ForwardComStubs.Stub_26<global::Windows.System.ILauncherStatics3, global::Windows.Storage.IStorageFolder, global::Windows.Foundation.IAsyncOperation<bool>>(
+									__this, 
+									folder, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
 }
 
 namespace Windows.System.Threading
@@ -54362,6 +54384,45 @@ namespace Windows.UI.Xaml.Controls.Primitives
 									__this, 
 									value, 
 									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_IsOpen(
+						global::System.__ComObject __this, 
+						bool value)
+			{
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.Primitives.IPopup>(
+									__this, 
+									value, 
+									9
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_HorizontalOffset(
+						global::System.__ComObject __this, 
+						double value)
+			{
+				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IPopup>(
+									__this, 
+									value, 
+									11
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_VerticalOffset(
+						global::System.__ComObject __this, 
+						double value)
+			{
+				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IPopup>(
+									__this, 
+									value, 
+									13
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}

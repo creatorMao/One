@@ -132,7 +132,7 @@ namespace One.One_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[12];
+            _typeNameTable = new string[14];
             _typeNameTable[0] = "One.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -145,8 +145,10 @@ namespace One.One_XamlTypeInfo
             _typeNameTable[9] = "System.ValueType";
             _typeNameTable[10] = "Object";
             _typeNameTable[11] = "Byte";
+            _typeNameTable[12] = "One.UC.NotifyPopup";
+            _typeNameTable[13] = "One.UC.Prompt";
 
-            _typeTable = new global::System.Type[12];
+            _typeTable = new global::System.Type[14];
             _typeTable[0] = typeof(global::One.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -159,6 +161,8 @@ namespace One.One_XamlTypeInfo
             _typeTable[9] = typeof(global::System.ValueType);
             _typeTable[10] = typeof(global::System.Object);
             _typeTable[11] = typeof(global::System.Byte);
+            _typeTable[12] = typeof(global::One.UC.NotifyPopup);
+            _typeTable[13] = typeof(global::One.UC.Prompt);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -199,6 +203,7 @@ namespace One.One_XamlTypeInfo
         private object Activate_5_MoviePage() { return new global::One.Pages.MoviePage(); }
         private object Activate_6_ArticlePage() { return new global::One.Pages.ArticlePage(); }
         private object Activate_7_SettingPage() { return new global::One.Pages.SettingPage(); }
+        private object Activate_13_Prompt() { return new global::One.UC.Prompt(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -281,6 +286,19 @@ namespace One.One_XamlTypeInfo
             case 11:   //  Byte
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 12:   //  One.UC.NotifyPopup
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  One.UC.Prompt
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_13_Prompt;
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
             }

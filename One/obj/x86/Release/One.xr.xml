@@ -127,6 +127,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Padding" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
@@ -290,6 +292,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="Style" />
       <RootEvent Name="SelectionChanged" />
@@ -486,5 +489,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="MinHeight" />
     </RootType>
+    <RootType FullName="One.UC.PromptBox" />
   </Roots.RootTypes>
 </Roots>

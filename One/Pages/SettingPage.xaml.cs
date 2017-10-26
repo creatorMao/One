@@ -8,6 +8,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.Storage.Pickers;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,7 +31,7 @@ namespace One.Pages
         {
             this.InitializeComponent();
 
-            JudgeIsAlreadySeted();
+            LoadDefaultSetting();
 
         }
 
@@ -65,69 +66,50 @@ namespace One.Pages
             
         }
 
+
+        /// <summary>
+        /// 点击设置界面的地址 打开文件夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenFolder(object sender, PointerRoutedEventArgs e)
         {
+            GetFolder();
+        }
 
+        public async void GetFolder()
+        {
+            var path = AppSettings.GetSetting("DefaultDownloadPath").ToString();
+            StorageFolder folder = await StorageFolder.GetFolderFromPathAsync(path);
+            await Launcher.LaunchFolderAsync(folder);
         }
 
 
-        public void JudgeIsAlreadySeted()
+        public void LoadDefaultSetting()
         {
             var localSettings = AppSettings.localSettings;
 
 
-            //保存路径  因为其它界面需要下载功能，所以在mainpage里就把判断做了 这里只有取一下值就好了
+            //保存路径
             Folder.Text = AppSettings.GetSetting("DefaultDownloadPath").ToString();
 
-            //判断语言
-            if (localSettings.Values.ContainsKey("Language"))
-            {
-                LanguageSwitchComboBox.Items.Add("中文");
-                LanguageSwitchComboBox.Items.Add("英文");
-                LanguageSwitchComboBox.SelectedIndex =(int)AppSettings.GetSetting("Language");
-            }
-            else
-            {
-                AppSettings.SetSetting("Language", 0);
-                LanguageSwitchComboBox.Items.Add("中文");
-                LanguageSwitchComboBox.Items.Add("英文");
-                LanguageSwitchComboBox.SelectedIndex = 0;
-            }
+            //语言选择框
+            LanguageSwitchComboBox.Items.Add("中文");
+            LanguageSwitchComboBox.Items.Add("英文");
+            LanguageSwitchComboBox.SelectedIndex =(int)AppSettings.GetSetting("Language");
+            
 
 
-            //判断语言
-            if (localSettings.Values.ContainsKey("Theme"))
-            {
-                ThemeToggleSwitch.IsOn = (bool)AppSettings.GetSetting("Theme");
-            }
-            else
-            {
-                AppSettings.SetSetting("Theme",false);
-                ThemeToggleSwitch.IsOn = false;
-            }
+            //主题
+            ThemeToggleSwitch.IsOn = (bool)AppSettings.GetSetting("Theme");
 
-            //判断通知
-            if (localSettings.Values.ContainsKey("Toast"))
-            {
-                IsToastToggleSwitch.IsOn = (bool)AppSettings.GetSetting("Toast");
-            }
-            else
-            {
-                AppSettings.SetSetting("Toast", true);
-                IsToastToggleSwitch.IsOn = true;
-            }
+            
+            //是否通知
+            IsToastToggleSwitch.IsOn = (bool)AppSettings.GetSetting("Toast");
 
 
-            //判断动态磁贴
-            if (localSettings.Values.ContainsKey("Tile"))
-            {
-                IsTileToggleSwitch.IsOn =(bool)AppSettings.GetSetting("Tile");
-            }
-            else
-            {
-                AppSettings.SetSetting("Tile", true);
-                IsTileToggleSwitch.IsOn = true;
-            }
+            //是否动态磁贴
+            IsTileToggleSwitch.IsOn =(bool)AppSettings.GetSetting("Tile");
 
 
 
@@ -188,6 +170,34 @@ namespace One.Pages
             {
                 AppSettings.SetSetting("Language", 1);
             }
+        }
+
+
+        /// <summary>
+        /// 恢复默认设置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ReStoreDefaultSetting(object sender, RoutedEventArgs e)
+        {
+
+            AppSettings.SetSetting("DefaultDownloadPath", "C:\\Users\\maozw\\Pictures\\ONE");
+
+
+            AppSettings.SetSetting("Language", 0);
+
+            AppSettings.SetSetting("Theme", false);
+
+            AppSettings.SetSetting("Toast", true);
+
+
+            AppSettings.SetSetting("Tile", true);
+
+
+            //重新加载一次默认设置
+            LoadDefaultSetting();
+
+
         }
     }
 }

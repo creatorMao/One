@@ -40112,6 +40112,28 @@ namespace Windows.System
 			}
 		}
 	}
+
+	// Windows.System.ILauncherStatics3
+	public unsafe static class ILauncherStatics3__Impl
+	{
+		// StubClass for 'Windows.System.ILauncherStatics3'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Foundation.IAsyncOperation<bool> LaunchFolderAsync(
+						global::System.__ComObject __this, 
+						global::Windows.Storage.IStorageFolder folder)
+			{
+				global::Windows.Foundation.IAsyncOperation<bool> __ret = global::__Interop.ForwardComStubs.Stub_26<global::Windows.System.ILauncherStatics3, global::Windows.Storage.IStorageFolder, global::Windows.Foundation.IAsyncOperation<bool>>(
+									__this, 
+									folder, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
 }
 
 namespace Windows.System.Threading

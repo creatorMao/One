@@ -240,3 +240,7 @@ D:\study\uwpProjects\One\One\obj\x86\Debug\Pages\MoviePage.xbf
 D:\study\uwpProjects\One\One\obj\x86\Debug\Pages\ArticlePage.xbf
 D:\study\uwpProjects\One\One\obj\x86\Debug\ResourceDictionary\Dictionary.xbf
 D:\study\uwpProjects\One\One\obj\x86\Debug\ResourceDictionary\StyleDictionary.xbf
+D:\study\uwpProjects\One\One\obj\x86\Debug\Pages\SettingPage.g.i.cs
+D:\study\uwpProjects\One\One\obj\x86\Debug\Pages\SettingPage.g.cs
+D:\study\uwpProjects\One\One\obj\x86\Debug\Pages\SettingPage.xaml
+D:\study\uwpProjects\One\One\obj\x86\Debug\Pages\SettingPage.xbf
