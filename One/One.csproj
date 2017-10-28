@@ -131,11 +131,8 @@
       <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC\NotifyPopup.xaml.cs">
-      <DependentUpon>NotifyPopup.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UC\Prompt.xaml.cs">
-      <DependentUpon>Prompt.xaml</DependentUpon>
+    <Compile Include="UC\PopupNotice.xaml.cs">
+      <DependentUpon>PopupNotice.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -270,11 +267,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UC\NotifyPopup.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\Prompt.xaml">
+    <Page Include="UC\PopupNotice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

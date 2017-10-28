@@ -1,6 +1,7 @@
 ﻿using One.Common;
 using One.Converter;
 using One.Model;
+using One.UC;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -156,8 +157,10 @@ namespace One.Pages
             //当用户设置为不提示的时候  就不提示233
             if ((bool)AppSettings.GetSetting("Toast"))
             {
-                ToastNotification toast = ToastHelper.ShowAToast("已经复制", shareLinkString);
-                ToastNotificationManager.CreateToastNotifier().Show(toast);
+                //ToastNotification toast = ToastHelper.ShowAToast("已经复制", shareLinkString);
+                //ToastNotificationManager.CreateToastNotifier().Show(toast);
+                PopupNotice popupNotice = new PopupNotice("已经复制到剪贴板");
+                popupNotice.ShowAPopup();
             }
         }
 

@@ -43,10 +43,10 @@ namespace One.Model
 
 
 
-            //NotifyPopup notifyPopup = new NotifyPopup("提示点东西吧!");
-            //notifyPopup.Show();
-            Prompt prompt = new Prompt();
-            prompt.Show("正在下载！");
+            //Prompt prompt = new Prompt("正在下载!");
+            //prompt.Show();
+            PopupNotice popupNotice = new PopupNotice("正在后台下载......");
+            popupNotice.ShowAPopup();
             await download.StartAsync();
 
 
