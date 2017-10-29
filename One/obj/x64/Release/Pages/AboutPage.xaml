@@ -33,7 +33,7 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center">
                         <TextBlock Foreground="White">
-                            Version:1.0.0
+                            Version:1.0.1
                         </TextBlock>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center"

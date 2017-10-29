@@ -324,6 +324,18 @@
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UC">
+				<NamedResource name="PopupNotice.xbf" uri="ms-resource://32688UWP.UWP/Files/UC/PopupNotice.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Tip.xbf" uri="ms-resource://32688UWP.UWP/Files/UC/Tip.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
 			<ResourceMapSubtree name="WinMetadata">
 				<NamedResource name="Windows.winmd" uri="ms-resource://32688UWP.UWP/Files/WinMetadata/Windows.winmd">
 					<Candidate type="Path">

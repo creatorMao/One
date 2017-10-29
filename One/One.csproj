@@ -134,6 +134,9 @@
     <Compile Include="UC\PopupNotice.xaml.cs">
       <DependentUpon>PopupNotice.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UC\Tip.xaml.cs">
+      <DependentUpon>Tip.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -268,6 +271,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UC\PopupNotice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\Tip.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -141,6 +141,12 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Name" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="RenderTransform" />
+      <RootProperty Name="MinHeight" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
@@ -365,6 +371,7 @@
       <RootProperty Name="Duration" />
       <RootProperty Name="To" />
       <RootProperty Name="From" />
+      <RootProperty Name="EasingFunction" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ContentPresenter">
@@ -447,7 +454,9 @@
       <RootProperty Name="Height" />
       <RootProperty Name="MinWidth" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.TranslateTransform" />
+    <RootType FullName="Windows.UI.Xaml.Media.TranslateTransform">
+      <RootProperty Name="Y" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
     </RootType>
@@ -489,6 +498,15 @@
       <RootProperty Name="Width" />
       <RootProperty Name="MinHeight" />
     </RootType>
-    <RootType FullName="One.UC.PromptBox" />
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="Resources" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.PowerEase">
+      <RootProperty Name="EasingMode" />
+    </RootType>
+    <RootType FullName="One.UC.PopupNotice" />
+    <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform" />
+    <RootType FullName="One.UC.Tip" />
   </Roots.RootTypes>
 </Roots>

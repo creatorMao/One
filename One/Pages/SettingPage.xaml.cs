@@ -193,6 +193,8 @@ namespace One.Pages
 
             AppSettings.SetSetting("Tile", true);
 
+            AppSettings.RemoveSetting("20171029update");
+
 
             //重新加载一次默认设置
             LoadDefaultSetting();

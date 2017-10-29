@@ -1,12 +1,14 @@
 ﻿using One.Common;
 using One.Model;
 using One.Pages;
+using One.UC;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -55,7 +57,18 @@ namespace One
 
             JudgeIsAlreadySeted();
 
+            
+
         }
+
+
+        public void ShowTip()
+        {
+            Tip tip = new Tip();
+            tip.ShowTip();
+        }
+
+
 
         /// <summary>
         /// 自定义标题栏
@@ -204,15 +217,27 @@ namespace One
             MainPageProgressRing.IsActive = false;
             HamburgerButton.Visibility = Visibility.Visible;
 
+
             TodayDate.Text = onelistResultList[0].data.weather.date.Replace("-","/"); ;
             PlaceName.Text = onelistResultList[0].data.weather.city_name;
             AirName.Text = onelistResultList[0].data.weather.climate;
             TempName.Text = onelistResultList[0].data.weather.temperature+ "℃";
 
 
-           
+
 
             RootFrame.Navigate(typeof(IndexPage), _photoMonthList);
+
+
+            //进入应用第一屏 显示一些tips
+            //判断是否是第一次进入应用 
+            if (AppSettings.GetSetting("20171029update") == null)
+            {
+                await Task.Delay(1500);
+                ShowTip();
+                AppSettings.SetSetting("20171029update", true);
+            }
+
 
 
         }

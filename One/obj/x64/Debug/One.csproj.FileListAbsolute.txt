@@ -261,3 +261,8 @@ D:\study\uwpProjects\One\One\obj\x64\Debug\UC\PopupNotice.g.i.cs
 D:\study\uwpProjects\One\One\obj\x64\Debug\UC\PopupNotice.g.cs
 D:\study\uwpProjects\One\One\obj\x64\Debug\UC\PopupNotice.xaml
 D:\study\uwpProjects\One\One\obj\x64\Debug\UC\PopupNotice.xbf
+D:\study\uwpProjects\One\One\bin\x64\Debug\UC\Tip.xbf
+D:\study\uwpProjects\One\One\obj\x64\Debug\UC\Tip.g.i.cs
+D:\study\uwpProjects\One\One\obj\x64\Debug\UC\Tip.g.cs
+D:\study\uwpProjects\One\One\obj\x64\Debug\UC\Tip.xaml
+D:\study\uwpProjects\One\One\obj\x64\Debug\UC\Tip.xbf

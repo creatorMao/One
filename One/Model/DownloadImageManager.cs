@@ -40,11 +40,6 @@ namespace One.Model
 
 
 
-
-
-
-            //Prompt prompt = new Prompt("正在下载!");
-            //prompt.Show();
             PopupNotice popupNotice = new PopupNotice("正在后台下载......");
             popupNotice.ShowAPopup();
             await download.StartAsync();

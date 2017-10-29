@@ -50,6 +50,7 @@ namespace One.Pages
             dateTime = DateTime.Now.AddMonths(-1);
 
 
+
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
