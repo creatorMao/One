@@ -9,6 +9,7 @@ using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.System;
+using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -125,11 +126,12 @@ namespace One.Pages
                 case "IsTileToggleSwitch":
                     if (toggleSwitch.IsOn)
                     {
-
+                        
                     }
                     else
                     {
-
+                        TileUpdater tileUpdater = TileUpdateManager.CreateTileUpdaterForApplication();
+                        tileUpdater.Clear();
                     }
                     AppSettings.SetSetting("Tile", toggleSwitch.IsOn);
                     break;

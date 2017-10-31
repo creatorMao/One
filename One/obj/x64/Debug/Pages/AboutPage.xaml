@@ -49,21 +49,21 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center"
                                 Orientation="Horizontal">
-                        <Button Foreground="White"
+                        <Button x:ConnectionId='4' Foreground="White"
                                 Margin="0,10,0,0" 
                                 Style="{StaticResource ButtonAboutPageStyle}"
-                                Click="RateApp">
+                                               >
                             给我点个赞.
                         </Button>
-                        <Button Foreground="White"
+                        <Button x:ConnectionId='5' Foreground="White"
                                 VerticalAlignment="Center"
                                 Style="{StaticResource ButtonAboutPageStyle}"
-                                Click="DonateMe"
+                                                
                                 Margin="0,10,0,0">
                             捐助
                         </Button>
                     </StackPanel>
-                    <StackPanel HorizontalAlignment="Center"
+                    <StackPanel x:ConnectionId='1' HorizontalAlignment="Center"
                                 Margin="0,10,0,0"
                                 Visibility="Collapsed"
                                 Name="ZhifubaoAccount">
@@ -87,10 +87,10 @@
                                Width="30"
                                Height="30"/>
                         </Button>
-                        <Button Foreground="White"
+                        <Button x:ConnectionId='3' Foreground="White"
                                 VerticalAlignment="Center"
                                 Style="{StaticResource ButtonAboutPageStyle}"
-                                Click="OpenApp">
+                                               >
                             围脖控
                         </Button>
                     </StackPanel>
@@ -146,11 +146,11 @@
 
                             </Image>
                         </HyperlinkButton>
-                        <HyperlinkButton Margin="5,0,5,0"
+                        <HyperlinkButton x:ConnectionId='2' Margin="5,0,5,0"
                                          Width="50"
                                          Height="50"
                                          Style="{StaticResource HyperlinkButtonStyle1}"
-                                         Click="EmailToMe">
+                                                          >
                             <Image Width="40"
                                Height="40"
                                Source="../Assets/icon/email.png"
@@ -191,3 +191,4 @@
         </Grid>
     </Grid>
 </Page>
+

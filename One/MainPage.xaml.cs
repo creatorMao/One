@@ -23,6 +23,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Core;
+using Windows.UI.Notifications;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
 
@@ -57,7 +59,9 @@ namespace One
 
             JudgeIsAlreadySeted();
 
-            
+
+
+
 
         }
 
@@ -115,6 +119,7 @@ namespace One
             view.TitleBar.ButtonInactiveForegroundColor = Colors.White;
 
         }
+
 
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
@@ -218,6 +223,14 @@ namespace One
             HamburgerButton.Visibility = Visibility.Visible;
 
 
+            //当数据准备好后 更新一下数据 并且用户设置了磁贴更新的话
+            if ((bool)AppSettings.GetSetting("Tile"))
+            {
+                UpdateTiles();
+            }
+            
+
+
             TodayDate.Text = onelistResultList[0].data.weather.date.Replace("-","/"); ;
             PlaceName.Text = onelistResultList[0].data.weather.city_name;
             AirName.Text = onelistResultList[0].data.weather.climate;
@@ -286,6 +299,11 @@ namespace One
 
         }
 
-
+        private void UpdateTiles()
+        {
+            TileManager tileManager = new TileManager();
+            var content=tileManager.SetContent(_photoMonthList[0].HpImgOriginalUrl, _photoMonthList[0].HpContent, _photoMonthList[0].ImageAuthors);
+            tileManager.SendATile(content);
+        }
     }
 }

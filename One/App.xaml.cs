@@ -39,6 +39,7 @@ namespace One
         /// <param name="e">有关启动请求和过程的详细信息。</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // 不要在窗口已包含内容时重复应用程序初始化，
@@ -96,5 +97,8 @@ namespace One
             //TODO: 保存应用程序状态并停止任何后台活动
             deferral.Complete();
         }
+
+
+
     }
 }
