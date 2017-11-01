@@ -31,7 +31,6 @@ namespace One.Pages
         private ObservableCollection<PhotoAlbum_Datum> _photoMonthList = null;
 
 
-        private DateTime dateTime;
 
 
         private double _lastPosition = 0;
@@ -43,13 +42,10 @@ namespace One.Pages
         private PhotoAlbum_Datum photoAlbum_Datum = new PhotoAlbum_Datum();
 
 
+
         public IndexPage()
         {
             this.InitializeComponent();
-
-            dateTime = DateTime.Now.AddMonths(-1);
-
-
 
         }
 
@@ -57,19 +53,13 @@ namespace One.Pages
         {
             base.OnNavigatedTo(e);
 
-            _photoMonthList =e.Parameter as ObservableCollection<PhotoAlbum_Datum>;
+
+            _photoMonthList = e.Parameter as ObservableCollection<PhotoAlbum_Datum>;
+
+
+
 
         }
-
-      
-        //private async void PreParePhotoList()
-        //{
-        //    PhotoAlbum_GettingStarted data =new PhotoAlbum_GettingStarted();
-        //    _photoMonthList = new ObservableCollection<PhotoAlbum_Datum>();
-
-        //    data = await PhotoAlbumManager.GetPhotolistByMonth();
-        //    data.Data.ForEach(p => _photoMonthList.Add(p));
-        //}
 
 
 
@@ -228,12 +218,15 @@ namespace One.Pages
 
         private async void  PreData()
         {
-            
+            var time = _photoMonthList[_photoMonthList.Count - 1].HpMakettime;
+            DateTime dt = DateTime.Parse(time);
+
+            dt = dt.AddMonths(-1);
+
             PhotoAlbum_GettingStarted data1 = new PhotoAlbum_GettingStarted();
             isAwait = !isAwait;
-            data1 = await PhotoAlbumManager.GetPhotolistByLastMonth(dateTime.ToString("yyyy-MM-dd"));
+            data1 = await PhotoAlbumManager.GetPhotolistByLastMonth(dt.ToString("yyyy-MM-dd"));
             isAwait = !isAwait;
-            dateTime =dateTime.AddMonths(-1);
             data1.Data.ForEach(p => _photoMonthList.Add(p));
 
         }

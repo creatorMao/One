@@ -24,7 +24,7 @@
             </DoubleAnimation>
 
             <DoubleAnimation From="0"
-                             To="0.7"
+                             To="0.8"
                              Duration="00:00:00.3"
                              Storyboard.TargetName="Mask"
                              Storyboard.TargetProperty="Opacity"
@@ -71,7 +71,7 @@
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
 
-            <DoubleAnimation From="0.7"
+            <DoubleAnimation From="0.8"
                              To="0"
                              Duration="00:00:00.3"
                              Storyboard.TargetName="Mask"
@@ -116,14 +116,14 @@
         
         <Grid x:ConnectionId='3' Background="Black"
               Opacity="0.5"
-              Name="Mask"
-                                       >
+              Name="Mask">
             
         </Grid>
 
 
         <Grid>
-            <StackPanel x:ConnectionId='4' MinHeight="200"
+            <!--2017.10.29-->
+            <!--<StackPanel MinHeight="200"
                         MaxWidth="400"
                         Background="#1D1D1D"
                         VerticalAlignment="Center"
@@ -174,6 +174,67 @@
                             HorizontalAlignment="Right"
                             Orientation="Horizontal"
                             Margin="0,10,0,0">
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="RateApp">
+                        商店给个好评
+                    </Button>
+
+                    <Button Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="CloseTip">
+                        关闭
+                    </Button>
+                </StackPanel>
+                
+            </StackPanel>-->
+            <!--2017.11.1-->
+            <StackPanel x:ConnectionId='4' MinHeight="200"
+                        Width="350"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="1">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    1.紧急修复首页只显示一个的bug.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    2.增加动态磁贴（目前不能每天更新信息).
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.11.01
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
                     <Button x:ConnectionId='5' Foreground="Gray"
                         Margin="0,10,0,0" 
                         Style="{StaticResource ButtonAboutPageStyle}"
@@ -188,7 +249,7 @@
                         关闭
                     </Button>
                 </StackPanel>
-                
+
             </StackPanel>
         </Grid>
         

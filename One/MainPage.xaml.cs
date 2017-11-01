@@ -44,6 +44,8 @@ namespace One
         private ObservableCollection<PhotoAlbum_Datum> _photoMonthList = null;
 
 
+  
+
 
         public MainPage()
         {
@@ -55,11 +57,14 @@ namespace One
 
             navMenuList = NavMenuManager.CreateNavMenuList();
 
+
+
             PrepareData();
 
             JudgeIsAlreadySeted();
 
 
+            
 
 
 
@@ -140,7 +145,7 @@ namespace One
                 switch (currentNavMenuItem.Title)
                 {
                     case "一个":
-                        RootFrame.Navigate(currentNavMenuItem.NavigatePage,_photoMonthList);
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage, _photoMonthList);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "文章":
@@ -215,7 +220,23 @@ namespace One
             PhotoAlbum_GettingStarted data = new PhotoAlbum_GettingStarted();
              _photoMonthList = new ObservableCollection<PhotoAlbum_Datum>();
             data = await PhotoAlbumManager.GetPhotolistByMonth();
+
             data.Data.ForEach(p => _photoMonthList.Add(p));
+
+            PhotoAlbum_GettingStarted data1 = new PhotoAlbum_GettingStarted();
+            if (data.Data.Count<=10)
+            {
+                //当一个月是前几天的时候，list数量太少，所以要多加一个月显示
+                var time = _photoMonthList[_photoMonthList.Count - 1].HpMakettime;
+                DateTime dt = DateTime.Parse(time);
+
+                dt = dt.AddMonths(-1);
+
+                data1 = await PhotoAlbumManager.GetPhotolistByLastMonth(dt.ToString("yyyy-MM-dd"));
+            }
+            
+            
+            data1.Data.ForEach(p => _photoMonthList.Add(p));
 
             //结束等待
             WaitPage.Visibility = Visibility.Collapsed;
@@ -238,17 +259,17 @@ namespace One
 
 
 
-
             RootFrame.Navigate(typeof(IndexPage), _photoMonthList);
 
 
             //进入应用第一屏 显示一些tips
             //判断是否是第一次进入应用 
-            if (AppSettings.GetSetting("20171029update") == null)
+            AppSettings.RemoveSetting("20171029update");
+            if (AppSettings.GetSetting("20171101update") == null)
             {
                 await Task.Delay(1500);
                 ShowTip();
-                AppSettings.SetSetting("20171029update", true);
+                AppSettings.SetSetting("20171101update", true);
             }
 
 

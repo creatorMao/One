@@ -5388,6 +5388,107 @@ namespace Windows.UI.Notifications
 		}
 	}
 
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Notifications.ITileNotification))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class TileNotification : global::System.__ComObject, global::Windows.UI.Notifications.ITileNotification
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		public TileNotification(global::Windows.Data.Xml.Dom.XmlDocument content)
+		{
+			global::System.IntPtr retval;
+			retval = __Factory_Windows_UI_Notifications__ITileNotificationFactory_CreateTileNotification(
+								"Windows.UI.Notifications.TileNotification", 
+								content
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			this.__AttachAndRelease(retval);
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::System.IntPtr __Factory_Windows_UI_Notifications__ITileNotificationFactory_CreateTileNotification(
+					string typeName, 
+					global::Windows.Data.Xml.Dom.XmlDocument content)
+		{
+			global::System.IntPtr __pRetVal;
+			__pRetVal = global::Windows.UI.Notifications.ITileNotificationFactory__Impl.Stubs.CreateTileNotification(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Notifications.ITileNotificationFactory).TypeHandle
+												), 
+								content
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::__Interop.McgHelpers.GetIUnknownForFactoryReturn(ref __pRetVal);
+			return __pRetVal;
+		}
+
+		public TileNotification(global::System.IntPtr dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Notifications.ITileUpdater))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class TileUpdater : global::System.__ComObject, global::Windows.UI.Notifications.ITileUpdater
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public void Update(global::Windows.UI.Notifications.TileNotification notification)
+		{
+			global::Windows.UI.Notifications.ITileUpdater__Impl.Stubs.Update(
+								this, 
+								notification
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public void Clear()
+		{
+			global::Windows.UI.Notifications.ITileUpdater__Impl.Stubs.Clear(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		public TileUpdater(global::System.IntPtr dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class TileUpdateManager : global::System.__ComObject
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.UI.Notifications.TileUpdater CreateTileUpdaterForApplication()
+		{
+			global::Windows.UI.Notifications.TileUpdater retval;
+			retval = __Factory_Windows_UI_Notifications__ITileUpdateManagerStatics_CreateTileUpdaterForApplication("Windows.UI.Notifications.TileUpdateManager");
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.UI.Notifications.TileUpdater __Factory_Windows_UI_Notifications__ITileUpdateManagerStatics_CreateTileUpdaterForApplication(string typeName)
+		{
+			global::Windows.UI.Notifications.TileUpdater __pRetVal;
+			__pRetVal = global::Windows.UI.Notifications.ITileUpdateManagerStatics__Impl.Stubs.CreateTileUpdaterForApplication(global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+									typeName, 
+									typeof(global::Windows.UI.Notifications.ITileUpdateManagerStatics).TypeHandle
+								));
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		public TileUpdateManager(global::System.IntPtr dummy)
+		{
+		}
+	}
+
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
 	public unsafe interface IToastNotificationFactory
@@ -5400,6 +5501,39 @@ namespace Windows.UI.Notifications
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
 	public unsafe interface IToastNotification
 	{
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ITileNotificationFactory
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::System.IntPtr CreateTileNotification(global::Windows.Data.Xml.Dom.XmlDocument content);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ITileNotification
+	{
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ITileUpdater
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void Update(global::Windows.UI.Notifications.TileNotification notification);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void Clear();
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ITileUpdateManagerStatics
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.UI.Notifications.TileUpdater CreateTileUpdaterForApplication();
 	}
 }
 

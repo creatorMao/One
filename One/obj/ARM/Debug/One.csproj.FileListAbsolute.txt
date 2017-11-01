@@ -239,3 +239,15 @@ D:\study\uwpProjects\One\One\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.t
 D:\study\uwpProjects\One\One\obj\ARM\Debug\resources.en-us.resfiles
 D:\study\uwpProjects\One\One\obj\ARM\Debug\resources.en-us.resfiles.intermediate
 D:\study\uwpProjects\One\One\obj\ARM\Debug\ProjectArchitectures.txt
+D:\study\uwpProjects\One\One\obj\ARM\Debug\Pages\SettingPage.g.i.cs
+D:\study\uwpProjects\One\One\obj\ARM\Debug\Pages\SettingPage.g.cs
+D:\study\uwpProjects\One\One\obj\ARM\Debug\UC\PopupNotice.g.i.cs
+D:\study\uwpProjects\One\One\obj\ARM\Debug\UC\PopupNotice.g.cs
+D:\study\uwpProjects\One\One\obj\ARM\Debug\UC\Tip.g.i.cs
+D:\study\uwpProjects\One\One\obj\ARM\Debug\UC\Tip.g.cs
+D:\study\uwpProjects\One\One\obj\ARM\Debug\Pages\SettingPage.xaml
+D:\study\uwpProjects\One\One\obj\ARM\Debug\UC\PopupNotice.xaml
+D:\study\uwpProjects\One\One\obj\ARM\Debug\UC\Tip.xaml
+D:\study\uwpProjects\One\One\obj\ARM\Debug\Pages\SettingPage.xbf
+D:\study\uwpProjects\One\One\obj\ARM\Debug\UC\PopupNotice.xbf
+D:\study\uwpProjects\One\One\obj\ARM\Debug\UC\Tip.xbf

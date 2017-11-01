@@ -33,7 +33,7 @@
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center">
                         <TextBlock Foreground="White">
-                            Version:1.0.1
+                            Version:1.0.2
                         </TextBlock>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Center"
@@ -138,6 +138,7 @@
                         <HyperlinkButton Margin="5,0,5,0"
                                          Width="50"
                                          Height="50"
+                                         NavigateUri="http://www.cnblogs.com/MzwCat/"
                                          Style="{StaticResource HyperlinkButtonStyle1}">
                             <Image Width="30"
                                Height="30"

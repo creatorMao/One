@@ -40671,6 +40671,78 @@ namespace Windows.UI.Notifications
 			}
 		}
 	}
+
+	// Windows.UI.Notifications.ITileNotificationFactory
+	public unsafe static class ITileNotificationFactory__Impl
+	{
+		// StubClass for 'Windows.UI.Notifications.ITileNotificationFactory'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::System.IntPtr CreateTileNotification(
+						global::System.__ComObject __this, 
+						global::Windows.Data.Xml.Dom.XmlDocument content)
+			{
+				global::System.IntPtr __ret = global::__Interop.ForwardComStubs.Stub_81<global::Windows.UI.Notifications.ITileNotificationFactory, global::Windows.Data.Xml.Dom.XmlDocument>(
+									__this, 
+									content, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
+
+	// Windows.UI.Notifications.ITileUpdater
+	public unsafe static class ITileUpdater__Impl
+	{
+		// StubClass for 'Windows.UI.Notifications.ITileUpdater'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void Update(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Notifications.TileNotification notification)
+			{
+				global::__Interop.ForwardComStubs.Stub_5<global::Windows.UI.Notifications.ITileUpdater, global::Windows.UI.Notifications.TileNotification>(
+									__this, 
+									notification, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void Clear(global::System.__ComObject __this)
+			{
+				global::__Interop.ForwardComStubs.Stub_16<global::Windows.UI.Notifications.ITileUpdater>(
+									__this, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+		}
+	}
+
+	// Windows.UI.Notifications.ITileUpdateManagerStatics
+	public unsafe static class ITileUpdateManagerStatics__Impl
+	{
+		// StubClass for 'Windows.UI.Notifications.ITileUpdateManagerStatics'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Notifications.TileUpdater CreateTileUpdaterForApplication(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Notifications.TileUpdater __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.UI.Notifications.ITileUpdateManagerStatics, global::Windows.UI.Notifications.TileUpdater>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
 }
 
 namespace Windows.UI.ViewManagement
