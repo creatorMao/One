@@ -133,7 +133,8 @@
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid x:ConnectionId='17' Name="RootGrid">
-                    <Frame x:ConnectionId='18' Name="RootFrame"></Frame>
+                    <Frame x:ConnectionId='18' Name="RootFrame"
+                           Background="Gray"></Frame>
                 </Grid>
             </SplitView.Content>
         </SplitView>
@@ -178,6 +179,7 @@
               Grid.RowSpan="3"
               Grid.Column="0"
               Grid.ColumnSpan="2"
+              Background="White"
               Name="WaitPage"
               Visibility="Collapsed">
 

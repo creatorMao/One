@@ -19,25 +19,25 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\study\uwpProjects\One\One\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>AE0572AF3976D8EA46FDE74C4B1873EAAB7BFCA75F5D2ED759F2B4EAB843C3BE</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>32688UWP.UWP_1.1.21.0_x64__9fwyyn341hema</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>515C53D5502C0CA8B82EC0A1B57218954D6D42CCDD551D71A5DB92A9903EF5C4</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>32688UWP.UWP_1.1.22.0_x64__9fwyyn341hema</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>32688UWP.UWP_9fwyyn341hema!App</RegisteredUserModeAppID>
     <RegisteredPackageID>32688UWP.UWP</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=7AB80963-39C0-4325-A468-DC0AA0B127A8</RegisteredPackagePublisher>
-    <RegisteredVersion>1.1.21.0</RegisteredVersion>
+    <RegisteredVersion>1.1.22.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="D:\study\uwpProjects\One\One\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-01T11:08:04.063</Modified>
+      <Modified>2017-11-02T14:23:22.549</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\One.exe">
       <PackagePath>entrypoint\One.exe</PackagePath>
-      <Modified>2017-11-01T11:08:02.559</Modified>
+      <Modified>2017-11-02T14:23:21.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\handy.dotnetcore-compatibility.colortranslations\0.2.1\lib\netstandard1.4\ColorTranslations.dll">
       <PackagePath>ColorTranslations.dll</PackagePath>
@@ -931,7 +931,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\One.xr.xml">
       <PackagePath>One.xr.xml</PackagePath>
-      <Modified>2017-11-01T11:06:46.056</Modified>
+      <Modified>2017-11-02T14:21:03.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -940,11 +940,11 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-01T11:08:03.248</Modified>
+      <Modified>2017-11-02T14:23:22.266</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\Core\One.exe">
       <PackagePath>One.exe</PackagePath>
-      <Modified>2017-11-01T11:08:04.059</Modified>
+      <Modified>2017-11-02T14:23:22.545</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,17 @@
     xmlns:model="using:One.Model"
     mc:Ignorable="d">
 
+    <!--<Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <DrillInNavigationTransitionInfo  />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>-->
+
+
     <Grid Name="MoviePageRootGrid">
 
         <Grid.ColumnDefinitions>
