@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\study\uwpProjects\One\One\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>515C53D5502C0CA8B82EC0A1B57218954D6D42CCDD551D71A5DB92A9903EF5C4</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>A885C0BC376754B578AA5F05EDC0D693956BA1DF25673CAD8DFF29C569E07CD1</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>32688UWP.UWP_1.1.22.0_x64__9fwyyn341hema</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>32688UWP.UWP_9fwyyn341hema!App</RegisteredUserModeAppID>
     <RegisteredPackageID>32688UWP.UWP</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\study\uwpProjects\One\One\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-02T14:23:22.549</Modified>
+      <Modified>2017-11-03T12:21:01.965</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\One.exe">
       <PackagePath>entrypoint\One.exe</PackagePath>
-      <Modified>2017-11-02T14:23:21.716</Modified>
+      <Modified>2017-11-03T12:20:59.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\handy.dotnetcore-compatibility.colortranslations\0.2.1\lib\netstandard1.4\ColorTranslations.dll">
       <PackagePath>ColorTranslations.dll</PackagePath>
@@ -931,7 +931,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\One.xr.xml">
       <PackagePath>One.xr.xml</PackagePath>
-      <Modified>2017-11-02T14:21:03.646</Modified>
+      <Modified>2017-11-03T11:52:43.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -940,11 +940,11 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-02T14:23:22.266</Modified>
+      <Modified>2017-11-03T12:21:01.650</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Debug\Core\One.exe">
       <PackagePath>One.exe</PackagePath>
-      <Modified>2017-11-02T14:23:22.545</Modified>
+      <Modified>2017-11-03T12:21:01.961</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -25,6 +25,7 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Core;
 using Windows.UI.Notifications;
+using Windows.Globalization;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
 
@@ -55,7 +56,7 @@ namespace One
 
             SetTitleBar();
 
-            navMenuList = NavMenuManager.CreateNavMenuList();
+            navMenuList = NavMenuManager.CreateNavMenuList((string)AppSettings.GetSetting("Language"));
 
 
 
@@ -145,22 +146,27 @@ namespace One
                 switch (currentNavMenuItem.Title)
                 {
                     case "一个":
+                    case "ONE":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, _photoMonthList);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "文章":
+                    case "Article":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "电影":
+                    case "Movie":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
                         break;
                     case "关于":
+                    case "About":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
                         break;
                     case "设置":
+                    case "Setting":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
                         break;
@@ -218,13 +224,13 @@ namespace One
             onelistResultList = await OnelistManager.GetLatelyOnelist();
 
             PhotoAlbum_GettingStarted data = new PhotoAlbum_GettingStarted();
-             _photoMonthList = new ObservableCollection<PhotoAlbum_Datum>();
+            _photoMonthList = new ObservableCollection<PhotoAlbum_Datum>();
             data = await PhotoAlbumManager.GetPhotolistByMonth();
 
             data.Data.ForEach(p => _photoMonthList.Add(p));
 
             PhotoAlbum_GettingStarted data1 = new PhotoAlbum_GettingStarted();
-            if (data.Data.Count<=10)
+            if (data.Data.Count <= 10)
             {
                 //当一个月是前几天的时候，list数量太少，所以要多加一个月显示
                 var time = _photoMonthList[_photoMonthList.Count - 1].HpMakettime;
@@ -234,8 +240,8 @@ namespace One
 
                 data1 = await PhotoAlbumManager.GetPhotolistByLastMonth(dt.ToString("yyyy-MM-dd"));
             }
-            
-            
+
+
             data1.Data.ForEach(p => _photoMonthList.Add(p));
 
             //结束等待
@@ -249,17 +255,27 @@ namespace One
             {
                 UpdateTiles();
             }
-            
 
 
-            TodayDate.Text = onelistResultList[0].data.weather.date.Replace("-","/"); ;
-            PlaceName.Text = onelistResultList[0].data.weather.city_name;
-            AirName.Text = onelistResultList[0].data.weather.climate;
+
+            TodayDate.Text = onelistResultList[0].data.weather.date.Replace("-", "/"); ;
+            if ((string)AppSettings.GetSetting("Language") == "en-US")
+            {
+                //官方api中 万年是地球和对流层 这里偷个懒
+                PlaceName.Text = "Earth";
+                AirName.Text = "Troposphere";
+            }
+            else
+            {
+                PlaceName.Text = onelistResultList[0].data.weather.city_name;
+                AirName.Text = onelistResultList[0].data.weather.climate;
+            }
             TempName.Text = onelistResultList[0].data.weather.temperature+ "℃";
 
 
 
             RootFrame.Navigate(typeof(IndexPage), _photoMonthList);
+            NavListview.SelectedIndex = 0;
 
 
             //进入应用第一屏 显示一些tips
@@ -300,7 +316,7 @@ namespace One
             //判断语言
             if (!localSettings.Values.ContainsKey("Theme"))
             {
-                AppSettings.SetSetting("Theme", false);
+                AppSettings.SetSetting("Theme", "zh-CN");
             }
 
             //判断通知

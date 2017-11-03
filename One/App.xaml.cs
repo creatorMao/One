@@ -1,4 +1,5 @@
-﻿using System;
+﻿using One.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +8,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,6 +32,15 @@ namespace One
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            if (AppSettings.GetSetting("Language") == null)
+            {
+                ApplicationLanguages.PrimaryLanguageOverride = "en-US";
+            }
+            else
+            {
+                ApplicationLanguages.PrimaryLanguageOverride = (string)AppSettings.GetSetting("Language");
+            }
         }
 
         /// <summary>

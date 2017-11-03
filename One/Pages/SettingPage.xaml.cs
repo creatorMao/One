@@ -1,4 +1,5 @@
 ﻿using One.Common;
+using One.UC;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -94,10 +95,22 @@ namespace One.Pages
             //保存路径
             Folder.Text = AppSettings.GetSetting("DefaultDownloadPath").ToString();
 
-            //语言选择框
-            LanguageSwitchComboBox.Items.Add("中文");
-            LanguageSwitchComboBox.Items.Add("英文");
-            LanguageSwitchComboBox.SelectedIndex =(int)AppSettings.GetSetting("Language");
+
+            if ((string)AppSettings.GetSetting("Language") == "zh-CN")
+            {
+                //语言选择框
+                LanguageSwitchComboBox.Items.Add("中文");
+                LanguageSwitchComboBox.Items.Add("英文");
+                LanguageSwitchComboBox.SelectedIndex = 0;
+            }
+            else if((string)AppSettings.GetSetting("Language") == "en-US")
+            {
+                //语言选择框
+                LanguageSwitchComboBox.Items.Add("Chinese");
+                LanguageSwitchComboBox.Items.Add("English");
+                LanguageSwitchComboBox.SelectedIndex = 1;
+            }
+            
             
 
 
@@ -164,14 +177,23 @@ namespace One.Pages
         private void LanguageSwitchComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var comboBox = sender as ComboBox;
-            if (comboBox.SelectedValue.ToString() == "中文")
+            if (comboBox.SelectedValue != null)
             {
-                AppSettings.SetSetting("Language", 0);
+                switch (comboBox.SelectedValue.ToString())
+                {
+                    case "中文":
+                    case "Chinese":
+                        AppSettings.SetSetting("Language", "zh-CN");
+                        break;
+                    case "英文":
+                    case "English":
+                        AppSettings.SetSetting("Language", "en-US");
+                        break;
+
+                }
             }
-            else
-            {
-                AppSettings.SetSetting("Language", 1);
-            }
+            
+           
         }
 
 
@@ -185,8 +207,8 @@ namespace One.Pages
 
             AppSettings.SetSetting("DefaultDownloadPath", "C:\\Users\\maozw\\Pictures\\ONE");
 
-
-            AppSettings.SetSetting("Language", 0);
+            LanguageSwitchComboBox.Items.Clear();
+            AppSettings.SetSetting("Language", "zh-CN");
 
             AppSettings.SetSetting("Theme", false);
 

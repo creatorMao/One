@@ -34,8 +34,8 @@
             
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -59,6 +59,7 @@
                        Text="设置"
                        Foreground="White"
                        FontSize="25"
+                       x:Uid="SettingPage_Setting"
                        />
 
             <TextBlock Grid.Column="0"
@@ -67,7 +68,8 @@
                        Margin="0,25,0,0"
                        Foreground="White"
                        FontSize="16"
-                       FontWeight="Thin"/>
+                       FontWeight="Thin"
+                       x:Uid="SettingPage_Tile"/>
             
             <TextBlock Grid.Column="0"
                        Grid.Row="2"
@@ -75,6 +77,7 @@
                        VerticalAlignment="Center"
                        Foreground="White"
                        FontSize="16"
+                       x:Uid="SettingPage_LiveTile"
                        />
 
             <ToggleSwitch x:ConnectionId='1' Grid.Column="1"
@@ -84,10 +87,11 @@
                           IsEnabled="True"
                           Name="IsTileToggleSwitch"
                           Foreground="White"
-                          Margin="28,0,0,0"
+                          Margin="58,0,0,0"
                           VerticalAlignment="Center" 
                           Style="{StaticResource ToggleSwitchCommonStyle}"
                                                   
+                          x:Uid="SettingPage_LiveTileToggleSwitch"
                           >
                 
             </ToggleSwitch>
@@ -98,7 +102,8 @@
                        Margin="0,20,0,0"
                        Foreground="White"
                        FontSize="16"
-                       FontWeight="Thin"/>
+                       FontWeight="Thin"
+                       x:Uid="SettingPage_Nofication"/>
 
             <TextBlock Grid.Column="0"
                        Grid.Row="4"
@@ -106,6 +111,7 @@
                        VerticalAlignment="Center"
                        Foreground="White"
                        FontSize="16"
+                       x:Uid="SettingPage_DownLoadAndCopyNofication"
                        />
 
             <ToggleSwitch x:ConnectionId='2' Grid.Column="1"
@@ -115,10 +121,11 @@
                           Name="IsToastToggleSwitch"
                           IsEnabled="True"
                           Foreground="White"
-                          Margin="28,0,0,0"
+                          Margin="58,0,0,0"
                           VerticalAlignment="Center"
                           Style="{StaticResource ToggleSwitchCommonStyle}"
                                                   
+                          x:Uid="SettingPage_DownLoadAndCopyNoficationToggleSwitch"
                           >
 
             </ToggleSwitch>
@@ -129,7 +136,8 @@
                        Margin="0,20,0,0"
                        Foreground="White"
                        FontSize="16"
-                       FontWeight="Thin"/>
+                       FontWeight="Thin"
+                       x:Uid="SettingPage_Theme"/>
 
             <TextBlock Grid.Column="0"
                        Grid.Row="6"
@@ -137,19 +145,21 @@
                        VerticalAlignment="Center"
                        Foreground="White"
                        FontSize="16"
+                       x:Uid="SettingPage_SwitchTheme"
                        />
 
             <ToggleSwitch x:ConnectionId='3' Grid.Column="1"
                           Grid.Row="6"
-                          OffContent="白"
+                          OffContent="Day"
                           OnContent="黑"
                           Name="ThemeToggleSwitch"
                           IsEnabled="True"
                           Foreground="White"
-                          Margin="28,0,0,0"
+                          Margin="58,0,0,0"
                           VerticalAlignment="Center"
                           Style="{StaticResource ToggleSwitchCommonStyle}"
                                                   
+                          x:Uid="SettingPage_SwitchThemeToggleSwitch"
                           >
 
             </ToggleSwitch>
@@ -163,7 +173,8 @@
                        Text="语言"
                        Foreground="White"
                        Margin="0,20,0,0"
-                       FontSize="16"/>
+                       FontSize="16"
+                       x:Uid="SettingPage_Language"/>
 
             <ComboBox x:ConnectionId='4' Grid.Column="0"
                       Grid.ColumnSpan="2"
@@ -182,12 +193,15 @@
                        Grid.Row="9"
                        Text="保存路径"
                        Foreground="White"
-                       Margin="0,20,0,0"/>
+                       Margin="0,20,0,0"
+                       x:Uid="SettingPage_SavedPath"/>
 
 
             <TextBlock x:ConnectionId='5' Grid.Column="0"
                        Grid.Row="10"
                        Name="Folder"
+                       Width="300"
+                       HorizontalAlignment="Left"
                                                   
                        VerticalAlignment="Center"
                        Foreground="White"/>
@@ -197,8 +211,12 @@
                     Content="修改保存路径"
                                         
                     Foreground="White"
+                    HorizontalAlignment="Right"
+                    Padding="5"
                     VerticalAlignment="Center"
-                    Style="{StaticResource ButtonCommonStyle}">
+                    Style="{StaticResource ButtonCommonStyle}"
+                    
+                    x:Uid="SettingPage_ChangeSavedPath">
                 
             </Button>
 
@@ -206,21 +224,22 @@
                     Grid.Row="11"
                     Foreground="White"
                     FontSize="14"
-                    Margin="0,0,0,0"
+                    Margin="-5,10,0,0"
                     Padding="5,5,5,5"
                     Content="恢复默认设置"
                     Style="{StaticResource ButtonCommonStyle}"
-                                                 >
+                                                 
+                    x:Uid="SettingPage_RestoreDefaultSetting">
                 
             </Button>
 
-            <TextBlock Grid.Row="12"
+            <!--<TextBlock Grid.Row="12"
                        Foreground="White"
                        Grid.Column="0"
                        Opacity="0.8"
                        FontSize="13"
                        Margin="0,10,0,0"
-                       Grid.ColumnSpan="2">//设置界面很多功能还没有完成，边学边做</TextBlock>
+                       Grid.ColumnSpan="2">//设置界面很多功能还没有完成，边学边做</TextBlock>-->
 
 
             

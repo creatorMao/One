@@ -146,6 +146,8 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="One_StoreKey.pfx" />
     <None Include="One_TemporaryKey.pfx" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\zh-CN\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\BadgeLogo.scale-100.png" />
