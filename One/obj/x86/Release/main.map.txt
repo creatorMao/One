@@ -1,6 +1,6 @@
 [ResourceMetadata]
+"ResourceDimensions"		"language-zh-cn"
 "ResourceDimensions"		"scale-200"
-"ResourceDimensions"		"language-zh-hans-cn"
 "ResourceDimensions"		"language-zh-CN"
 
 [Files]

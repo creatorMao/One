@@ -167,7 +167,7 @@ namespace One.Pages
                     else
                     {
 
-                    }
+                    } 
                     AppSettings.SetSetting("Theme", toggleSwitch.IsOn);
                     break;
             }
@@ -210,14 +210,14 @@ namespace One.Pages
             LanguageSwitchComboBox.Items.Clear();
             AppSettings.SetSetting("Language", "zh-CN");
 
-            AppSettings.SetSetting("Theme", false);
+            AppSettings.SetSetting("Theme", true);
 
             AppSettings.SetSetting("Toast", true);
 
 
             AppSettings.SetSetting("Tile", true);
 
-            AppSettings.RemoveSetting("20171029update");
+            AppSettings.RemoveSetting("20171103update");
 
 
             //重新加载一次默认设置

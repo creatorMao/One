@@ -56,13 +56,15 @@ namespace One
 
             SetTitleBar();
 
+            JudgeIsAlreadySeted();
+
             navMenuList = NavMenuManager.CreateNavMenuList((string)AppSettings.GetSetting("Language"));
 
 
 
             PrepareData();
 
-            JudgeIsAlreadySeted();
+            
 
 
             
@@ -275,17 +277,17 @@ namespace One
 
 
             RootFrame.Navigate(typeof(IndexPage), _photoMonthList);
-            NavListview.SelectedIndex = 0;
+            //NavListview.SelectedIndex = 0;
 
 
             //进入应用第一屏 显示一些tips
             //判断是否是第一次进入应用 
-            AppSettings.RemoveSetting("20171029update");
-            if (AppSettings.GetSetting("20171101update") == null)
+            AppSettings.RemoveSetting("20171101update");
+            if (AppSettings.GetSetting("20171103update") == null)
             {
                 await Task.Delay(1500);
                 ShowTip();
-                AppSettings.SetSetting("20171101update", true);
+                AppSettings.SetSetting("20171103update", true);
             }
 
 
@@ -309,14 +311,14 @@ namespace One
             //判断语言
             if (!localSettings.Values.ContainsKey("Language"))
             {
-                AppSettings.SetSetting("Language", 0);
+                AppSettings.SetSetting("Language", "zh-CN");
             }
 
 
-            //判断语言
+            //判断主题
             if (!localSettings.Values.ContainsKey("Theme"))
             {
-                AppSettings.SetSetting("Theme", "zh-CN");
+                AppSettings.SetSetting("Theme", true);
             }
 
             //判断通知

@@ -3,6 +3,7 @@
 	<ResourceMap name="32688UWP.UWP" version="1.0" primary="true">
 		<Qualifiers>
 			<AlternateForm>UNPLATED</AlternateForm>
+			<Language>ZH-CN</Language>
 			<Scale>200</Scale>
 			<TargetSize>256,16,24,32,48</TargetSize>
 		</Qualifiers>
@@ -340,6 +341,163 @@
 				<NamedResource name="Windows.winmd" uri="ms-resource://32688UWP.UWP/Files/WinMetadata/Windows.winmd">
 					<Candidate type="Path">
 						<Value>WinMetadata\Windows.winmd</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Resources">
+			<ResourceMapSubtree name="AboutPage_ContactMe">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/AboutPage_ContactMe/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>联系我</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="AboutPage_DonateMe">
+				<NamedResource name="Content" uri="ms-resource://32688UWP.UWP/Resources/AboutPage_DonateMe/Content">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>捐助</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="AboutPage_Like">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/AboutPage_Like/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>喜欢</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="AboutPage_OtherApp">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/AboutPage_OtherApp/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>其它应用</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="AboutPage_RateApp">
+				<NamedResource name="Content" uri="ms-resource://32688UWP.UWP/Resources/AboutPage_RateApp/Content">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>给我点个赞.</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="AboutPage_Thanks">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/AboutPage_Thanks/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>感谢</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_ChangeSavedPath">
+				<NamedResource name="Content" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_ChangeSavedPath/Content">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>修改保存路径</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_DownLoadAndCopyNofication">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_DownLoadAndCopyNofication/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>复制/下载完成 提示</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_DownLoadAndCopyNoficationToggleSwitch">
+				<NamedResource name="OffContent" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_DownLoadAndCopyNoficationToggleSwitch/OffContent">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>关</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="OnContent" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_DownLoadAndCopyNoficationToggleSwitch/OnContent">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>开</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_Language">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_Language/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>语言(重启生效)</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_LiveTile">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_LiveTile/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>动态磁贴</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_LiveTileToggleSwitch">
+				<NamedResource name="OffContent" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_LiveTileToggleSwitch/OffContent">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>关</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="OnContent" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_LiveTileToggleSwitch/OnContent">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>开</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_Nofication">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_Nofication/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>通知</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_RestoreDefaultSetting">
+				<NamedResource name="Content" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_RestoreDefaultSetting/Content">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>恢复默认设置</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_SavedPath">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_SavedPath/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>保存路径</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_Setting">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_Setting/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>设置</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_SwitchTheme">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_SwitchTheme/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>切换主题</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_SwitchThemeToggleSwitch">
+				<NamedResource name="OffContent" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_SwitchThemeToggleSwitch/OffContent">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>夜间</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="OnContent" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_SwitchThemeToggleSwitch/OnContent">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>白天</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_Theme">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_Theme/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>主题</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SettingPage_Tile">
+				<NamedResource name="Text" uri="ms-resource://32688UWP.UWP/Resources/SettingPage_Tile/Text">
+					<Candidate qualifiers="Language-ZH-CN" isDefault="true" type="String">
+						<Value>磁贴</Value>
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>

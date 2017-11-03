@@ -33,9 +33,17 @@ namespace One
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
+
+            if (AppSettings.GetSetting("20171103") == null)
+            {
+                AppSettings.RemoveSetting("Language");
+                AppSettings.RemoveSetting("Theme");
+                AppSettings.SetSetting("20171103", true);
+            }
+
             if (AppSettings.GetSetting("Language") == null)
             {
-                ApplicationLanguages.PrimaryLanguageOverride = "en-US";
+                ApplicationLanguages.PrimaryLanguageOverride = "zh-CN";
             }
             else
             {

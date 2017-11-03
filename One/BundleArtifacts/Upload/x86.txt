@@ -1,2 +1,2 @@
-MainPackage=D:\study\uwpProjects\One\One\bin\x86\Release\Upload\One_1.1.22.0_x86.appx
-SymbolPackage=D:\study\uwpProjects\One\One\bin\x86\Release\Upload\One_1.1.22.0\One_1.1.22.0_x86.appxsym
+MainPackage=D:\study\uwpProjects\One\One\bin\x86\Release\Upload\One_1.1.24.0_x86.appx
+SymbolPackage=D:\study\uwpProjects\One\One\bin\x86\Release\Upload\One_1.1.24.0\One_1.1.24.0_x86.appxsym

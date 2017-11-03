@@ -1,5 +1,7 @@
 obj\x86\Release\Upload\split.pri
 obj\x86\Release\Upload\split.map.txt
+obj\x86\Release\Upload\split.language-en.pri
+obj\x86\Release\Upload\split.language-en.map.txt
 obj\x86\Release\Upload\split.scale-100.pri
 obj\x86\Release\Upload\split.scale-100.map.txt
 obj\x86\Release\Upload\split.scale-125.pri

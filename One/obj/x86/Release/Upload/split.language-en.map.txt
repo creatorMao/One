@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-en"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"D:\study\uwpProjects\One\One\obj\x86\Release\Upload\split.language-en.pri"			"resources.pri"
