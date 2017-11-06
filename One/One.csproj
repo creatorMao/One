@@ -113,6 +113,7 @@
     <Compile Include="Model\MovieStoryManager.cs" />
     <Compile Include="Model\NavMenuManager.cs" />
     <Compile Include="Model\OnelistManager.cs" />
+    <Compile Include="Model\Photo.cs" />
     <Compile Include="Model\PhotoAlbumManager.cs" />
     <Compile Include="Model\RemoveHtmlManager.cs" />
     <Compile Include="Model\ToastHelper.cs" />

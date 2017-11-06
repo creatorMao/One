@@ -33,7 +33,7 @@ namespace One
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
-
+            //由于在早期的版本的时候，添加了键值为language的用于设置，当时用的是1和0来存，现在我把1和0改为"en-US","ZH-CH"，所以加了一个20171103，把这两个键值给删了，新用户和更新过一次的都不受印影响。
             if (AppSettings.GetSetting("20171103") == null)
             {
                 AppSettings.RemoveSetting("Language");
@@ -41,8 +41,10 @@ namespace One
                 AppSettings.SetSetting("20171103", true);
             }
 
+            //程序刚开始判断是否有language这个键值，如果为空，默认用中文
             if (AppSettings.GetSetting("Language") == null)
             {
+                //应用程序首选语言 这里设置为中文
                 ApplicationLanguages.PrimaryLanguageOverride = "zh-CN";
             }
             else

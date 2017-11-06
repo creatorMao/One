@@ -58,7 +58,17 @@ namespace One
 
             JudgeIsAlreadySeted();
 
-            navMenuList = NavMenuManager.CreateNavMenuList((string)AppSettings.GetSetting("Language"));
+
+            
+            if (AppSettings.GetSetting("Language") == null)
+            {
+                navMenuList = NavMenuManager.CreateNavMenuList("zh-CN");
+            }
+            else
+            {
+                navMenuList = NavMenuManager.CreateNavMenuList((string)AppSettings.GetSetting("Language"));
+            }
+            
 
 
 
@@ -308,7 +318,7 @@ namespace One
                 AppSettings.SetSetting("DefaultDownloadPath", delaultDownloadFolder.Path);
             }
 
-            //判断语言
+            //判断语言 其实这个地方已经不需要判断了  因为语言的键值是在app.xaml.cs里首先就判断好了 哈哈哈
             if (!localSettings.Values.ContainsKey("Language"))
             {
                 AppSettings.SetSetting("Language", "zh-CN");

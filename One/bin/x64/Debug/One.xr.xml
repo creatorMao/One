@@ -280,6 +280,11 @@
       <RootProperty Name="MinWindowWidth" />
     </RootType>
     <RootType FullName="One.Pages.IndexPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.FlipView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="IsDoubleTapEnabled" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
     <RootType FullName="One.Pages.MoviePage" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />

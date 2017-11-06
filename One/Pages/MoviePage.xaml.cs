@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
@@ -20,6 +21,8 @@ using Windows.UI.Xaml.Navigation;
 
 namespace One.Pages
 {
+    
+
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
@@ -36,9 +39,36 @@ namespace One.Pages
 
         ContentList clickedItem = null;
 
+
+        DoubleAnimation doubleAnimationOpen = new DoubleAnimation()
+        {
+            To = 1,
+            From = 0,
+            Duration = new Duration(TimeSpan.FromSeconds(0.4)),
+        };
+
+        DoubleAnimation doubleAnimationClose = new DoubleAnimation()
+        {
+            To = 0,
+            From = 1,
+            Duration = new Duration(TimeSpan.FromSeconds(0.4)),
+        };
+
+        Storyboard storyboard = new Storyboard();
+
+       
+
+
+
+
+
         public MoviePage()
         {
             this.InitializeComponent();
+
+            
+
+
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -79,7 +109,26 @@ namespace One.Pages
             //当数据全部准备好的时候，关闭等待
             MovieInfoPageProcessRing.IsActive = false;
 
-            MovieInfoImage.Source = new BitmapImage(new Uri(movieInfoList[0].data.detailcover));
+
+            List<Photo> imageList = new List<Photo>();
+
+            
+
+
+
+
+
+            for (int i = 0; i < movieInfoList[0].data.photo.Count; i++)
+            { 
+
+                imageList.Add(new Photo(movieInfoList[0].data.photo[i]));
+            }
+
+
+            
+
+            MovieInfoImageFlipView.ItemsSource = imageList;
+
             MovieStory_Title.Text = movieStoryList[0].data.data[0].title;
             MovieStory_Author.Text = "文/"+movieStoryList[0].data.data[0].author_list[0].user_name;
             MovieStory_Content.Text = RemoveHtmlManager.RemoveHtmlTag(movieStoryList[0].data.data[0].content);
@@ -103,5 +152,68 @@ namespace One.Pages
         {
             MovieInfoPage.Visibility = Visibility.Collapsed;
         }
+
+
+
+        //private void ImageRightPannel_PointerEntered(object sender, PointerRoutedEventArgs e)
+        //{
+        //    storyboard.Stop();
+
+        //    Storyboard.SetTarget(doubleAnimationOpen, MovieInfoImageNextButton);
+        //    Storyboard.SetTargetName(doubleAnimationOpen, "MovieInfoImageNextButton");
+        //    Storyboard.SetTargetProperty(doubleAnimationOpen,"Opacity");
+
+        //    storyboard.Children.Clear();
+        //    storyboard.Children.Add(doubleAnimationOpen);
+            
+        //    storyboard.Begin();
+        //}
+
+
+
+        //private void ImageRightPannel_PointerExited(object sender, PointerRoutedEventArgs e)
+        //{
+        //    storyboard.Stop();
+
+        //    Storyboard.SetTarget(doubleAnimationClose, MovieInfoImageNextButton);
+        //    Storyboard.SetTargetName(doubleAnimationClose, "MovieInfoImageNextButton");
+        //    Storyboard.SetTargetProperty(doubleAnimationClose, "Opacity");
+
+        //    storyboard.Children.Clear();
+        //    storyboard.Children.Add(doubleAnimationClose);
+
+        //    storyboard.Begin();
+        //}
+
+
+
+        //private void ImageLeftPannel_PointerEntered(object sender, PointerRoutedEventArgs e)
+        //{
+        //    storyboard.Stop();
+
+        //    Storyboard.SetTarget(doubleAnimationOpen, MovieInfoImagePreButton);
+        //    Storyboard.SetTargetName(doubleAnimationOpen, "MovieInfoImagePreButton");
+        //    Storyboard.SetTargetProperty(doubleAnimationOpen, "Opacity");
+
+        //    storyboard.Children.Clear();
+        //    storyboard.Children.Add(doubleAnimationOpen);
+
+        //    storyboard.Begin();
+        //}
+
+        //private void ImageLeftPannel_PointerExited(object sender, PointerRoutedEventArgs e)
+        //{
+
+        //    storyboard.Stop();
+
+        //    Storyboard.SetTarget(doubleAnimationClose, MovieInfoImagePreButton);
+        //    Storyboard.SetTargetName(doubleAnimationClose, "MovieInfoImagePreButton");
+        //    Storyboard.SetTargetProperty(doubleAnimationClose, "Opacity");
+
+        //    storyboard.Children.Clear();
+        //    storyboard.Children.Add(doubleAnimationClose);
+
+        //    storyboard.Begin();
+        //}
     }
 }

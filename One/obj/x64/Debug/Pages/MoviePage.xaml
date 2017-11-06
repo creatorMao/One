@@ -18,7 +18,6 @@
         </TransitionCollection>
     </Page.Transitions>-->
 
-
     <Grid x:ConnectionId='2' Name="MoviePageRootGrid">
 
         <Grid.ColumnDefinitions>
@@ -68,7 +67,7 @@
 
         <Grid x:ConnectionId='5' Name="MovieListViewContainer">
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
-                <ListView x:ConnectionId='21' Name="MovieListView"
+                <ListView x:ConnectionId='23' Name="MovieListView"
                                                             
                           ItemContainerStyle="{StaticResource ListViewItemContainerCommonStyle}"
                           Visibility="Visible"
@@ -77,11 +76,11 @@
                           >
                     <ListView.ItemTemplate>
                         <DataTemplate                               >
-                            <Grid x:ConnectionId='22' MinWidth="400"
+                            <Grid x:ConnectionId='24' MinWidth="400"
                                   Height="300">
-                                <Image x:ConnectionId='23'                          
+                                <Image x:ConnectionId='25'                          
                                        Stretch="UniformToFill"></Image>
-                                <TextBlock x:ConnectionId='24'                         
+                                <TextBlock x:ConnectionId='26'                         
                                            HorizontalAlignment="Left"
                                            VerticalAlignment="Bottom"
                                            Margin="30"
@@ -115,9 +114,92 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Grid Grid.Row="0">
-                        <Image x:ConnectionId='20' Name="MovieInfoImage"
-                       Stretch="UniformToFill"/>
+                    <Grid Grid.Row="0"
+                      >
+
+
+                        <FlipView x:ConnectionId='20' Name="MovieInfoImageFlipView"
+                                  IsDoubleTapEnabled="False"
+                                  >
+                            <FlipView.ItemTemplate>
+                                <DataTemplate                         >
+                                    <Grid x:ConnectionId='21'>
+                                        <Image x:ConnectionId='22' Stretch="UniformToFill"
+                                                                         ></Image>
+                                    </Grid>
+                                </DataTemplate>
+                            </FlipView.ItemTemplate>
+                        </FlipView>
+                        
+                        <!--<Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Grid Grid.Column="4"
+                                  Name="ImageRightPannel"
+                                  PointerEntered="ImageRightPannel_PointerEntered"
+                                  PointerExited="ImageRightPannel_PointerExited"
+                                  Background="Transparent"
+                                  >
+
+                               
+
+                                <Button Style="{StaticResource ButtonCommonStyle}"
+                                Width="50"
+                                Height="50"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Margin="0,0,5,0"
+                                Name="MovieInfoImageNextButton"
+                                Opacity="0"
+                               >
+
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" 
+                                          Glyph="&#xE013;" 
+                                          Foreground="White"/>
+                                </Button>
+
+                                
+                                
+                            </Grid>
+
+
+                            <Grid Grid.Column="0"
+                                  PointerEntered="ImageLeftPannel_PointerEntered"
+                                  PointerExited="ImageLeftPannel_PointerExited"
+                                  Background="Transparent">
+                                <Button Style="{StaticResource ButtonCommonStyle}"
+                                Width="50"
+                                Height="50"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Name="MovieInfoImagePreButton"
+                                Margin="5,0,0,0"
+                                Opacity="0"
+                                        
+                                        
+                                >
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" 
+                                          Glyph="&#xE012;" 
+                                          Foreground="White"/>
+                                </Button>
+                                
+                            </Grid>
+
+                            
+
+
+
+
+                        </Grid>-->
+                        
                     </Grid>
 
 
