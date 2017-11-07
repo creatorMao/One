@@ -112,10 +112,11 @@ namespace One.Pages
             //当数据全部准备好的时候，关闭等待
             MovieInfoPageProcessRing.IsActive = false;
 
-
-            imageList = new List<Photo>();
-
             
+            imageList = new List<Photo>();
+            
+
+
 
             for (int i = 0; i < movieInfoList[0].data.photo.Count; i++)
             { 
@@ -130,6 +131,11 @@ namespace One.Pages
                 FlipViewlistview.Visibility = Visibility.Visible;
                 FlipViewlistview.ItemsSource = imageList;
                 FlipViewlistview.SelectedIndex = 0;
+            }
+            else  //当图片的数据只有一条的时候，那么图片底部的listview就关闭，然后将选择的索引设置为-1  -1代表没有选
+            {
+                FlipViewlistview.Visibility = Visibility.Collapsed;
+                FlipViewlistview.SelectedIndex = -1;
             }
 
 
