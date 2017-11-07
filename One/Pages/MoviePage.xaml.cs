@@ -40,6 +40,9 @@ namespace One.Pages
         ContentList clickedItem = null;
 
 
+        List<Photo> imageList;
+
+
         DoubleAnimation doubleAnimationOpen = new DoubleAnimation()
         {
             To = 1,
@@ -110,24 +113,30 @@ namespace One.Pages
             MovieInfoPageProcessRing.IsActive = false;
 
 
-            List<Photo> imageList = new List<Photo>();
+            imageList = new List<Photo>();
 
             
-
-
-
-
 
             for (int i = 0; i < movieInfoList[0].data.photo.Count; i++)
             { 
 
                 imageList.Add(new Photo(movieInfoList[0].data.photo[i]));
+                
             }
 
 
-            
+            if (imageList.Count > 1)
+            {
+                FlipViewlistview.Visibility = Visibility.Visible;
+                FlipViewlistview.ItemsSource = imageList;
+                FlipViewlistview.SelectedIndex = 0;
+            }
+
 
             MovieInfoImageFlipView.ItemsSource = imageList;
+
+            MovieInfoImageFlipView.SelectedIndex = 0;
+
 
             MovieStory_Title.Text = movieStoryList[0].data.data[0].title;
             MovieStory_Author.Text = "文/"+movieStoryList[0].data.data[0].author_list[0].user_name;
@@ -155,65 +164,71 @@ namespace One.Pages
 
 
 
-        //private void ImageRightPannel_PointerEntered(object sender, PointerRoutedEventArgs e)
-        //{
-        //    storyboard.Stop();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MovieInfoImageFlipView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (FlipViewlistview.Visibility == Visibility.Visible)
+            {
+                FlipViewlistview.SelectedIndex = MovieInfoImageFlipView.SelectedIndex;
+            }
 
-        //    Storyboard.SetTarget(doubleAnimationOpen, MovieInfoImageNextButton);
-        //    Storyboard.SetTargetName(doubleAnimationOpen, "MovieInfoImageNextButton");
-        //    Storyboard.SetTargetProperty(doubleAnimationOpen,"Opacity");
+        }
 
-        //    storyboard.Children.Clear();
-        //    storyboard.Children.Add(doubleAnimationOpen);
+
+        private void FlipViewlistview_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var listview = sender as ListView;
+            int index = listview.SelectedIndex;
+            if (MovieInfoImageFlipView.SelectedIndex >= 0)
+            {
+                MovieInfoImageFlipView.SelectedIndex = index;
+            }
             
-        //    storyboard.Begin();
-        //}
+            
+        }
+
+        private void Grid_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            storyboard.Stop();
+
+            Storyboard.SetTarget(doubleAnimationOpen, DownLoadButton);
+            Storyboard.SetTargetName(doubleAnimationOpen, "DownLoadButton");
+            Storyboard.SetTargetProperty(doubleAnimationOpen, "Opacity");
+
+            storyboard.Children.Clear();
+            storyboard.Children.Add(doubleAnimationOpen);
+            storyboard.Begin();
+
+        }
+
+        private void Grid_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            storyboard.Stop();
+
+            Storyboard.SetTarget(doubleAnimationClose, DownLoadButton);
+            Storyboard.SetTargetName(doubleAnimationClose, "DownLoadButton");
+            Storyboard.SetTargetProperty(doubleAnimationClose, "Opacity");
+
+            storyboard.Children.Clear();
+            storyboard.Children.Add(doubleAnimationClose);
+            storyboard.Begin();
+        }
 
 
 
-        //private void ImageRightPannel_PointerExited(object sender, PointerRoutedEventArgs e)
-        //{
-        //    storyboard.Stop();
 
-        //    Storyboard.SetTarget(doubleAnimationClose, MovieInfoImageNextButton);
-        //    Storyboard.SetTargetName(doubleAnimationClose, "MovieInfoImageNextButton");
-        //    Storyboard.SetTargetProperty(doubleAnimationClose, "Opacity");
+        private async void DownLoadButton_Click(object sender, RoutedEventArgs e)
+        {
+            int index = MovieInfoImageFlipView.SelectedIndex;
+            string imageuri = imageList[index].imageurl;
 
-        //    storyboard.Children.Clear();
-        //    storyboard.Children.Add(doubleAnimationClose);
+            DownloadImageManager downloadImageManager = new DownloadImageManager();
 
-        //    storyboard.Begin();
-        //}
-
-
-
-        //private void ImageLeftPannel_PointerEntered(object sender, PointerRoutedEventArgs e)
-        //{
-        //    storyboard.Stop();
-
-        //    Storyboard.SetTarget(doubleAnimationOpen, MovieInfoImagePreButton);
-        //    Storyboard.SetTargetName(doubleAnimationOpen, "MovieInfoImagePreButton");
-        //    Storyboard.SetTargetProperty(doubleAnimationOpen, "Opacity");
-
-        //    storyboard.Children.Clear();
-        //    storyboard.Children.Add(doubleAnimationOpen);
-
-        //    storyboard.Begin();
-        //}
-
-        //private void ImageLeftPannel_PointerExited(object sender, PointerRoutedEventArgs e)
-        //{
-
-        //    storyboard.Stop();
-
-        //    Storyboard.SetTarget(doubleAnimationClose, MovieInfoImagePreButton);
-        //    Storyboard.SetTargetName(doubleAnimationClose, "MovieInfoImagePreButton");
-        //    Storyboard.SetTargetProperty(doubleAnimationClose, "Opacity");
-
-        //    storyboard.Children.Clear();
-        //    storyboard.Children.Add(doubleAnimationClose);
-
-        //    storyboard.Begin();
-        //}
+            await downloadImageManager.SaveImage(clickedItem.item_id.ToString()+index.ToString()+".jpg",imageuri);
+        }
     }
 }
