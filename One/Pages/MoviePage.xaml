@@ -42,7 +42,7 @@
                 </VisualState>
                 <VisualState x:Name="Desktop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1100"></AdaptiveTrigger>
+                        <AdaptiveTrigger MinWindowWidth="1000"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="MovieListViewContainer.Grid.Column" Value="0"/>
@@ -184,14 +184,18 @@
                               Padding="30,30,30,15">
                             <TextBlock Name="MovieStory_Title"
                                        FontSize="28"
-                                       Foreground="#333333"/>
+                                       Foreground="#333333"
+                                       IsTextSelectionEnabled="True"
+                                       TextWrapping="WrapWholeWords"
+                                       />
                         </Grid>
 
                         <Grid Grid.Row="1"
                               Padding="30,0,30,0">
                             <TextBlock Name="MovieStory_Author"
                                        VerticalAlignment="Center"
-                                       Foreground="#333333"></TextBlock>
+                                       Foreground="#333333"
+                                       IsTextSelectionEnabled="True"></TextBlock>
                             <Button Style="{StaticResource ButtonCommonStyle}"
                                     HorizontalAlignment="Right"
                                     Click="OpenMovieInfomationPage">
@@ -205,10 +209,11 @@
                         <Grid Grid.Row="2"
                               Padding="30,0,30,0">
                             <TextBlock Name="MovieStory_Content"
-                                  TextWrapping="WrapWholeWords"
-                                   LineHeight="50"
+                                       TextWrapping="WrapWholeWords"
+                                   LineHeight="45"
                                    FontSize="16"
-                                   Foreground="#333333"></TextBlock>
+                                   Foreground="#333333"
+                                   IsTextSelectionEnabled="True"></TextBlock>
                         </Grid>
 
                     </Grid>
@@ -276,12 +281,14 @@
                                     <TextBlock Name="MovieInfo_Title"
                                            HorizontalAlignment="Center"
                                            FontSize="25"
-                                           Foreground="#333333"></TextBlock>
+                                           Foreground="#333333"
+                                           IsTextSelectionEnabled="True"></TextBlock>
                                     <TextBlock Name="MovieInfo_Forward"
                                            HorizontalAlignment="Center"
                                            Foreground="#333333"
                                            Margin="0,15,0,0"
-                                           FontSize="17"></TextBlock>
+                                           FontSize="17"
+                                           IsTextSelectionEnabled="True"></TextBlock>
                                 </StackPanel>
                             </Grid>
 
@@ -291,6 +298,7 @@
                                            HorizontalAlignment="Center"
                                            Foreground="#333333"
                                            TextAlignment="Center"
+                                           IsTextSelectionEnabled="True"
                                            ></TextBlock>
                             </Grid>
 
@@ -301,13 +309,15 @@
                                     <TextBlock HorizontalAlignment="Center"
                                            Foreground="#333333"
                                            Margin="0,30,0,30"
-                                           Text="---剧情简介---"/>
+                                           Text="---剧情简介---"
+                                           IsTextSelectionEnabled="True"/>
                                     <TextBlock Name="MovieInfo_officialstory"
                                            HorizontalAlignment="Center"
                                            Foreground="#333333"
                                            TextWrapping="WrapWholeWords"
                                            LineHeight="30"
-                                           FontWeight="Normal">
+                                           FontWeight="Normal"
+                                           IsTextSelectionEnabled="True">
 
                                     </TextBlock>
                                 </StackPanel>

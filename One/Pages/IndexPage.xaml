@@ -55,7 +55,7 @@
                 </VisualState>
                 <VisualState x:Name="Desktop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1100"></AdaptiveTrigger>
+                        <AdaptiveTrigger MinWindowWidth="1000"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
@@ -109,7 +109,8 @@
                                     VerticalAlignment="Center">
                                     <TextBlock Text="{x:Bind HpTitle}"
                                        Foreground="White"
-                                       FontSize="26"/>
+                                       FontSize="26"
+                                       />
                                 </StackPanel>
                             </Grid>
                         </DataTemplate>
@@ -165,7 +166,8 @@
                                Margin="8,0,0,0"
                                Foreground="White"
                                FontSize="16"
-                               FontWeight="Bold"/>
+                               FontWeight="Bold"
+                               />
                     </StackPanel>
                 </Grid>
 
@@ -239,7 +241,8 @@
                                HorizontalAlignment="Center"
                                TextWrapping="WrapWholeWords"
                                LineHeight="25"
-                                   FontWeight="Light"
+                               FontWeight="Light"
+                               IsTextSelectionEnabled="True"
                                />
                         </ScrollViewer>
                     </Grid>

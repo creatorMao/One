@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="32688UWP.UWP" Publisher="CN=7AB80963-39C0-4325-A468-DC0AA0B127A8" Version="1.1.25.0" ProcessorArchitecture="x64" />
+  <Identity Name="32688UWP.UWP" Publisher="CN=7AB80963-39C0-4325-A468-DC0AA0B127A8" Version="1.1.26.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="2c5bb877-dcde-4dd9-8219-b8632335d869" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>一个UWP</DisplayName>

@@ -4232,81 +4232,6 @@ namespace System.Collections.Generic
 		}
 	}
 
-	// System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>
-	public unsafe static class IReadOnlyList_A__wux__Media_Animation_DoubleKeyFrame_V___Impl
-	{
-		// DispatchClass for 'System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>'
-		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>))]
-		internal abstract partial class Dispatcher : global::System.__ComObject, global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>, global::System.Collections.Generic.IReadOnlyCollection<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>
-		{
-			global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame> global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.GetEnumerator()
-			{
-				global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IIterableSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle;
-				return (global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>)global::__Interop.McgHelpers.GetGenericEnumerator(
-									this, 
-									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle
-								);
-			}
-
-			global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
-			{
-				return global::__Interop.McgHelpers.GetNonGenericEnumerator(
-									this, 
-									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle
-								);
-			}
-
-			int global::System.Collections.Generic.IReadOnlyCollection<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.Count
-			{
-				get
-				{
-					global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IVectorViewSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle;
-					return global::__Interop.McgHelpers.GetReadOnlyCollectionCount(
-										this, 
-										typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle
-									);
-				}
-			}
-
-			global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.this[int index]
-			{
-				get
-				{
-					return global::System.Runtime.InteropServices.McgMarshal.FastCast<global::System.Runtime.InteropServices.WindowsRuntime.IReadOnlyListAdapter<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>>(global::System.Runtime.InteropServices.McgMarshal.GetDynamicAdapter(
-											this, 
-											typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle
-										))[index];
-				}
-			}
-		}
-	}
-
-	// System.Collections.Generic.IEnumerable<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
-	public unsafe static class IEnumerable_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl
-	{
-		// DispatchClass for 'System.Collections.Generic.IEnumerable<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>'
-		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>))]
-		internal abstract partial class Dispatcher : global::System.__ComObject, global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
-		{
-			global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame> global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.GetEnumerator()
-			{
-				global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IIterableSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle;
-				return (global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>)global::__Interop.McgHelpers.GetGenericEnumerator(
-									this, 
-									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
-								);
-			}
-
-			global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
-			{
-				return global::__Interop.McgHelpers.GetNonGenericEnumerator(
-									this, 
-									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
-								);
-			}
-		}
-	}
-
 	// System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.ObjectKeyFrame>
 	public unsafe static class IReadOnlyList_A__wux__Media_Animation_ObjectKeyFrame_V___Impl
 	{
@@ -4377,6 +4302,81 @@ namespace System.Collections.Generic
 				return global::__Interop.McgHelpers.GetNonGenericEnumerator(
 									this, 
 									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>).TypeHandle
+								);
+			}
+		}
+	}
+
+	// System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>
+	public unsafe static class IReadOnlyList_A__wux__Media_Animation_DoubleKeyFrame_V___Impl
+	{
+		// DispatchClass for 'System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>))]
+		internal abstract partial class Dispatcher : global::System.__ComObject, global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>, global::System.Collections.Generic.IReadOnlyCollection<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>
+		{
+			global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame> global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.GetEnumerator()
+			{
+				global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IIterableSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle;
+				return (global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>)global::__Interop.McgHelpers.GetGenericEnumerator(
+									this, 
+									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle
+								);
+			}
+
+			global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
+			{
+				return global::__Interop.McgHelpers.GetNonGenericEnumerator(
+									this, 
+									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle
+								);
+			}
+
+			int global::System.Collections.Generic.IReadOnlyCollection<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.Count
+			{
+				get
+				{
+					global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IVectorViewSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle;
+					return global::__Interop.McgHelpers.GetReadOnlyCollectionCount(
+										this, 
+										typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle
+									);
+				}
+			}
+
+			global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.this[int index]
+			{
+				get
+				{
+					return global::System.Runtime.InteropServices.McgMarshal.FastCast<global::System.Runtime.InteropServices.WindowsRuntime.IReadOnlyListAdapter<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>>(global::System.Runtime.InteropServices.McgMarshal.GetDynamicAdapter(
+											this, 
+											typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle
+										))[index];
+				}
+			}
+		}
+	}
+
+	// System.Collections.Generic.IEnumerable<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
+	public unsafe static class IEnumerable_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl
+	{
+		// DispatchClass for 'System.Collections.Generic.IEnumerable<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>))]
+		internal abstract partial class Dispatcher : global::System.__ComObject, global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
+		{
+			global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame> global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.GetEnumerator()
+			{
+				global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IIterableSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle;
+				return (global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>)global::__Interop.McgHelpers.GetGenericEnumerator(
+									this, 
+									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
+								);
+			}
+
+			global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
+			{
+				return global::__Interop.McgHelpers.GetNonGenericEnumerator(
+									this, 
+									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
 								);
 			}
 		}
@@ -10236,55 +10236,6 @@ namespace System.Collections.Generic
 		}
 	}
 
-	// System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
-	public unsafe static class IReadOnlyList_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl
-	{
-		// DispatchClass for 'System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>'
-		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>))]
-		internal abstract partial class Dispatcher : global::System.__ComObject, global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>, global::System.Collections.Generic.IReadOnlyCollection<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
-		{
-			global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame> global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.GetEnumerator()
-			{
-				global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IIterableSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle;
-				return (global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>)global::__Interop.McgHelpers.GetGenericEnumerator(
-									this, 
-									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
-								);
-			}
-
-			global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
-			{
-				return global::__Interop.McgHelpers.GetNonGenericEnumerator(
-									this, 
-									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
-								);
-			}
-
-			int global::System.Collections.Generic.IReadOnlyCollection<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.Count
-			{
-				get
-				{
-					global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IVectorViewSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle;
-					return global::__Interop.McgHelpers.GetReadOnlyCollectionCount(
-										this, 
-										typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
-									);
-				}
-			}
-
-			global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.this[int index]
-			{
-				get
-				{
-					return global::System.Runtime.InteropServices.McgMarshal.FastCast<global::System.Runtime.InteropServices.WindowsRuntime.IReadOnlyListAdapter<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>>(global::System.Runtime.InteropServices.McgMarshal.GetDynamicAdapter(
-											this, 
-											typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
-										))[index];
-				}
-			}
-		}
-	}
-
 	// System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>
 	public unsafe static class IReadOnlyList_A__wux__Media_Animation_IObjectKeyFrame_V___Impl
 	{
@@ -10328,6 +10279,55 @@ namespace System.Collections.Generic
 					return global::System.Runtime.InteropServices.McgMarshal.FastCast<global::System.Runtime.InteropServices.WindowsRuntime.IReadOnlyListAdapter<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>>(global::System.Runtime.InteropServices.McgMarshal.GetDynamicAdapter(
 											this, 
 											typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>).TypeHandle
+										))[index];
+				}
+			}
+		}
+	}
+
+	// System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
+	public unsafe static class IReadOnlyList_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl
+	{
+		// DispatchClass for 'System.Collections.Generic.IReadOnlyList<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>))]
+		internal abstract partial class Dispatcher : global::System.__ComObject, global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>, global::System.Collections.Generic.IReadOnlyCollection<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
+		{
+			global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame> global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.GetEnumerator()
+			{
+				global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IIterableSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle;
+				return (global::System.Collections.Generic.IEnumerator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>)global::__Interop.McgHelpers.GetGenericEnumerator(
+									this, 
+									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
+								);
+			}
+
+			global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator()
+			{
+				return global::__Interop.McgHelpers.GetNonGenericEnumerator(
+									this, 
+									typeof(global::System.Collections.Generic.IEnumerable<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
+								);
+			}
+
+			int global::System.Collections.Generic.IReadOnlyCollection<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.Count
+			{
+				get
+				{
+					global::System.RuntimeTypeHandle dummySharedDynamicAdapter = typeof(global::System.Runtime.InteropServices.WindowsRuntime.IVectorViewSharedReferenceTypesDynamicAdapter<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle;
+					return global::__Interop.McgHelpers.GetReadOnlyCollectionCount(
+										this, 
+										typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
+									);
+				}
+			}
+
+			global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.this[int index]
+			{
+				get
+				{
+					return global::System.Runtime.InteropServices.McgMarshal.FastCast<global::System.Runtime.InteropServices.WindowsRuntime.IReadOnlyListAdapter<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>>(global::System.Runtime.InteropServices.McgMarshal.GetDynamicAdapter(
+											this, 
+											typeof(global::System.Collections.Generic.IReadOnlyList<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle
 										))[index];
 				}
 			}
@@ -14943,6 +14943,17 @@ namespace Windows.ApplicationModel
 		public static partial class Stubs
 		{
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.ApplicationModel.PackageId get_Id(global::System.__ComObject __this)
+			{
+				global::Windows.ApplicationModel.PackageId __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.ApplicationModel.IPackage, global::Windows.ApplicationModel.PackageId>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static global::Windows.Storage.StorageFolder get_InstalledLocation(global::System.__ComObject __this)
 			{
 				global::Windows.Storage.StorageFolder __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.ApplicationModel.IPackage, global::Windows.Storage.StorageFolder>(
@@ -14951,6 +14962,36 @@ namespace Windows.ApplicationModel
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 				return __ret;
+			}
+		}
+	}
+
+	// Windows.ApplicationModel.IPackageId
+	public unsafe static class IPackageId__Impl
+	{
+		// StubClass for 'Windows.ApplicationModel.IPackageId'
+		public static partial class Stubs
+		{
+			// Signature, Windows.ApplicationModel.IPackageId.get_Version, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Windows_ApplicationModel_PackageVersion__Windows_ApplicationModel__PackageVersion, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.ApplicationModel.PackageVersion get_Version(global::System.__ComObject __this)
+			{
+				// Setup
+				global::Windows.ApplicationModel.PackageVersion unsafe_value__retval;
+				global::Windows.ApplicationModel.PackageVersion value__retval;
+				int unsafe___hr;
+				// Marshalling
+				// Call to native method
+				unsafe___hr = global::__Interop.ComCallHelpers.Call(
+									__this, 
+									typeof(global::Windows.ApplicationModel.IPackageId).TypeHandle, 
+									7, 
+									&(unsafe_value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				value__retval = unsafe_value__retval;
+				// Return
+				return value__retval;
 			}
 		}
 	}
@@ -15059,7 +15100,7 @@ namespace Windows.ApplicationModel.Core
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.ApplicationModel.Core.ICoreApplicationViewTitleBar>(
 									__this, 
 									value, 
 									6
@@ -25053,7 +25094,7 @@ namespace Windows.Foundation.Collections
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static global::Windows.Foundation.Point get_Current(global::System.__ComObject __this)
 			{
-				global::Windows.Foundation.Point __ret = global::__Interop.ForwardComStubs.Stub_19<global::Windows.Foundation.Collections.IIterator<global::Windows.Foundation.Point>>(
+				global::Windows.Foundation.Point __ret = global::__Interop.ForwardComStubs.Stub_20<global::Windows.Foundation.Collections.IIterator<global::Windows.Foundation.Point>>(
 									__this, 
 									6
 								);
@@ -29996,282 +30037,6 @@ namespace Windows.Foundation.Collections
 		}
 	}
 
-	// Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>
-	public unsafe static class IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl
-	{
-		// StubClass for 'Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame get_Current(global::System.__ComObject __this)
-			{
-				global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>, global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>(
-									__this, 
-									6
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static bool get_HasCurrent(global::System.__ComObject __this)
-			{
-				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>>(
-									__this, 
-									7
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static bool MoveNext(global::System.__ComObject __this)
-			{
-				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>>(
-									__this, 
-									8
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			// Signature, Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.GetMany, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [Mcg.CodeGen.ArrayMarshaller] rg_Windows_UI_Xaml_Media_Animation_DoubleKeyFrame__Windows_UI_Xaml_Media_Animation__DoubleKeyFrame * *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static uint GetMany(
-						global::System.__ComObject __this, 
-						global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame[] items)
-			{
-				// Setup
-				uint unsafe_items_mcgLength = 0;
-				void** unsafe_items = default(void**);
-				uint unsafe___value__retval;
-				uint __value__retval;
-				int unsafe___hr;
-				try
-				{
-					// Marshalling
-					if (items != null)
-						unsafe_items_mcgLength = (uint)items.Length;
-					if (items != null)
-						unsafe_items = (void**)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(unsafe_items_mcgLength * sizeof(void*))));
-					// Call to native method
-					unsafe___hr = global::__Interop.ComCallHelpers.Call(
-										__this, 
-										typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle, 
-										9, 
-										unsafe_items_mcgLength, 
-										unsafe_items, 
-										&(unsafe___value__retval)
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					__value__retval = unsafe___value__retval;
-					if (items != null)
-						for (uint mcgIdx = 0; (mcgIdx < unsafe_items_mcgLength); mcgIdx++)
-						{
-							// [fwd] [out] [optional] [Mcg.CodeGen.WinRTClassMarshaller] Windows_UI_Xaml_Media_Animation_DoubleKeyFrame__Windows_UI_Xaml_Media_Animation__DoubleKeyFrame * items
-							items[mcgIdx] = (global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(
-												((global::System.IntPtr)unsafe_items[mcgIdx]), 
-												typeof(global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame).TypeHandle
-											);
-						}
-					// Return
-					return __value__retval;
-				}
-				finally
-				{
-					// Cleanup
-					if (unsafe_items != null)
-						for (uint mcgIdx_1 = 0; (mcgIdx_1 < unsafe_items_mcgLength); mcgIdx_1++)
-						{
-							// [fwd] [in] [out] [optional] [Mcg.CodeGen.WinRTClassMarshaller] Windows_UI_Xaml_Media_Animation_DoubleKeyFrame__Windows_UI_Xaml_Media_Animation__DoubleKeyFrame * items
-							global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_items[mcgIdx_1])));
-						}
-					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_items);
-				}
-			}
-		}
-
-		// DispatchClass for 'Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>'
-		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>))]
-		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.Collections.IIterator`1.Current")]
-			global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.get_Current()
-			{
-				global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl.Stubs.get_Current(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.Collections.IIterator`1.HasCurrent")]
-			bool global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.get_HasCurrent()
-			{
-				bool __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl.Stubs.get_HasCurrent(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			bool global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.MoveNext()
-			{
-				bool __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl.Stubs.MoveNext(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			uint global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.GetMany(global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame[] items)
-			{
-				uint __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl.Stubs.GetMany(
-									this, 
-									items
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-		}
-	}
-
-	// Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
-	public unsafe static class IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl
-	{
-		// StubClass for 'Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame get_Current(global::System.__ComObject __this)
-			{
-				global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>, global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>(
-									__this, 
-									6
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static bool get_HasCurrent(global::System.__ComObject __this)
-			{
-				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>>(
-									__this, 
-									7
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static bool MoveNext(global::System.__ComObject __this)
-			{
-				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>>(
-									__this, 
-									8
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			// Signature, Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.GetMany, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [Mcg.CodeGen.ArrayMarshaller] rg_Windows_UI_Xaml_Media_Animation_IDoubleKeyFrame__Windows_UI_Xaml_Media_Animation__IDoubleKeyFrame * *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static uint GetMany(
-						global::System.__ComObject __this, 
-						global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame[] items)
-			{
-				// Setup
-				uint unsafe_items_mcgLength = 0;
-				void** unsafe_items = default(void**);
-				uint unsafe___value__retval;
-				uint __value__retval;
-				int unsafe___hr;
-				try
-				{
-					// Marshalling
-					if (items != null)
-						unsafe_items_mcgLength = (uint)items.Length;
-					if (items != null)
-						unsafe_items = (void**)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(unsafe_items_mcgLength * sizeof(void*))));
-					// Call to native method
-					unsafe___hr = global::__Interop.ComCallHelpers.Call(
-										__this, 
-										typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle, 
-										9, 
-										unsafe_items_mcgLength, 
-										unsafe_items, 
-										&(unsafe___value__retval)
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					__value__retval = unsafe___value__retval;
-					if (items != null)
-						for (uint mcgIdx = 0; (mcgIdx < unsafe_items_mcgLength); mcgIdx++)
-						{
-							// [fwd] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_UI_Xaml_Media_Animation_IDoubleKeyFrame__Windows_UI_Xaml_Media_Animation__IDoubleKeyFrame * items
-							items[mcgIdx] = (global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(
-												((global::System.IntPtr)unsafe_items[mcgIdx]), 
-												typeof(global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame).TypeHandle
-											);
-						}
-					// Return
-					return __value__retval;
-				}
-				finally
-				{
-					// Cleanup
-					if (unsafe_items != null)
-						for (uint mcgIdx_1 = 0; (mcgIdx_1 < unsafe_items_mcgLength); mcgIdx_1++)
-						{
-							// [fwd] [in] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_UI_Xaml_Media_Animation_IDoubleKeyFrame__Windows_UI_Xaml_Media_Animation__IDoubleKeyFrame * items
-							global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_items[mcgIdx_1])));
-						}
-					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_items);
-				}
-			}
-		}
-
-		// DispatchClass for 'Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>'
-		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>))]
-		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.Collections.IIterator`1.Current")]
-			global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.get_Current()
-			{
-				global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl.Stubs.get_Current(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.Collections.IIterator`1.HasCurrent")]
-			bool global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.get_HasCurrent()
-			{
-				bool __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl.Stubs.get_HasCurrent(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			bool global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.MoveNext()
-			{
-				bool __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl.Stubs.MoveNext(this);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			uint global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.GetMany(global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame[] items)
-			{
-				uint __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl.Stubs.GetMany(
-									this, 
-									items
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __retVal;
-			}
-		}
-	}
-
 	// Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.ObjectKeyFrame>
 	public unsafe static class IIterator_A__wux__Media_Animation_ObjectKeyFrame_V___Impl
 	{
@@ -30539,6 +30304,282 @@ namespace Windows.Foundation.Collections
 			uint global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>.GetMany(global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame[] items)
 			{
 				uint __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IObjectKeyFrame_V___Impl.Stubs.GetMany(
+									this, 
+									items
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+	}
+
+	// Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>
+	public unsafe static class IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl
+	{
+		// StubClass for 'Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame get_Current(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>, global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool get_HasCurrent(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>>(
+									__this, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool MoveNext(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>>(
+									__this, 
+									8
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			// Signature, Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.GetMany, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [Mcg.CodeGen.ArrayMarshaller] rg_Windows_UI_Xaml_Media_Animation_DoubleKeyFrame__Windows_UI_Xaml_Media_Animation__DoubleKeyFrame * *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static uint GetMany(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame[] items)
+			{
+				// Setup
+				uint unsafe_items_mcgLength = 0;
+				void** unsafe_items = default(void**);
+				uint unsafe___value__retval;
+				uint __value__retval;
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					if (items != null)
+						unsafe_items_mcgLength = (uint)items.Length;
+					if (items != null)
+						unsafe_items = (void**)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(unsafe_items_mcgLength * sizeof(void*))));
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>).TypeHandle, 
+										9, 
+										unsafe_items_mcgLength, 
+										unsafe_items, 
+										&(unsafe___value__retval)
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					__value__retval = unsafe___value__retval;
+					if (items != null)
+						for (uint mcgIdx = 0; (mcgIdx < unsafe_items_mcgLength); mcgIdx++)
+						{
+							// [fwd] [out] [optional] [Mcg.CodeGen.WinRTClassMarshaller] Windows_UI_Xaml_Media_Animation_DoubleKeyFrame__Windows_UI_Xaml_Media_Animation__DoubleKeyFrame * items
+							items[mcgIdx] = (global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(
+												((global::System.IntPtr)unsafe_items[mcgIdx]), 
+												typeof(global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame).TypeHandle
+											);
+						}
+					// Return
+					return __value__retval;
+				}
+				finally
+				{
+					// Cleanup
+					if (unsafe_items != null)
+						for (uint mcgIdx_1 = 0; (mcgIdx_1 < unsafe_items_mcgLength); mcgIdx_1++)
+						{
+							// [fwd] [in] [out] [optional] [Mcg.CodeGen.WinRTClassMarshaller] Windows_UI_Xaml_Media_Animation_DoubleKeyFrame__Windows_UI_Xaml_Media_Animation__DoubleKeyFrame * items
+							global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_items[mcgIdx_1])));
+						}
+					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_items);
+				}
+			}
+		}
+
+		// DispatchClass for 'Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>))]
+		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.Collections.IIterator`1.Current")]
+			global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.get_Current()
+			{
+				global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl.Stubs.get_Current(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.Collections.IIterator`1.HasCurrent")]
+			bool global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.get_HasCurrent()
+			{
+				bool __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl.Stubs.get_HasCurrent(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			bool global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.MoveNext()
+			{
+				bool __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl.Stubs.MoveNext(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			uint global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame>.GetMany(global::Windows.UI.Xaml.Media.Animation.DoubleKeyFrame[] items)
+			{
+				uint __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_DoubleKeyFrame_V___Impl.Stubs.GetMany(
+									this, 
+									items
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+	}
+
+	// Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
+	public unsafe static class IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl
+	{
+		// StubClass for 'Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame get_Current(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>, global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool get_HasCurrent(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>>(
+									__this, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool MoveNext(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>>(
+									__this, 
+									8
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			// Signature, Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.GetMany, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [Mcg.CodeGen.ArrayMarshaller] rg_Windows_UI_Xaml_Media_Animation_IDoubleKeyFrame__Windows_UI_Xaml_Media_Animation__IDoubleKeyFrame * *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static uint GetMany(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame[] items)
+			{
+				// Setup
+				uint unsafe_items_mcgLength = 0;
+				void** unsafe_items = default(void**);
+				uint unsafe___value__retval;
+				uint __value__retval;
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					if (items != null)
+						unsafe_items_mcgLength = (uint)items.Length;
+					if (items != null)
+						unsafe_items = (void**)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(unsafe_items_mcgLength * sizeof(void*))));
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>).TypeHandle, 
+										9, 
+										unsafe_items_mcgLength, 
+										unsafe_items, 
+										&(unsafe___value__retval)
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					__value__retval = unsafe___value__retval;
+					if (items != null)
+						for (uint mcgIdx = 0; (mcgIdx < unsafe_items_mcgLength); mcgIdx++)
+						{
+							// [fwd] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_UI_Xaml_Media_Animation_IDoubleKeyFrame__Windows_UI_Xaml_Media_Animation__IDoubleKeyFrame * items
+							items[mcgIdx] = (global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(
+												((global::System.IntPtr)unsafe_items[mcgIdx]), 
+												typeof(global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame).TypeHandle
+											);
+						}
+					// Return
+					return __value__retval;
+				}
+				finally
+				{
+					// Cleanup
+					if (unsafe_items != null)
+						for (uint mcgIdx_1 = 0; (mcgIdx_1 < unsafe_items_mcgLength); mcgIdx_1++)
+						{
+							// [fwd] [in] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_UI_Xaml_Media_Animation_IDoubleKeyFrame__Windows_UI_Xaml_Media_Animation__IDoubleKeyFrame * items
+							global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_items[mcgIdx_1])));
+						}
+					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_items);
+				}
+			}
+		}
+
+		// DispatchClass for 'Windows.Foundation.Collections.IIterator<Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>))]
+		internal abstract partial class Dispatcher : global::System.__ComObject, global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.Collections.IIterator`1.Current")]
+			global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.get_Current()
+			{
+				global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl.Stubs.get_Current(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Foundation.Collections.IIterator`1.HasCurrent")]
+			bool global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.get_HasCurrent()
+			{
+				bool __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl.Stubs.get_HasCurrent(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			bool global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.MoveNext()
+			{
+				bool __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl.Stubs.MoveNext(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			uint global::Windows.Foundation.Collections.IIterator<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>.GetMany(global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame[] items)
+			{
+				uint __retVal = global::Windows.Foundation.Collections.IIterator_A__wux__Media_Animation_IDoubleKeyFrame_V___Impl.Stubs.GetMany(
 									this, 
 									items
 								);
@@ -31388,7 +31429,7 @@ namespace Windows.Foundation.Collections
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_Current(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.Foundation.Collections.IIterator<double>>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.Foundation.Collections.IIterator<double>>(
 									__this, 
 									6
 								);
@@ -42399,9 +42440,33 @@ namespace Windows.UI.Xaml
 		public static partial class Stubs
 		{
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool get_AllowDrop(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.UI.Xaml.IUIElement>(
+									__this, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_AllowDrop(
+						global::System.__ComObject __this, 
+						bool value)
+			{
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IUIElement>(
+									__this, 
+									value, 
+									8
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_Opacity(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IUIElement>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IUIElement>(
 									__this, 
 									9
 								);
@@ -42414,7 +42479,7 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IUIElement>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IUIElement>(
 									__this, 
 									value, 
 									10
@@ -42449,7 +42514,7 @@ namespace Windows.UI.Xaml
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static global::Windows.Foundation.Point get_RenderTransformOrigin(global::System.__ComObject __this)
 			{
-				global::Windows.Foundation.Point __ret = global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IUIElement>(
+				global::Windows.Foundation.Point __ret = global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.IUIElement>(
 									__this, 
 									17
 								);
@@ -42493,7 +42558,7 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.IUIElement>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IUIElement>(
 									__this, 
 									value, 
 									20
@@ -42556,6 +42621,54 @@ namespace Windows.UI.Xaml
 									__this, 
 									value, 
 									27
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool get_IsDoubleTapEnabled(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.UI.Xaml.IUIElement>(
+									__this, 
+									32
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_IsDoubleTapEnabled(
+						global::System.__ComObject __this, 
+						bool value)
+			{
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IUIElement>(
+									__this, 
+									value, 
+									33
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool get_IsHoldingEnabled(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.UI.Xaml.IUIElement>(
+									__this, 
+									36
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_IsHoldingEnabled(
+						global::System.__ComObject __this, 
+						bool value)
+			{
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IUIElement>(
+									__this, 
+									value, 
+									37
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
@@ -44346,7 +44459,7 @@ namespace Windows.UI.Xaml
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_Width(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IFrameworkElement>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									15
 								);
@@ -44359,7 +44472,7 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									value, 
 									16
@@ -44370,7 +44483,7 @@ namespace Windows.UI.Xaml
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_Height(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IFrameworkElement>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									17
 								);
@@ -44383,7 +44496,7 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									value, 
 									18
@@ -44394,7 +44507,7 @@ namespace Windows.UI.Xaml
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_MinWidth(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IFrameworkElement>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									19
 								);
@@ -44407,7 +44520,7 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									value, 
 									20
@@ -44418,7 +44531,7 @@ namespace Windows.UI.Xaml
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_MaxWidth(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IFrameworkElement>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									21
 								);
@@ -44431,7 +44544,7 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									value, 
 									22
@@ -44442,7 +44555,7 @@ namespace Windows.UI.Xaml
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_MinHeight(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IFrameworkElement>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									23
 								);
@@ -44455,10 +44568,34 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IFrameworkElement>(
 									__this, 
 									value, 
 									24
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static double get_MaxHeight(global::System.__ComObject __this)
+			{
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IFrameworkElement>(
+									__this, 
+									25
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_MaxHeight(
+						global::System.__ComObject __this, 
+						double value)
+			{
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IFrameworkElement>(
+									__this, 
+									value, 
+									26
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
@@ -45832,7 +45969,7 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						bool IsActive)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.IStateTriggerBaseProtected>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IStateTriggerBaseProtected>(
 									__this, 
 									IsActive, 
 									6
@@ -45981,7 +46118,7 @@ namespace Windows.UI.Xaml
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_MinWindowWidth(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.IAdaptiveTrigger>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IAdaptiveTrigger>(
 									__this, 
 									6
 								);
@@ -45994,7 +46131,7 @@ namespace Windows.UI.Xaml
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.IAdaptiveTrigger>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.IAdaptiveTrigger>(
 									__this, 
 									value, 
 									7
@@ -46819,7 +46956,7 @@ namespace Windows.UI.Xaml.Automation.Peers
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static global::Windows.Foundation.Point GetClickablePointCore(global::System.__ComObject __this)
 			{
-				global::Windows.Foundation.Point __ret = global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides>(
+				global::Windows.Foundation.Point __ret = global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides>(
 									__this, 
 									14
 								);
@@ -47457,7 +47594,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_FontSize(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IControl>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IControl>(
 									__this, 
 									6
 								);
@@ -47470,7 +47607,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IControl>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.IControl>(
 									__this, 
 									value, 
 									7
@@ -47566,7 +47703,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IControl>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IControl>(
 									__this, 
 									value, 
 									21
@@ -47590,7 +47727,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IControl>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IControl>(
 									__this, 
 									value, 
 									23
@@ -48287,7 +48424,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IControl3>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IControl3>(
 									__this, 
 									value, 
 									7
@@ -49498,7 +49635,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_MaxWidth(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IColumnDefinition>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IColumnDefinition>(
 									__this, 
 									8
 								);
@@ -49511,7 +49648,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IColumnDefinition>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.IColumnDefinition>(
 									__this, 
 									value, 
 									9
@@ -49695,7 +49832,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.ISplitView>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.ISplitView>(
 									__this, 
 									value, 
 									11
@@ -49706,7 +49843,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_OpenPaneLength(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.ISplitView>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.ISplitView>(
 									__this, 
 									12
 								);
@@ -49719,7 +49856,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.ISplitView>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.ISplitView>(
 									__this, 
 									value, 
 									13
@@ -49730,7 +49867,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_CompactPaneLength(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.ISplitView>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.ISplitView>(
 									__this, 
 									14
 								);
@@ -49743,7 +49880,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.ISplitView>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.ISplitView>(
 									__this, 
 									value, 
 									15
@@ -50195,7 +50332,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IProgressRing>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IProgressRing>(
 									__this, 
 									value, 
 									7
@@ -50244,7 +50381,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_FontSize(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.ITextBlock>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.ITextBlock>(
 									__this, 
 									6
 								);
@@ -50257,7 +50394,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.ITextBlock>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.ITextBlock>(
 									__this, 
 									value, 
 									7
@@ -50421,7 +50558,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_LineHeight(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.ITextBlock>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.ITextBlock>(
 									__this, 
 									31
 								);
@@ -50434,10 +50571,34 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.ITextBlock>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.ITextBlock>(
 									__this, 
 									value, 
 									32
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static bool get_IsTextSelectionEnabled(global::System.__ComObject __this)
+			{
+				bool __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.UI.Xaml.Controls.ITextBlock>(
+									__this, 
+									35
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_IsTextSelectionEnabled(
+						global::System.__ComObject __this, 
+						bool value)
+			{
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.ITextBlock>(
+									__this, 
+									value, 
+									36
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
@@ -50695,7 +50856,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_FontSize(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IFontIcon>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IFontIcon>(
 									__this, 
 									8
 								);
@@ -50708,7 +50869,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IFontIcon>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.IFontIcon>(
 									__this, 
 									value, 
 									9
@@ -50764,7 +50925,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IFontIcon3>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IFontIcon3>(
 									__this, 
 									value, 
 									7
@@ -51301,7 +51462,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IGroupStyle>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IGroupStyle>(
 									__this, 
 									value, 
 									17
@@ -51473,7 +51634,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IListViewBase>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IListViewBase>(
 									__this, 
 									value, 
 									16
@@ -52623,7 +52784,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IScrollViewer>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IScrollViewer>(
 									__this, 
 									value, 
 									11
@@ -52647,7 +52808,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IScrollViewer>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IScrollViewer>(
 									__this, 
 									value, 
 									13
@@ -52811,7 +52972,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_VerticalOffset(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IScrollViewer>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IScrollViewer>(
 									__this, 
 									45
 								);
@@ -52822,7 +52983,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_ViewportHeight(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IScrollViewer>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IScrollViewer>(
 									__this, 
 									46
 								);
@@ -52833,7 +52994,7 @@ namespace Windows.UI.Xaml.Controls
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_ExtentHeight(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IScrollViewer>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.IScrollViewer>(
 									__this, 
 									49
 								);
@@ -52908,7 +53069,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IScrollViewer>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IScrollViewer>(
 									__this, 
 									value, 
 									63
@@ -52932,7 +53093,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IScrollViewer>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IScrollViewer>(
 									__this, 
 									value, 
 									65
@@ -53119,6 +53280,30 @@ namespace Windows.UI.Xaml.Controls
 		}
 	}
 
+	// Windows.UI.Xaml.Controls.IFlipViewFactory
+	public unsafe static class IFlipViewFactory__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Controls.IFlipViewFactory'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::System.IntPtr CreateInstance(
+						global::System.__ComObject __this, 
+						global::System.IntPtr outer, 
+						out global::System.IntPtr inner)
+			{
+				global::System.IntPtr __ret = global::__Interop.ForwardComStubs.Stub_4<global::Windows.UI.Xaml.Controls.IFlipViewFactory>(
+									__this, 
+									outer, 
+									out inner, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
+
 	// Windows.UI.Xaml.Controls.IToggleSwitch
 	public unsafe static class IToggleSwitch__Impl
 	{
@@ -53141,7 +53326,7 @@ namespace Windows.UI.Xaml.Controls
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.IToggleSwitch>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.IToggleSwitch>(
 									__this, 
 									value, 
 									7
@@ -53874,6 +54059,17 @@ namespace Windows.UI.Xaml.Controls.Primitives
 		public static partial class Stubs
 		{
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static int get_SelectedIndex(global::System.__ComObject __this)
+			{
+				int __ret = global::__Interop.ForwardComStubs.Stub_28<global::Windows.UI.Xaml.Controls.Primitives.ISelector>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static void put_SelectedIndex(
 						global::System.__ComObject __this, 
 						int value)
@@ -53959,7 +54155,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_KnobCurrentToOnOffset(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings>(
 									__this, 
 									6
 								);
@@ -53970,7 +54166,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_KnobCurrentToOffOffset(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings>(
 									__this, 
 									7
 								);
@@ -53981,7 +54177,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_KnobOnToOffOffset(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings>(
 									__this, 
 									8
 								);
@@ -53992,7 +54188,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_KnobOffToOnOffset(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IToggleSwitchTemplateSettings>(
 									__this, 
 									9
 								);
@@ -54011,7 +54207,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_DropDownOpenedHeight(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IComboBoxTemplateSettings>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IComboBoxTemplateSettings>(
 									__this, 
 									6
 								);
@@ -54022,7 +54218,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_DropDownOffset(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IComboBoxTemplateSettings>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IComboBoxTemplateSettings>(
 									__this, 
 									8
 								);
@@ -54041,7 +54237,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_DropDownContentMinWidth(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IComboBoxTemplateSettings2>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IComboBoxTemplateSettings2>(
 									__this, 
 									6
 								);
@@ -54060,7 +54256,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_Maximum(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IRangeBase>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IRangeBase>(
 									__this, 
 									8
 								);
@@ -54073,7 +54269,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IRangeBase>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.Primitives.IRangeBase>(
 									__this, 
 									value, 
 									9
@@ -54084,7 +54280,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_Value(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IRangeBase>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IRangeBase>(
 									__this, 
 									14
 								);
@@ -54097,7 +54293,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IRangeBase>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.Primitives.IRangeBase>(
 									__this, 
 									value, 
 									15
@@ -54328,7 +54524,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_ViewportSize(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IScrollBar>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IScrollBar>(
 									__this, 
 									8
 								);
@@ -54341,7 +54537,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Controls.Primitives.IScrollBar>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Controls.Primitives.IScrollBar>(
 									__this, 
 									value, 
 									9
@@ -54521,7 +54717,7 @@ namespace Windows.UI.Xaml.Controls.Primitives
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.UI.Xaml.Controls.Primitives.IPopup>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Controls.Primitives.IPopup>(
 									__this, 
 									value, 
 									9
@@ -58563,7 +58759,7 @@ namespace Windows.UI.Xaml.Media
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_Y(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.ITranslateTransform>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.ITranslateTransform>(
 									__this, 
 									8
 								);
@@ -58576,7 +58772,7 @@ namespace Windows.UI.Xaml.Media
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.ITranslateTransform>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.ITranslateTransform>(
 									__this, 
 									value, 
 									9
@@ -58667,7 +58863,7 @@ namespace Windows.UI.Xaml.Media
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_CenterX(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.IScaleTransform>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.IScaleTransform>(
 									__this, 
 									6
 								);
@@ -58680,7 +58876,7 @@ namespace Windows.UI.Xaml.Media
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.IScaleTransform>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.IScaleTransform>(
 									__this, 
 									value, 
 									7
@@ -58691,7 +58887,7 @@ namespace Windows.UI.Xaml.Media
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_CenterY(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.IScaleTransform>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.IScaleTransform>(
 									__this, 
 									8
 								);
@@ -58704,7 +58900,7 @@ namespace Windows.UI.Xaml.Media
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.IScaleTransform>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.IScaleTransform>(
 									__this, 
 									value, 
 									9
@@ -58715,7 +58911,7 @@ namespace Windows.UI.Xaml.Media
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_ScaleX(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.IScaleTransform>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.IScaleTransform>(
 									__this, 
 									10
 								);
@@ -58728,7 +58924,7 @@ namespace Windows.UI.Xaml.Media
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.IScaleTransform>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.IScaleTransform>(
 									__this, 
 									value, 
 									11
@@ -58739,7 +58935,7 @@ namespace Windows.UI.Xaml.Media
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_ScaleY(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.IScaleTransform>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.IScaleTransform>(
 									__this, 
 									12
 								);
@@ -58752,7 +58948,7 @@ namespace Windows.UI.Xaml.Media
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.IScaleTransform>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.IScaleTransform>(
 									__this, 
 									value, 
 									13
@@ -59090,6 +59286,16 @@ namespace Windows.UI.Xaml.Media.Animation
 			}
 
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void Stop(global::System.__ComObject __this)
+			{
+				global::__Interop.ForwardComStubs.Stub_16<global::Windows.UI.Xaml.Media.Animation.IStoryboard>(
+									__this, 
+									8
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static void Begin(global::System.__ComObject __this)
 			{
 				global::__Interop.ForwardComStubs.Stub_16<global::Windows.UI.Xaml.Media.Animation.IStoryboard>(
@@ -59097,6 +59303,105 @@ namespace Windows.UI.Xaml.Media.Animation
 									9
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+		}
+	}
+
+	// Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory
+	public unsafe static class IObjectKeyFrameFactory__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::System.IntPtr CreateInstance(
+						global::System.__ComObject __this, 
+						global::System.IntPtr outer, 
+						out global::System.IntPtr inner)
+			{
+				global::System.IntPtr __ret = global::__Interop.ForwardComStubs.Stub_4<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory>(
+									__this, 
+									outer, 
+									out inner, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
+
+	// Windows.UI.Xaml.Media.Animation.IObjectKeyFrame
+	public unsafe static class IObjectKeyFrame__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Media.Animation.IObjectKeyFrame'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static object get_Value(global::System.__ComObject __this)
+			{
+				object __ret = global::__Interop.ForwardComStubs.Stub_14<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Value(
+						global::System.__ComObject __this, 
+						object value)
+			{
+				global::__Interop.ForwardComStubs.Stub_42<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>(
+									__this, 
+									value, 
+									7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Media.Animation.KeyTime get_KeyTime(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.Media.Animation.KeyTime __ret = global::__Interop.ForwardComStubs.Stub_65<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>(
+									__this, 
+									8
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_KeyTime(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Media.Animation.KeyTime value)
+			{
+				global::__Interop.ForwardComStubs.Stub_66<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>(
+									__this, 
+									value, 
+									9
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+		}
+	}
+
+	// Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames
+	public unsafe static class IObjectAnimationUsingKeyFrames__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection get_KeyFrames(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames, global::Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection>(
+									__this, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
 			}
 		}
 	}
@@ -59134,7 +59439,7 @@ namespace Windows.UI.Xaml.Media.Animation
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_Value(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>(
 									__this, 
 									6
 								);
@@ -59147,7 +59452,7 @@ namespace Windows.UI.Xaml.Media.Animation
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.Animation.IDoubleKeyFrame>(
 									__this, 
 									value, 
 									7
@@ -59289,7 +59594,7 @@ namespace Windows.UI.Xaml.Media.Animation
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_OpenedLength(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation>(
 									__this, 
 									18
 								);
@@ -59302,7 +59607,7 @@ namespace Windows.UI.Xaml.Media.Animation
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation>(
 									__this, 
 									value, 
 									19
@@ -59313,7 +59618,7 @@ namespace Windows.UI.Xaml.Media.Animation
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_OffsetFromCenter(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation>(
 									__this, 
 									22
 								);
@@ -59326,7 +59631,7 @@ namespace Windows.UI.Xaml.Media.Animation
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.Animation.ISplitCloseThemeAnimation>(
 									__this, 
 									value, 
 									23
@@ -59393,7 +59698,7 @@ namespace Windows.UI.Xaml.Media.Animation
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_OpenedLength(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation>(
 									__this, 
 									18
 								);
@@ -59406,7 +59711,7 @@ namespace Windows.UI.Xaml.Media.Animation
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation>(
 									__this, 
 									value, 
 									19
@@ -59417,7 +59722,7 @@ namespace Windows.UI.Xaml.Media.Animation
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_OffsetFromCenter(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation>(
 									__this, 
 									22
 								);
@@ -59430,111 +59735,12 @@ namespace Windows.UI.Xaml.Media.Animation
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.Animation.ISplitOpenThemeAnimation>(
 									__this, 
 									value, 
 									23
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-		}
-	}
-
-	// Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory
-	public unsafe static class IObjectKeyFrameFactory__Impl
-	{
-		// StubClass for 'Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::System.IntPtr CreateInstance(
-						global::System.__ComObject __this, 
-						global::System.IntPtr outer, 
-						out global::System.IntPtr inner)
-			{
-				global::System.IntPtr __ret = global::__Interop.ForwardComStubs.Stub_4<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrameFactory>(
-									__this, 
-									outer, 
-									out inner, 
-									6
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-		}
-	}
-
-	// Windows.UI.Xaml.Media.Animation.IObjectKeyFrame
-	public unsafe static class IObjectKeyFrame__Impl
-	{
-		// StubClass for 'Windows.UI.Xaml.Media.Animation.IObjectKeyFrame'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static object get_Value(global::System.__ComObject __this)
-			{
-				object __ret = global::__Interop.ForwardComStubs.Stub_14<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>(
-									__this, 
-									6
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Value(
-						global::System.__ComObject __this, 
-						object value)
-			{
-				global::__Interop.ForwardComStubs.Stub_42<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>(
-									__this, 
-									value, 
-									7
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.UI.Xaml.Media.Animation.KeyTime get_KeyTime(global::System.__ComObject __this)
-			{
-				global::Windows.UI.Xaml.Media.Animation.KeyTime __ret = global::__Interop.ForwardComStubs.Stub_65<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>(
-									__this, 
-									8
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_KeyTime(
-						global::System.__ComObject __this, 
-						global::Windows.UI.Xaml.Media.Animation.KeyTime value)
-			{
-				global::__Interop.ForwardComStubs.Stub_66<global::Windows.UI.Xaml.Media.Animation.IObjectKeyFrame>(
-									__this, 
-									value, 
-									9
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-		}
-	}
-
-	// Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames
-	public unsafe static class IObjectAnimationUsingKeyFrames__Impl
-	{
-		// StubClass for 'Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames'
-		public static partial class Stubs
-		{
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static global::Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection get_KeyFrames(global::System.__ComObject __this)
-			{
-				global::Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection __ret = global::__Interop.ForwardComStubs.Stub_6<global::Windows.UI.Xaml.Media.Animation.IObjectAnimationUsingKeyFrames, global::Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection>(
-									__this, 
-									6
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
 			}
 		}
 	}
@@ -59695,7 +59901,7 @@ namespace Windows.UI.Xaml.Media.Animation
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_FromHorizontalOffset(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimation>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimation>(
 									__this, 
 									8
 								);
@@ -59708,7 +59914,7 @@ namespace Windows.UI.Xaml.Media.Animation
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimation>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Media.Animation.IRepositionThemeAnimation>(
 									__this, 
 									value, 
 									9
@@ -60526,7 +60732,7 @@ namespace Windows.UI.Xaml.Shapes
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_StrokeThickness(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Shapes.IShape>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Shapes.IShape>(
 									__this, 
 									12
 								);
@@ -60539,7 +60745,7 @@ namespace Windows.UI.Xaml.Shapes
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Shapes.IShape>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Shapes.IShape>(
 									__this, 
 									value, 
 									13
@@ -60558,7 +60764,7 @@ namespace Windows.UI.Xaml.Shapes
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_RadiusX(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Shapes.IRectangle>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Shapes.IRectangle>(
 									__this, 
 									6
 								);
@@ -60571,7 +60777,7 @@ namespace Windows.UI.Xaml.Shapes
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Shapes.IRectangle>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Shapes.IRectangle>(
 									__this, 
 									value, 
 									7
@@ -60582,7 +60788,7 @@ namespace Windows.UI.Xaml.Shapes
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static double get_RadiusY(global::System.__ComObject __this)
 			{
-				double __ret = global::__Interop.ForwardComStubs.Stub_17<global::Windows.UI.Xaml.Shapes.IRectangle>(
+				double __ret = global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Shapes.IRectangle>(
 									__this, 
 									8
 								);
@@ -60595,7 +60801,7 @@ namespace Windows.UI.Xaml.Shapes
 						global::System.__ComObject __this, 
 						double value)
 			{
-				global::__Interop.ForwardComStubs.Stub_18<global::Windows.UI.Xaml.Shapes.IRectangle>(
+				global::__Interop.ForwardComStubs.Stub_19<global::Windows.UI.Xaml.Shapes.IRectangle>(
 									__this, 
 									value, 
 									9
@@ -61027,7 +61233,7 @@ namespace Windows.Web.Http.Filters
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.Web.Http.Filters.IHttpBaseProtocolFilter>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.Web.Http.Filters.IHttpBaseProtocolFilter>(
 									__this, 
 									value, 
 									9
@@ -61040,7 +61246,7 @@ namespace Windows.Web.Http.Filters
 						global::System.__ComObject __this, 
 						bool value)
 			{
-				global::__Interop.ForwardComStubs.Stub_20<global::Windows.Web.Http.Filters.IHttpBaseProtocolFilter>(
+				global::__Interop.ForwardComStubs.Stub_17<global::Windows.Web.Http.Filters.IHttpBaseProtocolFilter>(
 									__this, 
 									value, 
 									11

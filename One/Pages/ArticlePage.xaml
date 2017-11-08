@@ -49,7 +49,7 @@
                 </VisualState>
                 <VisualState x:Name="Desktop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1100"></AdaptiveTrigger>
+                        <AdaptiveTrigger MinWindowWidth="1000"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ArtcleContainer.Grid.Column" Value="0"/>
@@ -121,38 +121,106 @@
 
 
         <Grid Name="Article_Detail"
-              Background="#E8E8E8"
+              Background="White"
               Visibility="Collapsed">
 
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
-                <Grid Padding="40">
+                <Grid Padding="15">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
-                <Grid Grid.Row="0">
+                <Grid Grid.Row="0"
+                      Margin="40,0,0,0">
                     <TextBlock Name="Article_Title"
                                FontSize="30"
-                               Foreground="#333333">
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True">
 
                     </TextBlock>
                 </Grid>
 
                 <Grid Grid.Row="1"
-                      Margin="0,20,0,20">
+                      Margin="40,20,0,20">
                     <TextBlock Name="Article_Author"
-                               Foreground="#333333">
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True">
 
                     </TextBlock>
                 </Grid>
 
-                <Grid Grid.Row="2">
+                
+                        <Border BorderBrush="#666666"
+                                Background="Transparent"
+                                BorderThickness="1"
+                                CornerRadius="2"
+                                Padding="5"
+                                Grid.Row="2"
+                                Margin="40,0,40,0"
+                                Name="ReaderContainer"
+                                Visibility="Collapsed"
+                                >
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Button Click="Button_Click"
+                                    Grid.Column="0"
+                                    Style="{StaticResource ButtonCommonStyle}"
+                                    VerticalAlignment="Center"
+                                    >
+                                <Image Source="../Assets/icon/voice.png"
+                                       Stretch="UniformToFill"
+                                       Width="25"
+                                       Height="25"
+                                       VerticalAlignment="Center"></Image>
+                            </Button>
+                            
+                            <StackPanel Grid.Column="1"
+                                        Orientation="Horizontal">
+                                <TextBlock Margin="5,0,0,0"
+                                           VerticalAlignment="Center">
+                                    有声朗读
+                                </TextBlock>
+                                <TextBlock Margin="5,0,5,0"
+                                           VerticalAlignment="Center">
+                                    |
+                                </TextBlock>
+                                <TextBlock Margin="0,0,0,0"
+                                           VerticalAlignment="Center"
+                                           Name="ReaderName">
+                                </TextBlock>
+                            </StackPanel>
+
+                            <TextBlock Margin="0,0,10,0"
+                                       Grid.Column="2"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
+                                       Name="ReadTimeSpan"></TextBlock>
+                            <MediaElement Name="ArticleInfo_Media"
+                                          AudioCategory="Media"
+                                          AutoPlay="False">
+
+                            </MediaElement>
+                        </Grid>
+                       
+                        </Border>
+                
+
+                <Grid Grid.Row="3">
                     <TextBlock Name="Article_Content"
                                Foreground="#333333"
                                LineHeight="40"
-                               TextWrapping="WrapWholeWords">
+                               TextWrapping="WrapWholeWords"
+                               IsTextSelectionEnabled="True">
 
                     </TextBlock>
                 </Grid>

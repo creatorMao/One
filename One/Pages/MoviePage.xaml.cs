@@ -114,10 +114,13 @@ namespace One.Pages
 
             
             imageList = new List<Photo>();
-            
 
 
 
+            //api 里detailcover有一张
+            imageList.Add(new Photo(movieInfoList[0].data.detailcover));
+
+            //api 里photo中有几张
             for (int i = 0; i < movieInfoList[0].data.photo.Count; i++)
             { 
 

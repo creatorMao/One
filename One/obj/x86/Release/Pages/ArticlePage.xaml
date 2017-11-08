@@ -49,7 +49,7 @@
                 </VisualState>
                 <VisualState x:ConnectionId='3' x:Name="Desktop">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1100"></AdaptiveTrigger>
+                        <AdaptiveTrigger MinWindowWidth="1000"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ArtcleContainer.Grid.Column" Value="0"/>
@@ -135,7 +135,8 @@
                 <Grid Grid.Row="0">
                     <TextBlock x:ConnectionId='9' Name="Article_Title"
                                FontSize="30"
-                               Foreground="#333333">
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True">
 
                     </TextBlock>
                 </Grid>
@@ -143,7 +144,8 @@
                 <Grid Grid.Row="1"
                       Margin="0,20,0,20">
                     <TextBlock x:ConnectionId='8' Name="Article_Author"
-                               Foreground="#333333">
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True">
 
                     </TextBlock>
                 </Grid>
@@ -152,7 +154,8 @@
                     <TextBlock x:ConnectionId='7' Name="Article_Content"
                                Foreground="#333333"
                                LineHeight="40"
-                               TextWrapping="WrapWholeWords">
+                               TextWrapping="WrapWholeWords"
+                               IsTextSelectionEnabled="True">
 
                     </TextBlock>
                 </Grid>

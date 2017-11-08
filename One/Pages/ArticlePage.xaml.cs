@@ -29,6 +29,8 @@ namespace One.Pages
 
         List<Article_RootObject> articleList = null;
 
+        public bool IsStop = false;
+
         public ArticlePage()
         {
             this.InitializeComponent();
@@ -58,11 +60,42 @@ namespace One.Pages
         {
             articleList = await ArticalInfoManager.GetArticleInfoByItemId(item_id);
 
+            
+
+
+            //因为现在的文章列表是我从api里搜集出来的，所以并不是每一篇文章都有音频
+            if (articleList[0].data.audio!="")
+            {
+                ReaderContainer.Visibility = Visibility.Visible;
+                ArticleInfo_Media.Source = new Uri(articleList[0].data.audio);
+                ReaderName.Text = articleList[0].data.anchor;
+                int timeSpan = int.Parse(articleList[0].data.audio_duration);
+                int minutes = timeSpan / 60;
+                int seconds = timeSpan % 60;
+                ReadTimeSpan.Text = minutes.ToString() + ":" + seconds.ToString();
+            }
 
             Article_Title.Text = articleList[0].data.hp_title;
             Article_Author.Text = "文/"+articleList[0].data.author[0].user_name;
             Article_Content.Text = RemoveHtmlManager.RemoveHtmlTag(articleList[0].data.hp_content);
            
+        }
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (IsStop == false)
+            {
+                ArticleInfo_Media.Play();
+            }
+            else
+            {
+                //第二次点击暂停
+                ArticleInfo_Media.Pause();
+            }
+            IsStop = !IsStop;
+            
         }
     }
 }

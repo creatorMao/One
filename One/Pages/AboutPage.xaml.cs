@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel;
 using Windows.ApplicationModel.Email;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -28,6 +29,12 @@ namespace One.Pages
         public AboutPage()
         {
             this.InitializeComponent();
+
+
+            //绑定软件版本
+            Package package = Package.Current;
+            Version.Text = package.Id.Version.Major.ToString() + "." + package.Id.Version.Minor.ToString() + "." + package.Id.Version.Build.ToString() + "." + package.Id.Version.Revision.ToString();
+
         }
 
         /// <summary>

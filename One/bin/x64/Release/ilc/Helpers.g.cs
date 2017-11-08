@@ -860,7 +860,7 @@ namespace __Interop
 		internal static int StdCall__21(
 					global::System.IntPtr pfn, 
 					void* pthis, 
-					double arg0)
+					sbyte arg0)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -869,7 +869,7 @@ namespace __Interop
 		internal static int StdCall__22(
 					global::System.IntPtr pfn, 
 					void* pthis, 
-					global::Windows.Foundation.Point arg0)
+					double arg0)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -878,7 +878,7 @@ namespace __Interop
 		internal static int StdCall__23(
 					global::System.IntPtr pfn, 
 					void* pthis, 
-					sbyte arg0)
+					global::Windows.Foundation.Point arg0)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;

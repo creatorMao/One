@@ -178,6 +178,7 @@
     <Content Include="Assets\icon\qq.png" />
     <Content Include="Assets\icon\time1.png" />
     <Content Include="Assets\icon\time.png" />
+    <Content Include="Assets\icon\voice.png" />
     <Content Include="Assets\icon\weibo.png" />
     <Content Include="Assets\icon\email.png" />
     <Content Include="Assets\icon\share_link.png" />
