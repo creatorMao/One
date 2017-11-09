@@ -151,6 +151,7 @@
     <PRIResource Include="Strings\zh-CN\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\audio\123.mp3" />
     <Content Include="Assets\BadgeLogo.scale-100.png" />
     <Content Include="Assets\BadgeLogo.scale-125.png" />
     <Content Include="Assets\BadgeLogo.scale-150.png" />
@@ -178,7 +179,9 @@
     <Content Include="Assets\icon\qq.png" />
     <Content Include="Assets\icon\time1.png" />
     <Content Include="Assets\icon\time.png" />
-    <Content Include="Assets\icon\voice.png" />
+    <Content Include="Assets\icon\voice1.png" />
+    <Content Include="Assets\icon\voice2.png" />
+    <Content Include="Assets\icon\voice3.png" />
     <Content Include="Assets\icon\weibo.png" />
     <Content Include="Assets\icon\email.png" />
     <Content Include="Assets\icon\share_link.png" />

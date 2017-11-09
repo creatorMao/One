@@ -3,6 +3,7 @@ D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.Microsoft.VisualBasic.SR.
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Collections.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.IO.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Runtime.InteropServices.SR.resw
+D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Console.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Diagnostics.Debug.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.IO.FileSystem.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Net.Primitives.SR.resw
@@ -16,6 +17,8 @@ D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Collections.NonGen
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Collections.Specialized.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.ComponentModel.Annotations.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.ComponentModel.EventBasedAsync.SR.resw
+D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.ComponentModel.Primitives.SR.resw
+D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.ComponentModel.TypeConverter.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Data.Common.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Dynamic.Runtime.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Globalization.Extensions.SR.resw
@@ -40,7 +43,9 @@ D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Private.DataContra
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Private.ServiceModel.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Reflection.DispatchProxy.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Reflection.Metadata.SR.resw
+D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Runtime.InteropServices.RuntimeInformation.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Runtime.Numerics.SR.resw
+D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Runtime.Serialization.Formatters.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Runtime.Serialization.Primitives.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Runtime.WindowsRuntime.SR.resw
 D:\study\uwpProjects\One\One\obj\x86\Debug\FxResources.System.Runtime.WindowsRuntime.UI.Xaml.SR.resw

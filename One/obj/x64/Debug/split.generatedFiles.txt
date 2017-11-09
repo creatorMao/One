@@ -1,5 +1,7 @@
 obj\x64\Debug\split.pri
 obj\x64\Debug\split.map.txt
+obj\x64\Debug\split.language-en.pri
+obj\x64\Debug\split.language-en.map.txt
 obj\x64\Debug\split.scale-100.pri
 obj\x64\Debug\split.scale-100.map.txt
 obj\x64\Debug\split.scale-125.pri
