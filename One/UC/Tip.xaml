@@ -328,7 +328,7 @@
 
             </StackPanel>-->
             <!--2017.11.8-->
-            <StackPanel MinHeight="200"
+            <!--<StackPanel MinHeight="200"
                         Width="380"
                         Background="#1D1D1D"
                         VerticalAlignment="Center"
@@ -375,6 +375,69 @@
                            HorizontalAlignment="Right"
                            FontSize="14">
                     2017.11.8
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="RateApp">
+                        商店给个好评
+                    </Button>
+
+                    <Button Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="CloseTip">
+                        关闭
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>-->
+            <!--2017.11.10-->
+            <StackPanel MinHeight="200"
+                        Width="380"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="1">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    1.文章模块里部分文章支持有声朗读.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    2.周末快乐，微软周末应用商店审核的很慢，更新之后如果有bug，只能下周一以后更新了。
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.11.10
                 </TextBlock>
                 <StackPanel VerticalAlignment="Bottom"
                             HorizontalAlignment="Right"

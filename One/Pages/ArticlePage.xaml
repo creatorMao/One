@@ -20,7 +20,26 @@
     </Page.Transitions>-->
 
 
-    
+
+    <Page.Resources>
+        <BitmapImage x:Key="key0" UriSource="../Assets/icon/voice.png"/>
+        <BitmapImage x:Key="key1" UriSource="../Assets/icon/voice1.png"/>
+        <BitmapImage x:Key="key2" UriSource="../Assets/icon/voice2.png"/>
+        <BitmapImage x:Key="key3" UriSource="../Assets/icon/voice3.png"/>
+        <Storyboard x:Key="std" 
+                    x:Name="std"
+                    RepeatBehavior="Forever" 
+                    >
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OpenAudioButtonImage" Storyboard.TargetProperty="Source">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.0" Value="{StaticResource key0}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{StaticResource key1}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{StaticResource key2}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.1" Value="{StaticResource key3}"/>
+                
+            </ObjectAnimationUsingKeyFrames>
+
+        </Storyboard>
+    </Page.Resources>
     
 
 
@@ -182,7 +201,6 @@
                                 Background="Transparent"
                                 BorderThickness="1"
                                 CornerRadius="2"
-                                Padding="5"
                                 Grid.Row="3"
                                 Margin="30,15,30,0"
                                 Name="ReaderContainer"
@@ -196,6 +214,17 @@
                                 <ColumnDefinition Width="auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
+
+
+                            <ProgressBar Name="ArticleInfo_ProgressBar"
+                                         Grid.Column="0"
+                                         Grid.ColumnSpan="3"
+                                         Height="40"
+                                         Background="Transparent"
+                                         Foreground="#eeeeee"
+                                         Value="0"
+                                         >
+                            </ProgressBar>
 
                             <Button Click="Button_Click"
                                     Grid.Column="0"
@@ -214,17 +243,21 @@
 
                             <StackPanel Grid.Column="1"
                                         Orientation="Horizontal">
-                                <TextBlock Margin="5,0,0,0"
-                                           VerticalAlignment="Center">
+                                <TextBlock Margin="0,0,0,0"
+                                           VerticalAlignment="Center"
+                                           Foreground="#333333">
                                     有声朗读
                                 </TextBlock>
                                 <TextBlock Margin="5,0,5,0"
-                                           VerticalAlignment="Center">
+                                           VerticalAlignment="Center"
+                                           Foreground="#333333"
+                                           >
                                     |
                                 </TextBlock>
                                 <TextBlock Margin="0,0,0,0"
                                            VerticalAlignment="Center"
-                                           Name="ReaderName">
+                                           Name="ReaderName"
+                                           Foreground="#333333">
                                 </TextBlock>
                             </StackPanel>
 
@@ -232,13 +265,19 @@
                                        Grid.Column="2"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Right"
-                                       Name="ReadTimeSpan"></TextBlock>
+                                       Name="ReadTimeSpan"
+                                       Foreground="#333333"></TextBlock>
+
+
+                            
 
                             <!--如果不先加source，就没有声音 还奇怪的bug-->
                             <MediaElement Name="ArticleInfo_Media"
                                           AudioCategory="Media"
                                           AutoPlay="False"
                                           Source="../audio/123.mp3"
+                                          MediaEnded="ArticleInfo_Media_MediaEnded"
+                                          MediaOpened="ArticleInfo_Media_MediaOpened"
                                           >
 
                             </MediaElement>

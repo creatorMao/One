@@ -179,6 +179,7 @@
     <Content Include="Assets\icon\qq.png" />
     <Content Include="Assets\icon\time1.png" />
     <Content Include="Assets\icon\time.png" />
+    <Content Include="Assets\icon\voice.png" />
     <Content Include="Assets\icon\voice1.png" />
     <Content Include="Assets\icon\voice2.png" />
     <Content Include="Assets\icon\voice3.png" />

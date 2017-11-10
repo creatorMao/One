@@ -1,4 +1,5 @@
 WinMetadata\Windows.winmd
+Assets\audio\123.mp3
 Assets\BadgeLogo.scale-100.png
 Assets\BadgeLogo.scale-125.png
 Assets\BadgeLogo.scale-150.png
@@ -29,6 +30,10 @@ Assets\icon\share_more.png
 Assets\icon\share_weibo.png
 Assets\icon\time.png
 Assets\icon\time1.png
+Assets\icon\voice.png
+Assets\icon\voice1.png
+Assets\icon\voice2.png
+Assets\icon\voice3.png
 Assets\icon\weibo.png
 Assets\icon\world.png
 Assets\icon\world1.png

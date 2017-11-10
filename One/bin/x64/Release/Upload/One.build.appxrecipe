@@ -388,6 +388,9 @@
     <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\system.xml.xmlserializer\4.0.11\runtimes\aot\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\audio\123.mp3">
+      <PackagePath>Assets\audio\123.mp3</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\BadgeLogo.scale-100.png">
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -473,6 +476,18 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\time.png">
       <PackagePath>Assets\icon\time.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\voice.png">
+      <PackagePath>Assets\icon\voice.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\voice1.png">
+      <PackagePath>Assets\icon\voice1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\voice2.png">
+      <PackagePath>Assets\icon\voice2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\voice3.png">
+      <PackagePath>Assets\icon\voice3.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\weibo.png">
       <PackagePath>Assets\icon\weibo.png</PackagePath>

@@ -1089,8 +1089,7 @@ namespace __Interop
 		internal static int StdCall__45(
 					global::System.IntPtr pfn, 
 					void* pthis, 
-					void* arg0, 
-					global::System.Runtime.InteropServices.HSTRING arg1)
+					global::Windows.UI.Xaml.Media.Animation.RepeatBehavior arg0)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -1099,8 +1098,8 @@ namespace __Interop
 		internal static int StdCall__46(
 					global::System.IntPtr pfn, 
 					void* pthis, 
-					double arg0, 
-					double arg1)
+					void* arg0, 
+					global::System.Runtime.InteropServices.HSTRING arg1)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -1118,8 +1117,8 @@ namespace __Interop
 		internal static int StdCall__48(
 					global::System.IntPtr pfn, 
 					void* pthis, 
-					global::Windows.UI.Color arg0, 
-					void* arg1)
+					double arg0, 
+					double arg1)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -1128,13 +1127,23 @@ namespace __Interop
 		internal static int StdCall__49(
 					global::System.IntPtr pfn, 
 					void* pthis, 
+					global::Windows.UI.Color arg0, 
+					void* arg1)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__50(
+					global::System.IntPtr pfn, 
+					void* pthis, 
 					global::Windows.UI.Color arg0)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
 		}
 
-		internal static TResult HasThisCall__50<TResult>(
+		internal static TResult HasThisCall__51<TResult>(
 					object __this, 
 					global::System.IntPtr pfn, 
 					string arg0)
@@ -1143,7 +1152,7 @@ namespace __Interop
 			return default(TResult);
 		}
 
-		internal static TResult HasThisCall__51<TResult>(
+		internal static TResult HasThisCall__52<TResult>(
 					object __this, 
 					global::System.IntPtr pfn)
 		{
@@ -1151,7 +1160,7 @@ namespace __Interop
 			return default(TResult);
 		}
 
-		internal static object HasThisCall__52(
+		internal static object HasThisCall__53(
 					object __this, 
 					global::System.IntPtr pfn, 
 					string arg0)
@@ -1160,7 +1169,7 @@ namespace __Interop
 			return default(object);
 		}
 
-		internal static object HasThisCall__53(
+		internal static object HasThisCall__54(
 					object __this, 
 					global::System.IntPtr pfn, 
 					object arg0)
@@ -1169,7 +1178,7 @@ namespace __Interop
 			return default(object);
 		}
 
-		internal static int StdCall__54(
+		internal static int StdCall__55(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					uint arg0, 
@@ -1179,7 +1188,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__55(
+		internal static int StdCall__56(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					uint arg0, 
@@ -1189,7 +1198,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__56(
+		internal static int StdCall__57(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					uint arg0)
@@ -1198,7 +1207,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__57(
+		internal static int StdCall__58(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					uint arg0, 
@@ -1210,7 +1219,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__58(
+		internal static int StdCall__59(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					global::System.Runtime.InteropServices.HSTRING arg0, 
@@ -1221,7 +1230,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__59(
+		internal static int StdCall__60(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					ulong arg0)
@@ -1230,7 +1239,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__60(
+		internal static int StdCall__61(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					ulong arg0, 
@@ -1240,7 +1249,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static ulong HasThisCall__61(
+		internal static ulong HasThisCall__62(
 					object __this, 
 					global::System.IntPtr pfn)
 		{
@@ -1248,7 +1257,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static void HasThisCall__62(
+		internal static void HasThisCall__63(
 					object __this, 
 					global::System.IntPtr pfn, 
 					ulong arg0)
@@ -1256,7 +1265,7 @@ namespace __Interop
 			// This method is implemented elsewhere in the toolchain
 		}
 
-		internal static TResult HasThisCall__63<TResult>(
+		internal static TResult HasThisCall__64<TResult>(
 					object __this, 
 					global::System.IntPtr pfn, 
 					ulong arg0)
@@ -1265,7 +1274,7 @@ namespace __Interop
 			return default(TResult);
 		}
 
-		internal static int StdCall__64(
+		internal static int StdCall__65(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1277,7 +1286,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static uint HasThisCall__65(
+		internal static uint HasThisCall__66(
 					object __this, 
 					global::System.IntPtr pfn)
 		{
@@ -1285,7 +1294,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static void HasThisCall__66(
+		internal static void HasThisCall__67(
 					object __this, 
 					global::System.IntPtr pfn, 
 					uint arg0)
@@ -1293,7 +1302,7 @@ namespace __Interop
 			// This method is implemented elsewhere in the toolchain
 		}
 
-		internal static int StdCall__67(
+		internal static int StdCall__68(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1303,7 +1312,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static void HasThisCall__68<TArg0>(
+		internal static void HasThisCall__69<TArg0>(
 					object __this, 
 					global::System.IntPtr pfn, 
 					TArg0 arg0, 
@@ -1312,7 +1321,7 @@ namespace __Interop
 			// This method is implemented elsewhere in the toolchain
 		}
 
-		internal static void HasThisCall__69<TArg0>(
+		internal static void HasThisCall__70<TArg0>(
 					object __this, 
 					global::System.IntPtr pfn, 
 					TArg0 arg0, 
@@ -1321,7 +1330,7 @@ namespace __Interop
 			// This method is implemented elsewhere in the toolchain
 		}
 
-		internal static int StdCall__70(
+		internal static int StdCall__71(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1332,7 +1341,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__71(
+		internal static int StdCall__72(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					int arg0, 
@@ -1343,7 +1352,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__72(
+		internal static int StdCall__73(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					global::System.Runtime.InteropServices.HSTRING arg0, 
@@ -1354,7 +1363,16 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__73(
+		internal static int StdCall__74(
+					global::System.IntPtr pfn, 
+					void* pthis, 
+					global::System.TimeSpan arg0)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__75(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1366,7 +1384,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__74(
+		internal static int StdCall__76(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					int arg0, 
@@ -1380,7 +1398,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__75(
+		internal static int StdCall__77(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					int arg0, 
@@ -1393,7 +1411,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__76(
+		internal static int StdCall__78(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					int arg0, 
@@ -1404,7 +1422,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__77(
+		internal static int StdCall__79(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					global::System.Runtime.InteropServices.HSTRING arg0, 
@@ -1415,7 +1433,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__78(
+		internal static int StdCall__80(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1425,7 +1443,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__79(
+		internal static int StdCall__81(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1435,7 +1453,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__80(
+		internal static int StdCall__82(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1447,7 +1465,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__81(
+		internal static int StdCall__83(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1461,7 +1479,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__82(
+		internal static int StdCall__84(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					global::System.IntPtr arg0, 
@@ -1475,7 +1493,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__83(
+		internal static int StdCall__85(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					global::System.IntPtr arg0)
@@ -1484,7 +1502,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__84(
+		internal static int StdCall__86(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					int arg0, 
@@ -1496,7 +1514,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__85(
+		internal static int StdCall__87(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1507,7 +1525,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__86(
+		internal static int StdCall__88(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1522,7 +1540,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__87(
+		internal static int StdCall__89(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					int arg0, 
@@ -1535,7 +1553,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__88(
+		internal static int StdCall__90(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					int arg0, 
@@ -1548,7 +1566,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__89(
+		internal static int StdCall__91(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					int arg0, 
@@ -1559,7 +1577,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static void StdCall__90(
+		internal static void StdCall__92(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					global::System.IntPtr arg0)
@@ -1567,7 +1585,7 @@ namespace __Interop
 			// This method is implemented elsewhere in the toolchain
 		}
 
-		internal static int StdCall__91(
+		internal static int StdCall__93(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1581,7 +1599,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__92(
+		internal static int StdCall__94(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -1593,7 +1611,7 @@ namespace __Interop
 			return 0;
 		}
 
-		internal static int StdCall__93(
+		internal static int StdCall__95(
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
@@ -2377,215 +2395,230 @@ namespace __Interop
 		public delegate void AddrOfTarget150(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs a2);
+					global::Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs a2);
 
 		public delegate void AddrOfTarget151(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.Primitives.ScrollEventArgs a2);
+					global::Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs a2);
 
 		public delegate void AddrOfTarget152(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.Primitives.DragStartedEventArgs a2);
+					global::Windows.UI.Xaml.Media.TimelineMarkerRoutedEventArgs a2);
 
 		public delegate void AddrOfTarget153(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.Primitives.DragDeltaEventArgs a2);
+					global::Windows.UI.Xaml.Media.RateChangedRoutedEventArgs a2);
 
 		public delegate void AddrOfTarget154(
+					global::System.__ComObject a0, 
+					global::Windows.UI.Xaml.Controls.MediaElement a1, 
+					global::Windows.UI.Xaml.Media.PartialMediaFailureDetectedEventArgs a2);
+
+		public delegate void AddrOfTarget155(
+					global::System.__ComObject a0, 
+					object a1, 
+					global::Windows.UI.Xaml.Controls.Primitives.ScrollEventArgs a2);
+
+		public delegate void AddrOfTarget156(
+					global::System.__ComObject a0, 
+					object a1, 
+					global::Windows.UI.Xaml.Controls.Primitives.DragStartedEventArgs a2);
+
+		public delegate void AddrOfTarget157(
+					global::System.__ComObject a0, 
+					object a1, 
+					global::Windows.UI.Xaml.Controls.Primitives.DragDeltaEventArgs a2);
+
+		public delegate void AddrOfTarget158(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs a2);
 
-		public delegate object AddrOfTarget155<T>(
+		public delegate object AddrOfTarget159<T>(
 					global::System.Collections.Generic.IReadOnlyList<T> a0, 
 					global::System.Runtime.InteropServices.Toolbox.IList_Oper a1, 
 					ref int a2, 
 					ref T a3);
 
-		public delegate void AddrOfTarget156(
+		public delegate void AddrOfTarget160(
 					global::System.__ComObject a0, 
 					global::Windows.ApplicationModel.DataTransfer.DataTransferManager a1, 
 					global::Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs a2);
 
-		public delegate void AddrOfTarget157(
+		public delegate void AddrOfTarget161(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> a1, 
 					uint a2);
-
-		public delegate void AddrOfTarget158(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate void AddrOfTarget159(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> a1, 
-					uint a2);
-
-		public delegate void AddrOfTarget160(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate int AddrOfTarget161<T>(
-					global::Windows.Foundation.AsyncOperationCompletedHandler<T> a0, 
-					global::Windows.Foundation.IAsyncOperation<T> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget162(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperation<bool> a1, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget163(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
+					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> a1, 
+					uint a2);
 
 		public delegate void AddrOfTarget164(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFile> a1, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget165(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.IStorageItem> a1, 
+		public delegate int AddrOfTarget165<T>(
+					global::Windows.Foundation.AsyncOperationCompletedHandler<T> a0, 
+					global::Windows.Foundation.IAsyncOperation<T> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget166(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFolder> a1, 
+					global::Windows.Foundation.IAsyncOperation<bool> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget167(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.Collections.IObservableMap<string, string> a1, 
-					global::Windows.Foundation.Collections.IMapChangedEventArgs<string> a2);
+					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget168(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncAction a1);
+					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFile> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget169(
 					global::System.__ComObject a0, 
-					global::Windows.System.Threading.ThreadPoolTimer a1);
+					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.IStorageItem> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget170(global::System.__ComObject a0);
+		public delegate void AddrOfTarget170(
+					global::System.__ComObject a0, 
+					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFolder> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget171(
+					global::System.__ComObject a0, 
+					global::Windows.Foundation.Collections.IObservableMap<string, string> a1, 
+					global::Windows.Foundation.Collections.IMapChangedEventArgs<string> a2);
+
+		public delegate void AddrOfTarget172(
+					global::System.__ComObject a0, 
+					global::Windows.Foundation.IAsyncAction a1);
+
+		public delegate void AddrOfTarget173(
+					global::System.__ComObject a0, 
+					global::Windows.System.Threading.ThreadPoolTimer a1);
+
+		public delegate void AddrOfTarget174(global::System.__ComObject a0);
+
+		public delegate void AddrOfTarget175(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs a2);
 
-		public delegate void AddrOfTarget172(
-					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs a2);
-
-		public delegate int AddrOfTarget173<T>(
+		public delegate int AddrOfTarget176<T>(
 					global::System.Collections.Generic.IList<T> a0, 
 					global::System.Runtime.InteropServices.Toolbox.IList_Oper a1, 
 					int a2, 
 					ref object a3);
 
-		public delegate int AddrOfTarget174<T>(
+		public delegate int AddrOfTarget177<T>(
 					global::Windows.Foundation.Collections.IIterator<T> a0, 
 					global::System.Runtime.InteropServices.Toolbox.IIterator_Oper a1, 
 					ref object a2, 
 					int a3);
 
-		public delegate int AddrOfTarget175<T>(
+		public delegate int AddrOfTarget178<T>(
 					global::System.Collections.Generic.IReadOnlyList<T> a0, 
 					global::System.Runtime.InteropServices.Toolbox.IList_Oper a1, 
 					int a2, 
 					ref T a3);
 
-		public delegate void AddrOfTarget176(
+		public delegate void AddrOfTarget179(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Networking.BackgroundTransfer.DownloadOperation, global::Windows.Networking.BackgroundTransfer.DownloadOperation> a1, 
 					global::Windows.Networking.BackgroundTransfer.DownloadOperation a2);
 
-		public delegate void AddrOfTarget177(
+		public delegate void AddrOfTarget180(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Networking.BackgroundTransfer.DownloadOperation, global::Windows.Networking.BackgroundTransfer.DownloadOperation> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget178(
+		public delegate void AddrOfTarget181(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.WindowActivatedEventArgs a2);
 
-		public delegate void AddrOfTarget179(
+		public delegate void AddrOfTarget182(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.CoreWindowEventArgs a2);
 
-		public delegate void AddrOfTarget180(
+		public delegate void AddrOfTarget183(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.WindowSizeChangedEventArgs a2);
 
-		public delegate void AddrOfTarget181(
+		public delegate void AddrOfTarget184(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.VisibilityChangedEventArgs a2);
 
-		public delegate void AddrOfTarget182(
+		public delegate void AddrOfTarget185(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.Collections.IObservableMap<string, object> a1, 
 					global::Windows.Foundation.Collections.IMapChangedEventArgs<string> a2);
 
-		public delegate void AddrOfTarget183(
+		public delegate void AddrOfTarget186(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IInputStream, ulong> a1, 
 					ulong a2);
 
-		public delegate void AddrOfTarget184(
+		public delegate void AddrOfTarget187(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IInputStream, ulong> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget185(
+		public delegate void AddrOfTarget188(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Web.Http.HttpResponseMessage, global::Windows.Web.Http.HttpProgress> a1, 
 					global::Windows.Web.Http.HttpProgress a2);
 
-		public delegate void AddrOfTarget186(
+		public delegate void AddrOfTarget189(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Web.Http.HttpResponseMessage, global::Windows.Web.Http.HttpProgress> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget187(
+		public delegate void AddrOfTarget190(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::System.Collections.Generic.IReadOnlyList<global::Windows.Security.Cryptography.Certificates.Certificate>> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate object AddrOfTarget188(object a0);
+		public delegate object AddrOfTarget191(object a0);
 
-		public delegate object AddrOfTarget189(global::System.__ComObject a0);
+		public delegate object AddrOfTarget192(global::System.__ComObject a0);
 
-		public delegate int AddrOfTarget190(
+		public delegate int AddrOfTarget193(
 					ref global::Windows.UI.Xaml.Markup.XmlnsDefinition a0, 
 					out global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType a1);
 
-		public delegate int AddrOfTarget191(
+		public delegate int AddrOfTarget194(
 					ref global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType a0, 
 					out global::Windows.UI.Xaml.Markup.XmlnsDefinition a1);
 
-		public delegate void AddrOfTarget192(ref global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType a0);
+		public delegate void AddrOfTarget195(ref global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType a0);
 
-		public delegate int AddrOfTarget193(
+		public delegate int AddrOfTarget196(
 					ref global::Windows.Web.Http.HttpProgress a0, 
 					out global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a1);
 
-		public delegate int AddrOfTarget194(
+		public delegate int AddrOfTarget197(
 					ref global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a0, 
 					out global::Windows.Web.Http.HttpProgress a1);
 
-		public delegate void AddrOfTarget195(ref global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a0);
+		public delegate void AddrOfTarget198(ref global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a0);
 	}
 }
 

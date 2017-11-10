@@ -25,6 +25,9 @@
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\audio\123.mp3">
+      <PackagePath>Assets\audio\123.mp3</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\BadgeLogo.scale-100.png">
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -119,6 +122,18 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\time1.png">
       <PackagePath>Assets\icon\time1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\voice.png">
+      <PackagePath>Assets\icon\voice.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\voice1.png">
+      <PackagePath>Assets\icon\voice1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\voice2.png">
+      <PackagePath>Assets\icon\voice2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\voice3.png">
+      <PackagePath>Assets\icon\voice3.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\weibo.png">
       <PackagePath>Assets\icon\weibo.png</PackagePath>

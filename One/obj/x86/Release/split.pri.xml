@@ -104,6 +104,13 @@
 						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
+				<ResourceMapSubtree name="audio">
+					<NamedResource name="123.mp3" uri="ms-resource://32688UWP.UWP/Files/Assets/audio/123.mp3">
+						<Candidate type="Path">
+							<Value>Assets\audio\123.mp3</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
 				<ResourceMapSubtree name="icon">
 					<NamedResource name="about-selected.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/about-selected.png">
 						<Candidate type="Path">
@@ -228,6 +235,26 @@
 					<NamedResource name="time1.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/time1.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\time1.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="voice.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/voice.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\voice.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="voice1.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/voice1.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\voice1.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="voice2.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/voice2.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\voice2.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="voice3.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/voice3.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\voice3.png</Value>
 						</Candidate>
 					</NamedResource>
 					<NamedResource name="weibo.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/weibo.png">

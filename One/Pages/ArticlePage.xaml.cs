@@ -33,7 +33,6 @@ namespace One.Pages
 
         public bool IsStop = false;
 
-        public int index=1;
 
         //定义定时器
         public DispatcherTimer timer;
@@ -43,7 +42,7 @@ namespace One.Pages
             this.InitializeComponent();
 
             timer = new DispatcherTimer();
-            timer.Interval =TimeSpan.FromSeconds(0.5);
+            timer.Interval =TimeSpan.FromSeconds(1);
             
         }
 
@@ -53,6 +52,14 @@ namespace One.Pages
             receiveData = (List<RootObject>)e.Parameter;
 
             contentList = ExtracteDataManager.ExtracteDataByShareUrl(receiveData, "article");
+        }
+
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+
+            timer.Stop();
         }
 
         private void StoryListView_ItemClick(object sender, ItemClickEventArgs e)
@@ -72,8 +79,16 @@ namespace One.Pages
             Article_Detail_Image.Source = new BitmapImage(new Uri(clickedItem.img_url));
             //具体的文章内容
             PrePare(item_id);
+
+            //停止动画 和清空进度条
+            std.Stop();
+            ArticleInfo_ProgressBar.Value = 0;
+
+
             WaitArticleProgressRing.Visibility = Visibility.Collapsed;
             WaitArticleProgressRing.IsActive = false;
+
+
         }
 
 
@@ -85,16 +100,22 @@ namespace One.Pages
 
 
             //因为现在的文章列表是我从api里搜集出来的，所以并不是每一篇文章都有音频
-            if (articleList[0].data.audio!="")
+            if (articleList[0].data.audio != "")
             {
                 ReaderContainer.Visibility = Visibility.Visible;
                 ArticleInfo_Media.Source = new Uri(articleList[0].data.audio);
-                timer.Tick += Change;
                 ReaderName.Text = articleList[0].data.anchor;
                 int timeSpan = int.Parse(articleList[0].data.audio_duration);
                 int minutes = timeSpan / 60;
                 int seconds = timeSpan % 60;
                 ReadTimeSpan.Text = minutes.ToString() + ":" + seconds.ToString();
+            }
+            else
+            {
+                ArticleInfo_Media.Stop();
+                timer.Stop();
+                IsStop = false;
+                ReaderContainer.Visibility = Visibility.Collapsed;
             }
 
             Article_Title.Text = articleList[0].data.hp_title;
@@ -107,17 +128,18 @@ namespace One.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
 
             if (IsStop == false)
             {
                 timer.Start();
+                std.Begin();
                 ArticleInfo_Media.Play();
             }
             else
             {
-                timer.Stop();
                 //第二次点击暂停
+                timer.Stop();
+                std.Stop();
                 ArticleInfo_Media.Pause();
             }
             IsStop = !IsStop;
@@ -129,23 +151,16 @@ namespace One.Pages
 
         public void Change(object sender, object e)
         {
-            index=index+1;
 
-           
+            double totalSeconds = ArticleInfo_Media.NaturalDuration.TimeSpan.TotalSeconds;
 
-            if (index == 1)
-            {
-                OpenAudioButtonImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/icon/voice1.png"));
-            }
-            if (index == 2)
-            {
-                OpenAudioButtonImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/icon/voice2.png"));
-            }
-            else if (index == 3)
-            {
-                OpenAudioButtonImage.Source = new BitmapImage(new Uri("ms-appx:///Assets/icon/voice3.png"));
-                index = 0;
-            }
+            double currentSeconds = ArticleInfo_Media.Position.TotalSeconds;
+
+            double progressBarValue = (currentSeconds * 100) / (1.0*totalSeconds);
+
+
+            ArticleInfo_ProgressBar.Value = progressBarValue;
+
          
         }
 
@@ -153,8 +168,27 @@ namespace One.Pages
         private async void Article_Detail_Image_DownLoadButton_Click(object sender, RoutedEventArgs e)
         {
             DownloadImageManager downloadImageManager = new DownloadImageManager();
-            BitmapImage bitmapImage=(BitmapImage)Article_Detail_Image.Source;
-            await downloadImageManager.SaveImage(articleList[0].data.hp_title,bitmapImage.UriSource.ToString());
+            BitmapImage bitmapImage = (BitmapImage)Article_Detail_Image.Source;
+            await downloadImageManager.SaveImage(articleList[0].data.hp_title, bitmapImage.UriSource.ToString());
+
+            //测试按钮
+            //ArticleInfo_Media.Position = TimeSpan.FromMinutes(28);
+        }
+
+
+
+        private void ArticleInfo_Media_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            std.Stop();
+            IsStop = false;
+        }
+
+
+
+        private void ArticleInfo_Media_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            timer.Tick += Change;
         }
     }
 }

@@ -690,3 +690,13 @@ D:\study\uwpProjects\One\One\obj\x64\Release\UC\PopupNotice.xaml
 D:\study\uwpProjects\One\One\obj\x64\Release\UC\Tip.xaml
 D:\study\uwpProjects\One\One\obj\x64\Release\UC\PopupNotice.xbf
 D:\study\uwpProjects\One\One\obj\x64\Release\UC\Tip.xbf
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\audio\123.mp3
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\voice.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\voice1.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\voice2.png
+D:\study\uwpProjects\One\One\bin\x64\Release\ilc\Assets\icon\voice3.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\audio\123.mp3
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\voice.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\voice1.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\voice2.png
+D:\study\uwpProjects\One\One\obj\x64\Release\ilc\in\Assets\icon\voice3.png
