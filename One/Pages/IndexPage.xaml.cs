@@ -42,6 +42,11 @@ namespace One.Pages
         private PhotoAlbum_Datum photoAlbum_Datum = new PhotoAlbum_Datum();
 
 
+        bool isFirstDown = true;
+
+
+        bool isFirstUp = true;
+
 
         public IndexPage()
         {
@@ -207,6 +212,42 @@ namespace One.Pages
         /// <param name="e"></param>
         private void ItemListContainerScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
+
+            //鼠标滚轮向下 显示返回顶部图标  选10不选0的  照顾某些鼠标滚轮不灵了
+            if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition > 30)
+            {
+                isFirstUp = true;
+                if (isFirstDown == true)
+                {
+                    BackTopButtonIn.Begin();
+                }
+                else
+                {
+
+                }
+                isFirstDown = false;
+
+                //BackTopButton.Visibility = Visibility.Visible;
+            }
+            else if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition < -30)  //向上
+            {
+                isFirstDown = true;
+                if (isFirstUp == true)
+                {
+                    BackTopButtonOut.Begin();
+                }
+                else
+                {
+
+                }
+                isFirstUp = false;
+                //BackTopButton.Visibility = Visibility.Collapsed;
+            }
+
+
+
+
+            //判断滑倒底部 更新数据
             if (ItemListContainerScrollViewer.ExtentHeight - ItemListContainerScrollViewer.ViewportHeight == ItemListContainerScrollViewer.VerticalOffset && isAwait == true)
             {
                 PreData();
@@ -255,6 +296,12 @@ namespace One.Pages
         {
             ImageInfoPageMask.Visibility = Visibility.Collapsed;
             ImageInfoPage.Visibility = Visibility.Collapsed;
+        }
+
+        private void BackTopButton_Click(object sender, RoutedEventArgs e)
+        {
+            //放回顶部
+            ItemListContainerScrollViewer.ChangeView(null,0,null);
         }
     }
 }

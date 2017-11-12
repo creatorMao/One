@@ -133,6 +133,8 @@
       <RootProperty Name="Height" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="RenderTransform" />
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="Padding" />
       <RootProperty Name="FontSize" />
@@ -280,6 +282,23 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="One.Pages.AboutPage" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.Storyboard">
+      <RootProperty Name="Children" />
+      <RootProperty Name="RepeatBehavior" />
+      <RootMethod Name="GetTargetName" />
+      <RootMethod Name="SetTargetName" />
+      <RootMethod Name="GetTargetProperty" />
+      <RootMethod Name="SetTargetProperty" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.DoubleAnimation">
+      <RootProperty Name="From" />
+      <RootProperty Name="To" />
+      <RootProperty Name="Duration" />
+      <RootProperty Name="EasingFunction" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.PowerEase">
+      <RootProperty Name="EasingMode" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
     </RootType>
@@ -295,6 +314,9 @@
     <RootType FullName="Windows.UI.Xaml.AdaptiveTrigger">
       <RootProperty Name="MinWindowWidth" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.TranslateTransform">
+      <RootProperty Name="Y" />
+    </RootType>
     <RootType FullName="One.Pages.IndexPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.FlipView">
       <RootProperty Name="Name" />
@@ -306,13 +328,23 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="One.Pages.MoviePage" />
+    <RootType FullName="Windows.UI.Xaml.Media.Imaging.BitmapImage">
+      <RootProperty Name="UriSource" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames">
+      <RootProperty Name="KeyFrames" />
+      <RootProperty Name="Duration" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame">
+      <RootProperty Name="KeyTime" />
+      <RootProperty Name="Value" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Name" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Background" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="CornerRadius" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Child" />
@@ -324,11 +356,20 @@
       <RootProperty Name="Height" />
       <RootProperty Name="MinWidth" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressBar">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Value" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
       <RootProperty Name="Name" />
       <RootProperty Name="AudioCategory" />
       <RootProperty Name="AutoPlay" />
       <RootProperty Name="Source" />
+      <RootEvent Name="MediaEnded" />
+      <RootEvent Name="MediaOpened" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />
@@ -379,21 +420,32 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsControl">
       <RootProperty Name="ItemsPanel" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.Storyboard">
-      <RootProperty Name="Children" />
-      <RootMethod Name="GetTargetName" />
-      <RootMethod Name="SetTargetName" />
-      <RootMethod Name="GetTargetProperty" />
-      <RootMethod Name="SetTargetProperty" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentPresenter">
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="ContentTransitions" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="VerticalContentAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FlowDirection" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="IsHitTestVisible" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="RenderTransform" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames">
-      <RootProperty Name="KeyFrames" />
-      <RootProperty Name="Duration" />
+    <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
+      <RootMethod Name="GetAccessibilityView" />
+      <RootMethod Name="SetAccessibilityView" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame">
-      <RootProperty Name="KeyTime" />
-      <RootProperty Name="Value" />
-    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.TemplateBindingExtension" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames">
       <RootProperty Name="KeyFrames" />
@@ -426,41 +478,9 @@
       <RootProperty Name="OpenedLength" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Visibility" />
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.DoubleAnimation">
-      <RootProperty Name="Duration" />
-      <RootProperty Name="To" />
-      <RootProperty Name="From" />
-      <RootProperty Name="EasingFunction" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ContentPresenter">
-      <RootProperty Name="ContentTemplate" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="FontWeight" />
-      <RootProperty Name="FlowDirection" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="IsHitTestVisible" />
-      <RootProperty Name="Opacity" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="ContentTransitions" />
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="VerticalContentAlignment" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="RenderTransform" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
-      <RootMethod Name="GetAccessibilityView" />
-      <RootMethod Name="SetAccessibilityView" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
       <RootProperty Name="Child" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.TemplateBindingExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPresenter">
       <RootProperty Name="Margin" />
     </RootType>
@@ -494,9 +514,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Height" />
       <RootProperty Name="MinWidth" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.TranslateTransform">
-      <RootProperty Name="Y" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
@@ -542,9 +559,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.PowerEase">
-      <RootProperty Name="EasingMode" />
     </RootType>
     <RootType FullName="One.UC.PopupNotice" />
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform" />

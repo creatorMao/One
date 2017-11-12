@@ -21,6 +21,7 @@
 
 
 
+
     <Page.Resources>
         <BitmapImage x:Key="key0" UriSource="../Assets/icon/voice.png"/>
         <BitmapImage x:Key="key1" UriSource="../Assets/icon/voice1.png"/>
@@ -39,6 +40,54 @@
             </ObjectAnimationUsingKeyFrames>
 
         </Storyboard>
+
+
+        <Storyboard x:Name="BackTopButtonIn">
+            <DoubleAnimation From="0"
+                             To="1"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="BackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="70"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="BackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="BackTopButtonOut">
+            <DoubleAnimation From="1"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="BackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="0"
+                             To="70"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="BackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
     </Page.Resources>
     
 
@@ -90,7 +139,11 @@
         </VisualStateManager.VisualStateGroups>
 
         <Grid Name="ArtcleContainer">
-            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+            
+            
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
+                          ViewChanged="ScrollViewer_ViewChanged"
+                          Name="ItemListContainerScrollViewer">
                 <ListView Name="StoryListView"
                         ItemsSource="{x:Bind contentList}"
                         ItemContainerStyle="{StaticResource ListViewItemContainerDefaultStyle}"
@@ -131,6 +184,31 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </ScrollViewer>
+
+
+            <!--返回顶部按键-->
+            <Button Name="BackTopButton"
+                    Click="BackTopButton_Click"
+                    Style="{StaticResource ButtonEllipseStyle}"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="30"
+                    Background="#17BED2"
+                    Opacity="1"
+                    Visibility="Visible"
+                    Width="50"
+                    Height="50">
+
+                <!--改变Y轴和透明底-->
+                <Button.RenderTransform>
+                    <TranslateTransform Y="80"></TranslateTransform>
+                </Button.RenderTransform>
+
+                <FontIcon FontFamily="Segoe MDL2 Assets" 
+                          Glyph="&#xE110;" 
+                          Foreground="White"/>
+            </Button>
+
         </Grid>
 
         <Grid Name="DetailPageBackground"

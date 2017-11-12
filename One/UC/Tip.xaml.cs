@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.ApplicationModel.Email;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -69,6 +70,23 @@ namespace One.UC
         {
             _popup.IsOpen = false;
         }
+
+
+
+        private void JoinQQ(object sender, RoutedEventArgs e)
+        {
+            DataPackage dataPackage = new DataPackage();
+            dataPackage.SetText("426862785");
+
+            Clipboard.SetContent(dataPackage);
+
+            PopupNotice popupNotice = new PopupNotice("已将群号复制到剪贴板");
+            popupNotice.ShowAPopup();
+
+
+
+        }
+
 
     }
 }

@@ -239,5 +239,52 @@ namespace One.Pages
 
             await downloadImageManager.SaveImage(clickedItem.item_id.ToString()+index.ToString()+".jpg",imageuri);
         }
+
+
+        private double _lastPosition = 0;
+        bool isFirstDown = true;
+        bool isFirstUp = true;
+        private void ItemListContainerScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+            //鼠标滚轮向下 显示返回顶部图标  选10不选0的  照顾某些鼠标滚轮不灵了
+            if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition > 30)
+            {
+                isFirstUp = true;
+                if (isFirstDown == true)
+                {
+                    BackTopButtonIn.Begin();
+                }
+                else
+                {
+
+                }
+                isFirstDown = false;
+
+                //BackTopButton.Visibility = Visibility.Visible;
+            }
+            else if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition < -30)  //向上
+            {
+                isFirstDown = true;
+                if (isFirstUp == true)
+                {
+                    BackTopButtonOut.Begin();
+                }
+                else
+                {
+
+                }
+                isFirstUp = false;
+                //BackTopButton.Visibility = Visibility.Collapsed; 
+
+            }
+            _lastPosition = ItemListContainerScrollViewer.VerticalOffset;
+        }
+
+
+        private void BackTopButton_Click(object sender, RoutedEventArgs e)
+        {
+            //放回顶部
+            ItemListContainerScrollViewer.ChangeView(null, 0, null);
+        }
     }
 }

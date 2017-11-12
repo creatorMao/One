@@ -242,7 +242,7 @@ namespace One
             data.Data.ForEach(p => _photoMonthList.Add(p));
 
             PhotoAlbum_GettingStarted data1 = new PhotoAlbum_GettingStarted();
-            if (data.Data.Count <= 10)
+            if (data.Data.Count <= 12)
             {
                 //当一个月是前几天的时候，list数量太少，所以要多加一个月显示
                 var time = _photoMonthList[_photoMonthList.Count - 1].HpMakettime;
@@ -251,10 +251,12 @@ namespace One
                 dt = dt.AddMonths(-1);
 
                 data1 = await PhotoAlbumManager.GetPhotolistByLastMonth(dt.ToString("yyyy-MM-dd"));
+
+                data1.Data.ForEach(p => _photoMonthList.Add(p));
             }
 
 
-            data1.Data.ForEach(p => _photoMonthList.Add(p));
+            
 
             //结束等待
             WaitPage.Visibility = Visibility.Collapsed;
@@ -292,12 +294,13 @@ namespace One
 
             //进入应用第一屏 显示一些tips
             //判断是否是第一次进入应用 
-            AppSettings.RemoveSetting("20171108update");
-            if (AppSettings.GetSetting("20171110update") == null)
+            AppSettings.RemoveSetting("20171110update");
+            if (AppSettings.GetSetting("20171112update") == null)
             {
+                //负优化哈哈
                 await Task.Delay(1500);
                 ShowTip();
-                AppSettings.SetSetting("20171110update", true);
+                AppSettings.SetSetting("20171112update", true);
             }
 
 
