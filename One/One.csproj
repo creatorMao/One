@@ -100,6 +100,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\AppSettings.cs" />
+    <Compile Include="Common\SerializeHelper.cs" />
     <Compile Include="Common\TileManager.cs" />
     <Compile Include="Converter\ColorConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -111,6 +112,7 @@
     <Compile Include="Model\IdlistManager.cs" />
     <Compile Include="Model\MovieInfoManager.cs" />
     <Compile Include="Model\MovieStoryManager.cs" />
+    <Compile Include="Model\MusicListManager.cs" />
     <Compile Include="Model\NavMenuManager.cs" />
     <Compile Include="Model\OnelistManager.cs" />
     <Compile Include="Model\Photo.cs" />
@@ -128,6 +130,9 @@
     </Compile>
     <Compile Include="Pages\ArticlePage.xaml.cs">
       <DependentUpon>ArticlePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MusicPage.xaml.cs">
+      <DependentUpon>MusicPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SettingPage.xaml.cs">
       <DependentUpon>SettingPage.xaml</DependentUpon>
@@ -268,6 +273,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ArticlePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MusicPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

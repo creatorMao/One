@@ -167,6 +167,11 @@ namespace One
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
+                    case "音乐":
+                    case "Music":
+                        RootFrame.Navigate(currentNavMenuItem.NavigatePage);
+                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
+                        break;
                     case "电影":
                     case "Movie":
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);

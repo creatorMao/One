@@ -1,0 +1,533 @@
+﻿<UserControl
+    x:Class="One.UC.Tip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:One.UC"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        
+        <Storyboard x:ConnectionId='1' x:Name="TipIn">
+            <DoubleAnimation From="0"
+                             To="1"
+                             Duration="00:00:00.3"
+                             Storyboard.TargetName="TipContainer"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <DoubleAnimation From="0"
+                             To="0.8"
+                             Duration="00:00:00.3"
+                             Storyboard.TargetName="Mask"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <DoubleAnimation From="1.2"
+                             To="1"
+                             Duration="00:00:00.3"
+                             Storyboard.TargetName="TipContainer"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <DoubleAnimation From="1.2"
+                             To="1"
+                             Duration="00:00:00.3"
+                             Storyboard.TargetName="TipContainer"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            
+        </Storyboard>
+
+
+        <Storyboard x:ConnectionId='2' x:Name="TipOut">
+            <DoubleAnimation From="1"
+                             To="0"
+                             Duration="00:00:00.3"
+                             Storyboard.TargetName="TipContainer"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <DoubleAnimation From="0.8"
+                             To="0"
+                             Duration="00:00:00.3"
+                             Storyboard.TargetName="Mask"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+
+            <DoubleAnimation From="1"
+                             To="1.2"
+                             Duration="00:00:00.3"
+                             Storyboard.TargetName="TipContainer"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <DoubleAnimation From="1"
+                             To="1.2"
+                             Duration="00:00:00.3"
+                             Storyboard.TargetName="TipContainer"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+
+    </UserControl.Resources>
+    
+    
+
+    <Grid>
+        
+        
+        <Grid x:ConnectionId='3' Background="Black"
+              Opacity="0.5"
+              Name="Mask">
+            
+        </Grid>
+
+
+        <Grid>
+            <!--2017.10.29-->
+            <!--<StackPanel MinHeight="200"
+                        MaxWidth="400"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="0">
+                
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    目前已基本完成: 摄影 / 文章 / 影视
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    待完成: 音乐 / 问答 /磁贴等模块
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           TextWrapping="WrapWholeWords"
+                           LineHeight="25"
+                           FontSize="14">
+                    这是我的第一个应用,喜欢大家多多支持!喜欢的话可以点一下右下角的商店给个好评,只有你们评价了,商店才会推给更多的人,我也会有动力一直做下去.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.10.29
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="RateApp">
+                        商店给个好评
+                    </Button>
+
+                    <Button Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="CloseTip">
+                        关闭
+                    </Button>
+                </StackPanel>
+                
+            </StackPanel>-->
+            <!--2017.11.1-->
+            <!--<StackPanel MinHeight="200"
+                        Width="350"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="1">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    1.紧急修复首页只显示一个的bug.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    2.增加动态磁贴（目前不能每天更新信息).
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.11.01
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="RateApp">
+                        商店给个好评
+                    </Button>
+
+                    <Button Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="CloseTip">
+                        关闭
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>-->
+            <!--2017.11.3-->
+            <!--<StackPanel MinHeight="200"
+                        Width="350"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="1">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    1.最近事情多，都是小更新
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    2.修改了一些页面跳转动画
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    3.中英文切换（个人喜欢英文）
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    4.有什么bug联系我.....关于界面有我的联系方式
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    5.有奔溃的话 重装一次应用
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.11.03
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="RateApp">
+                        商店给个好评
+                    </Button>
+
+                    <Button Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="CloseTip">
+                        关闭
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>-->
+            <!--2017.11.8-->
+            <!--<StackPanel MinHeight="200"
+                        Width="380"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="1">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    1.内容可以复制（之前没注意到不能复制的问题）
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    2.电影短文页面增加轮播图以及图片下载
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    3.作者渣渣的开发技术，进度有点慢，可以说是边学边做了，望原谅
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.11.8
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="RateApp">
+                        商店给个好评
+                    </Button>
+
+                    <Button Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="CloseTip">
+                        关闭
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>-->
+            <!--2017.11.10-->
+            <!--<StackPanel MinHeight="200"
+                        Width="380"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="1">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    1.文章模块里部分文章支持有声朗读.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    2.周末快乐，微软周末应用商店审核的很慢，更新之后如果有bug，只能下周一以后更新了。
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.11.10
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="RateApp">
+                        商店给个好评
+                    </Button>
+
+                    <Button Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="CloseTip">
+                        关闭
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>-->
+            <!--2017.11.12-->
+            <StackPanel x:ConnectionId='4' MinHeight="200"
+                        Width="380"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="1">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    1.增加返回顶部按钮.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.11.12
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
+                    <Button x:ConnectionId='5' Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                                      >
+                        QQ群闲聊
+                    </Button> 
+                    <Button x:ConnectionId='6' Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                                       >
+                        商店给个好评
+                    </Button>
+
+                    <Button x:ConnectionId='7' Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                                        >
+                        关闭
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+        
+        
+    </Grid>
+    
+    
+    
+</UserControl>
+

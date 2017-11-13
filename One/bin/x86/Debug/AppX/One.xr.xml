@@ -381,6 +381,7 @@
       <RootProperty Name="ImageSource" />
     </RootType>
     <RootType FullName="One.Pages.ArticlePage" />
+    <RootType FullName="One.Pages.MusicPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
       <RootProperty Name="Name" />
       <RootProperty Name="OffContent" />

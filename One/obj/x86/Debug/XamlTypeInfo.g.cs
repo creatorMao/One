@@ -132,7 +132,7 @@ namespace One.One_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[14];
+            _typeNameTable = new string[15];
             _typeNameTable[0] = "One.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -140,15 +140,16 @@ namespace One.One_XamlTypeInfo
             _typeNameTable[4] = "One.Pages.IndexPage";
             _typeNameTable[5] = "One.Pages.MoviePage";
             _typeNameTable[6] = "One.Pages.ArticlePage";
-            _typeNameTable[7] = "One.Pages.SettingPage";
-            _typeNameTable[8] = "Windows.UI.Color";
-            _typeNameTable[9] = "System.ValueType";
-            _typeNameTable[10] = "Object";
-            _typeNameTable[11] = "Byte";
-            _typeNameTable[12] = "One.UC.PopupNotice";
-            _typeNameTable[13] = "One.UC.Tip";
+            _typeNameTable[7] = "One.Pages.MusicPage";
+            _typeNameTable[8] = "One.Pages.SettingPage";
+            _typeNameTable[9] = "Windows.UI.Color";
+            _typeNameTable[10] = "System.ValueType";
+            _typeNameTable[11] = "Object";
+            _typeNameTable[12] = "Byte";
+            _typeNameTable[13] = "One.UC.PopupNotice";
+            _typeNameTable[14] = "One.UC.Tip";
 
-            _typeTable = new global::System.Type[14];
+            _typeTable = new global::System.Type[15];
             _typeTable[0] = typeof(global::One.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -156,13 +157,14 @@ namespace One.One_XamlTypeInfo
             _typeTable[4] = typeof(global::One.Pages.IndexPage);
             _typeTable[5] = typeof(global::One.Pages.MoviePage);
             _typeTable[6] = typeof(global::One.Pages.ArticlePage);
-            _typeTable[7] = typeof(global::One.Pages.SettingPage);
-            _typeTable[8] = typeof(global::Windows.UI.Color);
-            _typeTable[9] = typeof(global::System.ValueType);
-            _typeTable[10] = typeof(global::System.Object);
-            _typeTable[11] = typeof(global::System.Byte);
-            _typeTable[12] = typeof(global::One.UC.PopupNotice);
-            _typeTable[13] = typeof(global::One.UC.Tip);
+            _typeTable[7] = typeof(global::One.Pages.MusicPage);
+            _typeTable[8] = typeof(global::One.Pages.SettingPage);
+            _typeTable[9] = typeof(global::Windows.UI.Color);
+            _typeTable[10] = typeof(global::System.ValueType);
+            _typeTable[11] = typeof(global::System.Object);
+            _typeTable[12] = typeof(global::System.Byte);
+            _typeTable[13] = typeof(global::One.UC.PopupNotice);
+            _typeTable[14] = typeof(global::One.UC.Tip);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -202,9 +204,10 @@ namespace One.One_XamlTypeInfo
         private object Activate_4_IndexPage() { return new global::One.Pages.IndexPage(); }
         private object Activate_5_MoviePage() { return new global::One.Pages.MoviePage(); }
         private object Activate_6_ArticlePage() { return new global::One.Pages.ArticlePage(); }
-        private object Activate_7_SettingPage() { return new global::One.Pages.SettingPage(); }
-        private object Activate_12_PopupNotice() { return new global::One.UC.PopupNotice(); }
-        private object Activate_13_Tip() { return new global::One.UC.Tip(); }
+        private object Activate_7_MusicPage() { return new global::One.Pages.MusicPage(); }
+        private object Activate_8_SettingPage() { return new global::One.Pages.SettingPage(); }
+        private object Activate_13_PopupNotice() { return new global::One.UC.PopupNotice(); }
+        private object Activate_14_Tip() { return new global::One.UC.Tip(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -259,14 +262,21 @@ namespace One.One_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 7:   //  One.Pages.SettingPage
+            case 7:   //  One.Pages.MusicPage
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_SettingPage;
+                userType.Activator = Activate_7_MusicPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  Windows.UI.Color
+            case 8:   //  One.Pages.SettingPage
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_SettingPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  Windows.UI.Color
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.AddMemberName("A");
                 userType.AddMemberName("B");
@@ -275,31 +285,31 @@ namespace One.One_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  System.ValueType
+            case 10:   //  System.ValueType
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 10:   //  Object
+            case 11:   //  Object
                 xamlType = new global::One.One_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Byte
+            case 12:   //  Byte
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 12:   //  One.UC.PopupNotice
+            case 13:   //  One.UC.PopupNotice
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_12_PopupNotice;
+                userType.Activator = Activate_13_PopupNotice;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  One.UC.Tip
+            case 14:   //  One.UC.Tip
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_13_Tip;
+                userType.Activator = Activate_14_Tip;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
