@@ -6,7 +6,36 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:One.Model"
+    xmlns:Xaml="using:Microsoft.Graphics.Canvas.UI.Xaml"
     mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <Storyboard x:Name="MachineIconIn">
+            <DoubleAnimation Storyboard.TargetName="MachineIcon"
+                             Storyboard.TargetProperty="(MachineIcon.RenderTransform).(TranslateTransform.X)"
+                             Duration="00:00:00.2"
+                             From="0"
+                             To="30">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="MachineIconOut">
+            <DoubleAnimation Storyboard.TargetName="MachineIcon"
+                             Storyboard.TargetProperty="(MachineIcon.RenderTransform).(TranslateTransform.X)"
+                             Duration="00:00:00.2"
+                             From="30"
+                             To="0">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+    </Page.Resources>
 
     <Grid Background="White">
 
@@ -71,7 +100,6 @@
                >
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="ItemListContainerScrollViewer"
-                          ViewChanged="ItemListContainerScrollViewer_ViewChanged"
                            >
                 <ListView ItemsSource="{x:Bind musicList}"
                   Name="ItemListview"
@@ -79,6 +107,7 @@
                   IsItemClickEnabled="True"
                   ItemClick="ItemListview_ItemClick"
                   ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                  
                   >
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="data:Music_Datum">
@@ -104,28 +133,7 @@
                 </ListView>
             </ScrollViewer>
 
-            <!--返回顶部按键-->
-            <!--<Button Name="BackTopButton"
-                    Click="BackTopButton_Click"
-                    Style="{StaticResource ButtonEllipseStyle}"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Right"
-                    Margin="30"
-                    Background="#17BED2"
-                    Opacity="1"
-                    Visibility="Visible"
-                    Width="50"
-                    Height="50">
-
-                --><!--改变Y轴和透明底--><!--
-                <Button.RenderTransform>
-                    <TranslateTransform Y="80"></TranslateTransform>
-                </Button.RenderTransform>
-
-                <FontIcon FontFamily="Segoe MDL2 Assets" 
-                          Glyph="&#xE110;" 
-                          Foreground="White"/>
-            </Button>-->
+         
 
         </Grid>
 
@@ -143,13 +151,117 @@
         <Grid Name="ItemDetailsPannel"
               Grid.Column="0"
               Grid.ColumnSpan="2"
+              Background="White"
               Visibility="Collapsed"
               >
 
-            <Grid Name="DetailPageContent">
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
 
-             
-            </Grid>
+                    <Grid Grid.Row="0">
+                        <Image Name="Detail_Image"
+                               Stretch="Fill"
+                               ImageOpened="Detail_Image_ImageOpened"
+                               ></Image>
+                        <Grid>
+                            <Rectangle x:Name="WhiteMask" 
+                                       Fill="White" />
+                            <Xaml:CanvasControl x:Name="Canvas" 
+                                                />
+                        </Grid>
+                        <Grid>
+                            <Grid Width="150"
+                                  Height="150"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  >
+                                <Image Name="MachineIcon"
+                                       Width="140"
+                                       Height="140"
+                                       Margin="0,0,0,0"
+                                       Source="../Assets/icon/music_disc.png"
+                                       Stretch="Fill">
+                                    <Image.RenderTransform>
+                                        <TranslateTransform X="0"></TranslateTransform>
+                                    </Image.RenderTransform>
+                                </Image>
+                                <Image Name="CoverImage"
+                                       Width="150"
+                                       Height="150"
+                                       Stretch="Fill"
+                                       Visibility="Visible"></Image>
+                                <Ellipse Width="50"
+                                         Height="50"
+                                         Fill="Black"
+                                         Opacity='0.7'
+                                         HorizontalAlignment="Center"
+                                         VerticalAlignment="Center">
+                                </Ellipse>
+                                <Button Width="50"
+                                        Height="50"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Style="{StaticResource ButtonNoneStyle}"
+                                        Click="PlayMusic"
+                                        >
+                                    <Image Source="../Assets/icon/play.png"
+                                           Width="30"
+                                           Height="30"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Name="PlayMusicButtonIcon"></Image>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                        <MediaElement Name="MusicPlayer"
+                                      AudioCategory="Media"
+                                      ></MediaElement>
+                    </Grid>
+
+                    <Grid Grid.Row="1"
+                          Margin="30,30,30,0">
+                        <TextBlock Name="Article_Title"
+                               FontSize="30"
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True"
+                               TextWrapping="WrapWholeWords">
+
+                        </TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="2"
+                      Margin="30,20,0,0">
+                        <TextBlock Name="Article_Author"
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True">
+
+                        </TextBlock>
+                    </Grid>
+
+
+                    
+
+                    <Grid Grid.Row="3"
+                          Padding="30,0,30,0">
+                        <TextBlock Name="Article_Content"
+                               Foreground="#333333"
+                               LineHeight="50"
+                               TextWrapping="WrapWholeWords"
+                               IsTextSelectionEnabled="True">
+
+                        </TextBlock>
+                    </Grid>
+
+
+                </Grid>
+            </ScrollViewer>
+
 
         </Grid>
 

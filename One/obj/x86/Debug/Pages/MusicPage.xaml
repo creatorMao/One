@@ -6,7 +6,36 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:One.Model"
+    xmlns:Xaml="using:Microsoft.Graphics.Canvas.UI.Xaml"
     mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <Storyboard x:ConnectionId='2' x:Name="MachineIconIn">
+            <DoubleAnimation Storyboard.TargetName="MachineIcon"
+                             Storyboard.TargetProperty="(MachineIcon.RenderTransform).(TranslateTransform.X)"
+                             Duration="00:00:00.2"
+                             From="0"
+                             To="30">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:ConnectionId='3' x:Name="MachineIconOut">
+            <DoubleAnimation Storyboard.TargetName="MachineIcon"
+                             Storyboard.TargetProperty="(MachineIcon.RenderTransform).(TranslateTransform.X)"
+                             Duration="00:00:00.2"
+                             From="30"
+                             To="0">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+    </Page.Resources>
 
     <Grid Background="White">
 
@@ -17,7 +46,7 @@
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <VisualState x:ConnectionId='2' x:Name="Phone">
+                <VisualState x:ConnectionId='4' x:Name="Phone">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
@@ -38,7 +67,7 @@
 
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='3' x:Name="Desktop">
+                <VisualState x:ConnectionId='5' x:Name="Desktop">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="1000"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
@@ -65,36 +94,36 @@
 
 
 
-        <Grid x:ConnectionId='4'  Name="ItemListContainer"
+        <Grid x:ConnectionId='6'  Name="ItemListContainer"
                Grid.Column="0"
                Grid.ColumnSpan="2"
                >
-            <ScrollViewer x:ConnectionId='8' Style="{StaticResource ScrollViewerCommonStyle}"
+            <ScrollViewer x:ConnectionId='20' Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="ItemListContainerScrollViewer"
-                                                                                 
                            >
-                <ListView x:ConnectionId='9'                                 
+                <ListView x:ConnectionId='21'                                 
                   Name="ItemListview"
                   Visibility="Visible"
                   IsItemClickEnabled="True"
                                                     
                   ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                  
                   >
                     <ListView.ItemTemplate>
                         <DataTemplate                              >
-                            <Grid x:ConnectionId='10' MinWidth="400"
+                            <Grid x:ConnectionId='22' MinWidth="400"
                                   Height="200"
                                   >
                                 <StackPanel>
-                                    <TextBlock x:ConnectionId='11'                           
+                                    <TextBlock x:ConnectionId='23'                           
                                            Foreground="Black"></TextBlock>
 
-                                    <Image x:ConnectionId='12' Width="100"
+                                    <Image x:ConnectionId='24' Width="100"
                                        Height="100"
                                                               >
 
                                     </Image>
-                                    <TextBlock x:ConnectionId='13'                      ></TextBlock>
+                                    <TextBlock x:ConnectionId='25'                      ></TextBlock>
                                 </StackPanel>
                                
                                 
@@ -104,33 +133,12 @@
                 </ListView>
             </ScrollViewer>
 
-            <!--返回顶部按键-->
-            <!--<Button Name="BackTopButton"
-                    Click="BackTopButton_Click"
-                    Style="{StaticResource ButtonEllipseStyle}"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Right"
-                    Margin="30"
-                    Background="#17BED2"
-                    Opacity="1"
-                    Visibility="Visible"
-                    Width="50"
-                    Height="50">
-
-                --><!--改变Y轴和透明底--><!--
-                <Button.RenderTransform>
-                    <TranslateTransform Y="80"></TranslateTransform>
-                </Button.RenderTransform>
-
-                <FontIcon FontFamily="Segoe MDL2 Assets" 
-                          Glyph="&#xE110;" 
-                          Foreground="White"/>
-            </Button>-->
+         
 
         </Grid>
 
 
-        <Grid x:ConnectionId='5' Name="DetailPageBackground"
+        <Grid x:ConnectionId='7' Name="DetailPageBackground"
               Background="White"
               >
             <Image Source="../Assets/images/oneisall.png"
@@ -140,16 +148,120 @@
         </Grid>
 
 
-        <Grid x:ConnectionId='6' Name="ItemDetailsPannel"
+        <Grid x:ConnectionId='8' Name="ItemDetailsPannel"
               Grid.Column="0"
               Grid.ColumnSpan="2"
+              Background="White"
               Visibility="Collapsed"
               >
 
-            <Grid x:ConnectionId='7' Name="DetailPageContent">
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
 
-             
-            </Grid>
+                    <Grid Grid.Row="0">
+                        <Image x:ConnectionId='12' Name="Detail_Image"
+                               Stretch="Fill"
+                                                                     
+                               ></Image>
+                        <Grid>
+                            <Rectangle x:ConnectionId='18' x:Name="WhiteMask" 
+                                       Fill="White" />
+                            <Xaml:CanvasControl x:ConnectionId='19' x:Name="Canvas" 
+                                                />
+                        </Grid>
+                        <Grid>
+                            <Grid Width="150"
+                                  Height="150"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  >
+                                <Image x:ConnectionId='14' Name="MachineIcon"
+                                       Width="140"
+                                       Height="140"
+                                       Margin="0,0,0,0"
+                                       Source="../Assets/icon/music_disc.png"
+                                       Stretch="Fill">
+                                    <Image.RenderTransform>
+                                        <TranslateTransform X="0"></TranslateTransform>
+                                    </Image.RenderTransform>
+                                </Image>
+                                <Image x:ConnectionId='15' Name="CoverImage"
+                                       Width="150"
+                                       Height="150"
+                                       Stretch="Fill"
+                                       Visibility="Visible"></Image>
+                                <Ellipse Width="50"
+                                         Height="50"
+                                         Fill="Black"
+                                         Opacity='0.7'
+                                         HorizontalAlignment="Center"
+                                         VerticalAlignment="Center">
+                                </Ellipse>
+                                <Button x:ConnectionId='16' Width="50"
+                                        Height="50"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Style="{StaticResource ButtonNoneStyle}"
+                                                         
+                                        >
+                                    <Image x:ConnectionId='17' Source="../Assets/icon/play.png"
+                                           Width="30"
+                                           Height="30"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Name="PlayMusicButtonIcon"></Image>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                        <MediaElement x:ConnectionId='13' Name="MusicPlayer"
+                                      AudioCategory="Media"
+                                      ></MediaElement>
+                    </Grid>
+
+                    <Grid Grid.Row="1"
+                          Margin="30,30,30,0">
+                        <TextBlock x:ConnectionId='11' Name="Article_Title"
+                               FontSize="30"
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True"
+                               TextWrapping="WrapWholeWords">
+
+                        </TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="2"
+                      Margin="30,20,0,0">
+                        <TextBlock x:ConnectionId='10' Name="Article_Author"
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True">
+
+                        </TextBlock>
+                    </Grid>
+
+
+                    
+
+                    <Grid Grid.Row="3"
+                          Padding="30,0,30,0">
+                        <TextBlock x:ConnectionId='9' Name="Article_Content"
+                               Foreground="#333333"
+                               LineHeight="50"
+                               TextWrapping="WrapWholeWords"
+                               IsTextSelectionEnabled="True">
+
+                        </TextBlock>
+                    </Grid>
+
+
+                </Grid>
+            </ScrollViewer>
+
 
         </Grid>
 

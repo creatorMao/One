@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\study\uwpProjects\One\One\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>47782BECDAC48244D68A80F923A8831CD953324B36AB4FCDFF6758BEFE568EF4</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>3FE0A5FBCF2DC3FF01BE8480666C669C69A0F14108779CA7D123E3029E099C11</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>32688UWP.UWP_1.1.31.0_x86__9fwyyn341hema</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>32688UWP.UWP_9fwyyn341hema!App</RegisteredUserModeAppID>
     <RegisteredPackageID>32688UWP.UWP</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\study\uwpProjects\One\One\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-13T13:46:58.866</Modified>
+      <Modified>2017-11-14T14:03:10.368</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Debug\One.exe">
       <PackagePath>entrypoint\One.exe</PackagePath>
-      <Modified>2017-11-13T13:46:57.884</Modified>
+      <Modified>2017-11-14T14:03:09.229</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\handy.dotnetcore-compatibility.colortranslations\0.2.1\lib\netstandard1.4\ColorTranslations.dll">
       <PackagePath>ColorTranslations.dll</PackagePath>
@@ -527,6 +527,14 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T15:15:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\win2d.uwp\1.21.0\runtimes\win10-x86\native\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+      <Modified>2017-06-25T19:01:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\win2d.uwp\1.21.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
+      <Modified>2017-06-25T19:01:44.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\audio\123.mp3">
       <PackagePath>Assets\audio\123.mp3</PackagePath>
       <Modified>2017-11-09T12:10:05.155</Modified>
@@ -599,6 +607,26 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\microsoft-shop.png">
       <PackagePath>Assets\icon\microsoft-shop.png</PackagePath>
       <Modified>2017-10-13T13:35:21.161</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\music-selected.png">
+      <PackagePath>Assets\icon\music-selected.png</PackagePath>
+      <Modified>2017-11-14T12:16:29.426</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\music.png">
+      <PackagePath>Assets\icon\music.png</PackagePath>
+      <Modified>2017-11-14T12:16:29.431</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\music_disc.png">
+      <PackagePath>Assets\icon\music_disc.png</PackagePath>
+      <Modified>2017-11-14T12:33:33.805</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\pause.png">
+      <PackagePath>Assets\icon\pause.png</PackagePath>
+      <Modified>2017-11-14T11:55:25.110</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\play.png">
+      <PackagePath>Assets\icon\play.png</PackagePath>
+      <Modified>2017-11-14T11:55:25.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\set-selected.png">
       <PackagePath>Assets\icon\set-selected.png</PackagePath>
@@ -951,7 +979,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Debug\One.xr.xml">
       <PackagePath>One.xr.xml</PackagePath>
-      <Modified>2017-11-13T13:07:48.020</Modified>
+      <Modified>2017-11-14T13:54:31.778</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -960,11 +988,11 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-13T13:46:58.493</Modified>
+      <Modified>2017-11-14T14:03:09.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Debug\Core\One.exe">
       <PackagePath>One.exe</PackagePath>
-      <Modified>2017-11-13T13:46:58.862</Modified>
+      <Modified>2017-11-14T14:03:10.360</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

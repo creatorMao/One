@@ -167,6 +167,9 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="RenderTransform" />
+      <RootProperty Name="Visibility" />
+      <RootEvent Name="ImageOpened" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
       <RootProperty Name="Name" />
@@ -316,6 +319,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.TranslateTransform">
       <RootProperty Name="Y" />
+      <RootProperty Name="X" />
     </RootType>
     <RootType FullName="One.Pages.IndexPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.FlipView">
@@ -376,11 +380,25 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Fill" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
     </RootType>
     <RootType FullName="One.Pages.ArticlePage" />
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="RadiusY" />
+      <RootProperty Name="RadiusX" />
+      <RootProperty Name="Stroke" />
+      <RootProperty Name="StrokeThickness" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl" />
     <RootType FullName="One.Pages.MusicPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
       <RootProperty Name="Name" />
@@ -496,17 +514,6 @@
     <RootType FullName="Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation">
       <RootProperty Name="FromHorizontalOffset" />
       <RootProperty Name="TargetName" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
-      <RootProperty Name="Fill" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="RadiusY" />
-      <RootProperty Name="RadiusX" />
-      <RootProperty Name="Stroke" />
-      <RootProperty Name="StrokeThickness" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Opacity" />
-      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Thumb">
       <RootProperty Name="Template" />

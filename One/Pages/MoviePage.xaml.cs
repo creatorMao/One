@@ -1,4 +1,5 @@
-﻿using One.Model;
+﻿using One.Common;
+using One.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -149,7 +150,7 @@ namespace One.Pages
 
             MovieStory_Title.Text = movieStoryList[0].data.data[0].title;
             MovieStory_Author.Text = "文/"+movieStoryList[0].data.data[0].author_list[0].user_name;
-            MovieStory_Content.Text = RemoveHtmlManager.RemoveHtmlTag(movieStoryList[0].data.data[0].content);
+            MovieStory_Content.Text = RemoveHtmlTagHelper.RemoveHtmlTag(movieStoryList[0].data.data[0].content);
         }
 
 

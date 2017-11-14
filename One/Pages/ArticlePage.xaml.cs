@@ -1,4 +1,5 @@
-﻿using One.Model;
+﻿using One.Common;
+using One.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -114,13 +115,13 @@ namespace One.Pages
             {
                 ArticleInfo_Media.Stop();
                 timer.Stop();
-                IsStop = false;
                 ReaderContainer.Visibility = Visibility.Collapsed;
             }
+            IsStop = false;
 
             Article_Title.Text = articleList[0].data.hp_title;
             Article_Author.Text = "文/"+articleList[0].data.author[0].user_name;
-            Article_Content.Text = RemoveHtmlManager.RemoveHtmlTag(articleList[0].data.hp_content);
+            Article_Content.Text = RemoveHtmlTagHelper.RemoveHtmlTag(articleList[0].data.hp_content);
            
         }
 

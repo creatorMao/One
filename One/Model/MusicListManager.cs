@@ -11,20 +11,7 @@ namespace One.Model
 
     public static class MusicListManager
     {
-        public static async Task<Music_GettingStarted> GetMusicList()
-        {
-            string musicListApi = "http://v3.wufazhuce.com:8000/api/music/bymonth/2017-11-13%2000:00:00?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android";
-
-            string json=await JsonHelper.GetJsonStringFromWebApi(musicListApi);
-
-            JsonSerializerSettings settings = new JsonSerializerSettings();
-            //保留null值
-            settings.NullValueHandling = NullValueHandling.Include;
-            Music_GettingStarted result=JsonConvert.DeserializeObject<Music_GettingStarted>(json, settings);
-
-            return result;
-
-        }
+        
     }
 
 

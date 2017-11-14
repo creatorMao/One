@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace One.Common
 {
-    public static class JsonHelper
+    public static class SerializeHelper
     {
         /// <summary>
-        /// 将一个web的api 拿到json数据
+        /// 从一个web的api中拿到string类型的json数据
         /// </summary>
         /// <param name="api">web api</param>
         /// <returns></returns>
@@ -28,6 +28,33 @@ namespace One.Common
 
             return resultJson;
 
+        }
+
+
+        /// <summary>
+        /// 将一个json数据，反序列化成你要的类型
+        /// </summary>
+        /// <typeparam name="T">目标类型，反序列化后的类型</typeparam>
+        /// <param name="jsonString">json数据</param>
+        /// <returns></returns>
+        public static T DeSerialize<T>(string jsonString)
+        {
+            T result;
+            result = JsonConvert.DeserializeObject<T>(jsonString);
+            return result;
+        }
+
+
+        /// <summary>
+        /// 将一个实例序列化
+        /// </summary>
+        /// <param name="value">要被序列化的实例</param>
+        /// <returns>序列化的结果 返回一个string类型的数据</returns>
+        public static string Serialize(object value)
+        {
+            string result;
+            result = JsonConvert.SerializeObject(value);
+            return result;
         }
     }
 }

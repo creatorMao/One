@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace One.Model
+namespace One.Common
 {
-    public static class RemoveHtmlManager
+    public static class RemoveHtmlTagHelper
     {
         public static string  RemoveHtmlTag(string html)
         {
