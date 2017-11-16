@@ -38,6 +38,10 @@ namespace One.Pages
     {
         private ObservableCollection<Music_Datum> musicList = null;
 
+        private ObservableCollection<MusicArticleComment_Datum> MusicArticleCommentList = null;
+
+      
+
 
         Music_Datum lastclickItem = new Music_Datum();
 
@@ -48,6 +52,8 @@ namespace One.Pages
         {
             this.InitializeComponent();
             musicList = new ObservableCollection<Music_Datum>();
+            MusicArticleCommentList = new ObservableCollection<MusicArticleComment_Datum>();
+           
 
             PrePareData();
 
@@ -85,9 +91,29 @@ namespace One.Pages
                 Article_Content.Text = RemoveHtmlTagHelper.RemoveHtmlTag(result.Data.Story);
                 CoverImage.Source = new BitmapImage(new Uri(result.Data.Cover));
 
+
+                //评论模块
+                string commentApi = String.Format("http://v3.wufazhuce.com:8000/api/comment/praiseandtime/music/{0}/0?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android",id);
+                string commentJsonString = await SerializeHelper.GetJsonStringFromWebApi(commentApi);
+                var commentListResult = SerializeHelper.DeSerialize<MusicArticleComment_GettingStarted>(commentJsonString);
+                //清空上一篇文章中的评论值
+                MusicArticleCommentList.Clear();
+
+
+                foreach (var item in commentListResult.Data.PurpleData)
+                {
+                    MusicArticleCommentList.Add(item);
+                }
+
+
+
+
                 //音乐api还没有找到  尴尬
-                string uriSource = String.Format("http://www.xiami.com/play?ids=/song/playlist/id/{0}/object_name/default/object_id/0#loaded", clickItem.MusicId);
-                MusicPlayer.Source = new Uri(uriSource);
+                //string uriSource = String.Format("http://www.xiami.com/play?ids=/song/playlist/id/{0}/object_name/default/object_id/0#loaded", clickItem.MusicId);
+                //MusicPlayer.Source = new Uri(uriSource);
+
+                //点击每个music item 将播放器的设置为默认
+                MusicPlayer.Stop();
 
 
             }
@@ -176,9 +202,13 @@ namespace One.Pages
         /// <param name="e"></param>
         private void PlayMusic(object sender, RoutedEventArgs e)
         {
+            //api 还没有找到 提示一下用户
+            PopupNotice popupNotice = new PopupNotice("当前音乐api还没适配好，所以目前音乐功能还在施工中.....");
+            popupNotice.ShowAPopup();
+
+
             if (isPlayMusic == true)
             {
-
                 MachineIconIn.Begin();
                 MusicPlayer.Play();
                 PlayMusicButtonIcon.Source = new BitmapImage(new Uri("ms-appx:///Assets/icon/pause.png"));
@@ -186,12 +216,12 @@ namespace One.Pages
             else if (isPlayMusic == false)
             {
                 MachineIconOut.Begin();
-                MusicPlayer.Stop();
+                //停止
+                MusicPlayer.Pause();
                 PlayMusicButtonIcon.Source = new BitmapImage(new Uri("ms-appx:///Assets/icon/play.png"));
             }
             isPlayMusic = !isPlayMusic;
         }
-
 
 
     }

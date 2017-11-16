@@ -112,6 +112,7 @@
     <Compile Include="Model\IdlistManager.cs" />
     <Compile Include="Model\MovieInfoManager.cs" />
     <Compile Include="Model\MovieStoryManager.cs" />
+    <Compile Include="Model\MusicArticleCommentListManager.cs" />
     <Compile Include="Model\MusicListManager.cs" />
     <Compile Include="Model\MusicStoryManager.cs" />
     <Compile Include="Model\NavMenuManager.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="Model\PhotoAlbumManager.cs" />
     <Compile Include="Common\RemoveHtmlTagHelper.cs" />
     <Compile Include="Model\ToastHelper.cs" />
+    <Compile Include="Model\Xiami.cs" />
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -158,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\audio\123.mp3" />
+    <Content Include="Assets\audio\music_bgm.flac" />
     <Content Include="Assets\BadgeLogo.scale-100.png" />
     <Content Include="Assets\BadgeLogo.scale-125.png" />
     <Content Include="Assets\BadgeLogo.scale-150.png" />

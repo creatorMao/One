@@ -24,6 +24,8 @@ namespace One.Model
 
         [JsonProperty("res")]
         public long Res { get; set; }
+
+        
     }
 
     public class Music_Datum

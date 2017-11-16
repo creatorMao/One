@@ -155,7 +155,8 @@
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="model:ContentList">
                             <Grid MinHeight="100"
-                              Padding="30,30,30,30">
+                                  Padding="30,30,30,30"
+                                  >
                                 <StackPanel Orientation="Horizontal">
                                     <StackPanel>
                                         <Ellipse Width="60"

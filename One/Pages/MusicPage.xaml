@@ -11,6 +11,9 @@
 
     <Page.Resources>
 
+        
+     
+
         <Storyboard x:Name="MachineIconIn">
             <DoubleAnimation Storyboard.TargetName="MachineIcon"
                              Storyboard.TargetProperty="(MachineIcon.RenderTransform).(TranslateTransform.X)"
@@ -37,7 +40,8 @@
 
     </Page.Resources>
 
-    <Grid Background="White">
+    <Grid Background="White"
+          >
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -162,6 +166,7 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
@@ -221,6 +226,7 @@
                         </Grid>
                         <MediaElement Name="MusicPlayer"
                                       AudioCategory="Media"
+                                      Source="../Assets/audio/music_bgm.flac"
                                       ></MediaElement>
                     </Grid>
 
@@ -244,9 +250,6 @@
                         </TextBlock>
                     </Grid>
 
-
-                    
-
                     <Grid Grid.Row="3"
                           Padding="30,0,30,0">
                         <TextBlock Name="Article_Content"
@@ -258,7 +261,72 @@
                         </TextBlock>
                     </Grid>
 
+                    <!--评论模块-->
+                    <Grid Grid.Row="4">
+                        <ListView ItemsSource="{x:Bind MusicArticleCommentList}"
+                                  Name="CommentListView"
+                                  HorizontalAlignment="Stretch"
+                                  HorizontalContentAlignment="Stretch"
+                                  ItemContainerStyle="{StaticResource ListViewItemCommentStyle}"
+                                  >
+                           
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="data:MusicArticleComment_Datum">
+                                    <Grid MinHeight="100"
+                                          Padding="30"
+                                          Name="CommentItemContainer"
+                                          
+                                          >
+                                       
 
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid 
+                                              Grid.ColumnSpan="2"
+                                              Grid.Row="0">
+                                            <Ellipse Width="30"
+                                                     Height="30"
+                                                     HorizontalAlignment="Left">
+                                                <Ellipse.Fill>
+                                                    <ImageBrush ImageSource="{x:Bind User.WebUrl}"></ImageBrush>
+                                                </Ellipse.Fill>
+                                            </Ellipse>
+                                            <TextBlock HorizontalAlignment="Left"
+                                                       Margin="40,0,0,0"
+                                                       Text="{x:Bind User.UserName}"
+                                                       VerticalAlignment="Center"></TextBlock>
+                                            <TextBlock HorizontalAlignment="Right"
+                                                       Text="{x:Bind InputDate}"
+                                                       VerticalAlignment="Center"></TextBlock>
+                                        </Grid>
+
+                                        <Grid Grid.Row="1"
+                                              >
+                                            <TextBlock TextWrapping="WrapWholeWords"
+                                                       Text="{x:Bind Content}"
+                                                       Margin="0,10,0,0"></TextBlock>
+                                        </Grid>
+
+                                        <Grid Grid.Row="2"
+                                              >
+                                            <StackPanel HorizontalAlignment="Right">
+                                                <TextBlock Text="{x:Bind Praisenum}"></TextBlock>
+                                            </StackPanel>
+                                        </Grid>
+
+                                        
+                                        
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                            
+                        </ListView>
+                    </Grid>
+                    
                 </Grid>
             </ScrollViewer>
 

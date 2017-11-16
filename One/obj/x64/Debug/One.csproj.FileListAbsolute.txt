@@ -265,3 +265,12 @@ D:\study\uwpProjects\One\One\obj\x64\Debug\UC\Tip.g.i.cs
 D:\study\uwpProjects\One\One\obj\x64\Debug\UC\Tip.g.cs
 D:\study\uwpProjects\One\One\obj\x64\Debug\UC\Tip.xaml
 D:\study\uwpProjects\One\One\obj\x64\Debug\UC\Tip.xbf
+D:\study\uwpProjects\One\One\bin\x64\Debug\Pages\MusicPage.xbf
+D:\study\uwpProjects\One\One\bin\x64\Debug\Core\ForBundle\AppxManifest.xml
+D:\study\uwpProjects\One\One\bin\x64\Debug\Microsoft.Graphics.Canvas.dll
+D:\study\uwpProjects\One\One\bin\x64\Debug\Microsoft.Graphics.Canvas.winmd
+D:\study\uwpProjects\One\One\obj\x64\Debug\One.csprojResolveAssemblyReference.cache
+D:\study\uwpProjects\One\One\obj\x64\Debug\Pages\MusicPage.g.i.cs
+D:\study\uwpProjects\One\One\obj\x64\Debug\Pages\MusicPage.g.cs
+D:\study\uwpProjects\One\One\obj\x64\Debug\Pages\MusicPage.xaml
+D:\study\uwpProjects\One\One\obj\x64\Debug\Pages\MusicPage.xbf
