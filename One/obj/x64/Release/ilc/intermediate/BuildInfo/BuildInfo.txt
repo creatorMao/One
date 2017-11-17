@@ -10,6 +10,7 @@ Framework:
 clrcompression.dll                                     : 1.0.24214.00 built by: PROJECTKREL
 ColorTranslations.dll                                  : 1.0.0.0
 Microsoft.CSharp.dll                                   : 4.6.24705.01
+Microsoft.Graphics.Canvas.dll                          : 1.21.0
 Microsoft.Toolkit.Uwp.Notifications.dll                : 2.0.0.0
 Microsoft.VisualBasic.dll                              : 1.0.24212.01
 Microsoft.Win32.Primitives.dll                         : 4.6.24705.01

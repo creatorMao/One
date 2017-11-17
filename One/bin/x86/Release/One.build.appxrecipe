@@ -28,6 +28,9 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\audio\123.mp3">
       <PackagePath>Assets\audio\123.mp3</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\audio\music_bgm.flac">
+      <PackagePath>Assets\audio\music_bgm.flac</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\BadgeLogo.scale-100.png">
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -93,11 +96,29 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\MoviePage.png">
       <PackagePath>Assets\icon\MoviePage.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\music-selected.png">
+      <PackagePath>Assets\icon\music-selected.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\music.png">
+      <PackagePath>Assets\icon\music.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\music_disc.png">
+      <PackagePath>Assets\icon\music_disc.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\one-selected.png">
       <PackagePath>Assets\icon\one-selected.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\one.png">
       <PackagePath>Assets\icon\one.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\pause.png">
+      <PackagePath>Assets\icon\pause.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\play.png">
+      <PackagePath>Assets\icon\play.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\prise.png">
+      <PackagePath>Assets\icon\prise.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Assets\icon\qq.png">
       <PackagePath>Assets\icon\qq.png</PackagePath>
@@ -353,6 +374,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Microsoft.Graphics.Canvas.dll">
+      <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\Microsoft.Graphics.Canvas.winmd">
+      <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Release\ilc\One.dll">
       <PackagePath>One.dll</PackagePath>

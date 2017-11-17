@@ -155,7 +155,8 @@
                     <ListView.ItemTemplate>
                         <DataTemplate                               >
                             <Grid x:ConnectionId='26' MinHeight="100"
-                              Padding="30,30,30,30">
+                                  Padding="30,30,30,30"
+                                  >
                                 <StackPanel Orientation="Horizontal">
                                     <StackPanel>
                                         <Ellipse Width="60"

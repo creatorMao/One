@@ -1821,7 +1821,7 @@
         <Setter Property="TabNavigation" Value="Local"/>
         <Setter Property="IsHoldingEnabled" Value="True"/>
         <Setter Property="Padding" Value="12,0,12,0"/>
-        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="MinWidth" Value="{ThemeResource ListViewItemMinWidth}"/>
         <Setter Property="MinHeight" Value="{ThemeResource ListViewItemMinHeight}"/>
@@ -1851,7 +1851,7 @@
                                            
                                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                            Control.IsTemplateFocusTarget="True" 
-                                           PointerOverForeground="Transparent"
+                                           
                                            PressedBackground="Transparent"
                                            PlaceholderBackground="Transparent" 
                                            PointerOverBackground="Transparent"

@@ -110,6 +110,11 @@
 							<Value>Assets\audio\123.mp3</Value>
 						</Candidate>
 					</NamedResource>
+					<NamedResource name="music_bgm.flac" uri="ms-resource://32688UWP.UWP/Files/Assets/audio/music_bgm.flac">
+						<Candidate type="Path">
+							<Value>Assets\audio\music_bgm.flac</Value>
+						</Candidate>
+					</NamedResource>
 				</ResourceMapSubtree>
 				<ResourceMapSubtree name="icon">
 					<NamedResource name="about-selected.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/about-selected.png">
@@ -187,6 +192,21 @@
 							<Value>Assets\icon\MoviePage.png</Value>
 						</Candidate>
 					</NamedResource>
+					<NamedResource name="music-selected.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/music-selected.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\music-selected.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="music.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/music.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\music.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="music_disc.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/music_disc.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\music_disc.png</Value>
+						</Candidate>
+					</NamedResource>
 					<NamedResource name="one-selected.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/one-selected.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\one-selected.png</Value>
@@ -195,6 +215,21 @@
 					<NamedResource name="one.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/one.png">
 						<Candidate type="Path">
 							<Value>Assets\icon\one.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="pause.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/pause.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\pause.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="play.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/play.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\play.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="prise.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/prise.png">
+						<Candidate type="Path">
+							<Value>Assets\icon\prise.png</Value>
 						</Candidate>
 					</NamedResource>
 					<NamedResource name="qq.png" uri="ms-resource://32688UWP.UWP/Files/Assets/icon/qq.png">
@@ -328,6 +363,11 @@
 					</Candidate>
 				</NamedResource>
 				<NamedResource name="MoviePage.xbf" uri="ms-resource://32688UWP.UWP/Files/Pages/MoviePage.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="MusicPage.xbf" uri="ms-resource://32688UWP.UWP/Files/Pages/MusicPage.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>

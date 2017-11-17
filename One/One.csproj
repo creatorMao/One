@@ -182,6 +182,7 @@
     <Content Include="Assets\icon\music_disc.png" />
     <Content Include="Assets\icon\pause.png" />
     <Content Include="Assets\icon\play.png" />
+    <Content Include="Assets\icon\prise.png" />
     <Content Include="Assets\icon\set-selected.png" />
     <Content Include="Assets\icon\set.png" />
     <Content Include="Assets\icon\share_more.png" />

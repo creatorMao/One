@@ -1,1 +1,1 @@
-D:\study\uwpProjects\One\One\bin\x64\Release\Upload\One_1.1.31.0\One_1.1.31.0_x86_x64.appxbundle
+D:\study\uwpProjects\One\One\bin\x64\Release\Upload\One_1.1.32.0\One_1.1.32.0_x86_x64.appxbundle

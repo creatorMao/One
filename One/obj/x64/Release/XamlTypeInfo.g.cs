@@ -132,7 +132,7 @@ namespace One.One_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[14];
+            _typeNameTable = new string[20];
             _typeNameTable[0] = "One.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -140,15 +140,21 @@ namespace One.One_XamlTypeInfo
             _typeNameTable[4] = "One.Pages.IndexPage";
             _typeNameTable[5] = "One.Pages.MoviePage";
             _typeNameTable[6] = "One.Pages.ArticlePage";
-            _typeNameTable[7] = "One.Pages.SettingPage";
-            _typeNameTable[8] = "Windows.UI.Color";
-            _typeNameTable[9] = "System.ValueType";
-            _typeNameTable[10] = "Object";
-            _typeNameTable[11] = "Byte";
-            _typeNameTable[12] = "One.UC.PopupNotice";
-            _typeNameTable[13] = "One.UC.Tip";
+            _typeNameTable[7] = "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl";
+            _typeNameTable[8] = "Microsoft.Graphics.Canvas.CanvasDevice";
+            _typeNameTable[9] = "Object";
+            _typeNameTable[10] = "Single";
+            _typeNameTable[11] = "Boolean";
+            _typeNameTable[12] = "Windows.UI.Color";
+            _typeNameTable[13] = "System.ValueType";
+            _typeNameTable[14] = "Windows.Foundation.Size";
+            _typeNameTable[15] = "One.Pages.MusicPage";
+            _typeNameTable[16] = "One.Pages.SettingPage";
+            _typeNameTable[17] = "Byte";
+            _typeNameTable[18] = "One.UC.PopupNotice";
+            _typeNameTable[19] = "One.UC.Tip";
 
-            _typeTable = new global::System.Type[14];
+            _typeTable = new global::System.Type[20];
             _typeTable[0] = typeof(global::One.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -156,13 +162,19 @@ namespace One.One_XamlTypeInfo
             _typeTable[4] = typeof(global::One.Pages.IndexPage);
             _typeTable[5] = typeof(global::One.Pages.MoviePage);
             _typeTable[6] = typeof(global::One.Pages.ArticlePage);
-            _typeTable[7] = typeof(global::One.Pages.SettingPage);
-            _typeTable[8] = typeof(global::Windows.UI.Color);
-            _typeTable[9] = typeof(global::System.ValueType);
-            _typeTable[10] = typeof(global::System.Object);
-            _typeTable[11] = typeof(global::System.Byte);
-            _typeTable[12] = typeof(global::One.UC.PopupNotice);
-            _typeTable[13] = typeof(global::One.UC.Tip);
+            _typeTable[7] = typeof(global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl);
+            _typeTable[8] = typeof(global::Microsoft.Graphics.Canvas.CanvasDevice);
+            _typeTable[9] = typeof(global::System.Object);
+            _typeTable[10] = typeof(global::System.Single);
+            _typeTable[11] = typeof(global::System.Boolean);
+            _typeTable[12] = typeof(global::Windows.UI.Color);
+            _typeTable[13] = typeof(global::System.ValueType);
+            _typeTable[14] = typeof(global::Windows.Foundation.Size);
+            _typeTable[15] = typeof(global::One.Pages.MusicPage);
+            _typeTable[16] = typeof(global::One.Pages.SettingPage);
+            _typeTable[17] = typeof(global::System.Byte);
+            _typeTable[18] = typeof(global::One.UC.PopupNotice);
+            _typeTable[19] = typeof(global::One.UC.Tip);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -202,9 +214,12 @@ namespace One.One_XamlTypeInfo
         private object Activate_4_IndexPage() { return new global::One.Pages.IndexPage(); }
         private object Activate_5_MoviePage() { return new global::One.Pages.MoviePage(); }
         private object Activate_6_ArticlePage() { return new global::One.Pages.ArticlePage(); }
-        private object Activate_7_SettingPage() { return new global::One.Pages.SettingPage(); }
-        private object Activate_12_PopupNotice() { return new global::One.UC.PopupNotice(); }
-        private object Activate_13_Tip() { return new global::One.UC.Tip(); }
+        private object Activate_7_CanvasControl() { return new global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl(); }
+        private object Activate_8_CanvasDevice() { return new global::Microsoft.Graphics.Canvas.CanvasDevice(); }
+        private object Activate_15_MusicPage() { return new global::One.Pages.MusicPage(); }
+        private object Activate_16_SettingPage() { return new global::One.Pages.SettingPage(); }
+        private object Activate_18_PopupNotice() { return new global::One.UC.PopupNotice(); }
+        private object Activate_19_Tip() { return new global::One.UC.Tip(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -259,14 +274,40 @@ namespace One.One_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 7:   //  One.Pages.SettingPage
-                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_SettingPage;
-                userType.SetIsLocalType();
+            case 7:   //  Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_7_CanvasControl;
+                userType.AddMemberName("Device");
+                userType.AddMemberName("Dpi");
+                userType.AddMemberName("UseSharedDevice");
+                userType.AddMemberName("ForceSoftwareRenderer");
+                userType.AddMemberName("DpiScale");
+                userType.AddMemberName("CustomDevice");
+                userType.AddMemberName("ClearColor");
+                userType.AddMemberName("ReadyToDraw");
+                userType.AddMemberName("Size");
                 xamlType = userType;
                 break;
 
-            case 8:   //  Windows.UI.Color
+            case 8:   //  Microsoft.Graphics.Canvas.CanvasDevice
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 9:   //  Object
+                xamlType = new global::One.One_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 10:   //  Single
+                xamlType = new global::One.One_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  Boolean
+                xamlType = new global::One.One_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 12:   //  Windows.UI.Color
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.AddMemberName("A");
                 userType.AddMemberName("B");
@@ -275,31 +316,45 @@ namespace One.One_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  System.ValueType
+            case 13:   //  System.ValueType
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 10:   //  Object
+            case 14:   //  Windows.Foundation.Size
                 xamlType = new global::One.One_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Byte
+            case 15:   //  One.Pages.MusicPage
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_15_MusicPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 16:   //  One.Pages.SettingPage
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_SettingPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  Byte
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 12:   //  One.UC.PopupNotice
+            case 18:   //  One.UC.PopupNotice
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_12_PopupNotice;
+                userType.Activator = Activate_18_PopupNotice;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  One.UC.Tip
+            case 19:   //  One.UC.Tip
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_13_Tip;
+                userType.Activator = Activate_19_Tip;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -308,42 +363,112 @@ namespace One.One_XamlTypeInfo
         }
 
 
-        private object get_0_Color_A(object instance)
+        private object get_0_CanvasControl_Device(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.Device;
+        }
+        private object get_1_CanvasControl_Dpi(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.Dpi;
+        }
+        private object get_2_CanvasControl_UseSharedDevice(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.UseSharedDevice;
+        }
+        private void set_2_CanvasControl_UseSharedDevice(object instance, object Value)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            that.UseSharedDevice = (global::System.Boolean)Value;
+        }
+        private object get_3_CanvasControl_ForceSoftwareRenderer(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.ForceSoftwareRenderer;
+        }
+        private void set_3_CanvasControl_ForceSoftwareRenderer(object instance, object Value)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            that.ForceSoftwareRenderer = (global::System.Boolean)Value;
+        }
+        private object get_4_CanvasControl_DpiScale(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.DpiScale;
+        }
+        private void set_4_CanvasControl_DpiScale(object instance, object Value)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            that.DpiScale = (global::System.Single)Value;
+        }
+        private object get_5_CanvasControl_CustomDevice(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.CustomDevice;
+        }
+        private void set_5_CanvasControl_CustomDevice(object instance, object Value)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            that.CustomDevice = (global::Microsoft.Graphics.Canvas.CanvasDevice)Value;
+        }
+        private object get_6_CanvasControl_ClearColor(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.ClearColor;
+        }
+        private void set_6_CanvasControl_ClearColor(object instance, object Value)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            that.ClearColor = (global::Windows.UI.Color)Value;
+        }
+        private object get_7_CanvasControl_ReadyToDraw(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.ReadyToDraw;
+        }
+        private object get_8_CanvasControl_Size(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.Size;
+        }
+        private object get_9_Color_A(object instance)
         {
             var that = (global::Windows.UI.Color)instance;
             return that.A;
         }
-        private void set_0_Color_A(object instance, object Value)
+        private void set_9_Color_A(object instance, object Value)
         {
             var that = (global::Windows.UI.Color)instance;
             that.A = (global::System.Byte)Value;
         }
-        private object get_1_Color_B(object instance)
+        private object get_10_Color_B(object instance)
         {
             var that = (global::Windows.UI.Color)instance;
             return that.B;
         }
-        private void set_1_Color_B(object instance, object Value)
+        private void set_10_Color_B(object instance, object Value)
         {
             var that = (global::Windows.UI.Color)instance;
             that.B = (global::System.Byte)Value;
         }
-        private object get_2_Color_G(object instance)
+        private object get_11_Color_G(object instance)
         {
             var that = (global::Windows.UI.Color)instance;
             return that.G;
         }
-        private void set_2_Color_G(object instance, object Value)
+        private void set_11_Color_G(object instance, object Value)
         {
             var that = (global::Windows.UI.Color)instance;
             that.G = (global::System.Byte)Value;
         }
-        private object get_3_Color_R(object instance)
+        private object get_12_Color_R(object instance)
         {
             var that = (global::Windows.UI.Color)instance;
             return that.R;
         }
-        private void set_3_Color_R(object instance, object Value)
+        private void set_12_Color_R(object instance, object Value)
         {
             var that = (global::Windows.UI.Color)instance;
             that.R = (global::System.Byte)Value;
@@ -356,29 +481,83 @@ namespace One.One_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.Device":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "Device", "Microsoft.Graphics.Canvas.CanvasDevice");
+                xamlMember.Getter = get_0_CanvasControl_Device;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.Dpi":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "Dpi", "Single");
+                xamlMember.Getter = get_1_CanvasControl_Dpi;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.UseSharedDevice":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "UseSharedDevice", "Boolean");
+                xamlMember.Getter = get_2_CanvasControl_UseSharedDevice;
+                xamlMember.Setter = set_2_CanvasControl_UseSharedDevice;
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.ForceSoftwareRenderer":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "ForceSoftwareRenderer", "Boolean");
+                xamlMember.Getter = get_3_CanvasControl_ForceSoftwareRenderer;
+                xamlMember.Setter = set_3_CanvasControl_ForceSoftwareRenderer;
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.DpiScale":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "DpiScale", "Single");
+                xamlMember.Getter = get_4_CanvasControl_DpiScale;
+                xamlMember.Setter = set_4_CanvasControl_DpiScale;
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.CustomDevice":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "CustomDevice", "Microsoft.Graphics.Canvas.CanvasDevice");
+                xamlMember.Getter = get_5_CanvasControl_CustomDevice;
+                xamlMember.Setter = set_5_CanvasControl_CustomDevice;
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.ClearColor":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "ClearColor", "Windows.UI.Color");
+                xamlMember.Getter = get_6_CanvasControl_ClearColor;
+                xamlMember.Setter = set_6_CanvasControl_ClearColor;
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.ReadyToDraw":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "ReadyToDraw", "Boolean");
+                xamlMember.Getter = get_7_CanvasControl_ReadyToDraw;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.Size":
+                userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "Size", "Windows.Foundation.Size");
+                xamlMember.Getter = get_8_CanvasControl_Size;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Windows.UI.Color.A":
                 userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
                 xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "A", "Byte");
-                xamlMember.Getter = get_0_Color_A;
-                xamlMember.Setter = set_0_Color_A;
+                xamlMember.Getter = get_9_Color_A;
+                xamlMember.Setter = set_9_Color_A;
                 break;
             case "Windows.UI.Color.B":
                 userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
                 xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "B", "Byte");
-                xamlMember.Getter = get_1_Color_B;
-                xamlMember.Setter = set_1_Color_B;
+                xamlMember.Getter = get_10_Color_B;
+                xamlMember.Setter = set_10_Color_B;
                 break;
             case "Windows.UI.Color.G":
                 userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
                 xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "G", "Byte");
-                xamlMember.Getter = get_2_Color_G;
-                xamlMember.Setter = set_2_Color_G;
+                xamlMember.Getter = get_11_Color_G;
+                xamlMember.Setter = set_11_Color_G;
                 break;
             case "Windows.UI.Color.R":
                 userType = (global::One.One_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
                 xamlMember = new global::One.One_XamlTypeInfo.XamlMember(this, "R", "Byte");
-                xamlMember.Getter = get_3_Color_R;
-                xamlMember.Setter = set_3_Color_R;
+                xamlMember.Getter = get_12_Color_R;
+                xamlMember.Setter = set_12_Color_R;
                 break;
             }
             return xamlMember;

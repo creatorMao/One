@@ -203,7 +203,7 @@ namespace One.Pages
         private void PlayMusic(object sender, RoutedEventArgs e)
         {
             //api 还没有找到 提示一下用户
-            PopupNotice popupNotice = new PopupNotice("当前音乐api还没适配好，所以目前音乐功能还在施工中.....");
+            PopupNotice popupNotice = new PopupNotice("当前音乐api还没适配好，所以目前音乐功能还在施工中.....bgm是b哥的.");
             popupNotice.ShowAPopup();
 
 

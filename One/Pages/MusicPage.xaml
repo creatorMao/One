@@ -9,6 +9,19 @@
     xmlns:Xaml="using:Microsoft.Graphics.Canvas.UI.Xaml"
     mc:Ignorable="d">
 
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <DrillInNavigationTransitionInfo  />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    
+    
+
     <Page.Resources>
 
         
@@ -115,22 +128,82 @@
                   >
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="data:Music_Datum">
-                            <Grid MinWidth="400"
-                                  Height="200"
-                                  >
-                                <StackPanel>
+                            <Grid 
+                                  
+                                  Padding="25">
+                                <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Ellipse Width="80"
+                                             Height="80"
+                                             Grid.Column="0">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{x:Bind Cover}"></ImageBrush>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+
+                                <Grid Grid.Column="1"
+                                      Margin="15,0,0,0"
+                                      VerticalAlignment="Center">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
                                     <TextBlock Text="{x:Bind StoryTitle}"
-                                           Foreground="Black"></TextBlock>
+                                               TextWrapping="WrapWholeWords"
+                                               Grid.Row="0"
+                                               FontWeight="SemiBold"
+                                               Foreground="#333333"
+                                               FontSize="16">
+                                    </TextBlock>
 
-                                    <Image Width="100"
-                                       Height="100"
-                                       Source="{x:Bind Cover}">
+                                    <StackPanel Grid.Row="1"
+                                                Orientation="Horizontal"
+                                                Margin="0,5,0,0">
+                                        <TextBlock Foreground="#333333">文/</TextBlock>
+                                        <TextBlock Text="{x:Bind AuthorList[0].UserName}"
+                                                   Foreground="#333333"></TextBlock>
+                                    </StackPanel>
 
-                                    </Image>
-                                    <TextBlock Text="{x:Bind Album}"></TextBlock>
-                                </StackPanel>
-                               
-                                
+                                    <Grid Grid.Row="2"
+                                          Margin="0,2,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <TextBlock Text="{x:Bind Title}"
+                                                   Grid.Column="0"
+                                                   FontSize="14"
+                                                   Foreground="#333333"></TextBlock>
+                                        <TextBlock Grid.Column="1"
+                                                   FontSize="14"
+                                                   Foreground="#333333"> . </TextBlock>
+                                        <TextBlock Text="{x:Bind Author.UserName}"
+                                                   Grid.Column="2"
+                                                   FontSize="14"
+                                                   Foreground="#333333"></TextBlock>
+                                        <TextBlock Grid.Column="3"
+                                                   FontSize="14"
+                                                   Foreground="#333333"> | </TextBlock>
+                                        <TextBlock Text="{x:Bind Album}"
+                                                   TextWrapping="WrapWholeWords"
+                                                   Grid.Column="4"
+                                                   FontSize="14"
+                                                   Foreground="#333333"/>
+                                    </Grid>
+                                    
+                                   
+                                </Grid>
+
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -227,6 +300,7 @@
                         <MediaElement Name="MusicPlayer"
                                       AudioCategory="Media"
                                       Source="../Assets/audio/music_bgm.flac"
+                                      AutoPlay="False"
                                       ></MediaElement>
                     </Grid>
 
@@ -283,6 +357,7 @@
                                             <RowDefinition Height="auto"></RowDefinition>
                                             <RowDefinition Height="auto"></RowDefinition>
                                             <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
                                         </Grid.RowDefinitions>
 
                                         <Grid 
@@ -298,25 +373,62 @@
                                             <TextBlock HorizontalAlignment="Left"
                                                        Margin="40,0,0,0"
                                                        Text="{x:Bind User.UserName}"
-                                                       VerticalAlignment="Center"></TextBlock>
+                                                       VerticalAlignment="Center"
+                                                       Foreground="#979797"
+                                                       FontWeight="Normal"
+                                                       FontSize="14"></TextBlock>
                                             <TextBlock HorizontalAlignment="Right"
                                                        Text="{x:Bind InputDate}"
-                                                       VerticalAlignment="Center"></TextBlock>
+                                                       VerticalAlignment="Center"
+                                                       Foreground="#979797"
+                                                       FontWeight="Normal"
+                                                       FontSize="14"></TextBlock>
                                         </Grid>
 
                                         <Grid Grid.Row="1"
+                                              Padding="40,0,0,0"
                                               >
                                             <TextBlock TextWrapping="WrapWholeWords"
                                                        Text="{x:Bind Content}"
-                                                       Margin="0,10,0,0"></TextBlock>
+                                                       Margin="0,15,0,0"
+                                                       Foreground="#333333"
+                                                       FontSize="15"
+                                                       FontWeight="Normal"
+                                                       LineHeight="30"></TextBlock>
                                         </Grid>
 
                                         <Grid Grid.Row="2"
                                               >
-                                            <StackPanel HorizontalAlignment="Right">
-                                                <TextBlock Text="{x:Bind Praisenum}"></TextBlock>
+                                            <StackPanel HorizontalAlignment="Right"
+                                                        Orientation="Horizontal">
+                                                <Button 
+                                                        Style="{StaticResource ButtonCommonStyle}"
+                                                        
+                                                        >
+                                                    <Image Source="../Assets/icon/prise.png"
+                                                           Width="25"
+                                                           Height="25"
+                                                           Stretch="UniformToFill"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           
+                                                           />
+                                                </Button>
+                                                <TextBlock Text="{x:Bind Praisenum}"
+                                                           VerticalAlignment="Center"
+                                                           HorizontalAlignment="Left"
+                                                           Margin="-8,0,0,0"
+                                                           Foreground="#979797"></TextBlock>
                                             </StackPanel>
                                         </Grid>
+
+                                        <!--边框-->
+                                        <Border Height="1"
+                                                Grid.Row="3"
+                                                Margin="0,10,0,0"
+                                                Background="#e8e8e8">
+                                            
+                                        </Border>
 
                                         
                                         
