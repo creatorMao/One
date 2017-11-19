@@ -299,13 +299,13 @@ namespace One
 
             //进入应用第一屏 显示一些tips
             //判断是否是第一次进入应用 
-            AppSettings.RemoveSetting("20171112update");
-            if (AppSettings.GetSetting("20171117update") == null)
+            AppSettings.RemoveSetting("20171117update");
+            if (AppSettings.GetSetting("20171119update") == null)
             {
                 //负优化哈哈
                 await Task.Delay(1500);
                 ShowTip();
-                AppSettings.SetSetting("20171117update", true);
+                AppSettings.SetSetting("20171119update", true);
             }
 
 

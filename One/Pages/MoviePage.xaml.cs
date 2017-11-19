@@ -60,8 +60,14 @@ namespace One.Pages
 
         Storyboard storyboard = new Storyboard();
 
-       
 
+        double detialPagelastPosition = 0;
+        bool detialPageBackTopButtonIn = false;
+        bool detialPageBackTopButtonOut = false;
+
+        double listPagelastPosition = 0;
+        bool listPageBackTopButtonIn = false;
+        bool listPageBackTopButtonOut = false;
 
 
 
@@ -242,50 +248,61 @@ namespace One.Pages
         }
 
 
-        private double _lastPosition = 0;
-        bool isFirstDown = true;
-        bool isFirstUp = true;
+       
         private void ItemListContainerScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
-            //鼠标滚轮向下 显示返回顶部图标  选10不选0的  照顾某些鼠标滚轮不灵了
-            if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition > 30)
+            ScrollViewer scrollViewer = sender as ScrollViewer;
+
+            if ((scrollViewer.VerticalOffset > scrollViewer.ViewportHeight) && listPageBackTopButtonIn == false && scrollViewer.VerticalOffset - listPagelastPosition >= 10)  //
             {
-                isFirstUp = true;
-                if (isFirstDown == true)
-                {
-                    BackTopButtonIn.Begin();
-                }
-                else
-                {
+                listPageBackTopButtonIn = true;
+                ListPageBackTopButtonIn.Begin();
 
-                }
-                isFirstDown = false;
-
-                //BackTopButton.Visibility = Visibility.Visible;
-            }
-            else if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition < -30)  //向上
-            {
-                isFirstDown = true;
-                if (isFirstUp == true)
-                {
-                    BackTopButtonOut.Begin();
-                }
-                else
-                {
-
-                }
-                isFirstUp = false;
-                //BackTopButton.Visibility = Visibility.Collapsed; 
+                listPageBackTopButtonOut = false;
 
             }
-            _lastPosition = ItemListContainerScrollViewer.VerticalOffset;
+            else if (scrollViewer.VerticalOffset < scrollViewer.ViewportHeight && listPageBackTopButtonOut == false && scrollViewer.VerticalOffset - listPagelastPosition <= -10)  //当滚动条滚动到 呈现的高度的位置时隐藏
+            {
+                listPageBackTopButtonOut = true;
+                ListPageBackTopButtonOut.Begin();
+
+                listPageBackTopButtonIn = false;
+            }
+
+            listPagelastPosition = scrollViewer.VerticalOffset;
         }
 
-
-        private void BackTopButton_Click(object sender, RoutedEventArgs e)
+        private void MovieDetailScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
-            //放回顶部
-            ItemListContainerScrollViewer.ChangeView(null, 0, null);
+            ScrollViewer scrollViewer = sender as ScrollViewer;
+
+            if ((scrollViewer.VerticalOffset > scrollViewer.ViewportHeight) && detialPageBackTopButtonIn == false && scrollViewer.VerticalOffset - detialPagelastPosition >= 10)  //
+            {
+                detialPageBackTopButtonIn = true;
+                DetailPageBackTopButtonIn.Begin();
+
+                detialPageBackTopButtonOut = false;
+
+            }
+            else if (scrollViewer.VerticalOffset < scrollViewer.ViewportHeight && detialPageBackTopButtonOut == false && scrollViewer.VerticalOffset - detialPagelastPosition <= -10)  //当滚动条滚动到 呈现的高度的位置时隐藏
+            {
+                detialPageBackTopButtonOut = true;
+                DetailPageBackTopButtonOut.Begin();
+
+                detialPageBackTopButtonIn = false;
+            }
+
+            detialPagelastPosition = scrollViewer.VerticalOffset;
+        }
+
+        private void DetailPageBackTopButton_Click(object sender, RoutedEventArgs e)
+        {
+            MovieDetailScrollViewer.ChangeView(null,0,null);
+        }
+
+        private void ListPageBackTopButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItemListContainerScrollViewer.ChangeView(null,0,null);
         }
     }
 }

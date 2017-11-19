@@ -1,0 +1,649 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="One.Pages.MusicPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:One.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:One.Model"
+    xmlns:Xaml="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d">
+
+
+    
+    
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <DrillInNavigationTransitionInfo  />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+
+
+
+    <Page.Resources>
+
+        <Storyboard x:ConnectionId='2' x:Name="MachineIconIn">
+            <DoubleAnimation Storyboard.TargetName="MachineIcon"
+                             Storyboard.TargetProperty="(MachineIcon.RenderTransform).(TranslateTransform.X)"
+                             Duration="00:00:00.2"
+                             From="0"
+                             To="30">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:ConnectionId='3' x:Name="MachineIconOut">
+            <DoubleAnimation Storyboard.TargetName="MachineIcon"
+                             Storyboard.TargetProperty="(MachineIcon.RenderTransform).(TranslateTransform.X)"
+                             Duration="00:00:00.2"
+                             From="30"
+                             To="0">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:ConnectionId='4' x:Name="DetailPageBackTopButtonIn">
+            <DoubleAnimation From="0"
+                             To="1"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="DetailPageBackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="70"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="DetailPageBackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:ConnectionId='5' x:Name="DetailPageBackTopButtonOut">
+            <DoubleAnimation From="1"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="DetailPageBackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="0"
+                             To="70"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="DetailPageBackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:ConnectionId='6' x:Name="ListPageBackTopButtonIn">
+            <DoubleAnimation From="0"
+                             To="1"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="ListPageBackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="70"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="ListPageBackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:ConnectionId='7' x:Name="ListPageBackTopButtonOut">
+            <DoubleAnimation From="1"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="ListPageBackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="0"
+                             To="70"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="ListPageBackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+
+    </Page.Resources>
+
+    <Grid Background="White"
+          >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:ConnectionId='8' x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="ItemDetailsPannel.Grid.Column" Value="0"/>
+                        <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="2"/>
+
+
+
+                        <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
+                        <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="2"/>
+
+                        <Setter Target="DetailPageBackground.Visibility" Value="Collapsed"/>
+
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='9' x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1000"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
+                        <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="1"/>
+
+
+
+                        <Setter Target="ItemDetailsPannel.Grid.Column" Value="1"/>
+                        <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="1"/>
+
+
+                        <Setter Target="DetailPageBackground.Grid.Column" Value="1"/>
+                        <Setter Target="DetailPageBackground.Grid.ColumnSpan" Value="1"/>
+
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+
+        <Grid x:ConnectionId='10'  Name="ItemListContainer"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               >
+            <ScrollViewer x:ConnectionId='33' Style="{StaticResource ScrollViewerCommonStyle}"
+                          Name="ItemListContainerScrollViewer"
+                                                                                 
+                           >
+                <ListView x:ConnectionId='35'                                 
+                  Name="ItemListview"
+                  Visibility="Visible"
+                  IsItemClickEnabled="True"
+                                                    
+                  ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                  
+                  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate                              >
+                            <Grid x:ConnectionId='36' 
+                                  
+                                  Padding="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Ellipse Width="80"
+                                             Height="80"
+                                             Grid.Column="0">
+                                    <Ellipse.Fill>
+                                        <ImageBrush x:ConnectionId='42'                             ></ImageBrush>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+
+                                <Grid Grid.Column="1"
+                                      Margin="15,0,0,0"
+                                      VerticalAlignment="Center">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock x:ConnectionId='37'                           
+                                               TextWrapping="WrapWholeWords"
+                                               Grid.Row="0"
+                                               FontWeight="SemiBold"
+                                               Foreground="#333333"
+                                               FontSize="16">
+                                    </TextBlock>
+
+                                    <StackPanel Grid.Row="1"
+                                                Orientation="Horizontal"
+                                                Margin="0,5,0,0">
+                                        <TextBlock Foreground="#333333">文/</TextBlock>
+                                        <TextBlock x:ConnectionId='41'                                       
+                                                   Foreground="#333333"></TextBlock>
+                                    </StackPanel>
+
+                                    <Grid Grid.Row="2"
+                                          Margin="0,2,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock x:ConnectionId='38'                      
+                                                   Grid.Column="0"
+                                                   FontSize="14"
+                                                   Foreground="#333333"></TextBlock>
+                                        <TextBlock Grid.Column="1"
+                                                   FontSize="14"
+                                                   Foreground="#333333"> .</TextBlock>
+                                        <TextBlock x:ConnectionId='39'                                
+                                                   Grid.Column="2"
+                                                   FontSize="14"
+                                                   Foreground="#333333"></TextBlock>
+                                        <TextBlock Grid.Column="3"
+                                                   FontSize="14"
+                                                   Foreground="#333333"> |</TextBlock>
+                                        <TextBlock x:ConnectionId='40'                      
+                                                   TextWrapping="WrapWholeWords"
+                                                   Grid.Column="4"
+                                                   FontSize="14"
+                                                   Foreground="#333333"/>
+                                    </Grid>
+
+
+                                </Grid>
+
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+
+            <!--返回顶部按键-->
+            <Button x:ConnectionId='34' Name="ListPageBackTopButton"
+                                                       
+                    Style="{StaticResource ButtonEllipseStyle}"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="30"
+                    Background="#17BED2"
+                    Opacity="1"
+                    Visibility="Visible"
+                    Width="50"
+                    Height="50">
+
+                <!--改变Y轴和透明底-->
+
+                <Button.RenderTransform>
+                    <TranslateTransform Y="80"></TranslateTransform>
+                </Button.RenderTransform>
+
+                <FontIcon FontFamily="Segoe MDL2 Assets" 
+                          Glyph="&#xE110;" 
+                          Foreground="White"/>
+            </Button>
+
+
+        </Grid>
+
+
+        <Grid x:ConnectionId='11' Name="DetailPageBackground"
+              Background="White"
+              >
+            <Image Source="../Assets/images/oneisall.png"
+                   Width="250"
+                   Height="250"
+                       />
+        </Grid>
+
+
+        <Grid x:ConnectionId='12' Name="ItemDetailsPannel"
+              Grid.Column="0"
+              Grid.ColumnSpan="2"
+              Background="White"
+              Visibility="Collapsed"
+              >
+
+            <ScrollViewer x:ConnectionId='13' Style="{StaticResource ScrollViewerCommonStyle}"
+                          Name="ItemDetailsPannelScrollViewer"
+                                                                                 
+                          >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Image x:ConnectionId='25' Name="Detail_Image"
+                               Stretch="Fill"
+                                                                     
+                               ></Image>
+                        <Grid>
+                            <Rectangle x:ConnectionId='31' x:Name="WhiteMask" 
+                                       Fill="White" />
+                            <Xaml:CanvasControl x:ConnectionId='32' x:Name="Canvas" 
+                                                />
+                        </Grid>
+                        <Grid>
+                            <Grid Width="150"
+                                  Height="150"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  >
+                                <Image x:ConnectionId='27' Name="MachineIcon"
+                                       Width="140"
+                                       Height="140"
+                                       Margin="0,0,0,0"
+                                       Source="../Assets/icon/music_disc.png"
+                                       Stretch="Fill">
+                                    <Image.RenderTransform>
+                                        <TranslateTransform X="0"></TranslateTransform>
+                                    </Image.RenderTransform>
+                                </Image>
+                                <Image x:ConnectionId='28' Name="CoverImage"
+                                       Width="150"
+                                       Height="150"
+                                       Stretch="Fill"
+                                       Visibility="Visible"></Image>
+                                <Ellipse Width="50"
+                                         Height="50"
+                                         Fill="Black"
+                                         Opacity='0.7'
+                                         HorizontalAlignment="Center"
+                                         VerticalAlignment="Center">
+                                </Ellipse>
+                                <Button x:ConnectionId='29' Width="50"
+                                        Height="50"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Style="{StaticResource ButtonNoneStyle}"
+                                                         
+                                        >
+                                    <Image x:ConnectionId='30' Source="../Assets/icon/play.png"
+                                           Width="30"
+                                           Height="30"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           Name="PlayMusicButtonIcon"></Image>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                        <MediaElement x:ConnectionId='26' Name="MusicPlayer"
+                                      AudioCategory="Media"
+                                      Source="../Assets/audio/music_bgm.flac"
+                                      AutoPlay="False"
+                                      ></MediaElement>
+                    </Grid>
+
+                    <Grid Grid.Row="1"
+                          Margin="30,30,30,0">
+                        <TextBlock x:ConnectionId='24' Name="Article_Title"
+                               FontSize="30"
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True"
+                               TextWrapping="WrapWholeWords">
+
+                        </TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="2"
+                      Margin="30,20,0,0">
+                        <TextBlock x:ConnectionId='23' Name="Article_Author"
+                               Foreground="#333333"
+                               IsTextSelectionEnabled="True">
+
+                        </TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="3"
+                          Padding="30,0,30,0">
+                        <TextBlock x:ConnectionId='22' Name="Article_Content"
+                               Foreground="#333333"
+                               LineHeight="50"
+                               TextWrapping="WrapWholeWords"
+                               IsTextSelectionEnabled="True">
+
+                        </TextBlock>
+                    </Grid>
+
+                    <!--评论模块-->
+                    <Grid Grid.Row="4">
+                        <ListView x:ConnectionId='15'                                               
+                                  Name="CommentListView"
+                                  HorizontalAlignment="Stretch"
+                                  HorizontalContentAlignment="Stretch"
+                                  ItemContainerStyle="{StaticResource ListViewItemCommentStyle}"
+                                  >
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate                                            >
+                                    <Grid x:ConnectionId='16' MinHeight="100"
+                                          Padding="30"
+                                          Name="CommentItemContainer"
+                                          
+                                          >
+
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid 
+                                              Grid.ColumnSpan="2"
+                                              Grid.Row="0">
+                                            <Ellipse Width="30"
+                                                     Height="30"
+                                                     HorizontalAlignment="Left">
+                                                <Ellipse.Fill>
+                                                    <ImageBrush x:ConnectionId='21'                                   ></ImageBrush>
+                                                </Ellipse.Fill>
+                                            </Ellipse>
+                                            <TextBlock x:ConnectionId='19' HorizontalAlignment="Left"
+                                                       Margin="40,0,0,0"
+                                                                                    
+                                                       VerticalAlignment="Center"
+                                                       Foreground="#979797"
+                                                       FontWeight="Normal"
+                                                       FontSize="14"></TextBlock>
+                                            <TextBlock x:ConnectionId='20' HorizontalAlignment="Right"
+                                                                                
+                                                       VerticalAlignment="Center"
+                                                       Foreground="#979797"
+                                                       FontWeight="Normal"
+                                                       FontSize="14"></TextBlock>
+                                        </Grid>
+
+                                        <Grid Grid.Row="1"
+                                              Padding="40,0,0,0"
+                                              >
+                                            <TextBlock x:ConnectionId='18' TextWrapping="WrapWholeWords"
+                                                                              
+                                                       Margin="0,15,0,0"
+                                                       Foreground="#333333"
+                                                       FontSize="15"
+                                                       FontWeight="Normal"
+                                                       LineHeight="30"></TextBlock>
+                                        </Grid>
+
+                                        <Grid Grid.Row="2"
+                                              >
+                                            <StackPanel HorizontalAlignment="Right"
+                                                        Orientation="Horizontal">
+                                                <Button 
+                                                        Style="{StaticResource ButtonCommonStyle}"
+                                                        
+                                                        >
+                                                    <Image Source="../Assets/icon/prise.png"
+                                                           Width="25"
+                                                           Height="25"
+                                                           Stretch="UniformToFill"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center"
+                                                           
+                                                           />
+                                                </Button>
+                                                <TextBlock x:ConnectionId='17'                          
+                                                           VerticalAlignment="Center"
+                                                           HorizontalAlignment="Left"
+                                                           Margin="-8,0,0,0"
+                                                           Foreground="#979797"></TextBlock>
+                                            </StackPanel>
+                                        </Grid>
+
+                                        <!--边框-->
+                                        <Border Height="1"
+                                                Grid.Row="3"
+                                                Margin="0,10,0,0"
+                                                Background="#e8e8e8">
+
+                                        </Border>
+
+
+
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+
+                        </ListView>
+                    </Grid>
+
+
+
+                </Grid>
+            </ScrollViewer>
+
+
+            <!--返回顶部按键-->
+            <Button x:ConnectionId='14' Name="DetailPageBackTopButton"
+                                                         
+                    Style="{StaticResource ButtonEllipseStyle}"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="30"
+                    Background="#17BED2"
+                    Opacity="1"
+                    Visibility="Visible"
+                    Width="50"
+                    Height="50">
+
+                <!--改变Y轴和透明底-->
+                
+                <Button.RenderTransform>
+                    <TranslateTransform Y="80"></TranslateTransform>
+                </Button.RenderTransform>
+
+                <FontIcon FontFamily="Segoe MDL2 Assets" 
+                          Glyph="&#xE110;" 
+                          Foreground="White"/>
+            </Button>
+
+            <!--各种height测试-->
+            <!--<StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>ActualHeightText</TextBlock>
+                    <TextBlock Name="ActualHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>ExtentHeight:</TextBlock>
+                    <TextBlock Name="ExtentHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Height:</TextBlock>
+                    <TextBlock Name="HeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>ScrollableHeight:</TextBlock>
+                    <TextBlock Name="ScrollableHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>ViewportHeight:</TextBlock>
+                    <TextBlock Name="ViewportHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>MinHeight:</TextBlock>
+                    <TextBlock Name="MinHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>MaxHeight:</TextBlock>
+                    <TextBlock Name="MaxHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>VerticalOffset:</TextBlock>
+                    <TextBlock Name="VerticalOffsetText" Text=""></TextBlock>
+                </StackPanel>
+                
+
+            </StackPanel>-->
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>
+

@@ -35,6 +35,15 @@ namespace One.Pages
         public bool IsStop = false;
 
 
+        double detialPagelastPosition = 0;
+        bool detialPageBackTopButtonIn = false;
+        bool detialPageBackTopButtonOut = false;
+
+        double listPagelastPosition = 0;
+        bool listPageBackTopButtonIn = false;
+        bool listPageBackTopButtonOut = false;
+
+
         //定义定时器
         public DispatcherTimer timer;
 
@@ -193,54 +202,62 @@ namespace One.Pages
             timer.Tick += Change;
         }
 
-
-
-        private double _lastPosition = 0;
-        bool isFirstDown = true;
-        bool isFirstUp = true;
-        private void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        private void Article_DetailScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
-            //鼠标滚轮向下 显示返回顶部图标  选10不选0的  照顾某些鼠标滚轮不灵了
-            if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition > 30)
+            ScrollViewer scrollViewer = sender as ScrollViewer;
+
+            if ((scrollViewer.VerticalOffset > scrollViewer.ViewportHeight) && detialPageBackTopButtonIn == false && scrollViewer.VerticalOffset - detialPagelastPosition >= 10)  //
             {
-                isFirstUp = true;
-                if (isFirstDown == true)
-                {
-                    BackTopButtonIn.Begin();
-                }
-                else
-                {
+                detialPageBackTopButtonIn = true;
+                DetailPageBackTopButtonIn.Begin();
 
-                }
-                isFirstDown = false;
+                detialPageBackTopButtonOut = false;
 
-                //BackTopButton.Visibility = Visibility.Visible;
             }
-            else if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition < -30)  //向上
+            else if (scrollViewer.VerticalOffset < scrollViewer.ViewportHeight && detialPageBackTopButtonOut == false && scrollViewer.VerticalOffset - detialPagelastPosition <= -10)  //当滚动条滚动到 呈现的高度的位置时隐藏
             {
-                isFirstDown = true;
-                if (isFirstUp == true)
-                {
-                    BackTopButtonOut.Begin();
-                }
-                else
-                {
+                detialPageBackTopButtonOut = true;
+                DetailPageBackTopButtonOut.Begin();
 
-                }
-                isFirstUp = false;
-                //BackTopButton.Visibility = Visibility.Collapsed;
+                detialPageBackTopButtonIn = false;
             }
 
-            _lastPosition = ItemListContainerScrollViewer.VerticalOffset;
+            detialPagelastPosition = scrollViewer.VerticalOffset;
+        }
 
+        private void DetailPageBackTopButton_Click(object sender, RoutedEventArgs e)
+        {
+            Article_DetailScrollViewer.ChangeView(null,0,null);
         }
 
 
 
-        private void BackTopButton_Click(object sender, RoutedEventArgs e)
+        private void ItemListContainerScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
-            //放回顶部
-            ItemListContainerScrollViewer.ChangeView(null, 0, null);
+            ScrollViewer scrollViewer = sender as ScrollViewer;
+
+            if ((scrollViewer.VerticalOffset > scrollViewer.ViewportHeight) && listPageBackTopButtonIn == false && scrollViewer.VerticalOffset - listPagelastPosition >= 10)  //
+            {
+                listPageBackTopButtonIn = true;
+                ListPageBackTopButtonIn.Begin();
+
+                listPageBackTopButtonOut = false;
+
+            }
+            else if (scrollViewer.VerticalOffset < scrollViewer.ViewportHeight && listPageBackTopButtonOut == false && scrollViewer.VerticalOffset - listPagelastPosition <= -10)  //当滚动条滚动到 呈现的高度的位置时隐藏
+            {
+                listPageBackTopButtonOut = true;
+                ListPageBackTopButtonOut.Begin();
+
+                listPageBackTopButtonIn = false;
+            }
+
+            listPagelastPosition = scrollViewer.VerticalOffset;
+        }
+
+        private void ListPageBackTopButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItemListContainerScrollViewer.ChangeView(null,0,null);
         }
     }
 }

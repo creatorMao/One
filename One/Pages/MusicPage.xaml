@@ -10,6 +10,8 @@
     mc:Ignorable="d">
 
 
+    
+    
     <Page.Transitions>
         <TransitionCollection>
             <NavigationThemeTransition>
@@ -19,13 +21,10 @@
             </NavigationThemeTransition>
         </TransitionCollection>
     </Page.Transitions>
-    
-    
+
+
 
     <Page.Resources>
-
-        
-     
 
         <Storyboard x:Name="MachineIconIn">
             <DoubleAnimation Storyboard.TargetName="MachineIcon"
@@ -51,6 +50,99 @@
             </DoubleAnimation>
         </Storyboard>
 
+        <Storyboard x:Name="DetailPageBackTopButtonIn">
+            <DoubleAnimation From="0"
+                             To="1"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="DetailPageBackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="70"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="DetailPageBackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="DetailPageBackTopButtonOut">
+            <DoubleAnimation From="1"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="DetailPageBackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="0"
+                             To="70"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="DetailPageBackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="ListPageBackTopButtonIn">
+            <DoubleAnimation From="0"
+                             To="1"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="ListPageBackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="70"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="ListPageBackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="ListPageBackTopButtonOut">
+            <DoubleAnimation From="1"
+                             To="0"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="ListPageBackTopButton"
+                             Storyboard.TargetProperty="Opacity"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="0"
+                             To="70"
+                             Duration="00:00:00.5"
+                             Storyboard.TargetName="ListPageBackTopButton"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                             >
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"></PowerEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+
     </Page.Resources>
 
     <Grid Background="White"
@@ -72,7 +164,7 @@
                         <Setter Target="ItemDetailsPannel.Grid.Column" Value="0"/>
                         <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="2"/>
 
-                      
+
 
                         <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
                         <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="2"/>
@@ -92,7 +184,7 @@
                         <Setter Target="ItemListContainer.Grid.Column" Value="0"/>
                         <Setter Target="ItemListContainer.Grid.ColumnSpan" Value="1"/>
 
-                       
+
 
                         <Setter Target="ItemDetailsPannel.Grid.Column" Value="1"/>
                         <Setter Target="ItemDetailsPannel.Grid.ColumnSpan" Value="1"/>
@@ -117,6 +209,7 @@
                >
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="ItemListContainerScrollViewer"
+                          ViewChanged="ItemListContainerScrollViewer_ViewChanged"
                            >
                 <ListView ItemsSource="{x:Bind musicList}"
                   Name="ItemListview"
@@ -132,17 +225,17 @@
                                   
                                   Padding="25">
                                 <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    
-                                    <Ellipse Width="80"
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Ellipse Width="80"
                                              Height="80"
                                              Grid.Column="0">
-                                        <Ellipse.Fill>
-                                            <ImageBrush ImageSource="{x:Bind Cover}"></ImageBrush>
-                                        </Ellipse.Fill>
-                                    </Ellipse>
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{x:Bind Cover}"></ImageBrush>
+                                    </Ellipse.Fill>
+                                </Ellipse>
 
                                 <Grid Grid.Column="1"
                                       Margin="15,0,0,0"
@@ -179,29 +272,29 @@
                                             <ColumnDefinition Width="auto"></ColumnDefinition>
                                             <ColumnDefinition Width="auto"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-                                        
+
                                         <TextBlock Text="{x:Bind Title}"
                                                    Grid.Column="0"
                                                    FontSize="14"
                                                    Foreground="#333333"></TextBlock>
                                         <TextBlock Grid.Column="1"
                                                    FontSize="14"
-                                                   Foreground="#333333"> . </TextBlock>
+                                                   Foreground="#333333"> .</TextBlock>
                                         <TextBlock Text="{x:Bind Author.UserName}"
                                                    Grid.Column="2"
                                                    FontSize="14"
                                                    Foreground="#333333"></TextBlock>
                                         <TextBlock Grid.Column="3"
                                                    FontSize="14"
-                                                   Foreground="#333333"> | </TextBlock>
+                                                   Foreground="#333333"> |</TextBlock>
                                         <TextBlock Text="{x:Bind Album}"
                                                    TextWrapping="WrapWholeWords"
                                                    Grid.Column="4"
                                                    FontSize="14"
                                                    Foreground="#333333"/>
                                     </Grid>
-                                    
-                                   
+
+
                                 </Grid>
 
                             </Grid>
@@ -210,7 +303,30 @@
                 </ListView>
             </ScrollViewer>
 
-         
+            <!--返回顶部按键-->
+            <Button Name="ListPageBackTopButton"
+                    Click="ListPageBackTopButton_Click"
+                    Style="{StaticResource ButtonEllipseStyle}"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="30"
+                    Background="#17BED2"
+                    Opacity="1"
+                    Visibility="Visible"
+                    Width="50"
+                    Height="50">
+
+                <!--改变Y轴和透明底-->
+
+                <Button.RenderTransform>
+                    <TranslateTransform Y="80"></TranslateTransform>
+                </Button.RenderTransform>
+
+                <FontIcon FontFamily="Segoe MDL2 Assets" 
+                          Glyph="&#xE110;" 
+                          Foreground="White"/>
+            </Button>
+
 
         </Grid>
 
@@ -232,7 +348,10 @@
               Visibility="Collapsed"
               >
 
-            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+            <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
+                          Name="ItemDetailsPannelScrollViewer"
+                          ViewChanged="ItemDetailsPannelScrollViewer_ViewChanged"
+                          >
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="300"/>
@@ -343,7 +462,7 @@
                                   HorizontalContentAlignment="Stretch"
                                   ItemContainerStyle="{StaticResource ListViewItemCommentStyle}"
                                   >
-                           
+
                             <ListView.ItemTemplate>
                                 <DataTemplate x:DataType="data:MusicArticleComment_Datum">
                                     <Grid MinHeight="100"
@@ -351,7 +470,7 @@
                                           Name="CommentItemContainer"
                                           
                                           >
-                                       
+
 
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="auto"></RowDefinition>
@@ -427,21 +546,93 @@
                                                 Grid.Row="3"
                                                 Margin="0,10,0,0"
                                                 Background="#e8e8e8">
-                                            
+
                                         </Border>
 
-                                        
-                                        
+
+
                                     </Grid>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
-                            
+
                         </ListView>
                     </Grid>
-                    
+
+
+
                 </Grid>
             </ScrollViewer>
 
+
+            <!--返回顶部按键-->
+            <Button Name="DetailPageBackTopButton"
+                    Click="DetailPageBackTopButton_Click"
+                    Style="{StaticResource ButtonEllipseStyle}"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="30"
+                    Background="#17BED2"
+                    Opacity="1"
+                    Visibility="Visible"
+                    Width="50"
+                    Height="50">
+
+                <!--改变Y轴和透明底-->
+                
+                <Button.RenderTransform>
+                    <TranslateTransform Y="80"></TranslateTransform>
+                </Button.RenderTransform>
+
+                <FontIcon FontFamily="Segoe MDL2 Assets" 
+                          Glyph="&#xE110;" 
+                          Foreground="White"/>
+            </Button>
+
+            <!--各种height测试-->
+            <!--<StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>ActualHeightText</TextBlock>
+                    <TextBlock Name="ActualHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>ExtentHeight:</TextBlock>
+                    <TextBlock Name="ExtentHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Height:</TextBlock>
+                    <TextBlock Name="HeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>ScrollableHeight:</TextBlock>
+                    <TextBlock Name="ScrollableHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>ViewportHeight:</TextBlock>
+                    <TextBlock Name="ViewportHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>MinHeight:</TextBlock>
+                    <TextBlock Name="MinHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>MaxHeight:</TextBlock>
+                    <TextBlock Name="MaxHeightText" Text=""></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>VerticalOffset:</TextBlock>
+                    <TextBlock Name="VerticalOffsetText" Text=""></TextBlock>
+                </StackPanel>
+                
+
+            </StackPanel>-->
 
         </Grid>
 

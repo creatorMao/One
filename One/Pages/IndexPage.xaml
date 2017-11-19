@@ -21,11 +21,11 @@
 
     <UserControl.Resources>
 
-        <Storyboard x:Name="BackTopButtonIn">
+        <Storyboard x:Name="ListPageBackTopButtonIn">
             <DoubleAnimation From="0"
                              To="1"
                              Duration="00:00:00.5"
-                             Storyboard.TargetName="BackTopButton"
+                             Storyboard.TargetName="ListPageBackTopButton"
                              Storyboard.TargetProperty="Opacity"
                              >
                 <DoubleAnimation.EasingFunction>
@@ -35,7 +35,7 @@
             <DoubleAnimation From="70"
                              To="0"
                              Duration="00:00:00.5"
-                             Storyboard.TargetName="BackTopButton"
+                             Storyboard.TargetName="ListPageBackTopButton"
                              Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
                              >
                 <DoubleAnimation.EasingFunction>
@@ -44,11 +44,11 @@
             </DoubleAnimation>
         </Storyboard>
 
-        <Storyboard x:Name="BackTopButtonOut">
+        <Storyboard x:Name="ListPageBackTopButtonOut">
             <DoubleAnimation From="1"
                              To="0"
                              Duration="00:00:00.5"
-                             Storyboard.TargetName="BackTopButton"
+                             Storyboard.TargetName="ListPageBackTopButton"
                              Storyboard.TargetProperty="Opacity"
                              >
                 <DoubleAnimation.EasingFunction>
@@ -58,7 +58,7 @@
             <DoubleAnimation From="0"
                              To="70"
                              Duration="00:00:00.5"
-                             Storyboard.TargetName="BackTopButton"
+                             Storyboard.TargetName="ListPageBackTopButton"
                              Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
                              >
                 <DoubleAnimation.EasingFunction>
@@ -170,8 +170,8 @@
             </ScrollViewer>
 
             <!--返回顶部按键-->
-            <Button Name="BackTopButton"
-                    Click="BackTopButton_Click"
+            <Button Name="ListPageBackTopButton"
+                    Click="ListPageBackTopButton_Click"
                     Style="{StaticResource ButtonEllipseStyle}"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Right"
@@ -181,8 +181,9 @@
                     Visibility="Visible"
                     Width="50"
                     Height="50">
-                
+
                 <!--改变Y轴和透明底-->
+
                 <Button.RenderTransform>
                     <TranslateTransform Y="80"></TranslateTransform>
                 </Button.RenderTransform>

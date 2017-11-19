@@ -33,8 +33,6 @@ namespace One.Pages
 
 
 
-        private double _lastPosition = 0;
-
 
         bool isAwait = true;
 
@@ -42,10 +40,9 @@ namespace One.Pages
         private PhotoAlbum_Datum photoAlbum_Datum = new PhotoAlbum_Datum();
 
 
-        bool isFirstDown = true;
-
-
-        bool isFirstUp = true;
+        double listPagelastPosition = 0;
+        bool listPageBackTopButtonIn = false;
+        bool listPageBackTopButtonOut = false;
 
 
         public IndexPage()
@@ -213,47 +210,33 @@ namespace One.Pages
         private void ItemListContainerScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
 
-            //鼠标滚轮向下 显示返回顶部图标  选10不选0的  照顾某些鼠标滚轮不灵了
-            if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition > 30)
+            ScrollViewer scrollViewer = sender as ScrollViewer;
+
+            if ((scrollViewer.VerticalOffset > scrollViewer.ViewportHeight) && listPageBackTopButtonIn == false && scrollViewer.VerticalOffset - listPagelastPosition >= 10)  //
             {
-                isFirstUp = true;
-                if (isFirstDown == true)
-                {
-                    BackTopButtonIn.Begin();
-                }
-                else
-                {
+                listPageBackTopButtonIn = true;
+                ListPageBackTopButtonIn.Begin();
 
-                }
-                isFirstDown = false;
+                listPageBackTopButtonOut = false;
 
-                //BackTopButton.Visibility = Visibility.Visible;
             }
-            else if (ItemListContainerScrollViewer.VerticalOffset - _lastPosition < -30)  //向上
+            else if (scrollViewer.VerticalOffset < scrollViewer.ViewportHeight && listPageBackTopButtonOut == false && scrollViewer.VerticalOffset - listPagelastPosition <= -10)  //当滚动条滚动到 呈现的高度的位置时隐藏
             {
-                isFirstDown = true;
-                if (isFirstUp == true)
-                {
-                    BackTopButtonOut.Begin();
-                }
-                else
-                {
+                listPageBackTopButtonOut = true;
+                ListPageBackTopButtonOut.Begin();
 
-                }
-                isFirstUp = false;
-                //BackTopButton.Visibility = Visibility.Collapsed;
+                listPageBackTopButtonIn = false;
             }
-
 
 
 
             //判断滑倒底部 更新数据
-            if (ItemListContainerScrollViewer.ExtentHeight - ItemListContainerScrollViewer.ViewportHeight == ItemListContainerScrollViewer.VerticalOffset && isAwait == true)
+            if (scrollViewer.ScrollableHeight == scrollViewer.VerticalOffset && isAwait == true)
             {
                 PreData();
 
             }
-            _lastPosition = ItemListContainerScrollViewer.VerticalOffset;
+            listPagelastPosition = scrollViewer.VerticalOffset;
 
         }
 
@@ -298,10 +281,10 @@ namespace One.Pages
             ImageInfoPage.Visibility = Visibility.Collapsed;
         }
 
-        private void BackTopButton_Click(object sender, RoutedEventArgs e)
+        private void ListPageBackTopButton_Click(object sender, RoutedEventArgs e)
         {
             //放回顶部
-            ItemListContainerScrollViewer.ChangeView(null,0,null);
+            ItemListContainerScrollViewer.ChangeView(null, 0, null);
         }
     }
 }

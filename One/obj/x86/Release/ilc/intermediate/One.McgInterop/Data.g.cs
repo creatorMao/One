@@ -19735,7 +19735,7 @@ namespace __Interop
 				}, 
 				// Index = 23
 				new global::System.Runtime.InteropServices.CCWTemplateData() {
-					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.MoviePage+MoviePage_obj26_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
+					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.MoviePage+MoviePage_obj30_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
 					SupportedInterfaceListBeginIndex = 32,
 					NumberOfSupportedInterface = 2,
 					ParentCCWTemplateIndex = -1,
@@ -19743,7 +19743,7 @@ namespace __Interop
 				}, 
 				// Index = 24
 				new global::System.Runtime.InteropServices.CCWTemplateData() {
-					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.MoviePage+MoviePage_obj31_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
+					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.MoviePage+MoviePage_obj35_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
 					SupportedInterfaceListBeginIndex = 32,
 					NumberOfSupportedInterface = 2,
 					ParentCCWTemplateIndex = -1,
@@ -19767,7 +19767,7 @@ namespace __Interop
 				}, 
 				// Index = 27
 				new global::System.Runtime.InteropServices.CCWTemplateData() {
-					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.ArticlePage+ArticlePage_obj26_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
+					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.ArticlePage+ArticlePage_obj30_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
 					SupportedInterfaceListBeginIndex = 32,
 					NumberOfSupportedInterface = 2,
 					ParentCCWTemplateIndex = -1,
@@ -19791,7 +19791,7 @@ namespace __Interop
 				}, 
 				// Index = 30
 				new global::System.Runtime.InteropServices.CCWTemplateData() {
-					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.MusicPage+MusicPage_obj10_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
+					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.MusicPage+MusicPage_obj16_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
 					SupportedInterfaceListBeginIndex = 32,
 					NumberOfSupportedInterface = 2,
 					ParentCCWTemplateIndex = -1,
@@ -19799,7 +19799,7 @@ namespace __Interop
 				}, 
 				// Index = 31
 				new global::System.Runtime.InteropServices.CCWTemplateData() {
-					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.MusicPage+MusicPage_obj29_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
+					FixupClassType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("One.Pages.MusicPage+MusicPage_obj36_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
 					SupportedInterfaceListBeginIndex = 32,
 					NumberOfSupportedInterface = 2,
 					ParentCCWTemplateIndex = -1,
@@ -30883,15 +30883,15 @@ namespace __Interop
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(480, "One.Pages.IndexPage+IndexPage_obj33_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(504, "One.Pages.MoviePage, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(528, "One.Pages.MoviePage+MoviePage_obj1_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
-			[global::System.Runtime.CompilerServices.TypeHandleFixup(552, "One.Pages.MoviePage+MoviePage_obj26_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
-			[global::System.Runtime.CompilerServices.TypeHandleFixup(576, "One.Pages.MoviePage+MoviePage_obj31_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
+			[global::System.Runtime.CompilerServices.TypeHandleFixup(552, "One.Pages.MoviePage+MoviePage_obj30_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
+			[global::System.Runtime.CompilerServices.TypeHandleFixup(576, "One.Pages.MoviePage+MoviePage_obj35_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(600, "One.Pages.ArticlePage, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(624, "One.Pages.ArticlePage+ArticlePage_obj1_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
-			[global::System.Runtime.CompilerServices.TypeHandleFixup(648, "One.Pages.ArticlePage+ArticlePage_obj26_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
+			[global::System.Runtime.CompilerServices.TypeHandleFixup(648, "One.Pages.ArticlePage+ArticlePage_obj30_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(672, "One.Pages.MusicPage, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(696, "One.Pages.MusicPage+MusicPage_obj1_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
-			[global::System.Runtime.CompilerServices.TypeHandleFixup(720, "One.Pages.MusicPage+MusicPage_obj10_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
-			[global::System.Runtime.CompilerServices.TypeHandleFixup(744, "One.Pages.MusicPage+MusicPage_obj29_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
+			[global::System.Runtime.CompilerServices.TypeHandleFixup(720, "One.Pages.MusicPage+MusicPage_obj16_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
+			[global::System.Runtime.CompilerServices.TypeHandleFixup(744, "One.Pages.MusicPage+MusicPage_obj36_Bindings, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(768, "One.Pages.SettingPage, One, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(792, "System.Array, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
 			[global::System.Runtime.CompilerServices.TypeHandleFixup(816, "System.Diagnostics.Tracing.EventSource, System.Diagnostics.Tracing, Version=4.0.20.0, Culture=neutral, PublicKey" +

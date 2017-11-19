@@ -47,6 +47,14 @@ namespace One.Pages
 
         bool isPlayMusic = true;
 
+        double detialPagelastPosition = 0;
+        bool detialPageBackTopButtonIn = false;
+        bool detialPageBackTopButtonOut = false;
+
+        double listPagelastPosition = 0;
+        bool listPageBackTopButtonIn = false;
+        bool listPageBackTopButtonOut = false;
+
 
         public MusicPage()
         {
@@ -223,6 +231,75 @@ namespace One.Pages
             isPlayMusic = !isPlayMusic;
         }
 
+        
+        private void ItemDetailsPannelScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+            #region 测试scrollviewer的各种高度
+            //MaxHeightText.Text = ItemDetailsPannelScrollViewer.MaxHeight.ToString();
+            //VerticalOffsetText.Text = ItemDetailsPannelScrollViewer.VerticalOffset.ToString();
+            //HeightText.Text = ItemDetailsPannelScrollViewer.Height.ToString();
+            //MinHeightText.Text = ItemDetailsPannelScrollViewer.MinHeight.ToString();
+            //ActualHeightText.Text = ItemDetailsPannelScrollViewer.ActualHeight.ToString();
+            //ExtentHeightText.Text = ItemDetailsPannelScrollViewer.ExtentHeight.ToString();
+            //ScrollableHeightText.Text = ItemDetailsPannelScrollViewer.ScrollableHeight.ToString();
+            //ViewportHeightText.Text = ItemDetailsPannelScrollViewer.ViewportHeight.ToString();
+            #endregion
 
+            ScrollViewer scrollViewer = sender as ScrollViewer;
+
+            if ((scrollViewer.VerticalOffset>scrollViewer.ViewportHeight)&& detialPageBackTopButtonIn==false&& scrollViewer.VerticalOffset- detialPagelastPosition >= 10)  //
+            {
+                detialPageBackTopButtonIn = true;
+                DetailPageBackTopButtonIn.Begin();
+
+                detialPageBackTopButtonOut = false;
+
+            }
+            else if(scrollViewer.VerticalOffset< scrollViewer.ViewportHeight&& detialPageBackTopButtonOut== false&&scrollViewer.VerticalOffset - detialPagelastPosition <= -10)  //当滚动条滚动到 呈现的高度的位置时隐藏
+            {
+                detialPageBackTopButtonOut = true;
+                DetailPageBackTopButtonOut.Begin();
+
+                detialPageBackTopButtonIn = false;
+            }
+
+            detialPagelastPosition = scrollViewer.VerticalOffset;
+
+
+        }
+
+        private void DetailPageBackTopButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItemDetailsPannelScrollViewer.ChangeView(null, 0, null);
+        }
+
+
+        private void ListPageBackTopButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItemListContainerScrollViewer.ChangeView(null,0,null);
+        }
+
+        private void ItemListContainerScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+            ScrollViewer scrollViewer = sender as ScrollViewer;
+
+            if ((scrollViewer.VerticalOffset > scrollViewer.ViewportHeight) && listPageBackTopButtonIn == false && scrollViewer.VerticalOffset - listPagelastPosition >= 10)  //
+            {
+                listPageBackTopButtonIn = true;
+                ListPageBackTopButtonIn.Begin();
+
+                listPageBackTopButtonOut = false;
+
+            }
+            else if (scrollViewer.VerticalOffset < scrollViewer.ViewportHeight && listPageBackTopButtonOut == false && scrollViewer.VerticalOffset - listPagelastPosition <= -10)  //当滚动条滚动到 呈现的高度的位置时隐藏
+            {
+                listPageBackTopButtonOut = true;
+                ListPageBackTopButtonOut.Begin();
+
+                listPageBackTopButtonIn = false;
+            }
+
+            listPagelastPosition = scrollViewer.VerticalOffset;
+        }
     }
 }

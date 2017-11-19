@@ -64009,10 +64009,10 @@ namespace Windows.UI.Xaml.Controls
 		}
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ExtentHeight")]
-		public double get_ExtentHeight()
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ScrollableHeight")]
+		public double get_ScrollableHeight()
 		{
-			double __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_ExtentHeight(this);
+			double __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_ScrollableHeight(this);
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			return __retVal;
 		}
@@ -67652,8 +67652,8 @@ namespace Windows.UI.Xaml.Controls
 		double get_ViewportHeight();
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ExtentHeight")]
-		double get_ExtentHeight();
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ScrollableHeight")]
+		double get_ScrollableHeight();
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanged")]
