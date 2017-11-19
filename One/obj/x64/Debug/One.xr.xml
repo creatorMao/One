@@ -389,6 +389,7 @@
       <RootProperty Name="AudioCategory" />
       <RootProperty Name="AutoPlay" />
       <RootProperty Name="Source" />
+      <RootProperty Name="Volume" />
       <RootEvent Name="MediaEnded" />
       <RootEvent Name="MediaOpened" />
     </RootType>

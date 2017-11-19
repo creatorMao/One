@@ -407,6 +407,7 @@
                                           Source="../audio/123.mp3"
                                           MediaEnded="ArticleInfo_Media_MediaEnded"
                                           MediaOpened="ArticleInfo_Media_MediaOpened"
+                                          Volume="0.3"
                                           >
 
                             </MediaElement>

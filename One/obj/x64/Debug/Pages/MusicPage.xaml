@@ -420,6 +420,7 @@
                                       AudioCategory="Media"
                                       Source="../Assets/audio/music_bgm.flac"
                                       AutoPlay="False"
+                                      Volume="0.3"
                                       ></MediaElement>
                     </Grid>
 
