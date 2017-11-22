@@ -9,6 +9,8 @@ using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Globalization;
+using Windows.UI;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -19,11 +21,13 @@ using Windows.UI.Xaml.Navigation;
 
 namespace One
 {
+
     /// <summary>
     /// 提供特定于应用程序的行为，以补充默认的应用程序类。
     /// </summary>
     sealed partial class App : Application
     {
+
         /// <summary>
         /// 初始化单一实例应用程序对象。这是执行的创作代码的第一行，
         /// 已执行，逻辑上等同于 main() 或 WinMain()。
@@ -63,6 +67,7 @@ namespace One
 
             Frame rootFrame = Window.Current.Content as Frame;
 
+
             // 不要在窗口已包含内容时重复应用程序初始化，
             // 只需确保窗口处于活动状态
             if (rootFrame == null)
@@ -92,8 +97,12 @@ namespace One
                 }
                 // 确保当前窗口处于活动状态
                 Window.Current.Activate();
+
+                
+
             }
         }
+       
 
         /// <summary>
         /// 导航到特定页失败时调用

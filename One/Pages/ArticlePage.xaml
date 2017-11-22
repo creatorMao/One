@@ -139,7 +139,8 @@
     
 
 
-    <Grid Background="White">
+    <Grid Background="White"
+          SizeChanged="Grid_SizeChanged">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -285,7 +286,7 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-
+                    
                     <Grid Grid.Row="0">
                         <Image Name="Article_Detail_Image"
                                Stretch="UniformToFill"
@@ -463,6 +464,7 @@
                           Glyph="&#xE110;" 
                           Foreground="White"/>
             </Button>
+
 
 
         </Grid>

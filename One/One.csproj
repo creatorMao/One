@@ -102,6 +102,7 @@
     <Compile Include="Common\AppSettings.cs" />
     <Compile Include="Common\SerializeHelper.cs" />
     <Compile Include="Common\TileManager.cs" />
+    <Compile Include="Common\TitleBarHelper.cs" />
     <Compile Include="Converter\ColorConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -77,6 +78,7 @@ namespace One.Pages
             
 
             Article_Detail.Visibility = Visibility.Visible;
+            JudgeIsLargeWidth();
 
             var clickedItem = e.ClickedItem as ContentList;
 
@@ -101,6 +103,45 @@ namespace One.Pages
 
         }
 
+
+        public void JudgeIsLargeWidth()
+        {
+            this.Width = Window.Current.Bounds.Width;
+            if (Width < 1000)
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(false);
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+                SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
+            }
+            else
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(true);
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            }
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            this.Width = Window.Current.Bounds.Width;
+            if (Width < 1000&& Article_Detail.Visibility==Visibility.Visible)
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(false);
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+                SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
+            }
+            else
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(true);
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            }
+        }
+
+        private void BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            Article_Detail.Visibility = Visibility.Collapsed;
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            TitleBarHelper.ShowOrHideHamburgerButton(true);
+        }
 
         private async void PrePare(string item_id)
         {
@@ -259,5 +300,7 @@ namespace One.Pages
         {
             ItemListContainerScrollViewer.ChangeView(null,0,null);
         }
+
+       
     }
 }

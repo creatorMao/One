@@ -50,14 +50,13 @@ namespace One
 
         public MainPage()
         {
+            TitleBarHelper.CustomTitileBar();
+            TitleBarHelper.SetTitleBarButtonStyleByColor(Colors.Black);
+
             this.InitializeComponent();
-            CustomTitileBar();
 
-
-            SetTitleBar();
 
             JudgeIsAlreadySeted();
-
 
             
             if (AppSettings.GetSetting("Language") == null)
@@ -70,17 +69,9 @@ namespace One
             }
             
 
-
-
             PrepareData();
 
-            
-
-
-            
-
-
-
+           
         }
 
 
@@ -89,55 +80,6 @@ namespace One
             Tip tip = new Tip();
             tip.ShowTip();
         }
-
-
-
-        /// <summary>
-        /// 自定义标题栏
-        /// </summary>
-        public void CustomTitileBar()
-        {
-            
-            var titleBar = CoreApplication.GetCurrentView().TitleBar;
-            titleBar.ExtendViewIntoTitleBar = true;
-            
-        }
-
-        //三个按键样式设置
-        public void SetTitleBar()
-        {
-            //获得当前视图
-            var view = ApplicationView.GetForCurrentView();
-
-
-            //active 当前窗口
-            view.TitleBar.BackgroundColor = Colors.Transparent;
-            view.TitleBar.ForegroundColor = Colors.Black;
-
-            //inactive 不是当前窗口，我觉得不常用
-            view.TitleBar.InactiveBackgroundColor = Colors.Transparent;
-            view.TitleBar.InactiveForegroundColor = Colors.Black;
-
-            //button
-
-            //初始
-            view.TitleBar.ButtonBackgroundColor = Colors.Transparent;
-            view.TitleBar.ButtonForegroundColor = Colors.White;
-
-            //悬浮
-            view.TitleBar.ButtonHoverBackgroundColor = Colors.DarkGray;
-            view.TitleBar.ButtonHoverForegroundColor = Colors.White;
-
-            //按下
-            view.TitleBar.ButtonPressedBackgroundColor = Colors.DarkGray;
-            view.TitleBar.ButtonPressedForegroundColor = Colors.White;
-
-            //inactive 不是当前窗口，我觉得不常用
-            view.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
-            view.TitleBar.ButtonInactiveForegroundColor = Colors.White;
-
-        }
-
 
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
@@ -159,31 +101,37 @@ namespace One
                 {
                     case "一个":
                     case "ONE":
+                        TitleBarHelper.SetTitleBarButtonStyleByColor(Colors.Black);
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, _photoMonthList);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "文章":
                     case "Article":
+                        TitleBarHelper.SetTitleBarButtonStyleByColor(Colors.Black);
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "音乐":
                     case "Music":
+                        TitleBarHelper.SetTitleBarButtonStyleByColor(Colors.Black);
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "电影":
                     case "Movie":
+                        TitleBarHelper.SetTitleBarButtonStyleByColor(Colors.Black);
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage, onelistResultList);
-                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
+                        HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.Black);
                         break;
                     case "关于":
                     case "About":
+                        TitleBarHelper.SetTitleBarButtonStyleByColor(Colors.White);
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
                         break;
                     case "设置":
                     case "Setting":
+                        TitleBarHelper.SetTitleBarButtonStyleByColor(Colors.White);
                         RootFrame.Navigate(currentNavMenuItem.NavigatePage);
                         HamburgerButtonFontIcon.Foreground = new SolidColorBrush(Colors.White);
                         break;
@@ -361,6 +309,19 @@ namespace One
             TileManager tileManager = new TileManager();
             var content=tileManager.SetContent(_photoMonthList[0].HpImgOriginalUrl, _photoMonthList[0].HpContent, _photoMonthList[0].ImageAuthors);
             tileManager.SendATile(content);
+        }
+
+        public void ShowOrHideHamburgerButton(bool isShow)
+        {
+            if (isShow==true)
+            {
+                this.HamburgerButton.Visibility = Visibility.Visible;
+            }
+            else if(isShow == false)
+            {
+                this.HamburgerButton.Visibility = Visibility.Collapsed;
+            }
+            
         }
     }
 }

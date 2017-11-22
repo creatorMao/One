@@ -62,79 +62,82 @@
                    Grid.ColumnSpan="2">
             <SplitView.Pane>
                 <!--侧边栏-->
-                <Grid Background="White">
+                <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                    <Grid Background="White">
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="200"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
 
-                    <!--侧边栏顶部-->
-                    <Grid Grid.Row="0"
+                        <!--侧边栏顶部-->
+                        <Grid Grid.Row="0"
                           Background="#e0e0e0">
-                        <Image Source="Assets/images/header.jpg">
-                            
-                        </Image>
-                    </Grid>
+                            <Image Source="Assets/images/header.jpg">
 
-                    <!--侧边栏中间部分显示时间-->
-                    <Grid Grid.Row="1">
-                        <StackPanel Margin="25,0,0,5">
-                            <TextBlock Name="TodayDate"
+                            </Image>
+                        </Grid>
+
+                        <!--侧边栏中间部分显示时间-->
+                        <Grid Grid.Row="1">
+                            <StackPanel Margin="25,0,0,5">
+                                <TextBlock Name="TodayDate"
                                        Margin="0,5,0,5"
                                        Foreground="#757575"
                                        FontSize="17"/>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Name="PlaceName"
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Name="PlaceName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
-                                <TextBlock Name="AirName"
+                                    <TextBlock Name="AirName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
-                                <TextBlock Name="TempName"
+                                    <TextBlock Name="TempName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Grid>
+                        </Grid>
 
-                    <!--侧边栏选择项-->
-                    <Grid Grid.Row="2">
-                        <ListView ItemContainerStyle="{StaticResource MenuItemContainer}"
+                        <!--侧边栏选择项-->
+                        <Grid Grid.Row="2">
+                            <ListView ItemContainerStyle="{StaticResource MenuItemContainer}"
                                   ItemsSource="{x:Bind navMenuList}"
                                   ItemClick="ListView_ItemClick"
                                   IsItemClickEnabled="True"
                                   Name="NavListview">
-                            <ListView.ItemTemplate>
-                                <DataTemplate x:DataType="model:NavMenuItem">
-                                    <StackPanel Orientation="Horizontal"
+                                <ListView.ItemTemplate>
+                                    <DataTemplate x:DataType="model:NavMenuItem">
+                                        <StackPanel Orientation="Horizontal"
                                                 Padding="20,0,0,0"
                                                 >
-                                        <Image Source="{x:Bind IconAddress,Mode=TwoWay}"
+                                            <Image Source="{x:Bind IconAddress,Mode=TwoWay}"
                                                Width="20"
                                                Height="20"
                                                />
-                                        <TextBlock Text="{x:Bind Title}"
+                                            <TextBlock Text="{x:Bind Title}"
                                                    Margin="27,-2,0,0"
                                                    Foreground="{x:Bind ForegroundColor,Mode=TwoWay}"
                                                    VerticalAlignment="Center"
                                                    />
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </Grid>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
 
-                </Grid>
+                    </Grid>
+                </ScrollViewer>
+                
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid Name="RootGrid">
                     <Frame Name="RootFrame"
-                           Background="Gray"></Frame>
+                           Background="Transparent"></Frame>
                 </Grid>
             </SplitView.Content>
         </SplitView>
