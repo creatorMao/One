@@ -59,6 +59,9 @@ namespace One.Pages
         public MusicPage()
         {
             this.InitializeComponent();
+
+            Window.Current.SetTitleBar(TitleBarBlankBlock);
+
             musicList = new ObservableCollection<Music_Datum>();
             MusicArticleCommentList = new ObservableCollection<MusicArticleComment_Datum>();
            
@@ -88,6 +91,11 @@ namespace One.Pages
             //因为毛玻璃的代码里 不能快速的点击
             if (lastclickItem != clickItem)
             {
+                ItemDetailsPannel.Visibility = Visibility.Visible;
+                JudeCurrentWidth();
+
+
+
                 //点击进入音乐故事页面
                 string api = String.Format("http://v3.wufazhuce.com:8000/api/music/detail/{0}?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android", id);
                 string jsonString = await SerializeHelper.GetJsonStringFromWebApi(api);
@@ -122,12 +130,18 @@ namespace One.Pages
 
                 //点击每个music item 将播放器的设置为默认
                 MusicPlayer.Stop();
+                MachineIconOut.Begin();
+                isPlayMusic = true;
+                PlayMusicButtonIcon.Source = new BitmapImage(new Uri("ms-appx:///Assets/icon/play.png"));
 
+                lastclickItem = clickItem;
+
+               
 
             }
 
-            lastclickItem = clickItem;
-            ItemDetailsPannel.Visibility = Visibility.Visible;
+            
+           
 
         }
 
@@ -300,6 +314,40 @@ namespace One.Pages
             }
 
             listPagelastPosition = scrollViewer.VerticalOffset;
+        }
+
+
+        private void CloseDetialPage(object sender, RoutedEventArgs e)
+        {
+            TitleBarHelper.ShowOrHideHamburgerButton(true);
+            TitleBarBackButton.Visibility = Visibility.Collapsed;
+            ItemDetailsPannel.Visibility = Visibility.Collapsed;
+
+            ItemDetailsPannelScrollViewer.ChangeView(null, 0, null);
+
+            isPlayMusic = true;
+            MusicPlayer.Stop();
+
+        }
+
+        private void JudeCurrentWidth()
+        {
+            var width = Window.Current.Bounds.Width;
+            if (width <= 1000 && ItemDetailsPannel.Visibility == Visibility.Visible)
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(false);
+                TitleBarBackButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(true);
+                TitleBarBackButton.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            JudeCurrentWidth();
         }
     }
 }

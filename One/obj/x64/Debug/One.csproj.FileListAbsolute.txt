@@ -274,3 +274,8 @@ D:\study\uwpProjects\One\One\obj\x64\Debug\Pages\MusicPage.g.i.cs
 D:\study\uwpProjects\One\One\obj\x64\Debug\Pages\MusicPage.g.cs
 D:\study\uwpProjects\One\One\obj\x64\Debug\Pages\MusicPage.xaml
 D:\study\uwpProjects\One\One\obj\x64\Debug\Pages\MusicPage.xbf
+D:\study\uwpProjects\One\One\obj\x64\Debug\UC\BackButton.g.i.cs
+D:\study\uwpProjects\One\One\obj\x64\Debug\UC\BackButton.g.cs
+D:\study\uwpProjects\One\One\obj\x64\Debug\UC\BackButton.xaml
+D:\study\uwpProjects\One\One\obj\x64\Debug\UC\BackButton.xbf
+D:\study\uwpProjects\One\One\bin\x64\Debug\UC\BackButton.xbf

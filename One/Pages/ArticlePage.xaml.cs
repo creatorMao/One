@@ -1,10 +1,12 @@
 ﻿using One.Common;
 using One.Model;
+using One.UC;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
@@ -54,8 +56,12 @@ namespace One.Pages
 
             timer = new DispatcherTimer();
             timer.Interval =TimeSpan.FromSeconds(1);
-            
+
+            Window.Current.SetTitleBar(TitleBarBlankBlock);
+
         }
+
+
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -75,10 +81,10 @@ namespace One.Pages
 
         private void StoryListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
 
             Article_Detail.Visibility = Visibility.Visible;
-            JudgeIsLargeWidth();
+
+            JudeCurrentWidth();
 
             var clickedItem = e.ClickedItem as ContentList;
 
@@ -103,45 +109,6 @@ namespace One.Pages
 
         }
 
-
-        public void JudgeIsLargeWidth()
-        {
-            this.Width = Window.Current.Bounds.Width;
-            if (Width < 1000)
-            {
-                TitleBarHelper.ShowOrHideHamburgerButton(false);
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-                SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
-            }
-            else
-            {
-                TitleBarHelper.ShowOrHideHamburgerButton(true);
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
-            }
-        }
-
-        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            this.Width = Window.Current.Bounds.Width;
-            if (Width < 1000&& Article_Detail.Visibility==Visibility.Visible)
-            {
-                TitleBarHelper.ShowOrHideHamburgerButton(false);
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-                SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
-            }
-            else
-            {
-                TitleBarHelper.ShowOrHideHamburgerButton(true);
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
-            }
-        }
-
-        private void BackRequested(object sender, BackRequestedEventArgs e)
-        {
-            Article_Detail.Visibility = Visibility.Collapsed;
-            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
-            TitleBarHelper.ShowOrHideHamburgerButton(true);
-        }
 
         private async void PrePare(string item_id)
         {
@@ -301,6 +268,38 @@ namespace One.Pages
             ItemListContainerScrollViewer.ChangeView(null,0,null);
         }
 
-       
+
+        private void CloseDetialPage(object sender, RoutedEventArgs e)
+        {
+            TitleBarHelper.ShowOrHideHamburgerButton(true);
+            TitleBarBackButton.Visibility = Visibility.Collapsed;
+            Article_Detail.Visibility = Visibility.Collapsed;
+
+            Article_DetailScrollViewer.ChangeView(null,0,null);
+
+            ArticleInfo_Media.Stop();
+            IsStop = false;
+            timer.Stop();
+        }
+
+        private void JudeCurrentWidth()
+        {
+            var width = Window.Current.Bounds.Width;
+            if (width <= 1000 && Article_Detail.Visibility == Visibility.Visible)
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(false);
+                TitleBarBackButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(true);
+                TitleBarBackButton.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            JudeCurrentWidth();
+        }
     }
 }

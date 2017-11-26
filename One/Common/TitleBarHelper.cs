@@ -26,6 +26,8 @@ namespace One.Common
 
         }
 
+        
+
         //三个按键样式设置
         public static void SetTitleBarButtonStyleByColor(Color color)
         {

@@ -140,12 +140,20 @@
 
 
     <Grid Background="White"
-          SizeChanged="Grid_SizeChanged">
+          SizeChanged="Grid_SizeChanged"
+          >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
+
+       
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -186,7 +194,12 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <Grid Name="ArtcleContainer">
+       
+
+        <Grid Name="ArtcleContainer"
+              Grid.Row="0"
+              Grid.RowSpan="2"
+              >
             
             
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
@@ -263,6 +276,8 @@
 
         <Grid Name="DetailPageBackground"
               Background="White"
+              Grid.Row="0"
+              Grid.RowSpan="2"
               >
             <Image Source="../Assets/images/oneisall.png"
                     Width="250"
@@ -273,7 +288,9 @@
 
         <Grid Name="Article_Detail"
               Background="White"
-              Visibility="Collapsed">
+              Visibility="Collapsed"
+              Grid.Row="0"
+              Grid.RowSpan="2">
 
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="Article_DetailScrollViewer"
@@ -286,7 +303,7 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    
+
                     <Grid Grid.Row="0">
                         <Image Name="Article_Detail_Image"
                                Stretch="UniformToFill"
@@ -399,7 +416,7 @@
                                        Foreground="#333333"></TextBlock>
 
 
-                            
+
 
                             <!--如果不先加source，就没有声音 还奇怪的bug-->
                             <MediaElement Name="ArticleInfo_Media"
@@ -430,8 +447,8 @@
 
                         </TextBlock>
                     </Grid>
-                    
-                    
+
+
                 </Grid>
             </ScrollViewer>
 
@@ -469,6 +486,44 @@
 
         </Grid>
 
+        <Grid Name="TitleBar"
+              Grid.Row="0"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0"
+                  Name="TitleBarBackButton"
+                  Visibility="Collapsed">
+                <Button Style="{StaticResource ButtonCommonStyle}"
+                        Width="48"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                        Click="CloseDetialPage"
+                        >
+                    <FontIcon FontFamily="Segoe MDL2 Assets" 
+                              HorizontalAlignment="Left"
+                              Glyph="&#xE72B;" 
+                              Foreground="#333333"
+                              FontWeight="Light"
+                              FontSize="14"/>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="1"
+                  Background="Transparent"
+                  Name="TitleBarBlankBlock">
+                
+            </Grid>
+            
+        </Grid>
 
     </Grid>
+    
+    
+    
 </Page>

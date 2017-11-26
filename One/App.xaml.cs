@@ -95,13 +95,16 @@ namespace One
                     // 参数
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
+
+               
+
+
                 // 确保当前窗口处于活动状态
                 Window.Current.Activate();
 
-                
-
             }
         }
+
        
 
         /// <summary>

@@ -76,7 +76,7 @@ namespace One.Pages
         {
             this.InitializeComponent();
 
-            
+            Window.Current.SetTitleBar(TitleBarBlankBlock);
 
 
         }
@@ -97,6 +97,8 @@ namespace One.Pages
         private void MovieListView_ItemClick(object sender, ItemClickEventArgs e)
         {
             MovieDetail.Visibility = Visibility.Visible;
+
+            JudeCurrentWidth();
 
             clickedItem = e.ClickedItem as ContentList;
 
@@ -303,6 +305,36 @@ namespace One.Pages
         private void ListPageBackTopButton_Click(object sender, RoutedEventArgs e)
         {
             ItemListContainerScrollViewer.ChangeView(null,0,null);
+        }
+
+
+        private void CloseDetialPage(object sender, RoutedEventArgs e)
+        {
+            TitleBarHelper.ShowOrHideHamburgerButton(true);
+            TitleBarBackButton.Visibility = Visibility.Collapsed;
+            MovieDetail.Visibility = Visibility.Collapsed;
+
+            MovieDetailScrollViewer.ChangeView(null,0,null);
+        }
+
+        private void JudeCurrentWidth()
+        {
+            var width = Window.Current.Bounds.Width;
+            if (width <= 1000 && MovieDetail.Visibility == Visibility.Visible)
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(false);
+                TitleBarBackButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(true);
+                TitleBarBackButton.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            JudeCurrentWidth();
         }
     }
 }

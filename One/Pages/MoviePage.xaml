@@ -106,7 +106,13 @@
     </Page.Resources>
 
 
-    <Grid Name="MoviePageRootGrid">
+    <Grid Name="MoviePageRootGrid"
+          SizeChanged="Grid_SizeChanged">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -153,7 +159,9 @@
         </VisualStateManager.VisualStateGroups>
 
 
-        <Grid Name="MovieListViewContainer">
+        <Grid Name="MovieListViewContainer"
+              Grid.Row="0"
+              Grid.RowSpan="2">
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="ItemListContainerScrollViewer"
                           ViewChanged="ItemListContainerScrollViewer_ViewChanged">
@@ -209,6 +217,8 @@
 
         <Grid Name="DetailPageBackground"
               Background="White"
+              Grid.Row="0"
+              Grid.RowSpan="2"
               >
             <Image Source="../Assets/images/oneisall.png"
                     Width="250"
@@ -218,7 +228,9 @@
 
         <Grid Name="MovieDetail"
               Background="White"
-              Visibility="Collapsed">
+              Visibility="Collapsed"
+              Grid.Row="0"
+              Grid.RowSpan="2">
 
             <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="MovieDetailScrollViewer"
@@ -473,6 +485,42 @@
 
                     </Grid>
                 </ScrollViewer>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Name="TitleBar"
+              Grid.Row="0"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0"
+                  Name="TitleBarBackButton"
+                  Visibility="Collapsed">
+                <Button Style="{StaticResource ButtonCommonStyle}"
+                        Width="48"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                        Click="CloseDetialPage"
+                        >
+                    <FontIcon FontFamily="Segoe MDL2 Assets" 
+                              HorizontalAlignment="Left"
+                              Glyph="&#xE72B;" 
+                              Foreground="#333333"
+                              FontWeight="Light"
+                              FontSize="14"/>
+                </Button>
+            </Grid>
+
+            <Grid Grid.Column="1"
+                  Background="Transparent"
+                  Name="TitleBarBlankBlock">
 
             </Grid>
 

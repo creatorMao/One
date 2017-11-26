@@ -49,6 +49,8 @@ namespace One.Pages
         {
             this.InitializeComponent();
 
+            Window.Current.SetTitleBar(TitleBarBlankBlock);
+
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -76,6 +78,8 @@ namespace One.Pages
         {
             ItemDetailsPannel.Visibility = Visibility.Visible;
 
+            JudeCurrentWidth();
+
             photoAlbum_Datum = (PhotoAlbum_Datum)e.ClickedItem;
 
             DetailsImage.Source = new BitmapImage(new Uri(photoAlbum_Datum.HpImgUrl));
@@ -88,10 +92,7 @@ namespace One.Pages
             ContentContainer.Background = new SolidColorBrush(color);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ItemDetailsPannel.Visibility = Visibility.Collapsed;
-        }
+        
 
         /// <summary>
         /// 点击保存图片
@@ -285,6 +286,34 @@ namespace One.Pages
         {
             //放回顶部
             ItemListContainerScrollViewer.ChangeView(null, 0, null);
+        }
+
+
+        private void CloseDetialPage(object sender, RoutedEventArgs e)
+        {
+            TitleBarHelper.ShowOrHideHamburgerButton(true);
+            TitleBarBackButton.Visibility = Visibility.Collapsed;
+            ItemDetailsPannel.Visibility = Visibility.Collapsed;
+        }
+
+        private void JudeCurrentWidth()
+        {
+            var width = Window.Current.Bounds.Width;
+            if (width <= 1000 && ItemDetailsPannel.Visibility == Visibility.Visible)
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(false);
+                TitleBarBackButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                TitleBarHelper.ShowOrHideHamburgerButton(true);
+                TitleBarBackButton.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            JudeCurrentWidth();
         }
     }
 }

@@ -48,7 +48,9 @@
 
         <Grid Grid.Row="0"
               Grid.Column="0"
-              Grid.ColumnSpan="2">
+              Grid.ColumnSpan="2"
+              >
+            
         </Grid>
 
         <SplitView x:ConnectionId='2' Name="RootSplitView"
