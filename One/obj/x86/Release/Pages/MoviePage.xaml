@@ -106,7 +106,13 @@
     </Page.Resources>
 
 
-    <Grid x:ConnectionId='6' Name="MoviePageRootGrid">
+    <Grid x:ConnectionId='6' Name="MoviePageRootGrid"
+                                        >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -153,11 +159,13 @@
         </VisualStateManager.VisualStateGroups>
 
 
-        <Grid x:ConnectionId='9' Name="MovieListViewContainer">
-            <ScrollViewer x:ConnectionId='32' Style="{StaticResource ScrollViewerCommonStyle}"
+        <Grid x:ConnectionId='9' Name="MovieListViewContainer"
+              Grid.Row="0"
+              Grid.RowSpan="2">
+            <ScrollViewer x:ConnectionId='36' Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="ItemListContainerScrollViewer"
                                                                                  >
-                <ListView x:ConnectionId='34' Name="MovieListView"
+                <ListView x:ConnectionId='38' Name="MovieListView"
                                                             
                           ItemContainerStyle="{StaticResource ListViewItemContainerCommonStyle}"
                           Visibility="Visible"
@@ -166,11 +174,11 @@
                           >
                     <ListView.ItemTemplate>
                         <DataTemplate                               >
-                            <Grid x:ConnectionId='35' MinWidth="400"
+                            <Grid x:ConnectionId='39' MinWidth="400"
                                   Height="300">
-                                <Image x:ConnectionId='36'                          
+                                <Image x:ConnectionId='40'                          
                                        Stretch="UniformToFill"></Image>
-                                <TextBlock x:ConnectionId='37'                         
+                                <TextBlock x:ConnectionId='41'                         
                                            HorizontalAlignment="Left"
                                            VerticalAlignment="Bottom"
                                            Margin="30"
@@ -183,7 +191,7 @@
             </ScrollViewer>
 
             <!--返回顶部按键-->
-            <Button x:ConnectionId='33' Name="ListPageBackTopButton"
+            <Button x:ConnectionId='37' Name="ListPageBackTopButton"
                                                        
                     Style="{StaticResource ButtonEllipseStyle}"
                     VerticalAlignment="Bottom"
@@ -209,6 +217,8 @@
 
         <Grid x:ConnectionId='10' Name="DetailPageBackground"
               Background="White"
+              Grid.Row="0"
+              Grid.RowSpan="2"
               >
             <Image Source="../Assets/images/oneisall.png"
                     Width="250"
@@ -218,9 +228,11 @@
 
         <Grid x:ConnectionId='11' Name="MovieDetail"
               Background="White"
-              Visibility="Collapsed">
+              Visibility="Collapsed"
+              Grid.Row="0"
+              Grid.RowSpan="2">
 
-            <ScrollViewer x:ConnectionId='12' Style="{StaticResource ScrollViewerCommonStyle}"
+            <ScrollViewer x:ConnectionId='16' Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="MovieDetailScrollViewer"
                                                                            
                          >
@@ -231,26 +243,26 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Grid x:ConnectionId='21' Grid.Row="0"
+                    <Grid x:ConnectionId='25' Grid.Row="0"
                                                               
                                                             >
 
 
-                        <FlipView x:ConnectionId='27' Name="MovieInfoImageFlipView"
+                        <FlipView x:ConnectionId='31' Name="MovieInfoImageFlipView"
                                   IsDoubleTapEnabled="False"
                                                                                             
                                   >
                             <FlipView.ItemTemplate>
                                 <DataTemplate                         >
-                                    <Grid x:ConnectionId='30'>
-                                        <Image x:ConnectionId='31' Stretch="UniformToFill"
+                                    <Grid x:ConnectionId='34'>
+                                        <Image x:ConnectionId='35' Stretch="UniformToFill"
                                                                          ></Image>
                                     </Grid>
                                 </DataTemplate>
                             </FlipView.ItemTemplate>
                         </FlipView>
 
-                        <ListView x:ConnectionId='28' x:Name="FlipViewlistview"
+                        <ListView x:ConnectionId='32' x:Name="FlipViewlistview"
                                   Margin="0,0,0,8"
                                   HorizontalAlignment="Center"
                                   VerticalAlignment="Bottom"
@@ -276,7 +288,7 @@
 
                         </ListView>
 
-                        <Button x:ConnectionId='29' Style="{StaticResource ButtonCommonStyle}"
+                        <Button x:ConnectionId='33' Style="{StaticResource ButtonCommonStyle}"
                                 Width="50"
                                 Height="50"
                                 VerticalAlignment="Bottom"
@@ -304,7 +316,7 @@
 
                         <Grid Grid.Row="0"
                               Padding="30,30,30,15">
-                            <TextBlock x:ConnectionId='26' Name="MovieStory_Title"
+                            <TextBlock x:ConnectionId='30' Name="MovieStory_Title"
                                        FontSize="28"
                                        Foreground="#333333"
                                        IsTextSelectionEnabled="True"
@@ -314,11 +326,11 @@
 
                         <Grid Grid.Row="1"
                               Padding="30,0,30,0">
-                            <TextBlock x:ConnectionId='24' Name="MovieStory_Author"
+                            <TextBlock x:ConnectionId='28' Name="MovieStory_Author"
                                        VerticalAlignment="Center"
                                        Foreground="#333333"
                                        IsTextSelectionEnabled="True"></TextBlock>
-                            <Button x:ConnectionId='25' Style="{StaticResource ButtonCommonStyle}"
+                            <Button x:ConnectionId='29' Style="{StaticResource ButtonCommonStyle}"
                                     HorizontalAlignment="Right"
                                                                    >
                                 <Image Width="28"
@@ -330,7 +342,7 @@
 
                         <Grid Grid.Row="2"
                               Padding="30,0,30,0">
-                            <TextBlock x:ConnectionId='23' Name="MovieStory_Content"
+                            <TextBlock x:ConnectionId='27' Name="MovieStory_Content"
                                        TextWrapping="WrapWholeWords"
                                    LineHeight="45"
                                    FontSize="16"
@@ -344,7 +356,7 @@
 
                     <Grid Grid.Row="0"
                   Grid.RowSpan="2">
-                        <ProgressRing x:ConnectionId='22' Name="MovieInfoPageProcessRing"
+                        <ProgressRing x:ConnectionId='26' Name="MovieInfoPageProcessRing"
                               Width="30"
                               Height="30">
 
@@ -355,7 +367,7 @@
             </ScrollViewer>
 
             <!--返回顶部按键-->
-            <Button x:ConnectionId='13' Name="DetailPageBackTopButton"
+            <Button x:ConnectionId='17' Name="DetailPageBackTopButton"
                                                          
                     Style="{StaticResource ButtonEllipseStyle}"
                     VerticalAlignment="Bottom"
@@ -378,7 +390,7 @@
                           Foreground="White"/>
             </Button>
 
-            <Grid x:ConnectionId='14' Name="MovieInfoPage"
+            <Grid x:ConnectionId='18' Name="MovieInfoPage"
                   Visibility="Collapsed"
                   Background="White">
 
@@ -392,7 +404,7 @@
 
                         <Grid Grid.Row="0"
                               Padding="30">
-                            <Button x:ConnectionId='20' Style="{StaticResource ButtonCommonStyle}"
+                            <Button x:ConnectionId='24' Style="{StaticResource ButtonCommonStyle}"
                                     HorizontalAlignment="Right"
                                                                     >
                                 <FontIcon FontFamily="Segoe MDL2 Assets" 
@@ -410,7 +422,7 @@
                             </Grid.RowDefinitions>
 
                             <Grid Grid.Row="0">
-                                <Image x:ConnectionId='19' Width="230"
+                                <Image x:ConnectionId='23' Width="230"
                                        Height="260"
                                        Name="MovieInfo_Image"
                                        Stretch="UniformToFill"
@@ -424,12 +436,12 @@
                                 <StackPanel>
 
 
-                                    <TextBlock x:ConnectionId='17' Name="MovieInfo_Title"
+                                    <TextBlock x:ConnectionId='21' Name="MovieInfo_Title"
                                            HorizontalAlignment="Center"
                                            FontSize="25"
                                            Foreground="#333333"
                                            IsTextSelectionEnabled="True"></TextBlock>
-                                    <TextBlock x:ConnectionId='18' Name="MovieInfo_Forward"
+                                    <TextBlock x:ConnectionId='22' Name="MovieInfo_Forward"
                                            HorizontalAlignment="Center"
                                            Foreground="#333333"
                                            Margin="0,15,0,0"
@@ -440,7 +452,7 @@
 
                             <Grid Grid.Row="2"
                                   Margin="0,20,0,0">
-                                <TextBlock x:ConnectionId='16' Name="MovieInfo_Director"
+                                <TextBlock x:ConnectionId='20' Name="MovieInfo_Director"
                                            HorizontalAlignment="Center"
                                            Foreground="#333333"
                                            TextAlignment="Center"
@@ -457,7 +469,7 @@
                                            Margin="0,30,0,30"
                                            Text="---剧情简介---"
                                            IsTextSelectionEnabled="True"/>
-                                    <TextBlock x:ConnectionId='15' Name="MovieInfo_officialstory"
+                                    <TextBlock x:ConnectionId='19' Name="MovieInfo_officialstory"
                                            HorizontalAlignment="Center"
                                            Foreground="#333333"
                                            TextWrapping="WrapWholeWords"
@@ -473,6 +485,42 @@
 
                     </Grid>
                 </ScrollViewer>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid x:ConnectionId='12' Name="TitleBar"
+              Grid.Row="0"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid x:ConnectionId='13' Grid.Column="0"
+                  Name="TitleBarBackButton"
+                  Visibility="Collapsed">
+                <Button x:ConnectionId='15' Style="{StaticResource ButtonCommonStyle}"
+                        Width="48"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                                               
+                        >
+                    <FontIcon FontFamily="Segoe MDL2 Assets" 
+                              HorizontalAlignment="Left"
+                              Glyph="&#xE72B;" 
+                              Foreground="#333333"
+                              FontWeight="Light"
+                              FontSize="14"/>
+                </Button>
+            </Grid>
+
+            <Grid x:ConnectionId='14' Grid.Column="1"
+                  Background="Transparent"
+                  Name="TitleBarBlankBlock">
 
             </Grid>
 

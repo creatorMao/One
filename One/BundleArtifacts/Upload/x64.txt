@@ -1,7 +1,7 @@
-MainPackage=D:\study\uwpProjects\One\One\bin\x64\Release\Upload\One_1.1.33.0_x64.appx
-SymbolPackage=D:\study\uwpProjects\One\One\bin\x64\Release\Upload\One_1.1.33.0\One_1.1.33.0_x64.appxsym
-ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.33.0_language-en.appx
-ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.33.0_scale-100.appx
-ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.33.0_scale-125.appx
-ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.33.0_scale-150.appx
-ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.33.0_scale-400.appx
+MainPackage=D:\study\uwpProjects\One\One\bin\x64\Release\Upload\One_1.1.38.0_x64.appx
+SymbolPackage=D:\study\uwpProjects\One\One\bin\x64\Release\Upload\One_1.1.38.0\One_1.1.38.0_x64.appxsym
+ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.38.0_language-en.appx
+ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.38.0_scale-100.appx
+ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.38.0_scale-125.appx
+ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.38.0_scale-150.appx
+ResourcePack=D:\study\uwpProjects\One\One\bin\x64\Release\One_1.1.38.0_scale-400.appx

@@ -7,5 +7,6 @@ Pages\MoviePage.xbf
 Pages\MusicPage.xbf
 Pages\SettingPage.xbf
 ResourceDictionary\StyleDictionary.xbf
+UC\BackButton.xbf
 UC\PopupNotice.xbf
 UC\Tip.xbf

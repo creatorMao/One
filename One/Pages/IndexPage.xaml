@@ -309,14 +309,6 @@
                                       Foreground="#264440"
                                       FontSize="26"/>
                             </Button>
-                            <!--<Button Background="Transparent"
-                                Style="{StaticResource ButtonCommonStyle}"
-                                Click="Button_Click">
-                                <FontIcon FontFamily="Segoe MDL2 Assets"
-                                      Glyph="&#xE72B;"
-                                      Foreground="#264440"
-                                      FontSize="26"/>
-                            </Button>-->
                         </StackPanel>
 
                     </Grid>

@@ -55741,10 +55741,11 @@ namespace Windows.UI.Xaml
 	}
 
 	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.IWindow))]
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.IWindow2))]
 	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe sealed class Window : global::System.__ComObject, global::Windows.UI.Xaml.IWindow
+	public unsafe sealed class Window : global::System.__ComObject, global::Windows.UI.Xaml.IWindow, global::Windows.UI.Xaml.IWindow2
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Bounds")]
@@ -55871,6 +55872,16 @@ namespace Windows.UI.Xaml
 		public void Activate()
 		{
 			global::Windows.UI.Xaml.IWindow__Impl.Stubs.Activate(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public void SetTitleBar(global::Windows.UI.Xaml.UIElement value)
+		{
+			global::Windows.UI.Xaml.IWindow2__Impl.Stubs.SetTitleBar(
+								this, 
+								value
+							);
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 		}
 
@@ -57277,6 +57288,14 @@ namespace Windows.UI.Xaml
 	public unsafe delegate void WindowVisibilityChangedEventHandler(
 				object sender, 
 				global::Windows.UI.Core.VisibilityChangedEventArgs e);
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IWindow2
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void SetTitleBar(global::Windows.UI.Xaml.UIElement value);
+	}
 
 	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -62399,6 +62418,26 @@ namespace Windows.UI.Xaml.Controls
 		}
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "FontWeight")]
+		public virtual global::Windows.UI.Text.FontWeight get_FontWeight()
+		{
+			global::Windows.UI.Text.FontWeight __retVal = global::Windows.UI.Xaml.Controls.IFontIcon__Impl.Stubs.get_FontWeight(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "FontWeight")]
+		public virtual void put_FontWeight(global::Windows.UI.Text.FontWeight value)
+		{
+			global::Windows.UI.Xaml.Controls.IFontIcon__Impl.Stubs.put_FontWeight(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "MirroredWhenRightToLeft")]
 		public virtual bool get_MirroredWhenRightToLeft()
 		{
@@ -62420,6 +62459,831 @@ namespace Windows.UI.Xaml.Controls
 
 		public FontIcon(global::System.IntPtr dummy) : 
 				base(dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewer))]
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewer2))]
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewer3))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class ScrollViewer : global::Windows.UI.Xaml.Controls.ContentControl, global::Windows.UI.Xaml.Controls.IScrollViewer, global::Windows.UI.Xaml.Controls.IScrollViewer2, global::Windows.UI.Xaml.Controls.IScrollViewer3
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		public ScrollViewer() : 
+				base(default(global::System.IntPtr))
+		{
+			global::System.IntPtr retval;
+			retval = global::System.Runtime.InteropServices.McgMarshal.ActivateInstance("Windows.UI.Xaml.Controls.ScrollViewer");
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			this.__AttachAndRelease(retval);
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "HorizontalScrollBarVisibility")]
+		public global::Windows.UI.Xaml.Controls.ScrollBarVisibility get_HorizontalScrollBarVisibility()
+		{
+			global::Windows.UI.Xaml.Controls.ScrollBarVisibility __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_HorizontalScrollBarVisibility(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "HorizontalScrollBarVisibility")]
+		public void put_HorizontalScrollBarVisibility(global::Windows.UI.Xaml.Controls.ScrollBarVisibility value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_HorizontalScrollBarVisibility(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalScrollBarVisibility")]
+		public global::Windows.UI.Xaml.Controls.ScrollBarVisibility get_VerticalScrollBarVisibility()
+		{
+			global::Windows.UI.Xaml.Controls.ScrollBarVisibility __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalScrollBarVisibility(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalScrollBarVisibility")]
+		public void put_VerticalScrollBarVisibility(global::Windows.UI.Xaml.Controls.ScrollBarVisibility value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_VerticalScrollBarVisibility(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsHorizontalRailEnabled")]
+		public bool get_IsHorizontalRailEnabled()
+		{
+			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_IsHorizontalRailEnabled(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsHorizontalRailEnabled")]
+		public void put_IsHorizontalRailEnabled(bool value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_IsHorizontalRailEnabled(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsVerticalRailEnabled")]
+		public bool get_IsVerticalRailEnabled()
+		{
+			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_IsVerticalRailEnabled(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsVerticalRailEnabled")]
+		public void put_IsVerticalRailEnabled(bool value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_IsVerticalRailEnabled(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "HorizontalScrollMode")]
+		public global::Windows.UI.Xaml.Controls.ScrollMode get_HorizontalScrollMode()
+		{
+			global::Windows.UI.Xaml.Controls.ScrollMode __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_HorizontalScrollMode(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "HorizontalScrollMode")]
+		public void put_HorizontalScrollMode(global::Windows.UI.Xaml.Controls.ScrollMode value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_HorizontalScrollMode(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalScrollMode")]
+		public global::Windows.UI.Xaml.Controls.ScrollMode get_VerticalScrollMode()
+		{
+			global::Windows.UI.Xaml.Controls.ScrollMode __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalScrollMode(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalScrollMode")]
+		public void put_VerticalScrollMode(global::Windows.UI.Xaml.Controls.ScrollMode value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_VerticalScrollMode(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ZoomMode")]
+		public global::Windows.UI.Xaml.Controls.ZoomMode get_ZoomMode()
+		{
+			global::Windows.UI.Xaml.Controls.ZoomMode __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_ZoomMode(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "ZoomMode")]
+		public void put_ZoomMode(global::Windows.UI.Xaml.Controls.ZoomMode value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_ZoomMode(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalSnapPointsAlignment")]
+		public global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment get_VerticalSnapPointsAlignment()
+		{
+			global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalSnapPointsAlignment(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalSnapPointsAlignment")]
+		public void put_VerticalSnapPointsAlignment(global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_VerticalSnapPointsAlignment(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalSnapPointsType")]
+		public global::Windows.UI.Xaml.Controls.SnapPointsType get_VerticalSnapPointsType()
+		{
+			global::Windows.UI.Xaml.Controls.SnapPointsType __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalSnapPointsType(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalSnapPointsType")]
+		public void put_VerticalSnapPointsType(global::Windows.UI.Xaml.Controls.SnapPointsType value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_VerticalSnapPointsType(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalOffset")]
+		public double get_VerticalOffset()
+		{
+			double __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalOffset(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ViewportHeight")]
+		public double get_ViewportHeight()
+		{
+			double __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_ViewportHeight(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ScrollableHeight")]
+		public double get_ScrollableHeight()
+		{
+			double __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_ScrollableHeight(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanged")]
+		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ViewChanged(global::System.EventHandler<global::Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs> value)
+		{
+			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.add_ViewChanged(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ViewChanged")]
+		public void remove_ViewChanged(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.remove_ViewChanged(
+								this, 
+								token
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsDeferredScrollingEnabled")]
+		public bool get_IsDeferredScrollingEnabled()
+		{
+			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_IsDeferredScrollingEnabled(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsDeferredScrollingEnabled")]
+		public void put_IsDeferredScrollingEnabled(bool value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_IsDeferredScrollingEnabled(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "BringIntoViewOnFocusChange")]
+		public bool get_BringIntoViewOnFocusChange()
+		{
+			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_BringIntoViewOnFocusChange(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "BringIntoViewOnFocusChange")]
+		public void put_BringIntoViewOnFocusChange(bool value)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_BringIntoViewOnFocusChange(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanging")]
+		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ViewChanging(global::System.EventHandler<global::Windows.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs> value)
+		{
+			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer2__Impl.Stubs.add_ViewChanging(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ViewChanging")]
+		public void remove_ViewChanging(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer2__Impl.Stubs.remove_ViewChanging(
+								this, 
+								token
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public bool ChangeView(
+					global::System.Nullable<double> horizontalOffset, 
+					global::System.Nullable<double> verticalOffset, 
+					global::System.Nullable<float> zoomFactor)
+		{
+			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer2__Impl.Stubs.ChangeView(
+								this, 
+								horizontalOffset, 
+								verticalOffset, 
+								zoomFactor
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "DirectManipulationStarted")]
+		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_DirectManipulationStarted(global::System.EventHandler<object> value)
+		{
+			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer3__Impl.Stubs.add_DirectManipulationStarted(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "DirectManipulationStarted")]
+		public void remove_DirectManipulationStarted(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer3__Impl.Stubs.remove_DirectManipulationStarted(
+								this, 
+								token
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "DirectManipulationCompleted")]
+		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_DirectManipulationCompleted(global::System.EventHandler<object> value)
+		{
+			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer3__Impl.Stubs.add_DirectManipulationCompleted(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "DirectManipulationCompleted")]
+		public void remove_DirectManipulationCompleted(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewer3__Impl.Stubs.remove_DirectManipulationCompleted(
+								this, 
+								token
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.UI.Xaml.Controls.ScrollBarVisibility GetHorizontalScrollBarVisibility(global::Windows.UI.Xaml.DependencyObject element)
+		{
+			global::Windows.UI.Xaml.Controls.ScrollBarVisibility retval;
+			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetHorizontalScrollBarVisibility(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.UI.Xaml.Controls.ScrollBarVisibility __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetHorizontalScrollBarVisibility(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element)
+		{
+			global::Windows.UI.Xaml.Controls.ScrollBarVisibility __pRetVal;
+			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetHorizontalScrollBarVisibility(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void SetHorizontalScrollBarVisibility(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollBarVisibility horizontalScrollBarVisibility)
+		{
+			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetHorizontalScrollBarVisibility(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element, 
+								horizontalScrollBarVisibility
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetHorizontalScrollBarVisibility(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollBarVisibility horizontalScrollBarVisibility)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetHorizontalScrollBarVisibility(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element, 
+								horizontalScrollBarVisibility
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.UI.Xaml.Controls.ScrollBarVisibility GetVerticalScrollBarVisibility(global::Windows.UI.Xaml.DependencyObject element)
+		{
+			global::Windows.UI.Xaml.Controls.ScrollBarVisibility retval;
+			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetVerticalScrollBarVisibility(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.UI.Xaml.Controls.ScrollBarVisibility __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetVerticalScrollBarVisibility(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element)
+		{
+			global::Windows.UI.Xaml.Controls.ScrollBarVisibility __pRetVal;
+			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetVerticalScrollBarVisibility(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void SetVerticalScrollBarVisibility(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollBarVisibility verticalScrollBarVisibility)
+		{
+			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetVerticalScrollBarVisibility(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element, 
+								verticalScrollBarVisibility
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetVerticalScrollBarVisibility(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollBarVisibility verticalScrollBarVisibility)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetVerticalScrollBarVisibility(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element, 
+								verticalScrollBarVisibility
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static bool GetIsVerticalRailEnabled(global::Windows.UI.Xaml.DependencyObject element)
+		{
+			bool retval;
+			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetIsVerticalRailEnabled(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static bool __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetIsVerticalRailEnabled(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element)
+		{
+			bool __pRetVal;
+			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetIsVerticalRailEnabled(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void SetIsVerticalRailEnabled(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool isVerticalRailEnabled)
+		{
+			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetIsVerticalRailEnabled(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element, 
+								isVerticalRailEnabled
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetIsVerticalRailEnabled(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool isVerticalRailEnabled)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetIsVerticalRailEnabled(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element, 
+								isVerticalRailEnabled
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.UI.Xaml.Controls.ScrollMode GetHorizontalScrollMode(global::Windows.UI.Xaml.DependencyObject element)
+		{
+			global::Windows.UI.Xaml.Controls.ScrollMode retval;
+			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetHorizontalScrollMode(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.UI.Xaml.Controls.ScrollMode __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetHorizontalScrollMode(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element)
+		{
+			global::Windows.UI.Xaml.Controls.ScrollMode __pRetVal;
+			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetHorizontalScrollMode(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void SetHorizontalScrollMode(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollMode horizontalScrollMode)
+		{
+			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetHorizontalScrollMode(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element, 
+								horizontalScrollMode
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetHorizontalScrollMode(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollMode horizontalScrollMode)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetHorizontalScrollMode(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element, 
+								horizontalScrollMode
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.UI.Xaml.Controls.ScrollMode GetVerticalScrollMode(global::Windows.UI.Xaml.DependencyObject element)
+		{
+			global::Windows.UI.Xaml.Controls.ScrollMode retval;
+			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetVerticalScrollMode(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.UI.Xaml.Controls.ScrollMode __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetVerticalScrollMode(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element)
+		{
+			global::Windows.UI.Xaml.Controls.ScrollMode __pRetVal;
+			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetVerticalScrollMode(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void SetVerticalScrollMode(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollMode verticalScrollMode)
+		{
+			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetVerticalScrollMode(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element, 
+								verticalScrollMode
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetVerticalScrollMode(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollMode verticalScrollMode)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetVerticalScrollMode(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element, 
+								verticalScrollMode
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static bool GetIsDeferredScrollingEnabled(global::Windows.UI.Xaml.DependencyObject element)
+		{
+			bool retval;
+			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetIsDeferredScrollingEnabled(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static bool __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetIsDeferredScrollingEnabled(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element)
+		{
+			bool __pRetVal;
+			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetIsDeferredScrollingEnabled(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void SetIsDeferredScrollingEnabled(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool isDeferredScrollingEnabled)
+		{
+			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetIsDeferredScrollingEnabled(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element, 
+								isDeferredScrollingEnabled
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetIsDeferredScrollingEnabled(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool isDeferredScrollingEnabled)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetIsDeferredScrollingEnabled(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element, 
+								isDeferredScrollingEnabled
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static bool GetBringIntoViewOnFocusChange(global::Windows.UI.Xaml.DependencyObject element)
+		{
+			bool retval;
+			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetBringIntoViewOnFocusChange(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static bool __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetBringIntoViewOnFocusChange(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element)
+		{
+			bool __pRetVal;
+			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetBringIntoViewOnFocusChange(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static void SetBringIntoViewOnFocusChange(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool bringIntoViewOnFocusChange)
+		{
+			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetBringIntoViewOnFocusChange(
+								"Windows.UI.Xaml.Controls.ScrollViewer", 
+								element, 
+								bringIntoViewOnFocusChange
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetBringIntoViewOnFocusChange(
+					string typeName, 
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool bringIntoViewOnFocusChange)
+		{
+			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetBringIntoViewOnFocusChange(
+								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
+												), 
+								element, 
+								bringIntoViewOnFocusChange
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		public ScrollViewer(global::System.IntPtr dummy) : 
+				base(dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewerViewChangedEventArgs))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class ScrollViewerViewChangedEventArgs : global::System.__ComObject, global::Windows.UI.Xaml.Controls.IScrollViewerViewChangedEventArgs
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		public ScrollViewerViewChangedEventArgs()
+		{
+			global::System.IntPtr retval;
+			retval = global::System.Runtime.InteropServices.McgMarshal.ActivateInstance("Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs");
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			this.__AttachAndRelease(retval);
+		}
+
+		public ScrollViewerViewChangedEventArgs(global::System.IntPtr dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewerViewChangingEventArgs))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class ScrollViewerViewChangingEventArgs : global::System.__ComObject, global::Windows.UI.Xaml.Controls.IScrollViewerViewChangingEventArgs
+	{
+		public ScrollViewerViewChangingEventArgs(global::System.IntPtr dummy)
 		{
 		}
 	}
@@ -63791,831 +64655,6 @@ namespace Windows.UI.Xaml.Controls
 		}
 	}
 
-	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewer))]
-	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewer2))]
-	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewer3))]
-	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe sealed class ScrollViewer : global::Windows.UI.Xaml.Controls.ContentControl, global::Windows.UI.Xaml.Controls.IScrollViewer, global::Windows.UI.Xaml.Controls.IScrollViewer2, global::Windows.UI.Xaml.Controls.IScrollViewer3
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		public ScrollViewer() : 
-				base(default(global::System.IntPtr))
-		{
-			global::System.IntPtr retval;
-			retval = global::System.Runtime.InteropServices.McgMarshal.ActivateInstance("Windows.UI.Xaml.Controls.ScrollViewer");
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			this.__AttachAndRelease(retval);
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "HorizontalScrollBarVisibility")]
-		public global::Windows.UI.Xaml.Controls.ScrollBarVisibility get_HorizontalScrollBarVisibility()
-		{
-			global::Windows.UI.Xaml.Controls.ScrollBarVisibility __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_HorizontalScrollBarVisibility(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "HorizontalScrollBarVisibility")]
-		public void put_HorizontalScrollBarVisibility(global::Windows.UI.Xaml.Controls.ScrollBarVisibility value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_HorizontalScrollBarVisibility(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalScrollBarVisibility")]
-		public global::Windows.UI.Xaml.Controls.ScrollBarVisibility get_VerticalScrollBarVisibility()
-		{
-			global::Windows.UI.Xaml.Controls.ScrollBarVisibility __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalScrollBarVisibility(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalScrollBarVisibility")]
-		public void put_VerticalScrollBarVisibility(global::Windows.UI.Xaml.Controls.ScrollBarVisibility value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_VerticalScrollBarVisibility(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsHorizontalRailEnabled")]
-		public bool get_IsHorizontalRailEnabled()
-		{
-			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_IsHorizontalRailEnabled(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsHorizontalRailEnabled")]
-		public void put_IsHorizontalRailEnabled(bool value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_IsHorizontalRailEnabled(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsVerticalRailEnabled")]
-		public bool get_IsVerticalRailEnabled()
-		{
-			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_IsVerticalRailEnabled(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsVerticalRailEnabled")]
-		public void put_IsVerticalRailEnabled(bool value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_IsVerticalRailEnabled(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "HorizontalScrollMode")]
-		public global::Windows.UI.Xaml.Controls.ScrollMode get_HorizontalScrollMode()
-		{
-			global::Windows.UI.Xaml.Controls.ScrollMode __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_HorizontalScrollMode(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "HorizontalScrollMode")]
-		public void put_HorizontalScrollMode(global::Windows.UI.Xaml.Controls.ScrollMode value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_HorizontalScrollMode(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalScrollMode")]
-		public global::Windows.UI.Xaml.Controls.ScrollMode get_VerticalScrollMode()
-		{
-			global::Windows.UI.Xaml.Controls.ScrollMode __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalScrollMode(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalScrollMode")]
-		public void put_VerticalScrollMode(global::Windows.UI.Xaml.Controls.ScrollMode value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_VerticalScrollMode(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ZoomMode")]
-		public global::Windows.UI.Xaml.Controls.ZoomMode get_ZoomMode()
-		{
-			global::Windows.UI.Xaml.Controls.ZoomMode __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_ZoomMode(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "ZoomMode")]
-		public void put_ZoomMode(global::Windows.UI.Xaml.Controls.ZoomMode value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_ZoomMode(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalSnapPointsAlignment")]
-		public global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment get_VerticalSnapPointsAlignment()
-		{
-			global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalSnapPointsAlignment(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalSnapPointsAlignment")]
-		public void put_VerticalSnapPointsAlignment(global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_VerticalSnapPointsAlignment(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalSnapPointsType")]
-		public global::Windows.UI.Xaml.Controls.SnapPointsType get_VerticalSnapPointsType()
-		{
-			global::Windows.UI.Xaml.Controls.SnapPointsType __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalSnapPointsType(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalSnapPointsType")]
-		public void put_VerticalSnapPointsType(global::Windows.UI.Xaml.Controls.SnapPointsType value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_VerticalSnapPointsType(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalOffset")]
-		public double get_VerticalOffset()
-		{
-			double __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_VerticalOffset(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ViewportHeight")]
-		public double get_ViewportHeight()
-		{
-			double __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_ViewportHeight(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ScrollableHeight")]
-		public double get_ScrollableHeight()
-		{
-			double __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_ScrollableHeight(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanged")]
-		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ViewChanged(global::System.EventHandler<global::Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs> value)
-		{
-			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.add_ViewChanged(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ViewChanged")]
-		public void remove_ViewChanged(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.remove_ViewChanged(
-								this, 
-								token
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsDeferredScrollingEnabled")]
-		public bool get_IsDeferredScrollingEnabled()
-		{
-			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_IsDeferredScrollingEnabled(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsDeferredScrollingEnabled")]
-		public void put_IsDeferredScrollingEnabled(bool value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_IsDeferredScrollingEnabled(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "BringIntoViewOnFocusChange")]
-		public bool get_BringIntoViewOnFocusChange()
-		{
-			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.get_BringIntoViewOnFocusChange(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "BringIntoViewOnFocusChange")]
-		public void put_BringIntoViewOnFocusChange(bool value)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer__Impl.Stubs.put_BringIntoViewOnFocusChange(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanging")]
-		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ViewChanging(global::System.EventHandler<global::Windows.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs> value)
-		{
-			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer2__Impl.Stubs.add_ViewChanging(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ViewChanging")]
-		public void remove_ViewChanging(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer2__Impl.Stubs.remove_ViewChanging(
-								this, 
-								token
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public bool ChangeView(
-					global::System.Nullable<double> horizontalOffset, 
-					global::System.Nullable<double> verticalOffset, 
-					global::System.Nullable<float> zoomFactor)
-		{
-			bool __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer2__Impl.Stubs.ChangeView(
-								this, 
-								horizontalOffset, 
-								verticalOffset, 
-								zoomFactor
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "DirectManipulationStarted")]
-		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_DirectManipulationStarted(global::System.EventHandler<object> value)
-		{
-			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer3__Impl.Stubs.add_DirectManipulationStarted(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "DirectManipulationStarted")]
-		public void remove_DirectManipulationStarted(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer3__Impl.Stubs.remove_DirectManipulationStarted(
-								this, 
-								token
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "DirectManipulationCompleted")]
-		public global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_DirectManipulationCompleted(global::System.EventHandler<object> value)
-		{
-			global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken __retVal = global::Windows.UI.Xaml.Controls.IScrollViewer3__Impl.Stubs.add_DirectManipulationCompleted(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "DirectManipulationCompleted")]
-		public void remove_DirectManipulationCompleted(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewer3__Impl.Stubs.remove_DirectManipulationCompleted(
-								this, 
-								token
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static global::Windows.UI.Xaml.Controls.ScrollBarVisibility GetHorizontalScrollBarVisibility(global::Windows.UI.Xaml.DependencyObject element)
-		{
-			global::Windows.UI.Xaml.Controls.ScrollBarVisibility retval;
-			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetHorizontalScrollBarVisibility(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return retval;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static global::Windows.UI.Xaml.Controls.ScrollBarVisibility __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetHorizontalScrollBarVisibility(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element)
-		{
-			global::Windows.UI.Xaml.Controls.ScrollBarVisibility __pRetVal;
-			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetHorizontalScrollBarVisibility(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __pRetVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void SetHorizontalScrollBarVisibility(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollBarVisibility horizontalScrollBarVisibility)
-		{
-			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetHorizontalScrollBarVisibility(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element, 
-								horizontalScrollBarVisibility
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetHorizontalScrollBarVisibility(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollBarVisibility horizontalScrollBarVisibility)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetHorizontalScrollBarVisibility(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element, 
-								horizontalScrollBarVisibility
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static global::Windows.UI.Xaml.Controls.ScrollBarVisibility GetVerticalScrollBarVisibility(global::Windows.UI.Xaml.DependencyObject element)
-		{
-			global::Windows.UI.Xaml.Controls.ScrollBarVisibility retval;
-			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetVerticalScrollBarVisibility(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return retval;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static global::Windows.UI.Xaml.Controls.ScrollBarVisibility __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetVerticalScrollBarVisibility(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element)
-		{
-			global::Windows.UI.Xaml.Controls.ScrollBarVisibility __pRetVal;
-			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetVerticalScrollBarVisibility(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __pRetVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void SetVerticalScrollBarVisibility(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollBarVisibility verticalScrollBarVisibility)
-		{
-			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetVerticalScrollBarVisibility(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element, 
-								verticalScrollBarVisibility
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetVerticalScrollBarVisibility(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollBarVisibility verticalScrollBarVisibility)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetVerticalScrollBarVisibility(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element, 
-								verticalScrollBarVisibility
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static bool GetIsVerticalRailEnabled(global::Windows.UI.Xaml.DependencyObject element)
-		{
-			bool retval;
-			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetIsVerticalRailEnabled(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return retval;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static bool __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetIsVerticalRailEnabled(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element)
-		{
-			bool __pRetVal;
-			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetIsVerticalRailEnabled(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __pRetVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void SetIsVerticalRailEnabled(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool isVerticalRailEnabled)
-		{
-			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetIsVerticalRailEnabled(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element, 
-								isVerticalRailEnabled
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetIsVerticalRailEnabled(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool isVerticalRailEnabled)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetIsVerticalRailEnabled(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element, 
-								isVerticalRailEnabled
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static global::Windows.UI.Xaml.Controls.ScrollMode GetHorizontalScrollMode(global::Windows.UI.Xaml.DependencyObject element)
-		{
-			global::Windows.UI.Xaml.Controls.ScrollMode retval;
-			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetHorizontalScrollMode(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return retval;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static global::Windows.UI.Xaml.Controls.ScrollMode __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetHorizontalScrollMode(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element)
-		{
-			global::Windows.UI.Xaml.Controls.ScrollMode __pRetVal;
-			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetHorizontalScrollMode(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __pRetVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void SetHorizontalScrollMode(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollMode horizontalScrollMode)
-		{
-			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetHorizontalScrollMode(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element, 
-								horizontalScrollMode
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetHorizontalScrollMode(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollMode horizontalScrollMode)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetHorizontalScrollMode(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element, 
-								horizontalScrollMode
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static global::Windows.UI.Xaml.Controls.ScrollMode GetVerticalScrollMode(global::Windows.UI.Xaml.DependencyObject element)
-		{
-			global::Windows.UI.Xaml.Controls.ScrollMode retval;
-			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetVerticalScrollMode(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return retval;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static global::Windows.UI.Xaml.Controls.ScrollMode __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetVerticalScrollMode(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element)
-		{
-			global::Windows.UI.Xaml.Controls.ScrollMode __pRetVal;
-			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetVerticalScrollMode(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __pRetVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void SetVerticalScrollMode(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollMode verticalScrollMode)
-		{
-			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetVerticalScrollMode(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element, 
-								verticalScrollMode
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetVerticalScrollMode(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollMode verticalScrollMode)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetVerticalScrollMode(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element, 
-								verticalScrollMode
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static bool GetIsDeferredScrollingEnabled(global::Windows.UI.Xaml.DependencyObject element)
-		{
-			bool retval;
-			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetIsDeferredScrollingEnabled(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return retval;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static bool __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetIsDeferredScrollingEnabled(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element)
-		{
-			bool __pRetVal;
-			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetIsDeferredScrollingEnabled(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __pRetVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void SetIsDeferredScrollingEnabled(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool isDeferredScrollingEnabled)
-		{
-			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetIsDeferredScrollingEnabled(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element, 
-								isDeferredScrollingEnabled
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetIsDeferredScrollingEnabled(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool isDeferredScrollingEnabled)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetIsDeferredScrollingEnabled(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element, 
-								isDeferredScrollingEnabled
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static bool GetBringIntoViewOnFocusChange(global::Windows.UI.Xaml.DependencyObject element)
-		{
-			bool retval;
-			retval = __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetBringIntoViewOnFocusChange(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return retval;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static bool __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_GetBringIntoViewOnFocusChange(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element)
-		{
-			bool __pRetVal;
-			__pRetVal = global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.GetBringIntoViewOnFocusChange(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __pRetVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		public static void SetBringIntoViewOnFocusChange(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool bringIntoViewOnFocusChange)
-		{
-			__Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetBringIntoViewOnFocusChange(
-								"Windows.UI.Xaml.Controls.ScrollViewer", 
-								element, 
-								bringIntoViewOnFocusChange
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		static void __Factory_Windows_UI_Xaml_Controls__IScrollViewerStatics_SetBringIntoViewOnFocusChange(
-					string typeName, 
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool bringIntoViewOnFocusChange)
-		{
-			global::Windows.UI.Xaml.Controls.IScrollViewerStatics__Impl.Stubs.SetBringIntoViewOnFocusChange(
-								global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
-													typeName, 
-													typeof(global::Windows.UI.Xaml.Controls.IScrollViewerStatics).TypeHandle
-												), 
-								element, 
-								bringIntoViewOnFocusChange
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		public ScrollViewer(global::System.IntPtr dummy) : 
-				base(dummy)
-		{
-		}
-	}
-
-	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewerViewChangedEventArgs))]
-	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe sealed class ScrollViewerViewChangedEventArgs : global::System.__ComObject, global::Windows.UI.Xaml.Controls.IScrollViewerViewChangedEventArgs
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		public ScrollViewerViewChangedEventArgs()
-		{
-			global::System.IntPtr retval;
-			retval = global::System.Runtime.InteropServices.McgMarshal.ActivateInstance("Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs");
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			this.__AttachAndRelease(retval);
-		}
-
-		public ScrollViewerViewChangedEventArgs(global::System.IntPtr dummy)
-		{
-		}
-	}
-
-	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IScrollViewerViewChangingEventArgs))]
-	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe sealed class ScrollViewerViewChangingEventArgs : global::System.__ComObject, global::Windows.UI.Xaml.Controls.IScrollViewerViewChangingEventArgs
-	{
-		public ScrollViewerViewChangingEventArgs(global::System.IntPtr dummy)
-		{
-		}
-	}
-
 	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Controls.IHyperlinkButton))]
 	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -65018,6 +65057,26 @@ namespace Windows.UI.Xaml.Controls
 		public void put_AutoPlay(bool value)
 		{
 			global::Windows.UI.Xaml.Controls.IMediaElement__Impl.Stubs.put_AutoPlay(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Volume")]
+		public double get_Volume()
+		{
+			double __retVal = global::Windows.UI.Xaml.Controls.IMediaElement__Impl.Stubs.get_Volume(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Volume")]
+		public void put_Volume(double value)
+		{
+			global::Windows.UI.Xaml.Controls.IMediaElement__Impl.Stubs.put_Volume(
 								this, 
 								value
 							);
@@ -67073,6 +67132,14 @@ namespace Windows.UI.Xaml.Controls
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "FontFamily")]
 		void put_FontFamily(global::Windows.UI.Xaml.Media.FontFamily value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "FontWeight")]
+		global::Windows.UI.Text.FontWeight get_FontWeight();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "FontWeight")]
+		void put_FontWeight(global::Windows.UI.Text.FontWeight value);
 	}
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -67086,6 +67153,232 @@ namespace Windows.UI.Xaml.Controls
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "MirroredWhenRightToLeft")]
 		void put_MirroredWhenRightToLeft(bool value);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IScrollViewerStatics
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.UI.Xaml.Controls.ScrollBarVisibility GetHorizontalScrollBarVisibility(global::Windows.UI.Xaml.DependencyObject element);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void SetHorizontalScrollBarVisibility(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollBarVisibility horizontalScrollBarVisibility);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.UI.Xaml.Controls.ScrollBarVisibility GetVerticalScrollBarVisibility(global::Windows.UI.Xaml.DependencyObject element);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void SetVerticalScrollBarVisibility(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollBarVisibility verticalScrollBarVisibility);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		bool GetIsVerticalRailEnabled(global::Windows.UI.Xaml.DependencyObject element);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void SetIsVerticalRailEnabled(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool isVerticalRailEnabled);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.UI.Xaml.Controls.ScrollMode GetHorizontalScrollMode(global::Windows.UI.Xaml.DependencyObject element);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void SetHorizontalScrollMode(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollMode horizontalScrollMode);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.UI.Xaml.Controls.ScrollMode GetVerticalScrollMode(global::Windows.UI.Xaml.DependencyObject element);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void SetVerticalScrollMode(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					global::Windows.UI.Xaml.Controls.ScrollMode verticalScrollMode);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		bool GetIsDeferredScrollingEnabled(global::Windows.UI.Xaml.DependencyObject element);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void SetIsDeferredScrollingEnabled(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool isDeferredScrollingEnabled);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		bool GetBringIntoViewOnFocusChange(global::Windows.UI.Xaml.DependencyObject element);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void SetBringIntoViewOnFocusChange(
+					global::Windows.UI.Xaml.DependencyObject element, 
+					bool bringIntoViewOnFocusChange);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IScrollViewer
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "HorizontalScrollBarVisibility")]
+		global::Windows.UI.Xaml.Controls.ScrollBarVisibility get_HorizontalScrollBarVisibility();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "HorizontalScrollBarVisibility")]
+		void put_HorizontalScrollBarVisibility(global::Windows.UI.Xaml.Controls.ScrollBarVisibility value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalScrollBarVisibility")]
+		global::Windows.UI.Xaml.Controls.ScrollBarVisibility get_VerticalScrollBarVisibility();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalScrollBarVisibility")]
+		void put_VerticalScrollBarVisibility(global::Windows.UI.Xaml.Controls.ScrollBarVisibility value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsHorizontalRailEnabled")]
+		bool get_IsHorizontalRailEnabled();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsHorizontalRailEnabled")]
+		void put_IsHorizontalRailEnabled(bool value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsVerticalRailEnabled")]
+		bool get_IsVerticalRailEnabled();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsVerticalRailEnabled")]
+		void put_IsVerticalRailEnabled(bool value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "HorizontalScrollMode")]
+		global::Windows.UI.Xaml.Controls.ScrollMode get_HorizontalScrollMode();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "HorizontalScrollMode")]
+		void put_HorizontalScrollMode(global::Windows.UI.Xaml.Controls.ScrollMode value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalScrollMode")]
+		global::Windows.UI.Xaml.Controls.ScrollMode get_VerticalScrollMode();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalScrollMode")]
+		void put_VerticalScrollMode(global::Windows.UI.Xaml.Controls.ScrollMode value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ZoomMode")]
+		global::Windows.UI.Xaml.Controls.ZoomMode get_ZoomMode();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "ZoomMode")]
+		void put_ZoomMode(global::Windows.UI.Xaml.Controls.ZoomMode value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalSnapPointsAlignment")]
+		global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment get_VerticalSnapPointsAlignment();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalSnapPointsAlignment")]
+		void put_VerticalSnapPointsAlignment(global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalSnapPointsType")]
+		global::Windows.UI.Xaml.Controls.SnapPointsType get_VerticalSnapPointsType();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalSnapPointsType")]
+		void put_VerticalSnapPointsType(global::Windows.UI.Xaml.Controls.SnapPointsType value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalOffset")]
+		double get_VerticalOffset();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ViewportHeight")]
+		double get_ViewportHeight();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ScrollableHeight")]
+		double get_ScrollableHeight();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanged")]
+		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ViewChanged(global::System.EventHandler<global::Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs> value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ViewChanged")]
+		void remove_ViewChanged(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsDeferredScrollingEnabled")]
+		bool get_IsDeferredScrollingEnabled();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsDeferredScrollingEnabled")]
+		void put_IsDeferredScrollingEnabled(bool value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "BringIntoViewOnFocusChange")]
+		bool get_BringIntoViewOnFocusChange();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "BringIntoViewOnFocusChange")]
+		void put_BringIntoViewOnFocusChange(bool value);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IScrollViewerViewChangedEventArgs
+	{
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IScrollViewer2
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanging")]
+		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ViewChanging(global::System.EventHandler<global::Windows.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs> value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ViewChanging")]
+		void remove_ViewChanging(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		bool ChangeView(
+					global::System.Nullable<double> horizontalOffset, 
+					global::System.Nullable<double> verticalOffset, 
+					global::System.Nullable<float> zoomFactor);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IScrollViewerViewChangingEventArgs
+	{
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IScrollViewer3
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "DirectManipulationStarted")]
+		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_DirectManipulationStarted(global::System.EventHandler<object> value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "DirectManipulationStarted")]
+		void remove_DirectManipulationStarted(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "DirectManipulationCompleted")]
+		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_DirectManipulationCompleted(global::System.EventHandler<object> value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "DirectManipulationCompleted")]
+		void remove_DirectManipulationCompleted(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
 	}
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -67508,232 +67801,6 @@ namespace Windows.UI.Xaml.Controls
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IScrollViewerStatics
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		global::Windows.UI.Xaml.Controls.ScrollBarVisibility GetHorizontalScrollBarVisibility(global::Windows.UI.Xaml.DependencyObject element);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		void SetHorizontalScrollBarVisibility(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollBarVisibility horizontalScrollBarVisibility);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		global::Windows.UI.Xaml.Controls.ScrollBarVisibility GetVerticalScrollBarVisibility(global::Windows.UI.Xaml.DependencyObject element);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		void SetVerticalScrollBarVisibility(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollBarVisibility verticalScrollBarVisibility);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		bool GetIsVerticalRailEnabled(global::Windows.UI.Xaml.DependencyObject element);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		void SetIsVerticalRailEnabled(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool isVerticalRailEnabled);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		global::Windows.UI.Xaml.Controls.ScrollMode GetHorizontalScrollMode(global::Windows.UI.Xaml.DependencyObject element);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		void SetHorizontalScrollMode(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollMode horizontalScrollMode);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		global::Windows.UI.Xaml.Controls.ScrollMode GetVerticalScrollMode(global::Windows.UI.Xaml.DependencyObject element);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		void SetVerticalScrollMode(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					global::Windows.UI.Xaml.Controls.ScrollMode verticalScrollMode);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		bool GetIsDeferredScrollingEnabled(global::Windows.UI.Xaml.DependencyObject element);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		void SetIsDeferredScrollingEnabled(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool isDeferredScrollingEnabled);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		bool GetBringIntoViewOnFocusChange(global::Windows.UI.Xaml.DependencyObject element);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		void SetBringIntoViewOnFocusChange(
-					global::Windows.UI.Xaml.DependencyObject element, 
-					bool bringIntoViewOnFocusChange);
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IScrollViewer
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "HorizontalScrollBarVisibility")]
-		global::Windows.UI.Xaml.Controls.ScrollBarVisibility get_HorizontalScrollBarVisibility();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "HorizontalScrollBarVisibility")]
-		void put_HorizontalScrollBarVisibility(global::Windows.UI.Xaml.Controls.ScrollBarVisibility value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalScrollBarVisibility")]
-		global::Windows.UI.Xaml.Controls.ScrollBarVisibility get_VerticalScrollBarVisibility();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalScrollBarVisibility")]
-		void put_VerticalScrollBarVisibility(global::Windows.UI.Xaml.Controls.ScrollBarVisibility value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsHorizontalRailEnabled")]
-		bool get_IsHorizontalRailEnabled();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsHorizontalRailEnabled")]
-		void put_IsHorizontalRailEnabled(bool value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsVerticalRailEnabled")]
-		bool get_IsVerticalRailEnabled();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsVerticalRailEnabled")]
-		void put_IsVerticalRailEnabled(bool value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "HorizontalScrollMode")]
-		global::Windows.UI.Xaml.Controls.ScrollMode get_HorizontalScrollMode();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "HorizontalScrollMode")]
-		void put_HorizontalScrollMode(global::Windows.UI.Xaml.Controls.ScrollMode value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalScrollMode")]
-		global::Windows.UI.Xaml.Controls.ScrollMode get_VerticalScrollMode();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalScrollMode")]
-		void put_VerticalScrollMode(global::Windows.UI.Xaml.Controls.ScrollMode value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ZoomMode")]
-		global::Windows.UI.Xaml.Controls.ZoomMode get_ZoomMode();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "ZoomMode")]
-		void put_ZoomMode(global::Windows.UI.Xaml.Controls.ZoomMode value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalSnapPointsAlignment")]
-		global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment get_VerticalSnapPointsAlignment();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalSnapPointsAlignment")]
-		void put_VerticalSnapPointsAlignment(global::Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalSnapPointsType")]
-		global::Windows.UI.Xaml.Controls.SnapPointsType get_VerticalSnapPointsType();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "VerticalSnapPointsType")]
-		void put_VerticalSnapPointsType(global::Windows.UI.Xaml.Controls.SnapPointsType value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "VerticalOffset")]
-		double get_VerticalOffset();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ViewportHeight")]
-		double get_ViewportHeight();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "ScrollableHeight")]
-		double get_ScrollableHeight();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanged")]
-		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ViewChanged(global::System.EventHandler<global::Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs> value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ViewChanged")]
-		void remove_ViewChanged(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "IsDeferredScrollingEnabled")]
-		bool get_IsDeferredScrollingEnabled();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "IsDeferredScrollingEnabled")]
-		void put_IsDeferredScrollingEnabled(bool value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "BringIntoViewOnFocusChange")]
-		bool get_BringIntoViewOnFocusChange();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "BringIntoViewOnFocusChange")]
-		void put_BringIntoViewOnFocusChange(bool value);
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IScrollViewerViewChangedEventArgs
-	{
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IScrollViewer2
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "ViewChanging")]
-		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_ViewChanging(global::System.EventHandler<global::Windows.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs> value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "ViewChanging")]
-		void remove_ViewChanging(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		bool ChangeView(
-					global::System.Nullable<double> horizontalOffset, 
-					global::System.Nullable<double> verticalOffset, 
-					global::System.Nullable<float> zoomFactor);
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IScrollViewerViewChangingEventArgs
-	{
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
-	public unsafe interface IScrollViewer3
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "DirectManipulationStarted")]
-		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_DirectManipulationStarted(global::System.EventHandler<object> value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "DirectManipulationStarted")]
-		void remove_DirectManipulationStarted(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventAdd, "DirectManipulationCompleted")]
-		global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_DirectManipulationCompleted(global::System.EventHandler<object> value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.EventRemove, "DirectManipulationCompleted")]
-		void remove_DirectManipulationCompleted(global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);
-	}
-
-	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
-	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
 	public unsafe interface IHyperlinkButtonFactory
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
@@ -67854,6 +67921,14 @@ namespace Windows.UI.Xaml.Controls
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "AutoPlay")]
 		void put_AutoPlay(bool value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Volume")]
+		double get_Volume();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Volume")]
+		void put_Volume(double value);
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "NaturalDuration")]

@@ -403,6 +403,9 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\audio\123.mp3">
       <PackagePath>Assets\audio\123.mp3</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\audio\music_bgm.flac">
+      <PackagePath>Assets\audio\music_bgm.flac</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\BadgeLogo.scale-100.png">
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -470,6 +473,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\play.png">
       <PackagePath>Assets\icon\play.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\prise.png">
+      <PackagePath>Assets\icon\prise.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\set-selected.png">
       <PackagePath>Assets\icon\set-selected.png</PackagePath>

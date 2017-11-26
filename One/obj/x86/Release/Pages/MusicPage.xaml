@@ -145,8 +145,14 @@
 
     </Page.Resources>
 
-    <Grid Background="White"
+    <Grid x:ConnectionId='8' Background="White"
+                                        
           >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -155,7 +161,7 @@
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <VisualState x:ConnectionId='8' x:Name="Phone">
+                <VisualState x:ConnectionId='9' x:Name="Phone">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
@@ -176,7 +182,7 @@
 
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='9' x:Name="Desktop">
+                <VisualState x:ConnectionId='10' x:Name="Desktop">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="1000"></AdaptiveTrigger>
                     </VisualState.StateTriggers>
@@ -203,15 +209,17 @@
 
 
 
-        <Grid x:ConnectionId='10'  Name="ItemListContainer"
+        <Grid x:ConnectionId='11'  Name="ItemListContainer"
                Grid.Column="0"
                Grid.ColumnSpan="2"
+               Grid.Row="0"
+               Grid.RowSpan="2"
                >
-            <ScrollViewer x:ConnectionId='33' Style="{StaticResource ScrollViewerCommonStyle}"
+            <ScrollViewer x:ConnectionId='38' Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="ItemListContainerScrollViewer"
                                                                                  
                            >
-                <ListView x:ConnectionId='35'                                 
+                <ListView x:ConnectionId='40'                                 
                   Name="ItemListview"
                   Visibility="Visible"
                   IsItemClickEnabled="True"
@@ -221,7 +229,7 @@
                   >
                     <ListView.ItemTemplate>
                         <DataTemplate                              >
-                            <Grid x:ConnectionId='36' 
+                            <Grid x:ConnectionId='41' 
                                   
                                   Padding="25">
                                 <Grid.ColumnDefinitions>
@@ -233,7 +241,7 @@
                                              Height="80"
                                              Grid.Column="0">
                                     <Ellipse.Fill>
-                                        <ImageBrush x:ConnectionId='42'                             ></ImageBrush>
+                                        <ImageBrush x:ConnectionId='47'                             ></ImageBrush>
                                     </Ellipse.Fill>
                                 </Ellipse>
 
@@ -247,7 +255,7 @@
                                         <RowDefinition Height="auto"></RowDefinition>
                                     </Grid.RowDefinitions>
 
-                                    <TextBlock x:ConnectionId='37'                           
+                                    <TextBlock x:ConnectionId='42'                           
                                                TextWrapping="WrapWholeWords"
                                                Grid.Row="0"
                                                FontWeight="SemiBold"
@@ -259,7 +267,7 @@
                                                 Orientation="Horizontal"
                                                 Margin="0,5,0,0">
                                         <TextBlock Foreground="#333333">文/</TextBlock>
-                                        <TextBlock x:ConnectionId='41'                                       
+                                        <TextBlock x:ConnectionId='46'                                       
                                                    Foreground="#333333"></TextBlock>
                                     </StackPanel>
 
@@ -273,21 +281,21 @@
                                             <ColumnDefinition Width="auto"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:ConnectionId='38'                      
+                                        <TextBlock x:ConnectionId='43'                      
                                                    Grid.Column="0"
                                                    FontSize="14"
                                                    Foreground="#333333"></TextBlock>
                                         <TextBlock Grid.Column="1"
                                                    FontSize="14"
                                                    Foreground="#333333"> .</TextBlock>
-                                        <TextBlock x:ConnectionId='39'                                
+                                        <TextBlock x:ConnectionId='44'                                
                                                    Grid.Column="2"
                                                    FontSize="14"
                                                    Foreground="#333333"></TextBlock>
                                         <TextBlock Grid.Column="3"
                                                    FontSize="14"
                                                    Foreground="#333333"> |</TextBlock>
-                                        <TextBlock x:ConnectionId='40'                      
+                                        <TextBlock x:ConnectionId='45'                      
                                                    TextWrapping="WrapWholeWords"
                                                    Grid.Column="4"
                                                    FontSize="14"
@@ -304,7 +312,7 @@
             </ScrollViewer>
 
             <!--返回顶部按键-->
-            <Button x:ConnectionId='34' Name="ListPageBackTopButton"
+            <Button x:ConnectionId='39' Name="ListPageBackTopButton"
                                                        
                     Style="{StaticResource ButtonEllipseStyle}"
                     VerticalAlignment="Bottom"
@@ -331,8 +339,10 @@
         </Grid>
 
 
-        <Grid x:ConnectionId='11' Name="DetailPageBackground"
+        <Grid x:ConnectionId='12' Name="DetailPageBackground"
               Background="White"
+              Grid.Row="0"
+              Grid.RowSpan="2"
               >
             <Image Source="../Assets/images/oneisall.png"
                    Width="250"
@@ -341,14 +351,16 @@
         </Grid>
 
 
-        <Grid x:ConnectionId='12' Name="ItemDetailsPannel"
+        <Grid x:ConnectionId='13' Name="ItemDetailsPannel"
               Grid.Column="0"
               Grid.ColumnSpan="2"
+              Grid.Row="0"
+              Grid.RowSpan="2"
               Background="White"
               Visibility="Collapsed"
               >
 
-            <ScrollViewer x:ConnectionId='13' Style="{StaticResource ScrollViewerCommonStyle}"
+            <ScrollViewer x:ConnectionId='18' Style="{StaticResource ScrollViewerCommonStyle}"
                           Name="ItemDetailsPannelScrollViewer"
                                                                                  
                           >
@@ -362,14 +374,14 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
-                        <Image x:ConnectionId='25' Name="Detail_Image"
+                        <Image x:ConnectionId='30' Name="Detail_Image"
                                Stretch="Fill"
                                                                      
                                ></Image>
                         <Grid>
-                            <Rectangle x:ConnectionId='31' x:Name="WhiteMask" 
+                            <Rectangle x:ConnectionId='36' x:Name="WhiteMask" 
                                        Fill="White" />
-                            <Xaml:CanvasControl x:ConnectionId='32' x:Name="Canvas" 
+                            <Xaml:CanvasControl x:ConnectionId='37' x:Name="Canvas" 
                                                 />
                         </Grid>
                         <Grid>
@@ -378,7 +390,7 @@
                                   VerticalAlignment="Center"
                                   HorizontalAlignment="Center"
                                   >
-                                <Image x:ConnectionId='27' Name="MachineIcon"
+                                <Image x:ConnectionId='32' Name="MachineIcon"
                                        Width="140"
                                        Height="140"
                                        Margin="0,0,0,0"
@@ -388,7 +400,7 @@
                                         <TranslateTransform X="0"></TranslateTransform>
                                     </Image.RenderTransform>
                                 </Image>
-                                <Image x:ConnectionId='28' Name="CoverImage"
+                                <Image x:ConnectionId='33' Name="CoverImage"
                                        Width="150"
                                        Height="150"
                                        Stretch="Fill"
@@ -400,14 +412,14 @@
                                          HorizontalAlignment="Center"
                                          VerticalAlignment="Center">
                                 </Ellipse>
-                                <Button x:ConnectionId='29' Width="50"
+                                <Button x:ConnectionId='34' Width="50"
                                         Height="50"
                                         VerticalAlignment="Center"
                                         HorizontalAlignment="Center"
                                         Style="{StaticResource ButtonNoneStyle}"
                                                          
                                         >
-                                    <Image x:ConnectionId='30' Source="../Assets/icon/play.png"
+                                    <Image x:ConnectionId='35' Source="../Assets/icon/play.png"
                                            Width="30"
                                            Height="30"
                                            VerticalAlignment="Center"
@@ -416,16 +428,17 @@
                                 </Button>
                             </Grid>
                         </Grid>
-                        <MediaElement x:ConnectionId='26' Name="MusicPlayer"
+                        <MediaElement x:ConnectionId='31' Name="MusicPlayer"
                                       AudioCategory="Media"
                                       Source="../Assets/audio/music_bgm.flac"
                                       AutoPlay="False"
+                                      Volume="0.3"
                                       ></MediaElement>
                     </Grid>
 
                     <Grid Grid.Row="1"
                           Margin="30,30,30,0">
-                        <TextBlock x:ConnectionId='24' Name="Article_Title"
+                        <TextBlock x:ConnectionId='29' Name="Article_Title"
                                FontSize="30"
                                Foreground="#333333"
                                IsTextSelectionEnabled="True"
@@ -436,7 +449,7 @@
 
                     <Grid Grid.Row="2"
                       Margin="30,20,0,0">
-                        <TextBlock x:ConnectionId='23' Name="Article_Author"
+                        <TextBlock x:ConnectionId='28' Name="Article_Author"
                                Foreground="#333333"
                                IsTextSelectionEnabled="True">
 
@@ -445,7 +458,7 @@
 
                     <Grid Grid.Row="3"
                           Padding="30,0,30,0">
-                        <TextBlock x:ConnectionId='22' Name="Article_Content"
+                        <TextBlock x:ConnectionId='27' Name="Article_Content"
                                Foreground="#333333"
                                LineHeight="50"
                                TextWrapping="WrapWholeWords"
@@ -456,7 +469,7 @@
 
                     <!--评论模块-->
                     <Grid Grid.Row="4">
-                        <ListView x:ConnectionId='15'                                               
+                        <ListView x:ConnectionId='20'                                               
                                   Name="CommentListView"
                                   HorizontalAlignment="Stretch"
                                   HorizontalContentAlignment="Stretch"
@@ -465,7 +478,7 @@
 
                             <ListView.ItemTemplate>
                                 <DataTemplate                                            >
-                                    <Grid x:ConnectionId='16' MinHeight="100"
+                                    <Grid x:ConnectionId='21' MinHeight="100"
                                           Padding="30"
                                           Name="CommentItemContainer"
                                           
@@ -486,17 +499,17 @@
                                                      Height="30"
                                                      HorizontalAlignment="Left">
                                                 <Ellipse.Fill>
-                                                    <ImageBrush x:ConnectionId='21'                                   ></ImageBrush>
+                                                    <ImageBrush x:ConnectionId='26'                                   ></ImageBrush>
                                                 </Ellipse.Fill>
                                             </Ellipse>
-                                            <TextBlock x:ConnectionId='19' HorizontalAlignment="Left"
+                                            <TextBlock x:ConnectionId='24' HorizontalAlignment="Left"
                                                        Margin="40,0,0,0"
                                                                                     
                                                        VerticalAlignment="Center"
                                                        Foreground="#979797"
                                                        FontWeight="Normal"
                                                        FontSize="14"></TextBlock>
-                                            <TextBlock x:ConnectionId='20' HorizontalAlignment="Right"
+                                            <TextBlock x:ConnectionId='25' HorizontalAlignment="Right"
                                                                                 
                                                        VerticalAlignment="Center"
                                                        Foreground="#979797"
@@ -507,7 +520,7 @@
                                         <Grid Grid.Row="1"
                                               Padding="40,0,0,0"
                                               >
-                                            <TextBlock x:ConnectionId='18' TextWrapping="WrapWholeWords"
+                                            <TextBlock x:ConnectionId='23' TextWrapping="WrapWholeWords"
                                                                               
                                                        Margin="0,15,0,0"
                                                        Foreground="#333333"
@@ -533,7 +546,7 @@
                                                            
                                                            />
                                                 </Button>
-                                                <TextBlock x:ConnectionId='17'                          
+                                                <TextBlock x:ConnectionId='22'                          
                                                            VerticalAlignment="Center"
                                                            HorizontalAlignment="Left"
                                                            Margin="-8,0,0,0"
@@ -565,7 +578,7 @@
 
 
             <!--返回顶部按键-->
-            <Button x:ConnectionId='14' Name="DetailPageBackTopButton"
+            <Button x:ConnectionId='19' Name="DetailPageBackTopButton"
                                                          
                     Style="{StaticResource ButtonEllipseStyle}"
                     VerticalAlignment="Bottom"
@@ -638,7 +651,41 @@
 
 
 
+        <Grid x:ConnectionId='14' Name="TitleBar"
+              Grid.Row="0"
+              Grid.Column="0"
+              Grid.ColumnSpan="2">
 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid x:ConnectionId='15' Grid.Column="0"
+                  Name="TitleBarBackButton"
+                  Visibility="Collapsed">
+                <Button x:ConnectionId='17' Style="{StaticResource ButtonCommonStyle}"
+                        Width="48"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                                               
+                        >
+                    <FontIcon FontFamily="Segoe MDL2 Assets" 
+                              HorizontalAlignment="Left"
+                              Glyph="&#xE72B;" 
+                              Foreground="#333333"
+                              FontWeight="Light"
+                              FontSize="14"/>
+                </Button>
+            </Grid>
+
+            <Grid x:ConnectionId='16' Grid.Column="1"
+                  Background="Transparent"
+                  Name="TitleBarBlankBlock">
+
+            </Grid>
+
+        </Grid>
 
 
 

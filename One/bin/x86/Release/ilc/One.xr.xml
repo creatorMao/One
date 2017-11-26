@@ -110,6 +110,7 @@
       <RootProperty Name="RenderTransform" />
       <RootProperty Name="IsHitTestVisible" />
       <RootEvent Name="PointerPressed" />
+      <RootEvent Name="SizeChanged" />
       <RootEvent Name="PointerEntered" />
       <RootEvent Name="PointerExited" />
       <RootMethod Name="GetRow" />
@@ -146,8 +147,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="RenderTransform" />
@@ -217,12 +218,46 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Glyph" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="MirroredWhenRightToLeft" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Style" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalScrollMode" />
+      <RootProperty Name="VerticalScrollMode" />
+      <RootProperty Name="IsHorizontalRailEnabled" />
+      <RootProperty Name="IsVerticalRailEnabled" />
+      <RootProperty Name="ZoomMode" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="BringIntoViewOnFocusChange" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="HorizontalScrollBarVisibility" />
+      <RootProperty Name="IsDeferredScrollingEnabled" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="VerticalSnapPointsType" />
+      <RootProperty Name="VerticalSnapPointsAlignment" />
+      <RootEvent Name="ViewChanged" />
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
+      <RootMethod Name="GetHorizontalScrollBarVisibility" />
+      <RootMethod Name="SetHorizontalScrollBarVisibility" />
+      <RootMethod Name="GetHorizontalScrollMode" />
+      <RootMethod Name="SetHorizontalScrollMode" />
+      <RootMethod Name="GetVerticalScrollMode" />
+      <RootMethod Name="SetVerticalScrollMode" />
+      <RootMethod Name="GetIsVerticalRailEnabled" />
+      <RootMethod Name="SetIsVerticalRailEnabled" />
+      <RootMethod Name="GetIsDeferredScrollingEnabled" />
+      <RootMethod Name="SetIsDeferredScrollingEnabled" />
+      <RootMethod Name="GetBringIntoViewOnFocusChange" />
+      <RootMethod Name="SetBringIntoViewOnFocusChange" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />
@@ -257,39 +292,6 @@
       <RootProperty Name="DefaultNavigationTransitionInfo" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.DrillInNavigationTransitionInfo" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="Style" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Name" />
-      <RootProperty Name="HorizontalScrollMode" />
-      <RootProperty Name="VerticalScrollMode" />
-      <RootProperty Name="IsHorizontalRailEnabled" />
-      <RootProperty Name="IsVerticalRailEnabled" />
-      <RootProperty Name="ZoomMode" />
-      <RootProperty Name="VerticalScrollBarVisibility" />
-      <RootProperty Name="BringIntoViewOnFocusChange" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="HorizontalScrollBarVisibility" />
-      <RootProperty Name="IsDeferredScrollingEnabled" />
-      <RootProperty Name="MinWidth" />
-      <RootProperty Name="VerticalSnapPointsType" />
-      <RootProperty Name="VerticalSnapPointsAlignment" />
-      <RootEvent Name="ViewChanged" />
-      <RootMethod Name="GetVerticalScrollBarVisibility" />
-      <RootMethod Name="SetVerticalScrollBarVisibility" />
-      <RootMethod Name="GetHorizontalScrollBarVisibility" />
-      <RootMethod Name="SetHorizontalScrollBarVisibility" />
-      <RootMethod Name="GetHorizontalScrollMode" />
-      <RootMethod Name="SetHorizontalScrollMode" />
-      <RootMethod Name="GetVerticalScrollMode" />
-      <RootMethod Name="SetVerticalScrollMode" />
-      <RootMethod Name="GetIsVerticalRailEnabled" />
-      <RootMethod Name="SetIsVerticalRailEnabled" />
-      <RootMethod Name="GetIsDeferredScrollingEnabled" />
-      <RootMethod Name="SetIsDeferredScrollingEnabled" />
-      <RootMethod Name="GetBringIntoViewOnFocusChange" />
-      <RootMethod Name="SetBringIntoViewOnFocusChange" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
       <RootProperty Name="Foreground" />
       <RootProperty Name="Content" />
@@ -389,6 +391,7 @@
       <RootProperty Name="AudioCategory" />
       <RootProperty Name="AutoPlay" />
       <RootProperty Name="Source" />
+      <RootProperty Name="Volume" />
       <RootEvent Name="MediaEnded" />
       <RootEvent Name="MediaOpened" />
     </RootType>
@@ -582,9 +585,10 @@
       <RootProperty Name="MinHeight" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
-      <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Resources" />
     </RootType>
+    <RootType FullName="One.UC.BackButton" />
     <RootType FullName="One.UC.PopupNotice" />
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform" />
     <RootType FullName="One.UC.Tip" />

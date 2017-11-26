@@ -19,25 +19,25 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\study\uwpProjects\One\One\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>3FE0A5FBCF2DC3FF01BE8480666C669C69A0F14108779CA7D123E3029E099C11</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>32688UWP.UWP_1.1.31.0_x86__9fwyyn341hema</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>169A11763F57D2691A285BE22FBB769B190B592A7ECC952C2E9479C78F84D795</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>32688UWP.UWP_1.1.35.0_x86__9fwyyn341hema</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>32688UWP.UWP_9fwyyn341hema!App</RegisteredUserModeAppID>
     <RegisteredPackageID>32688UWP.UWP</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=7AB80963-39C0-4325-A468-DC0AA0B127A8</RegisteredPackagePublisher>
-    <RegisteredVersion>1.1.31.0</RegisteredVersion>
+    <RegisteredVersion>1.1.35.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="D:\study\uwpProjects\One\One\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-14T14:03:10.368</Modified>
+      <Modified>2017-11-26T12:19:48.933</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Debug\One.exe">
       <PackagePath>entrypoint\One.exe</PackagePath>
-      <Modified>2017-11-14T14:03:09.229</Modified>
+      <Modified>2017-11-26T12:19:40.827</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\maozw\.nuget\packages\handy.dotnetcore-compatibility.colortranslations\0.2.1\lib\netstandard1.4\ColorTranslations.dll">
       <PackagePath>ColorTranslations.dll</PackagePath>
@@ -539,6 +539,10 @@
       <PackagePath>Assets\audio\123.mp3</PackagePath>
       <Modified>2017-11-09T12:10:05.155</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\audio\music_bgm.flac">
+      <PackagePath>Assets\audio\music_bgm.flac</PackagePath>
+      <Modified>2017-01-22T14:14:41.499</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\BadgeLogo.scale-100.png">
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -627,6 +631,10 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\play.png">
       <PackagePath>Assets\icon\play.png</PackagePath>
       <Modified>2017-11-14T11:55:25.114</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\prise.png">
+      <PackagePath>Assets\icon\prise.png</PackagePath>
+      <Modified>2017-11-17T12:23:24.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\Assets\icon\set-selected.png">
       <PackagePath>Assets\icon\set-selected.png</PackagePath>
@@ -979,7 +987,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Debug\One.xr.xml">
       <PackagePath>One.xr.xml</PackagePath>
-      <Modified>2017-11-14T13:54:31.778</Modified>
+      <Modified>2017-11-26T12:18:06.121</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -988,11 +996,11 @@
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-14T14:03:09.973</Modified>
+      <Modified>2017-11-26T12:19:41.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\study\uwpProjects\One\One\bin\x86\Debug\Core\One.exe">
       <PackagePath>One.exe</PackagePath>
-      <Modified>2017-11-14T14:03:10.360</Modified>
+      <Modified>2017-11-26T12:19:48.926</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -48,7 +48,9 @@
 
         <Grid Grid.Row="0"
               Grid.Column="0"
-              Grid.ColumnSpan="2">
+              Grid.ColumnSpan="2"
+              >
+            
         </Grid>
 
         <SplitView x:ConnectionId='2' Name="RootSplitView"
@@ -62,79 +64,82 @@
                    Grid.ColumnSpan="2">
             <SplitView.Pane>
                 <!--侧边栏-->
-                <Grid Background="White">
+                <ScrollViewer Style="{StaticResource ScrollViewerCommonStyle}">
+                    <Grid Background="White">
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="200"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
 
-                    <!--侧边栏顶部-->
-                    <Grid Grid.Row="0"
+                        <!--侧边栏顶部-->
+                        <Grid Grid.Row="0"
                           Background="#e0e0e0">
-                        <Image Source="Assets/images/header.jpg">
-                            
-                        </Image>
-                    </Grid>
+                            <Image Source="Assets/images/header.jpg">
 
-                    <!--侧边栏中间部分显示时间-->
-                    <Grid Grid.Row="1">
-                        <StackPanel Margin="25,0,0,5">
-                            <TextBlock x:ConnectionId='13' Name="TodayDate"
+                            </Image>
+                        </Grid>
+
+                        <!--侧边栏中间部分显示时间-->
+                        <Grid Grid.Row="1">
+                            <StackPanel Margin="25,0,0,5">
+                                <TextBlock x:ConnectionId='13' Name="TodayDate"
                                        Margin="0,5,0,5"
                                        Foreground="#757575"
                                        FontSize="17"/>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='14' Name="PlaceName"
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:ConnectionId='14' Name="PlaceName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
-                                <TextBlock x:ConnectionId='15' Name="AirName"
+                                    <TextBlock x:ConnectionId='15' Name="AirName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
-                                <TextBlock x:ConnectionId='16' Name="TempName"
+                                    <TextBlock x:ConnectionId='16' Name="TempName"
                                            Margin="0,0,15,0"
                                            Foreground="#757575"
                                            FontSize="14"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Grid>
+                        </Grid>
 
-                    <!--侧边栏选择项-->
-                    <Grid Grid.Row="2">
-                        <ListView x:ConnectionId='9' ItemContainerStyle="{StaticResource MenuItemContainer}"
+                        <!--侧边栏选择项-->
+                        <Grid Grid.Row="2">
+                            <ListView x:ConnectionId='9' ItemContainerStyle="{StaticResource MenuItemContainer}"
                                                                     
                                                                 
                                   IsItemClickEnabled="True"
                                   Name="NavListview">
-                            <ListView.ItemTemplate>
-                                <DataTemplate                               >
-                                    <StackPanel x:ConnectionId='10' Orientation="Horizontal"
+                                <ListView.ItemTemplate>
+                                    <DataTemplate                               >
+                                        <StackPanel x:ConnectionId='10' Orientation="Horizontal"
                                                 Padding="20,0,0,0"
                                                 >
-                                        <Image x:ConnectionId='11'                                          
+                                            <Image x:ConnectionId='11'                                          
                                                Width="20"
                                                Height="20"
                                                />
-                                        <TextBlock x:ConnectionId='12'                      
+                                            <TextBlock x:ConnectionId='12'                      
                                                    Margin="27,-2,0,0"
                                                                                                     
                                                    VerticalAlignment="Center"
                                                    />
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </Grid>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
 
-                </Grid>
+                    </Grid>
+                </ScrollViewer>
+                
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid x:ConnectionId='17' Name="RootGrid">
                     <Frame x:ConnectionId='18' Name="RootFrame"
-                           Background="Gray"></Frame>
+                           Background="Transparent"></Frame>
                 </Grid>
             </SplitView.Content>
         </SplitView>

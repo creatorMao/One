@@ -132,7 +132,7 @@ namespace One.One_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[20];
+            _typeNameTable = new string[21];
             _typeNameTable[0] = "One.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -151,10 +151,11 @@ namespace One.One_XamlTypeInfo
             _typeNameTable[15] = "One.Pages.MusicPage";
             _typeNameTable[16] = "One.Pages.SettingPage";
             _typeNameTable[17] = "Byte";
-            _typeNameTable[18] = "One.UC.PopupNotice";
-            _typeNameTable[19] = "One.UC.Tip";
+            _typeNameTable[18] = "One.UC.BackButton";
+            _typeNameTable[19] = "One.UC.PopupNotice";
+            _typeNameTable[20] = "One.UC.Tip";
 
-            _typeTable = new global::System.Type[20];
+            _typeTable = new global::System.Type[21];
             _typeTable[0] = typeof(global::One.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -173,8 +174,9 @@ namespace One.One_XamlTypeInfo
             _typeTable[15] = typeof(global::One.Pages.MusicPage);
             _typeTable[16] = typeof(global::One.Pages.SettingPage);
             _typeTable[17] = typeof(global::System.Byte);
-            _typeTable[18] = typeof(global::One.UC.PopupNotice);
-            _typeTable[19] = typeof(global::One.UC.Tip);
+            _typeTable[18] = typeof(global::One.UC.BackButton);
+            _typeTable[19] = typeof(global::One.UC.PopupNotice);
+            _typeTable[20] = typeof(global::One.UC.Tip);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -218,8 +220,9 @@ namespace One.One_XamlTypeInfo
         private object Activate_8_CanvasDevice() { return new global::Microsoft.Graphics.Canvas.CanvasDevice(); }
         private object Activate_15_MusicPage() { return new global::One.Pages.MusicPage(); }
         private object Activate_16_SettingPage() { return new global::One.Pages.SettingPage(); }
-        private object Activate_18_PopupNotice() { return new global::One.UC.PopupNotice(); }
-        private object Activate_19_Tip() { return new global::One.UC.Tip(); }
+        private object Activate_18_BackButton() { return new global::One.UC.BackButton(); }
+        private object Activate_19_PopupNotice() { return new global::One.UC.PopupNotice(); }
+        private object Activate_20_Tip() { return new global::One.UC.Tip(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -345,16 +348,23 @@ namespace One.One_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 18:   //  One.UC.PopupNotice
+            case 18:   //  One.UC.BackButton
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_18_PopupNotice;
+                userType.Activator = Activate_18_BackButton;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  One.UC.Tip
+            case 19:   //  One.UC.PopupNotice
                 userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_19_Tip;
+                userType.Activator = Activate_19_PopupNotice;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 20:   //  One.UC.Tip
+                userType = new global::One.One_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_20_Tip;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

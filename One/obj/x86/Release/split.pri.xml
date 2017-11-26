@@ -393,6 +393,11 @@
 				</NamedResource>
 			</ResourceMapSubtree>
 			<ResourceMapSubtree name="UC">
+				<NamedResource name="BackButton.xbf" uri="ms-resource://32688UWP.UWP/Files/UC/BackButton.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="PopupNotice.xbf" uri="ms-resource://32688UWP.UWP/Files/UC/PopupNotice.xbf">
 					<Candidate type="EmbeddedData">
 						<Base64Value>[Embedded Binary Data]</Base64Value>

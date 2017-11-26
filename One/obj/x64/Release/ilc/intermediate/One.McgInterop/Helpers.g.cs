@@ -1049,8 +1049,9 @@ namespace __Interop
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
-					uint arg1, 
-					void* arg2)
+					void* arg1, 
+					void* arg2, 
+					void* arg3)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -1059,8 +1060,8 @@ namespace __Interop
 		internal static int StdCall__42(
 					global::System.IntPtr pfn, 
 					void* pthis, 
-					global::System.Type__Impl.UnsafeType arg0, 
-					void* arg1, 
+					void* arg0, 
+					uint arg1, 
 					void* arg2)
 		{
 			// This method is implemented elsewhere in the toolchain
@@ -1071,7 +1072,8 @@ namespace __Interop
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					global::System.Type__Impl.UnsafeType arg0, 
-					void* arg1)
+					void* arg1, 
+					void* arg2)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -1080,10 +1082,8 @@ namespace __Interop
 		internal static int StdCall__44(
 					global::System.IntPtr pfn, 
 					void* pthis, 
-					void* arg0, 
-					void* arg1, 
-					void* arg2, 
-					void* arg3)
+					global::System.Type__Impl.UnsafeType arg0, 
+					void* arg1)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -6377,68 +6377,68 @@ namespace __Interop
 
 		public delegate void AddrOfTarget136(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.Collections.IObservableVector<object> a1, 
-					global::Windows.Foundation.Collections.IVectorChangedEventArgs a2);
+					object a1, 
+					global::Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs a2);
 
 		public delegate void AddrOfTarget137(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.SelectionChangedEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs a2);
 
 		public delegate void AddrOfTarget138(
 					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.Controls.ItemClickEventArgs a2);
+					global::Windows.Foundation.Collections.IObservableVector<object> a1, 
+					global::Windows.Foundation.Collections.IVectorChangedEventArgs a2);
 
 		public delegate void AddrOfTarget139(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.DragItemsStartingEventArgs a2);
+					global::Windows.UI.Xaml.Controls.SelectionChangedEventArgs a2);
 
 		public delegate void AddrOfTarget140(
 					global::System.__ComObject a0, 
-					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
-					global::Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs a2);
+					object a1, 
+					global::Windows.UI.Xaml.Controls.ItemClickEventArgs a2);
 
 		public delegate void AddrOfTarget141(
 					global::System.__ComObject a0, 
-					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
-					global::Windows.UI.Xaml.Controls.DragItemsCompletedEventArgs a2);
+					object a1, 
+					global::Windows.UI.Xaml.Controls.DragItemsStartingEventArgs a2);
 
 		public delegate void AddrOfTarget142(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
-					global::Windows.UI.Xaml.Controls.ChoosingItemContainerEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ContainerContentChangingEventArgs a2);
 
 		public delegate void AddrOfTarget143(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
-					global::Windows.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs a2);
+					global::Windows.UI.Xaml.Controls.DragItemsCompletedEventArgs a2);
 
 		public delegate void AddrOfTarget144(
 					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.Navigation.NavigationEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
+					global::Windows.UI.Xaml.Controls.ChoosingItemContainerEventArgs a2);
 
 		public delegate void AddrOfTarget145(
 					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs a2);
+					global::Windows.UI.Xaml.Controls.ListViewBase a1, 
+					global::Windows.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs a2);
 
 		public delegate void AddrOfTarget146(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Navigation.NavigationFailedEventArgs a2);
+					global::Windows.UI.Xaml.Navigation.NavigationEventArgs a2);
 
 		public delegate void AddrOfTarget147(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.ScrollViewerViewChangedEventArgs a2);
+					global::Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs a2);
 
 		public delegate void AddrOfTarget148(
 					global::System.__ComObject a0, 
 					object a1, 
-					global::Windows.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs a2);
+					global::Windows.UI.Xaml.Navigation.NavigationFailedEventArgs a2);
 
 		public delegate void AddrOfTarget149(
 					global::System.__ComObject a0, 
