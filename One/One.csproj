@@ -100,6 +100,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\AppSettings.cs" />
+    <Compile Include="Common\MyColorHelper.cs" />
     <Compile Include="Common\SerializeHelper.cs" />
     <Compile Include="Common\TileManager.cs" />
     <Compile Include="Common\TitleBarHelper.cs" />

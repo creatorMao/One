@@ -207,8 +207,10 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="LineHeight" />
+      <RootProperty Name="Opacity" />
       <RootProperty Name="IsTextSelectionEnabled" />
       <RootProperty Name="TextAlignment" />
+      <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="Width" />
       <RootEvent Name="PointerPressed" />
     </RootType>

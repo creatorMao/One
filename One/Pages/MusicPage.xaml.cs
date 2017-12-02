@@ -73,12 +73,22 @@ namespace One.Pages
 
         public async void PrePareData()
         {
-
-            string jsonString = await SerializeHelper.GetJsonStringFromWebApi("http://v3.wufazhuce.com:8000/api/music/bymonth/2017-11-13%2000:00:00?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android");
+            DateTime currentDataTime = DateTime.Now;
+            string jsonString = await SerializeHelper.GetJsonStringFromWebApi(String.Format("http://v3.wufazhuce.com:8000/api/music/bymonth/{0}%2000:00:00?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android",currentDataTime.ToString("yyyy-MM-dd")));
             var result = SerializeHelper.DeSerialize<Music_GettingStarted>(jsonString);
-
-
-            result.Data.ForEach(p => musicList.Add(p));
+            if (result.Data.Count <= 10)
+            {
+                result.Data.ForEach(p => musicList.Add(p));
+                currentDataTime=currentDataTime.AddMonths(-1);
+                string jsonString1 = await SerializeHelper.GetJsonStringFromWebApi(String.Format("http://v3.wufazhuce.com:8000/api/music/bymonth/{0}%2000:00:00?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android", currentDataTime.ToString("yyyy-MM-dd")));
+                var result1 = SerializeHelper.DeSerialize<Music_GettingStarted>(jsonString1);
+                result1.Data.ForEach(p => musicList.Add(p));
+            }
+            else
+            {
+                result.Data.ForEach(p => musicList.Add(p));
+            }
+            
         }
 
         private async void ItemListview_ItemClick(object sender, ItemClickEventArgs e)

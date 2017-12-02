@@ -460,7 +460,8 @@
                           Padding="30,0,30,0">
                         <TextBlock x:ConnectionId='27' Name="Article_Content"
                                Foreground="#333333"
-                               LineHeight="50"
+                               LineHeight="35"
+                               CharacterSpacing="20"
                                TextWrapping="WrapWholeWords"
                                IsTextSelectionEnabled="True">
 

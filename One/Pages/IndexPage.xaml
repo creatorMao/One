@@ -261,7 +261,6 @@
 
                 <Grid Grid.Row="1"
                   Name="ContentContainer"
-                  Background="#52948B"
                   Padding="20">
 
                     <Grid.RowDefinitions>
@@ -279,7 +278,7 @@
                         <TextBlock Name="VolumeText"
                                Grid.Column="0"
                                FontSize="20"
-                               Foreground="#264440"/>
+                               Foreground="Gray"/>
 
                         <StackPanel Orientation="Horizontal"
                                 Grid.Column="1"
@@ -289,8 +288,9 @@
                                 Click="ImageDownloadButton_Click">
                                 <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE1FD;"
-                                      Foreground="#264440"
-                                      FontSize="26"/>
+                                      Foreground="Gray"
+                                      FontSize="26"
+                                      />
                             </Button>
                             <Button Background="Transparent"
                                     Style="{StaticResource ButtonCommonStyle}"
@@ -298,7 +298,7 @@
                                      >
                                 <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE9D9;"
-                                      Foreground="#264440"
+                                      Foreground="Gray"
                                       FontSize="26"/>
                             </Button>
                             <Button Background="Transparent"
@@ -306,7 +306,7 @@
                                 Click="OpenSharePage">
                                 <FontIcon FontFamily="Segoe MDL2 Assets"
                                       Glyph="&#xE72D;"
-                                      Foreground="#264440"
+                                      Foreground="Gray"
                                       FontSize="26"/>
                             </Button>
                         </StackPanel>
@@ -321,7 +321,10 @@
                                TextWrapping="WrapWholeWords"
                                LineHeight="25"
                                FontWeight="Light"
+                               Foreground="Black"
+                               Opacity="0.8"
                                IsTextSelectionEnabled="True"
+                               
                                />
                         </ScrollViewer>
                     </Grid>

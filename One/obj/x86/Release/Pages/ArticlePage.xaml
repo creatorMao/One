@@ -325,11 +325,12 @@
                     </Grid>
 
                     <Grid Grid.Row="1"
-                          Margin="30,30,0,0">
+                          Margin="30,30,30,0">
                         <TextBlock x:ConnectionId='29' Name="Article_Title"
                                FontSize="30"
                                Foreground="#333333"
-                               IsTextSelectionEnabled="True">
+                               IsTextSelectionEnabled="True"
+                               TextWrapping="WrapWholeWords">
 
                         </TextBlock>
                     </Grid>
@@ -338,7 +339,8 @@
                       Margin="30,20,0,20">
                         <TextBlock x:ConnectionId='28' Name="Article_Author"
                                Foreground="#333333"
-                               IsTextSelectionEnabled="True">
+                               IsTextSelectionEnabled="True"
+                               TextWrapping="WrapWholeWords">
 
                         </TextBlock>
                     </Grid>
@@ -438,10 +440,11 @@
 
 
                     <Grid Grid.Row="4"
-                          Padding="30,10,30,0">
+                          Padding="30,0,30,0">
                         <TextBlock x:ConnectionId='21' Name="Article_Content"
                                Foreground="#333333"
-                               LineHeight="45"
+                               LineHeight="35"
+                               CharacterSpacing="20"
                                TextWrapping="WrapWholeWords"
                                IsTextSelectionEnabled="True">
 

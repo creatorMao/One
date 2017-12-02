@@ -217,7 +217,7 @@ namespace One.Pages
 
             AppSettings.SetSetting("Tile", true);
 
-            AppSettings.RemoveSetting("20171126update");
+            AppSettings.RemoveSetting("20171202update");
 
 
             //重新加载一次默认设置

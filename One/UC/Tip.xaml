@@ -649,7 +649,8 @@
 
             </StackPanel>-->
             <!--2017.11.26-->
-            <StackPanel MinHeight="200"
+            <!--2017-12-2-->
+            <!--<StackPanel MinHeight="200"
                         Width="380"
                         Background="#1D1D1D"
                         VerticalAlignment="Center"
@@ -684,6 +685,80 @@
                            HorizontalAlignment="Right"
                            FontSize="14">
                     2017.11.26
+                </TextBlock>
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Margin="0,10,0,0">
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="JoinQQ">
+                        QQ群闲聊
+                    </Button>
+                    <Button Foreground="Gray"
+                        Margin="0,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="RateApp">
+                        商店给个好评
+                    </Button>
+
+                    <Button Foreground="Gray"
+                        Margin="10,10,0,0" 
+                        Style="{StaticResource ButtonAboutPageStyle}"
+                        Click="CloseTip">
+                        关闭
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>-->
+            <StackPanel MinHeight="200"
+                        Width="380"
+                        Background="#1D1D1D"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Padding="25"
+                        Name="TipContainer"
+                        RenderTransformOrigin="0.5,0.5"
+                        Opacity="1">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform />
+                </StackPanel.RenderTransform>
+
+                <TextBlock Foreground="Gray"
+                           FontSize="20">
+                    Tips:
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14">
+                    复杂的世界里,一个就够了.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    1.提高阅读体验（增加段落间隔，空隙，等）
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    2.一个 详情页面自动配色
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,0,0"
+                           FontSize="14"
+                           TextWrapping="WrapWholeWords">
+                    3.修复音乐列表没有更新的bug.
+                </TextBlock>
+                <TextBlock Foreground="Gray"
+                           Margin="0,15,10,0"
+                           TextWrapping="WrapWholeWords"
+                           HorizontalAlignment="Right"
+                           FontSize="14">
+                    2017.12.2
                 </TextBlock>
                 <StackPanel VerticalAlignment="Bottom"
                             HorizontalAlignment="Right"

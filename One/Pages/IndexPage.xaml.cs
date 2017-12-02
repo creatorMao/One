@@ -5,6 +5,7 @@ using One.UC;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Net.Http;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Storage;
 using Windows.Storage.Streams;
@@ -74,22 +75,32 @@ namespace One.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ItemListview_ItemClick(object sender, ItemClickEventArgs e)
+        private async void ItemListview_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ItemDetailsPannel.Visibility = Visibility.Visible;
-
-            JudeCurrentWidth();
 
             photoAlbum_Datum = (PhotoAlbum_Datum)e.ClickedItem;
 
-            DetailsImage.Source = new BitmapImage(new Uri(photoAlbum_Datum.HpImgUrl));
+            
+            //获取图片的主要颜色，算法不是自己写的。因为计算主要颜色需要点时间，所以放在开头
+            var rass = RandomAccessStreamReference.CreateFromUri(new Uri(photoAlbum_Datum.HpImgUrl));
+            IRandomAccessStream inputStream = await rass.OpenReadAsync();
+            WriteableBitmap wb = new WriteableBitmap(5000, 5000);
+            wb.SetSource(inputStream);
+            ContentContainer.Background = new SolidColorBrush(MyColorHelper.GetMajorColor(wb));
+
+
+            //页面中其它数据的绑定
+            BitmapImage bitmapImage = new BitmapImage(new Uri(photoAlbum_Datum.HpImgUrl));
+            DetailsImage.Source = bitmapImage;
             VolumeText.Text = photoAlbum_Datum.HpTitle;
             WordsText.Text = photoAlbum_Datum.HpContent + " by " + photoAlbum_Datum.ImageAuthors;
             LikesCountTextBlock.Text = photoAlbum_Datum.Praisenum.ToString();
 
-            ColorConverter colorConverter = new ColorConverter();
-            Color color = colorConverter.StringToColor("#52948B");
-            ContentContainer.Background = new SolidColorBrush(color);
+
+            //等待主要颜色获取成功后，就可以打开
+            ItemDetailsPannel.Visibility = Visibility.Visible;
+            JudeCurrentWidth();
+
         }
 
         

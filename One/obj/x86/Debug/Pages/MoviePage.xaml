@@ -344,7 +344,7 @@
                               Padding="30,0,30,0">
                             <TextBlock x:ConnectionId='27' Name="MovieStory_Content"
                                        TextWrapping="WrapWholeWords"
-                                   LineHeight="45"
+                                   LineHeight="30"
                                    FontSize="16"
                                    Foreground="#333333"
                                    IsTextSelectionEnabled="True"></TextBlock>
